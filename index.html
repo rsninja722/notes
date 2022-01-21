@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>notes</title>
+    <meta charSet="utf-8"/>
+    <link rel="icon" type="image/gif" href="icon.png"/>
+    <link rel="stylesheet" href="atom-one-dark.css">
+    <style>
+        body {background-color: #091828;color: #62e7f8;font-family:monospace;margin: 0;}
+        h1,h2,h3,h4,h5,h6 {color: #6d91f4;margin-top: 8px;margin-bottom: 8px;}
+        h1 {border-bottom: 2px solid #3a3a3a;}
+        b {color: #6df4d0}
+        pre {color: #e6c07b;}
+        a {color: #e6c07b;text-decoration: none;}
+        a:hover {color:rgb(238, 227, 206);}
+        p {margin-top: 2px;margin-bottom: 2px;}
+        button {color: #6df4d0; background-color: #001e3c; border: 1px solid #1e4976; border-radius: 2px; margin: 5px;padding-left: 8px;padding-right: 8px;}
+        button:active {background-color: #004c99;}
+        ::-webkit-scrollbar {width: 10px;height: 10px;}
+        ::-webkit-scrollbar-track {background: #1e1e1e; }
+        ::-webkit-scrollbar-thumb {background: #444444; }
+        ::-webkit-scrollbar-thumb:hover {background: #666666; }
+        .katex {color: #6df4d0;}
+        .katex .base, .katex .strut {background-color: #050c15;}
+        .hljs {background-color: #050c15 !important;}
+    </style>
+    <link rel="stylesheet" href="katex/katex.min.css">
+    <script defer src="katex/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+    <!-- <script defer src="katex/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script> -->
+</head>
+<body>
+    <div id="links">
+        <h2>notes</h2>
+    </div>
+    <div id="postDiv" style="padding: 50px;"></div>
+    <script src="marked.js"></script>
+    <script src="highlight.min.js"></script>
+    <script>
+        fetch("files.json").then(Response => Response.json().then(json => {
+            var fileStructure = json
+            var note = window.location.search;
+            if (note.endsWith(".md")) {
+                note = note.substring(6, note.length);
+                fetch(note).then(Response => Response.text().then(text => {
+                    postDiv.innerHTML += marked(text);
+                    [].forEach.call(document.getElementsByTagName("code"),e=>hljs.highlightBlock(e));
+                    [].forEach.call(document.getElementsByTagName("latex"), e=>katex.render(e.innerText, e,{throwOnError:false}));
+                    document.body.removeChild(document.getElementById("links"));
+                    
+                }));
+            } else {
+                var dir = note.length == 0 ? "notes/" : note.substring(6, note.length);
+                var keyOrder = dir.split("/");
+                var notes = fileStructure;
+                for(var i of keyOrder) {
+                    if(i.length > 0) {
+                        notes = notes[i];
+                    }
+                }
+                var keys = Object.keys(notes);
+                for(var i=0;i<keys.length;i++) {
+                    var span = document.createElement("span");
+                    var a = document.createElement("a");
+
+                    a.href = `?note=${dir}${keys[i]}${keys[i].endsWith(".md")?"":"/"}`;
+                    a.innerText = "/" + keys[i];
+                    a.style = "font-size: 20px";
+
+                    span.appendChild(a);
+                    document.getElementById("links").appendChild(span);
+                    
+                    var br = document.createElement("br");
+                    document.getElementById("links").appendChild(br);
+                }
+            }
+            var button = document.createElement("button");
+            button.onclick = function () {
+                search = window.location.search;
+                link = search.endsWith(".md") ? search.substring(0,search.lastIndexOf("/")+1) : search.substring(0,search.length-1).substring(0,search.substring(0,search.length-1).lastIndexOf("/")+1);
+                window.location.search = link;
+            } 
+            button.innerText = "△";
+            document.body.insertBefore(button,document.getElementById("links"));
+        }));
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152717860-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-152717860-1');</script>
+</body>
+</html>
