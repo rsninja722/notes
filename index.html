@@ -8,33 +8,73 @@
     <style>
         body {background-color: #091828;color: #62e7f8;font-family:monospace;margin: 0;}
         h1,h2,h3,h4,h5,h6 {color: #6d91f4;margin-top: 8px;margin-bottom: 8px;}
-        h1 {border-bottom: 2px solid #3a3a3a;}
-        b {color: #6df4d0}
+        h1 {border-bottom: 2px solid #1e4976;}
+        b, strong {color: #6df4d0;}
         pre {color: #e6c07b;}
         a {color: #e6c07b;text-decoration: none;}
         a:hover {color:rgb(238, 227, 206);}
         p {margin-top: 2px;margin-bottom: 2px;}
-        button {color: #6df4d0; background-color: #001e3c; border: 1px solid #1e4976; border-radius: 2px; margin: 5px;padding-left: 8px;padding-right: 8px;}
+        button {
+            color: #6df4d0; 
+            background-color: #001e3c; 
+            border: 1px solid #1e4976; 
+            border-radius: 2px; 
+            margin: 5px;
+            padding: 3px 10px 3px 10px;
+            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
+        }
+        button:hover {background-color: #073058;}
         button:active {background-color: #004c99;}
+        table {
+            box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
+            border-collapse: collapse;
+            background:#050c15;
+            border-radius:6px;
+            border: 1px solid #1e4976;
+            overflow:hidden;
+            padding: 1px;
+        }
+        thead tr {
+            background:#292b56;
+        }
+        tbody tr {
+            border-bottom: 1px dotted #163455;
+        }
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+        th {
+            color: #6df4d0;
+        }
+        td {
+            border-left: 1px solid #1e4976;
+            border-right: 1px solid #1e4976;
+            padding: 4px;
+        }
+        td:first-child {
+            border-left: none;
+        }
+        td:last-child {
+            border-right: none;
+        }
         ::-webkit-scrollbar {width: 10px;height: 10px;}
         ::-webkit-scrollbar-track {background: #1e1e1e; }
         ::-webkit-scrollbar-thumb {background: #444444; }
         ::-webkit-scrollbar-thumb:hover {background: #666666; }
         .katex {color: #6df4d0;}
-        .katex .base, .katex .strut {background-color: #050c15;}
+        .katex .base, .katex .strut {background-color: #050c15;padding: 2px;}
         .hljs {background-color: #050c15 !important;}
     </style>
     <link rel="stylesheet" href="katex/katex.min.css">
-    <script defer src="katex/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
-    <!-- <script defer src="katex/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script> -->
 </head>
 <body>
     <div id="links">
         <h2>notes</h2>
     </div>
-    <div id="postDiv" style="padding: 50px;"></div>
+    <div id="postDiv" style="padding: 10px;"></div>
     <script src="marked.js"></script>
     <script src="highlight.min.js"></script>
+    <script defer src="katex/katex.min.js" ></script>
     <script>
         fetch("files.json").then(Response => Response.json().then(json => {
             var fileStructure = json
@@ -83,6 +123,5 @@
             document.body.insertBefore(button,document.getElementById("links"));
         }));
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152717860-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-152717860-1');</script>
 </body>
 </html>
