@@ -13,17 +13,17 @@ here are some things I can copy paste because I forget markdown on a weekly basi
 
 ## katex Wow
 
-<latex>
+$$
 \relax{x} = \int_{-\infty}^\infty
     \hat\xi\,e^{2 \pi i \xi x}
     \,d\xi
-</latex>
+$$
 
-can I do inline latex? <latex>x=\frac{-b\pm\sqrt{b^2-4ac}+\sqrt{\frac{\pi}{3^{(25)}\alpha}\kappa}}{2a}</latex> we'll see
+can I do inline latex? $$x=\frac{-b\pm\sqrt{b^2-4ac}+\sqrt{\frac{\pi}{3^{(25)}\alpha}\kappa}}{2a}$$ we'll see
 
-## things to grab
+## things to grab $$x=\frac{-b\pm\sqrt{b^2-4ac}+\sqrt{\frac{\pi}{3^{(25)}\alpha}\kappa}}{2a}$$ we'll see
 
-<latex>\int_x^n\int_0^{\infty}si\pi^{\pi^{ie^{\pi}}}</latex>
+$$\int_x^n\int_0^{\infty}si\pi^{\pi^{ie^{\pi}}}$$
 
 Wow images
 ![Image](https://i.ibb.co/VwjgRSf/13.jpg)

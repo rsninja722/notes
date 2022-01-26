@@ -75,6 +75,7 @@
     <script src="marked.js"></script>
     <script src="highlight.min.js"></script>
     <script defer src="katex/katex.min.js" ></script>
+    <script defer src="katex/katexAuto.js" ></script>
     <script>
         fetch("files.json").then(Response => Response.json().then(json => {
             var fileStructure = json
@@ -84,7 +85,9 @@
                 fetch(note).then(Response => Response.text().then(text => {
                     postDiv.innerHTML += marked(text);
                     [].forEach.call(document.getElementsByTagName("code"),e=>hljs.highlightBlock(e));
-                    [].forEach.call(document.getElementsByTagName("latex"), e=>katex.render(e.innerText, e,{throwOnError:false}));
+                    [].forEach.call(document.getElementsByTagName("td"),e=>e.style.color = e.innerText === "T" ? "#0beb0b" : (e.innerText === "F" ? "#e94c4c" : ""));
+                    renderMathInElement(document.getElementById("postDiv"));
+                    // [].forEach.call(document.getElementsByTagName("latex"), e=>katex.render(e.innerText, e,{throwOnError:false}));
                     document.body.removeChild(document.getElementById("links"));
                     
                 }));

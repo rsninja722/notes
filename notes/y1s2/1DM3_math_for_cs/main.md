@@ -7,41 +7,41 @@
 
 | symbol| latex | meaning |
 |---|---|---|
-|<latex>T</latex> | T | true |
-|<latex>F</latex> | F | false |
-|<latex>\land</latex> | \land | and |
-|<latex>\lor</latex> | \lor | or |
-|<latex>\lnot</latex> | \lnot | not |
-|<latex>\oplus</latex> | \oplus | xor |
-|<latex>\implies</latex> | \implies | implication |
-|<latex>\iff</latex> | \iff | if and only if |
-|<latex>\equiv</latex> | \equiv | equivalency |
+|$$T$$ | T | true |
+|$$F$$ | F | false |
+|$$\land$$ | \land | and |
+|$$\lor$$ | \lor | or |
+|$$\lnot$$ | \lnot | not |
+|$$\oplus$$ | \oplus | xor |
+|$$\rightarrow$$ | \rightarrow | implication |
+|$$\iff$$ | \iff | equivalency |
+|$$\equiv$$ | \equiv | equivalency |
 
 
 # Key Logical Equivalences
 ## Identity Laws
-<latex>p\land T\equiv p</latex>
-<latex>p\lor F\equiv p</latex>
+$$p\land T\equiv p$$
+$$p\lor F\equiv p$$
 ## Domination Laws
-<latex>p\lor T\equiv T</latex>
-<latex>p\land F\equiv F</latex>
+$$p\lor T\equiv T$$
+$$p\land F\equiv F$$
 ## Idempotent Laws
-<latex>p\lor p\equiv p</latex>
-<latex>p\land p\equiv p</latex>
+$$p\lor p\equiv p$$
+$$p\land p\equiv p$$
 ## Double Negation Law
-<latex>\neg (\neg p)\equiv p</latex>
+$$\neg (\neg p)\equiv p$$
 ## Negation Laws
-<latex>p\lor \neg p\equiv T</latex>
-<latex>p\land \neg p\equiv F</latex>
+$$p\lor \neg p\equiv T$$
+$$p\land \neg p\equiv F$$
 ## Commutative Laws
-<latex>p\lor q\equiv q\lor p</latex>
-<latex>p\land q\equiv q\land p</latex>
+$$p\lor q\equiv q\lor p$$
+$$p\land q\equiv q\land p$$
 ## Associative Laws
-<latex>(p\land q)\land r\equiv p\land (q\land r)</latex>
-<latex>(p\lor q)\lor r\equiv p\lor (q\lor r)</latex>
+$$(p\land q)\land r\equiv p\land (q\land r)$$
+$$(p\lor q)\lor r\equiv p\lor (q\lor r)$$
 ## Distributive Laws
-<latex>(p\lor(q\land r))\equiv(p\lor q)\land (p\lor r)</latex>
-<latex>(p\land(q\lor r))\equiv(p\land q)\lor (p\land r)</latex>
+$$(p\lor(q\land r))\equiv(p\lor q)\land (p\lor r)$$
+$$(p\land(q\lor r))\equiv(p\land q)\lor (p\land r)$$
 ## Absorption Laws
-<latex>p\lor(p\land q)\equiv p</latex>
-<latex>p\land(p\lor q)\equiv p</latex>
+$$p\lor(p\land q)\equiv p$$
+$$p\land(p\lor q)\equiv p$$

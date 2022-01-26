@@ -24,14 +24,15 @@ for root, subdirs, files in os.walk(walk_dir):
 
     for filename in files:
         file_path = os.path.join(root, filename)
-
-        dir_path = root.split("\\")
-        cur = structure
-        for i in dir_path:
-            if len(i) > 0:
-                cur = cur[i]
-        cur[filename] = filename
-        print("found file: ", filename)
+        
+        if filename.endswith(".md"):
+            dir_path = root.split("\\")
+            cur = structure
+            for i in dir_path:
+                if len(i) > 0:
+                    cur = cur[i]
+            cur[filename] = filename
+            print("found file: ", filename)
 
 file_content = json.dumps(structure)
 with open("files.json", 'w') as out:

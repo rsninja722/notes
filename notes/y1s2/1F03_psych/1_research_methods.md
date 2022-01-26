@@ -54,7 +54,7 @@
 ![normal distribution](./media/1_research_methods_1.png)
 
 - **measures of central tendencies**
-    - **mean** - average, susceptible to outliers - <latex>\frac{x1+x2+x3+x4+\ldots+x5}{n}</latex>
+    - **mean** - average, susceptible to outliers - $$\frac{x1+x2+x3+x4+\ldots+x5}{n}$$
     - **mode** - the value that appears most frequently in the set, can be used with non numeric data
     - **median** - the center value in a data set when the set is sorted
 - **measures of variability**
