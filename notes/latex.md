@@ -25,6 +25,7 @@ $$$$
 |---|---|---|
 |$$a_b$$ | a_b | sub |
 |$$a^b$$ | a^b | super |
+|$$\cdot$$ | \cdot | dot multiplication |
 |$$\frac{a}{b}$$ | \frac{a}{b}| fraction (inline)|
 |$$\dfrac{a}{b}$$ | \dfrac{a}{b}| fraction |
 |$$\sqrt{x}$$ | \sqrt{x} | square root |
