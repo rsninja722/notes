@@ -1,5 +1,7 @@
 # latex reference
 
+[supported characters](https://katex.org/docs/supported.html)
+
 ## block
 
 latex: `$$$$`
@@ -25,6 +27,8 @@ $$$$
 |---|---|---|
 |$$a_b$$ | a_b | sub |
 |$$a^b$$ | a^b | super |
+|$$\therefore$$ | \therefore | therefore |
+|$$\because$$ | \because | because |
 |$$\cdot$$ | \cdot | dot multiplication |
 |$$\frac{a}{b}$$ | \frac{a}{b}| fraction (inline)|
 |$$\dfrac{a}{b}$$ | \dfrac{a}{b}| fraction |

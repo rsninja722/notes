@@ -197,4 +197,4 @@ def tex_to_table(tex):
 
     return " |\n".join([" | ".join([str(e) for e in row]) for row in rows]) + " |"
 
-print(tex_to_table("a \\rightarrow b"))
+print(tex_to_table("(\\neg p \\lor q) \\land (p \\lor r) \\rightarrow (q \\lor r)"))

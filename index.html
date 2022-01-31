@@ -14,12 +14,13 @@
         h1,h2,h3,h4,h5,h6 {color: #ffb730;margin-top: 8px;margin-bottom: 8px;}
         h2,h3,h4,h5,h6 {border-bottom: 1px solid #1e4976;}
         h1 {border-bottom: 2px solid #1e4976;}
-        b, strong {color: #ff5cff;}
+        b, strong {color: #6aff44;font-weight: normal;}
         pre {color: #e6c07b;}
         a {color: #e6c07b;text-decoration: none;}
         a:hover {color:rgb(238, 227, 206);}
         p {margin-top: 2px;margin-bottom: 2px;}
         p,ul,li,td {line-height: 140%;}
+        code {letter-spacing: normal;word-spacing: normal;font-family: Consolas, monaco, monospace;}
         button {
             color: #6df4d0; 
             background-color: #001e3c; 
@@ -28,6 +29,18 @@
             margin: 5px;
             padding: 3px 10px 3px 10px;
             box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
+        }
+        summary {
+            color: #14a800;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none;
+        }
+        summary:hover {
+            cursor: pointer;
         }
         button:hover {background-color: #073058;}
         button:active {background-color: #004c99;}
@@ -51,6 +64,8 @@
         }
         th {
             color: #6df4d0;
+            padding-left: 5px;
+            padding-right: 5px;
         }
         td {
             border-left: 1px solid #1e4976;
@@ -90,8 +105,8 @@
                 note = note.substring(6, note.length);
                 fetch(note).then(Response => Response.text().then(text => {
                     postDiv.innerHTML += marked(text);
-                    [].forEach.call(document.getElementsByTagName("code"),e=>hljs.highlightBlock(e));
-                    [].forEach.call(document.getElementsByTagName("td"),e=>e.style.color = e.innerText === "T" ? "#0beb0b" : (e.innerText === "F" ? "#e94c4c" : ""));
+                    [].forEach.call(document.getElementsByTagName("code"),e=>hljs.highlightElement(e));
+                    [].forEach.call(document.getElementsByTagName("td"),e=>e.style.color = e.innerHTML === "T" ? "#0beb0b" : (e.innerHTML === "F" ? "#e94c4c" : ""));
                     renderMathInElement(document.getElementById("postDiv"));
                     // [].forEach.call(document.getElementsByTagName("latex"), e=>katex.render(e.innerText, e,{throwOnError:false}));
                     document.body.removeChild(document.getElementById("links"));
