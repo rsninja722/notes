@@ -1,15 +1,21 @@
 # Unix Commands
-
-- **uname** gives information about system **-a** gives more info
-- **pwd** present working directory
-- **man ___**  prints manual for command
-- **apropos ___**  searches **man** pages for a command
-- **ls** list directory contents
-- **pattern matching** * means any `fix`
-- **grep pattern files**  use regular expressions           `fix`
+- **man ___** - prints manual for command, exit with q
+- **cat** - output content to file
+- **cd** - change working directory
+- **cp** - source target - copy a file, target can be a directory or a file, **-r** recursively copy
+- **ls** - list directory contents, **-a** hidden files, **-l** more detailed
+- **mkdir** - make directory, **-p ___** create all directories for a given path
+- **mv** source target - move a file
+- **ps** - list all processes
+- **pwd** prints working directory
+- **rm ___** - remove file, **-d ___** remove folder, **-R ___** remove recursively from folder, **\*** all files
+- **rmdir** - removes a file directory if it is empty
+- **grep** - pattern files - searches file for content, **-r** recursive search, **-E** regular expression, **--include=PATTERN** Recurse in directories only searching file matching PATTERN ex. grep pattern -r, --include=\\\*.cpp --include=\\\*.h rootdir, **--exclude=PATTERN** Recurse in directories skip file matching PATTERN.
+- **uname** - gives information about system **-a** gives more info
+- **apropos ___** - searches **man** pages that contain the search term(s)
+- **pattern matching** - **\*** means any 0 or more characters, **?** means any 1 character
 - **filepaths**
     - . current dir
     - .. parent dir
     - / root
     - ~ home
--  **rm ___** remove file **-d folder_name** remove folder

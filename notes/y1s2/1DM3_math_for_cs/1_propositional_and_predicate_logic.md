@@ -1,3 +1,5 @@
+# Propositional Logic and Predicate Logic
+
 # Propositional Logic
 
 order of precedence
@@ -125,7 +127,7 @@ $$\lnot \forall x P(x) \equiv \exist x \lnot P(x)$$
 
 $$\lnot \exist x P(x) \equiv \forall x \lnot P(x)$$ 
 
-# Key Logical Equivalences
+## Key Logical Equivalences
 - **Identity Laws** - $$p\land T\equiv p$$, and $$p\lor F\equiv p$$
 - **Domination Laws** - $$p\lor T\equiv T$$, and $$p\land F\equiv F$$
 - **Idempotent Laws** - $$p\lor p\equiv p$$, and $$p\land p\equiv p$$
@@ -136,7 +138,7 @@ $$\lnot \exist x P(x) \equiv \forall x \lnot P(x)$$
 - **Distributive Laws** - $$(p\lor(q\land r))\equiv(p\lor q)\land (p\lor r)$$, and $$(p\land(q\lor r))\equiv(p\land q)\lor (p\land r)$$
 - **Absorption Laws** - $$p\lor(p\land q)\equiv p$$, and $$p\land(p\lor q)\equiv p$$
 
-# equivalence proofs
+## equivalence proofs
 
 ![proof](./media/1_propositional_logic_1.png)
 
@@ -198,3 +200,68 @@ english
 
 - $$\exists x \exists y P (x,y)$$ 
 - $$\exists y \exists x P (x,y)$$ There is a pair x,y for which P(x,y) is true
+
+# Proofs
+
+## rules of interference
+
+$$\exists x (C(x) \land \lnot B(x)$$ Premise
+$$C(a) \land \lnot B(a)$$ E1 from (1) $$\frac{\exists x P(x)}{\therefore P(x) for some element c}$$
+$$C(a)$$ simplification from (2) $$\frac{p \land q}{\therefore q}$$
+
+## proof of mathematical statements
+
+A proof is a valid argument that establishes the truth of a statement 
+In math, CS, and other disciplines, informal proofs which are generally shorter are generally used
+
+- theorem
+- lemma
+- corollary
+- conjecture
+
+## proving conditional statements: $$p \rightarrow q$$
+
+- **trivial proof** - if we know q is true then then $$p \rightarrow q$$ is true as well
+- **vacuous proof** - if we know p is false then $$p \rightarrow q$$ is true as well.
+- **direct proof** - assume that p is true. use the rules of interference, axioms, and logical equivalence to show that q must also be true
+- **proof by contraposition** - assume $$\lnot q$$ and show $$\lnot p$$ is true also. this is sometimes called an *indirect proof* method. if we give a direct proof of  $$ \lnot q \rightarrow \lnot p$$ then we have a proof of $$p \rightarrow q$$
+
+## theorems that are biconditional statements 
+to prove a theorem is a biconditional statement, that is, a statement in the form $$p \leftrightarrow q$$ we show that both $$p \rightarrow q$$ and $$q \rightarrow p$$ are both true
+
+## proof by cases
+to prove a conditional statement of the following form
+$$(p_1 \lor p_2 \lor ... \lor p_n) \rightarrow q$$
+
+use the tautology 
+
+$$[(p_1 \lor p_2 \lor ... \lor p_n) \rightarrow q] \leftrightarrow [(p_1 \rightarrow q) \land (p_2 \rightarrow q) \land ... \land (p_n \rightarrow q)]$$
+
+a complete proof must be shown for each case
+
+## existence proof
+proof of theorems of the form $$\exists xP(x)$$
+
+constructive existence proof:
+- find and explicit value of $$c$$ for which $$P(c)$$ is true
+- then $$\exists xP(x)$$ is true by Existential Generalization (EG)
+
+## nonconstructive existence proof
+in a nonconstructive proof, we assume no $$c$$ exists which makes $$P(c)$$ true and derive a contradiction
+
+example show that there exist irrational numbers x and y such that $$x^y$$ is rational.
+
+$$\exists x \exists y \frac{}{}$$ `TODO fix
+
+## counter example
+recall that $$ \exist x \lnot P(x) \equiv \lnot \forall x P(x)$$
+
+to establish that $$ \lnot \forall x P(x) $$ is true (or $$ \forall x P(x) $$ is false ) find a c such that $$\lnot P(c)$$ is true (or $$P(c)$$ is false)
+
+in this case c is called a counterexample to the assertion $$\forall x P(x) $$  
+
+## uniqueness proofs
+some theorems assert the existence of a unique element with a particular property $$\exists !x \ P(x)$$ the two parts if a uniqueness proof are
+
+- existence - we show that an element x with the property exists
+- uniqueness - we show that if $$y \not= x$$ then y does not have the property 
