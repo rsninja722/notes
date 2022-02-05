@@ -1,6 +1,8 @@
 # Conditioning
 
 ## classical conditioning / pavlovian conditioning
+reflexive learning
+
 Learning that one event accurately and reliably predicts the occurrence of a second event.
 
 the learning of a contingency between a paticular signal and a later event that are paired in time and/or space
@@ -69,5 +71,63 @@ if someone routinely uses a drug at a certain time and location, the body will s
 ![diagram](./media/2_conditioning_5.png)
 
 
-# instrumental conditioning
-relating causes and effects
+# instrumental conditioning / operant conditioning
+explicit training
+
+
+## original research
+started with animals and focused only on behavior, not mental processes
+
+Edward L. Thorndike was the first to research, he used cats in a puzzle box putting the focus on overt behavior
+
+## behaviors in animals
+- **stamp in** - favorable behaviors are slowly reinforced over time
+- **stamp out** - unfavorable behaviors are slowly fazed out over time
+
+- **law of effect** behaviors with positive consequences are stamped in, those with negative consequences are stamped out
+
+## types of instrumental conditioning
+
+### definitions
+- **reinforcer** - any stimulus that is present after a response that impacts the frequency that the response is performed
+
+increase in behavior | decrease in behavior 
+:---: | :---: 
+presentation of a positive reinforcer | removal of a positive reinforcer
+removal of a negative reinforcer | presentation of a negative reinforcer
+
+- **reward training** - presenting a positive reinforcer to encourage a behavior
+- **punishment training** - presenting a negative reinforcer to discourage a behavior
+    - risk of being unethical or distressing, the source of punishment might become a signal for fear or distress through classical conditioning
+- **omission training** - removal of a positive reinforcer to discourage a behavior, it is not the same as punishment. a time-out is an example
+- **escape training** - a removal of a negative reinforcer when a behavior is demonstrated after a constant negative reinforcer is applied to encourage a behavior 
+
+the bigger time gap between a behavior and its consequence, the less effective the training
+
+## acquisition and shaping
+in instrumental learning, the process of acquisition leads to the learning the contingency between a response and its consequence.
+
+- **response rate of behavior** - number of responses to training over time
+- **autoshaping** - learning without direct guidance, example: food is released every time a pigeon presses a button
+- **shaping** - used for behaviors that are too complex for auto shaping. complex behaviors are shaped over successive approximation. This complex behavior can be organized into smaller approximations which gradually build up to the full response. each approximation is reinforced through the presentation of a reward until the final complex behavior is achieved.
+    - reinforced for improvement
+- **chaining** - technique used to develop a sequence of behaviors. each behavior is reinforced with the opportunity to perform the next behavior in a sequence. example: leaning the alphabet
+    - reinforced for correct order
+
+## generalization and discrimination
+
+### discrimination
+contingencies are not always valid, different environments/people change whether or not a contingency is valid
+
+It's not only important to learn the contingency between a response and reinforcement, but also when that contingency is valid.
+
+- **discriminative stimulus / s+ / SD** - indicates when a contingency is valid
+- **stimulus delta / s- / sδ** - indicates when a contingency is invalid
+
+### generalization
+
+Sδ altering the generalization gradient of the discriminative stimulus in a experiment where a bird receives food when pecking at a button when a light of a certain color is on
+
+![diagram](./media/2_conditioning_6.png)
+
+SD vs CS+ - CS+ elicits a reflexive, involuntary result. the SD sets the occasion for a voluntary response

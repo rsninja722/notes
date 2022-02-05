@@ -11,7 +11,7 @@ $$\forall, \exists$$ | 1
 $$\lnot$$ | 2
 $$\land$$ | 3
 $$\lor$$ | 4
-$$\implies$$ | 5
+$$\rightarrow$$ | 5
 $$\leftrightarrow$$ | 6
 
 ## definitions
@@ -22,6 +22,7 @@ $$\leftrightarrow$$ | 6
 - **contradiction** - a proposition which is always false ex. $$ a \land \lnot b $$
 - **contingency** - a proposition which is neither a tautology nor a contradiction, such as $$ a $$
 - **logical equivalence** - two compound propositions a and b are logically equivalent if $$ a \leftrightarrow b $$ is a tautology. write as $$ a \iff b $$ or $$ a \equiv b $$, their truth tables have to have the same value
+- **connectives** logical operators
 
 ### negation / $$\lnot$$
 
@@ -119,6 +120,13 @@ F | T | F |
 F | F | T |
 </details>
 
+## converse, contrapositive, and inverse
+
+from $$ a \rightarrow b $$ we can form new conditional statements
+- $$ b \rightarrow a $$ is the converse
+- $$ \lnot b \rightarrow \lnot a $$  is the contrapositive
+- $$ \lnot a \rightarrow \lnot b $$  is the inverse
+
 ## De Morgan's Laws
 
 $$ \lnot (p \land q) \equiv \lnot p \lor \lnot q $$, and $$ \lnot (p \lor q) \equiv \lnot p \land \lnot q $$
@@ -138,31 +146,77 @@ $$\lnot \exist x P(x) \equiv \forall x \lnot P(x)$$
 - **Distributive Laws** - $$(p\lor(q\land r))\equiv(p\lor q)\land (p\lor r)$$, and $$(p\land(q\lor r))\equiv(p\land q)\lor (p\land r)$$
 - **Absorption Laws** - $$p\lor(p\land q)\equiv p$$, and $$p\land(p\lor q)\equiv p$$
 
-## equivalence proofs
+## logical equivalences involving conditional statements
+- $$p \rightarrow q \equiv \lnot p \lor q$$
+- $$p \rightarrow q \equiv \lnot q \rightarrow \lnot p$$
+- $$p \lor q \equiv \lnot p \lor q$$
+- $$p \land q \equiv \lnot (p \rightarrow \lnot q)$$
+- $$\lnot (p \rightarrow q) \equiv p \land \lnot q$$
+- $$(p \rightarrow q) \land (p \rightarrow r) \equiv p \rightarrow (q \land r)$$
+- $$(p \rightarrow r) \land (q \rightarrow r) \equiv (p \lor q) \rightarrow r)$$
+- $$(p \rightarrow q) \lor (p \rightarrow r) \equiv p \rightarrow (q \lor r)$$
+- $$(p \rightarrow r) \lor (q \rightarrow r) \equiv (p \land q) \rightarrow r$$
 
-![proof](./media/1_propositional_logic_1.png)
+## logical equivalences involving biconditional statements
+- $$p \leftrightarrow q \equiv (p \rightarrow q) \land (q \rightarrow p)$$
+- $$p \leftrightarrow q \equiv \lnot p \leftrightarrow \lnot q$$
+- $$p \leftrightarrow q \equiv (p \land q) \lor (\lnot p \land \lnot q)$$
+- $$\lnot (p \leftrightarrow q) \equiv p \leftrightarrow \lnot q$$
 
-## converse, contrapositive, and inverse
 
-from $$ a \rightarrow b $$ we can form new conditional statements
-- $$ b \rightarrow a $$ is the converse
-- $$ \lnot b \rightarrow \lnot a $$  is the contrapositive
-- $$ \lnot a \rightarrow \lnot b $$  is the inverse
+## constructing new logical equivalences
+
+we can show that two expressions are logically equivalent by developing a series of logically equivalent statements.
+
+To prove that $$A \equiv B$$ we produce a series of equivalences beginning with A and ending with B
+
+$$A \equiv A_1$$
+
+$$\ \ \vdots$$
+
+$$A_n \equiv B$$
+
+### equivalence proof example
+show that $$\lnot (p \lor (\lnot p \land q ))$$ is logically equivalent to $$ \lnot p \land \lnot q$$
+
+solution:
+$$\lnot (p \lor (\lnot p \land q )) \equiv$$
+
+[]() | []()
+:--- | :---
+$$\equiv \lnot p \land \lnot (\lnot p \land q)$$ | by the second de morgan law
+$$\equiv \lnot p \land [\lnot (\lnot p) \lor q]$$ | by the first de morgan law
+$$\equiv \lnot p \land (p \lor \lnot q)$$ | by the double negation law
+$$\equiv (\lnot p \land p) \lor (\lnot p \land \lnot q)$$ | by the second distribution law
+$$\equiv F \lor (\lnot p \land \lnot q)$$ | because $$(\lnot p \land p) \equiv F$$
+$$\equiv (\lnot p \land \lnot q) \lor F$$ | by the commutative law for disjunction
+$$\equiv (\lnot p \land \lnot q) $$ | by the identity law for $$F$$
 
 # Predicate Logic
 
+## definitions
+
 - **variables** - x,y,z
-- **Predicates** - P(x), M(x)
-- **Quantifiers** - symbols to express meaning of english words/statements
-    - **universal quantifier** $$\forall$$ (\forall) - for all / for every ex. $$\forall x P(x)$$ asserts P(x) is true for *every* x in the domain
-    - **existential quantifier** $$\exists$$ (\exists) - there exists ex. $$\exists x P(x)$$ asserts P(x) is true for *some* x in the domain
+- **predicates** - P(x), M(x)
 - **propositional functions** - generalizations of propositions. contain variables and a predicate. variables can be replaced by elements from their domain
     - example: let "x + y = z" be donated by R(x,y,z). R(2,-1,5) is false, R(3,4,7) is true
-- **compound expressions** - $$P(x) \land P(y)$$
+- **compound expressions** - connectives from propositional logic can be used together wit propositional logic $$P(x) \land P(y)$$
+- **quantifiers** - symbols to express meaning of english words/statements / used with propositional functions that contain variables to produce an expression
+    - **universal quantifier** - $$\forall$$ (\forall) - for all / for every ex. $$\forall x P(x)$$ asserts P(x) is true for *every* x in the domain
+    - **existential quantifier** - $$\exists$$ (\exists) - there exists ex. $$\exists x P(x)$$ asserts P(x) is true for *some* x in the domain
+    - **uniqueness quantifier** - $$\exists !xP(x)$$ - P(x) is true for one and only one x/ there is a unique x such that P(x) / can be expressed as $$ \exists x (P(x) \land \forall y (P(y) \rightarrow y=x))$$
 
+## equivalence in predicate logic
+statements involving predicates and quantifiers are logically equivalent if and only if they have the same truth value 
+- for every predicate substituted into these statements and 
+- for every domain of discourse used for the variables in the expressions. 
+
+## Negating quantified Expressions
+Symbolically  $$\not \forall x P(x)$$ and $$\exists x \lnot P(x) are equivalent
+
+Symbolically  $$\not \exists x P(x)$$ and $$\forall x \lnot P(x) are equivalent
 
 ## Nested quantifiers
-
 every real number has an inverse:
 $$\forall x \exists y (x + y = 0)$$
 
