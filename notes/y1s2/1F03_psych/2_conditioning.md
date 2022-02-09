@@ -131,3 +131,14 @@ Sδ altering the generalization gradient of the discriminative stimulus in a exp
 ![diagram](./media/2_conditioning_6.png)
 
 SD vs CS+ - CS+ elicits a reflexive, involuntary result. the SD sets the occasion for a voluntary response
+
+## schedules of reinforcement
+- **continuos reinforcement** - every time a behavior is shown, a reinforcer is given or taken
+- **partial reinforcement** - reinforcers are given or taken depending of some factor and not every time
+    - **fixed ratio schedule** - described by $$fr \ n$$ where reinforcers occur every $$n$$ times a behavior is shown
+        - **ratio strain** - the ratio makes it so the reinforcer occurs too rare enough to the point where it hsa little to no effect
+    - **fixed interval schedule** - described by $$fi \ n$$ where there is the potential for a reinforcer after every $$n$$ minutes 
+    - **variable ratio schedule** - described by $$vr \ n$$ same as fixed, but n can change across trials
+    - **variable interval schedule** -  described by $$vi \ n$$ same as fixed, but n can change across trials
+
+variable reinforcement is more robust to extinction
