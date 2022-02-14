@@ -54,3 +54,4 @@
 |$$\supseteq$$| \supseteq | superset of
 |$$\cup$$| \cup | set union
 |$$\cap$$| \cap | set intersection
+|$$\varnothing$$| \varnothing | empty set
