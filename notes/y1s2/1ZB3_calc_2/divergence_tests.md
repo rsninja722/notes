@@ -16,23 +16,23 @@ if the limit is
 
 ### example
 
-$$= \sum_{n=1}{\infin} \frac{(-3)^n}{(2n+1)!}$$
-
-$$= \lim_{n \to \infin} \frac{a_{n+1}}{a_n} = \lim_{n \to \infin} \big| \frac{ \frac{(-3)^{n+1}}{(2(n+1)+1)!} }{ \frac{(-3)^n}{(2n+1)!}} \big|$$
-
-$$= \lim_{n \to \infin} \big| \frac{(-3)^{n+1}}{(2n+3)!} \cdot \frac{(2n+1)!}{(-3)^n} \big|$$ `TODO fix`
-
-$$= \lim_{n \to \infin} \big| \frac{(-3)^{n+1}}{(-3)^n} \cdot \frac{(2n+1)!}{(2n+3)!} \big|$$
-
-$$= \lim_{n \to \infin} \big| (-3)^1 \cdot \frac{(2n+1)!}{(2n+3)!} \big|$$
-
-fix
-
-$$= \lim_{n \to \infin} \big|  \frac{-3}{(2n+3)(2n+2)} \big|$$
-
-$$= \lim_{n \to \infin} \big|  \frac{3}{(2n+3)(2n+2)} \big|$$
-
-$$= 0 < 1$$ -> series is absolutely convergent
+$$= \sum_{n=1}{\infin} \frac{(-3)^n}{(2n+1)!}$$ 
+ 
+$$= \lim_{n \to \infin} \frac{a_{n+1}}{a_n} = \lim_{n \to \infin} \big| \frac{ \frac{(-3)^{n+1}}{(2(n+1)+1)!} }{ \frac{(-3)^n}{(2n+1)!}} \big|$$ 
+ 
+$$= \lim_{n \to \infin} \big| \frac{(-3)^{n+1}}{(2n+3)!} \cdot \frac{(2n+1)!}{(-3)^n} \big|$$ 
+ 
+$$= \lim_{n \to \infin} \big| \frac{(-3)^{n+1}}{(-3)^n} \cdot \frac{(2n+1)!}{(2n+3)!} \big|$$ 
+ 
+$$= \lim_{n \to \infin} \big| (-3)^1 \cdot \frac{(2n+1)!}{(2n+3)\cdot(2n+2)\cdot(2n+1)\cdot(2n)} \big|$$ 
+ 
+$$= \lim_{n \to \infin} \big| -3 \cdot \frac{(2n+1)!}{(2n+3)\cdot(2n+2)\cdot(2n+1)!} \big|$$ 
+ 
+$$= \lim_{n \to \infin} \big|  \frac{-3}{(2n+3)(2n+2)} \big|$$ 
+ 
+$$= \lim_{n \to \infin} \big|  \frac{3}{(2n+3)(2n+2)} \big|$$ 
+ 
+$$= 0 < 1$$ -> series is absolutely convergent 
 
 ## root test
 
