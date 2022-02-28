@@ -212,9 +212,9 @@ statements involving predicates and quantifiers are logically equivalent if and 
 - for every domain of discourse used for the variables in the expressions. 
 
 ## Negating quantified Expressions
-Symbolically  $$\not \forall x P(x)$$ and $$\exists x \lnot P(x) are equivalent
+Symbolically  $$\lnot \forall x P(x)$$ and $$\exists x \lnot P(x) are equivalent
 
-Symbolically  $$\not \exists x P(x)$$ and $$\forall x \lnot P(x) are equivalent
+Symbolically  $$\lnot \exists x P(x)$$ and $$\forall x \lnot P(x) are equivalent
 
 ## Nested quantifiers
 Nested quantifiers are often necessary to express the meaning of sentences in English as well as important concepts in computer science and mathematics. 

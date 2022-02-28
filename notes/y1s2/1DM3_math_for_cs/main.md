@@ -44,8 +44,10 @@
 |$$\equiv$$ | \equiv | equivalency |
 
 ### sets 
+
 | symbol| latex | meaning |
 |---|---|---|
+|$$\varnothing$$ | \varnothing | emptyset
 |$$\in$$| \in | exists in
 |$$\notin$$| \notin | not exists in
 |$$\subset$$| \subset | proper subset of 
@@ -55,3 +57,4 @@
 |$$\cup$$| \cup | set union
 |$$\cap$$| \cap | set intersection
 |$$\varnothing$$| \varnothing | empty set
+|$$\bar{A} \enspace \overline{AB}$$| \bar{A} \overline{AB} | complement
