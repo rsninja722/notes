@@ -78,13 +78,19 @@
         td:last-child {
             border-right: none;
         }
+
+        code {
+            background-color: var(--code);
+            color: #ffffff;
+        }
+
         ::-webkit-scrollbar {width: 10px;height: 10px;}
         ::-webkit-scrollbar-track {background: #1e1e1e; }
         ::-webkit-scrollbar-thumb {background: #797979ab; }
         ::-webkit-scrollbar-thumb:hover {background: #b8b8b8ab; }
         .katex {color: var(--math);}
         .katex .base, .katex .strut {padding: 2px;}
-        .hljs {background-color: #050c15 !important;}
+        .hljs {background-color: #001a3b !important;}
 
         
     </style>
@@ -118,6 +124,7 @@
                 "--back": "#090f16",
                 "--math": "#41f0c1",
                 "--space": "0px",
+                "--code": "#001a3b",
                 "font-family": "Helvetica,Arial,sans-serif",
                 "letter-spacing": "normal",
                 "word-spacing": "normal"
@@ -132,6 +139,7 @@
                 "--back": "#030508",
                 "--math": "#3cffae",
                 "--space": "-6px",
+                "--code": "#001a3b",
                 "font-family":"OpenDyslexic3",
                 "letter-spacing": "-0.5px",
                 "word-spacing": "-5px"
@@ -165,9 +173,19 @@
                 note = note.substring(6, note.length);
                 fetch(note).then(Response => Response.text().then(text => {
 
+                    // find topics and create links
                     var lines = text.split("\n");
                     var topics = [];
+                    var ignore = false;
                     for (var i=0;i<lines.length;i++) {
+                        if(lines[i].startsWith("```")) {
+                            ignore = !ignore;
+                        }
+
+                        if (ignore) {
+                            continue;
+                        }
+
                         if(lines[i].startsWith("#")) {
                             topicName = lines[i].replace(/[\r#]/g,"").replace(" ","");
                             linkName = topicName.replace(/\s/g,"");
@@ -189,9 +207,34 @@
                     lines.splice(1,0,"");
 
                     postDiv.innerHTML += marked(lines.join("\n"));
-                    [].forEach.call(document.getElementsByTagName("code"),e=>hljs.highlightElement(e));
+                    // highligh code
+                    [].forEach.call(document.getElementsByTagName("pre"),e=>hljs.highlightElement(e));
+                    // highlight true/false T's and F's
                     [].forEach.call(document.getElementsByTagName("td"),e=>e.style.color = e.innerHTML === "T" ? "#0beb0b" : (e.innerHTML === "F" ? "#e94c4c" : ""));
+
+                    // render LaTeX
                     renderMathInElement(document.getElementById("postDiv"));
+
+                    children = document.getElementById("postDiv").children;
+                    
+                    stack = [];
+                    tags = ["H1","H2","H3","H4","H5","H6"];
+                    
+                    for(var i=0;i<children.length;i++) {
+                        tagName = children[i].tagName;
+                        if(!tags.includes(tagName)) {
+                            continue;
+                        }
+
+                        if(stack.length = 0) {
+                            div = document.createElement("div");
+                            div.className = tagName;
+                            stack.push()
+                        }
+
+                        parseInt(stack[stack.length-1].slice(1,2))
+                    }
+
                     document.body.removeChild(document.getElementById("links"));
                     
                     link = window.location.hash.replace("#","");
