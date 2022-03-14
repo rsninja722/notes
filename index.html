@@ -12,7 +12,7 @@
         }
         body {background-color: var(--back);color: var(--text);margin: 0;}
         h1,h2,h3,h4,h5,h6 {color: var(--title);margin-top: 8px;margin-bottom: 8px;}
-        h2,h3,h4,h5,h6 {border-bottom: 1px solid #1e4976;}
+        /* h2,h3,h4,h5,h6 {border-bottom: 1px solid #1e4976;} */
         h1 {border-bottom: 2px solid #1e4976;text-align: center;}
         b, strong {color: var(--bold);font-weight: normal;}
         pre {color: var(--pre);}
@@ -90,8 +90,19 @@
         ::-webkit-scrollbar-thumb:hover {background: #b8b8b8ab; }
         .katex {color: var(--math);}
         .katex .base, .katex .strut {padding: 2px;}
+        span.mord.text {
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+        }
+        .katex .base, .katex .strut {
+            padding: 2px 0 2px 0;
+        }
         .hljs {background-color: #001a3b !important;}
 
+        .H1,.H2,.H3,.H4,.H5,.H6 {
+            padding-left: 1em;
+            border-left: 1px solid #1e4976;
+        }
         
     </style>
     <link rel="stylesheet" href="katex/katex.min.css">
@@ -217,23 +228,85 @@
 
                     children = document.getElementById("postDiv").children;
                     
-                    stack = [];
-                    tags = ["H1","H2","H3","H4","H5","H6"];
+                    var stack = [];
+                    var tags = ["H1","H2","H3","H4","H5","H6"];
+                    var mainDiv = document.createElement("div");
                     
-                    for(var i=0;i<children.length;i++) {
-                        tagName = children[i].tagName;
+                    // debugger
+
+                    // for(var i=0;i<children.length;i++) {
+                    while(document.getElementById("postDiv").children.length > 0) {
+                        curChild = document.getElementById("postDiv").children[0]
+                        tagName = curChild.tagName;
                         if(!tags.includes(tagName)) {
+                            if(stack.length == 0) {
+                                mainDiv.appendChild(curChild);
+                            } else {
+                                stack[stack.length-1].appendChild(curChild);
+                            }
                             continue;
                         }
 
-                        if(stack.length = 0) {
+                        if(stack.length == 0) {
                             div = document.createElement("div");
                             div.className = tagName;
-                            stack.push()
+                            stack.push(div);
+                            stack[stack.length-1].appendChild(curChild);
+                            continue;
                         }
 
-                        parseInt(stack[stack.length-1].slice(1,2))
+                        tagLevel = tagName.slice(1,2);
+                        curLevel = parseInt(stack[stack.length-1].className.slice(1,2));
+
+                        // smaller header
+                        if(tagLevel > curLevel) {
+                            div = document.createElement("div");
+                            div.className = tagName;
+                            stack.push(div);
+                        // same size header
+                        } else if (tagLevel == curLevel) {
+                            if(stack.length == 1) {
+                                mainDiv.appendChild(stack.pop());
+                            } else {
+                                stack[stack.length-2].appendChild(stack.pop())
+                            }
+
+                            div = document.createElement("div");
+                            div.className = tagName;
+                            stack.push(div);
+                        // bigger header
+                        } else {
+                            
+                            while(parseInt(stack[stack.length-1].className.slice(1,2)) >= tagLevel) {
+                                if(stack.length == 1) {
+                                    mainDiv.appendChild(stack.pop());
+                                    break;
+                                } else {
+                                    stack[stack.length-2].appendChild(stack.pop())
+                                }
+                            }
+
+                            div = document.createElement("div");
+                            div.className = tagName;
+                            stack.push(div);
+                        }
+
+                        if(stack.length == 1) {
+                            mainDiv.appendChild(curChild);
+                        } else {
+                            stack[stack.length-2].appendChild(curChild);
+                        }
                     }
+                    while(stack.length > 0) {
+                        if(stack.length == 1) {
+                            mainDiv.appendChild(stack.pop());
+                        } else {
+                            stack[stack.length-2].appendChild(stack.pop());
+                        }
+                    }
+
+                    document.getElementById("postDiv").innerHTML = "";
+                    document.getElementById("postDiv").appendChild(mainDiv);
 
                     document.body.removeChild(document.getElementById("links"));
                     

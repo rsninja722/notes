@@ -1,14 +1,14 @@
 # Intro
 
 ## grading
-20% 9 online assigments
-20% midterm 1
-20% midterm 2
-40% exam
+- 20% 9 online assigments
+- 20% midterm 1
+- 20% midterm 2
+- 40% exam
 
 ## dates
-Feb 11 - midterm 1
-Mar 29 - midterm 2
+- Feb 11 - midterm 1
+- Mar 30 - midterm 2
 
 ## Course Schedule
 

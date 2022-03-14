@@ -395,7 +395,7 @@ $$fn$$ | 1,1,2,3,5,8,13,21,34,55,89,...
 
 sum of the terms $$a_m,a_{m+1},\dots ,a_n$$ from the sequence
 
-the notation $$\sum_{j=m}^{n} a_j \text{ or } \sum_{m\leq j\leq n} a_j $$
+the notation $$\sum_{j=m}^{n} a_j \text{or} \sum_{m\leq j\leq n} a_j $$
 
 represents $$a_m + a_{m+1} + \dots + a_n$$
 
@@ -438,4 +438,19 @@ when $$|A| \leq |B|$$ and A and B have different cardinality, we say the cardina
 
 - **$$\aleph_{0}$$** - cardinality of a countably infinite set
 
+some countable sets:
+- set of all positive integers
+- set of all positive rational numbers
+
+some uncountable sets:
+- set of all real numbers
+
+### show countability
 show a set is countable by showing its elements can be indexed by the positive integers
+
+a one-to-one correspondence **f** from the set of positive integers to a set **S** can be expressed as a sequence $$a_1,a_2,\dots,a_n,\dots$$ where $$a_1 = f(1),a_2 = f(2),\dots,a_n = f(n),\dots$$ 
+
+so, find a bijection with a function f(x) that generates all members of the sets from the positive real integers
+
+or show you can list the sequence
+
