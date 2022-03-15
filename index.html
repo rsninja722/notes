@@ -11,11 +11,15 @@
             src: url("./OpenDyslexic3-Regular.woff") format("woff");
         }
         body {background-color: var(--back);color: var(--text);margin: 0;}
-        h1,h2,h3,h4,h5,h6 {color: var(--title);margin-top: 8px;margin-bottom: 8px;}
-        /* h2,h3,h4,h5,h6 {border-bottom: 1px solid #1e4976;} */
-        h1 {border-bottom: 2px solid #1e4976;text-align: center;}
+        h1,h2,h3,h4,h5,h6 {color: var(--title);}
+        h2 {margin-top: 7px;margin-bottom: 7px;}
+        h3 {margin-top: 6px;margin-bottom: 6px;}
+        h4 {margin-top: 4px;margin-bottom: 4px;}
+        h5 {margin-top: 3px;margin-bottom: 3px;}
+        h6 {margin-top: 2px;margin-bottom: 2px;}
+        h1 {border-bottom: 2px solid #1e4976;text-align: center;margin-top: 8px;margin-bottom: 8px;}
         b, strong {color: var(--bold);font-weight: normal;}
-        pre {color: var(--pre);}
+        pre {color: var(--pre);margin: 0.5em}
         a {color: var(--pre);text-decoration: none;}
         a:hover {color:rgb(238, 227, 206);}
         p {margin-top: 2px;margin-bottom: 2px;}
@@ -47,7 +51,7 @@
         table {
             box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
             border-collapse: collapse;
-            background:#00000099;
+            background: var(--table);
             border-radius:6px;
             border: 1px solid #1e4976;
             overflow:hidden;
@@ -82,6 +86,7 @@
         code {
             background-color: var(--code);
             color: #ffffff;
+            border-radius: 3px;
         }
 
         ::-webkit-scrollbar {width: 10px;height: 10px;}
@@ -97,11 +102,28 @@
         .katex .base, .katex .strut {
             padding: 2px 0 2px 0;
         }
-        .hljs {background-color: #001a3b !important;}
+        .hljs {
+            background-color: var(--code) !important;
+            letter-spacing: normal; 
+            word-spacing: normal;
+            width: fit-content;
+            border-radius: 5px;
+            box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
+            font-family: consolas, monospace;
+        }
+
+        .hljs-comment {
+            color: #388b2d;
+        }
 
         .H1,.H2,.H3,.H4,.H5,.H6 {
             padding-left: 1em;
             border-left: 1px solid #1e4976;
+        }
+
+        img {
+            border-radius: 5px;
+            box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
         }
         
     </style>
@@ -123,6 +145,7 @@
         styleNames = [
             "clean",
             "contrast",
+            "blinding"
         ];
         styles = [
             {
@@ -135,7 +158,8 @@
                 "--back": "#090f16",
                 "--math": "#41f0c1",
                 "--space": "0px",
-                "--code": "#001a3b",
+                "--code": "#08172a",
+                "--table": "#040609",
                 "font-family": "Helvetica,Arial,sans-serif",
                 "letter-spacing": "normal",
                 "word-spacing": "normal"
@@ -150,10 +174,27 @@
                 "--back": "#030508",
                 "--math": "#3cffae",
                 "--space": "-6px",
-                "--code": "#001a3b",
+                "--code": "#08172a",
+                "--table": "#040609",
                 "font-family":"OpenDyslexic3",
                 "letter-spacing": "-0.5px",
                 "word-spacing": "-5px"
+            },
+            {
+                "--text": "#2a415a",
+                "--line-height": "normal",
+                "--title": "#0b5394",
+                "--bold": "#2fa1da",
+                "--pre": "#c37e00;",
+                "--summary": "#454bff",
+                "--back": "#ffffff",
+                "--math": "#003003",
+                "--space": "0px",
+                "--code": "#08172a",
+                "--table": "#eeeeee",
+                "font-family": "Helvetica,Arial,sans-serif",
+                "letter-spacing": "normal",
+                "word-spacing": "normal"
             }
         ];
         style = 0;

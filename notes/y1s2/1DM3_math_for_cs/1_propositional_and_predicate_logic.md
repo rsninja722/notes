@@ -149,7 +149,7 @@ $$\lnot \exist x P(x) \equiv \forall x \lnot P(x)$$
 ## logical equivalences involving conditional statements
 - $$p \rightarrow q \equiv \lnot p \lor q$$
 - $$p \rightarrow q \equiv \lnot q \rightarrow \lnot p$$
-- $$p \lor q \equiv \lnot p \lor q$$
+- $$p \lor q \equiv \lnot p \rightarrow q$$
 - $$p \land q \equiv \lnot (p \rightarrow \lnot q)$$
 - $$\lnot (p \rightarrow q) \equiv p \land \lnot q$$
 - $$(p \rightarrow q) \land (p \rightarrow r) \equiv p \rightarrow (q \land r)$$
@@ -212,9 +212,9 @@ statements involving predicates and quantifiers are logically equivalent if and 
 - for every domain of discourse used for the variables in the expressions. 
 
 ## Negating quantified Expressions
-Symbolically  $$\lnot \forall x P(x)$$ and $$\exists x \lnot P(x) are equivalent
+Symbolically  $$\lnot \forall x P(x)$$ and $$\exists x \lnot P(x)$$ are equivalent
 
-Symbolically  $$\lnot \exists x P(x)$$ and $$\forall x \lnot P(x) are equivalent
+Symbolically  $$\lnot \exists x P(x)$$ and $$\forall x \lnot P(x)$$ are equivalent
 
 ## Nested quantifiers
 Nested quantifiers are often necessary to express the meaning of sentences in English as well as important concepts in computer science and mathematics. 
@@ -238,7 +238,7 @@ order matters sometimes
 example:
  let $$ P(x,y)$$ be the statement $$x + y = y + x$$. Assume that U is the real numbers. Then  $$\forall x \forall y P (x,y)$$ and  $$\forall y \forall x P (x,y)$$ have the same truth value
 
-let $$ Q(x,y)$$ be the statement $x + y = o$$. Then $$\forall x \exists y Q (x,y)$$ is true, $$\exists y \forall x Q (x,y)$$ is false
+let $$ Q(x,y)$$ be the statement $$x + y = o$$. Then $$\forall x \exists y Q (x,y)$$ is true, $$\exists y \forall x Q (x,y)$$ is false
 
 example:
 let U be the real numbers
@@ -255,13 +255,9 @@ Define $$P(x,y): \frac{x}{y} = 1$$
 - $$\exists x \exists y P (x,y)$$ = True
 
 english
-- $$\forall x \forall y P (x,y)$$ 
 - $$\forall x \forall y P (x,y)$$ P(x,y) is true for every pair x,y
-
 - $$\exists x \forall y P (x,y)$$ For every x there is a y for which P(x,y) is true
 - $$\forall x \exists y P (x,y)$$ There is an x for which P(x,y) is true for every y
-
-- $$\exists x \exists y P (x,y)$$ 
 - $$\exists y \exists x P (x,y)$$ There is a pair x,y for which P(x,y) is true
 
 ## negating nested quantifiers

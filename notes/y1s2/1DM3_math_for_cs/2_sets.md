@@ -41,7 +41,7 @@ $$(a,b) =  \lbrace x|a\leq x\leq b\rbrace $$
 - $$\mathbb{N}$$ = natural numbers $$ \lbrace 0,1,2,3, ...\rbrace $$
 - $$\mathbb{Z}$$ = integers $$ \lbrace  ... ,-3,-2,-1,0,1,2,3, ...\rbrace  $$
 - $$\mathbb{Z}^{+}$$ = positive integers $$ \lbrace 1,2,3, ...\rbrace $$
-- $$\mathbb{Q}$$ = ration numbers (fractions)
+- $$\mathbb{Q}$$ = rational numbers (fractions)
 - $$\mathbb{R}$$ = real numbers (decimals)
 - $$\mathbb{R}^{+}$$ = positive real numbers (decimals)
 - $$\mathbb{C}$$ =  complex numbers
@@ -272,7 +272,7 @@ the composition of f with g, denoted $$f \circ g(x)$$ is the function from A to 
 range of f must be a subset of the domain of g
 
 ## graphs of functions
-the graph of function f is the set of ordered pairs $$\lbrace (a,b) | a \in A \enspace and \enspace f(a) = b}
+the graph of function f is the set of ordered pairs $$\lbrace (a,b) | a \in A \enspace and \enspace f(a) = b \rbrace$$
 
 ![img](./media/2_sets_7.png)
 
