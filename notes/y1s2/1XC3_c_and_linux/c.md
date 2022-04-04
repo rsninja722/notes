@@ -9,6 +9,7 @@
 - arrays
 - strings
 - structs
+- typedef
 - sizeof
 - typecasting
 - enums
@@ -73,6 +74,26 @@ multi line
 */
 ```
 
+## printing
+
+print using the `printf` function. The first argument is a string, following arguments are variables/constants that can be used to replace parts of the string
+
+```c
+printf("message\n"); // prints: message
+
+printf("number %d\n", 3); // prints: number 3
+
+printf("%010.3f/n", 12.3456); // prints: 000012.346
+```
+
+format string conversion specification:
+
+character(s) | description
+:--- | :---
+`%` | (required) introductory character
+`-` `+` `#` `+` *`space`* | `-` left justified <br> `+` sign is always shown <br> *`space`* prepends a space if there is no sign or there is nothing <br> `#` alternate behavior <br> `0` uses leading 0's to pad extra space
+`.` `*` | `.` the following number specifies the precision. the number that comes before specifies the length of padding
+conversion format specifiers | `c` single character <br> `s` character string <br> `d` integer <br> `o` shows an integer in octal form <br> `x` show an integer in hexadecimal form <br> u
 
 
 ## variables

@@ -87,7 +87,7 @@ the 2-permutations of S = {1,2,3} are 1,2; 1,3; 2,1; 2,3; 3,1; 3,2. hence, P(3,2
 ## combinations
 
 - **combination** - an r-combination of elements of a set is an *unordered* selection of r elements from the set. Thus, an r-combination is simply a subset of the set with r elements
-    - the number of r-combination of a set with n distinct elements is denoted by C(n,r) or $$\begin{pmatrix} n \\ r \end{pmatrix}$$
+    - the number of r-combination of a set with n distinct elements is denoted by C(n,r) or $$\binom{n}{r}$$
     - $$C(n,r) = \frac{P(n,r)}{P(r,r)} = \frac{n!}{(n-r)! r!}$$ if n and r are integers with $$q \leq r \leq n$$
     - **corollary 2** - $$C(n,r) = C(n,n-r)$$
 
@@ -98,3 +98,17 @@ C(4,2) = 6 because the 2-combinations of {a,b,c,d} are the six subsets {a,b}, {a
 a combinatorial proof of an identity is a proof that uses one of the following methods
     - a double counting proof uses counting arguments to prove that both sides of an identity count the same objects, but in different ways.
     - a bijective proof  shows  that there is a bijection between the sets of objects counted by the two sides of the identity.
+
+# 6.4 binomial coefficients and identities
+
+- **binomial expression** - sum of two terms such as $$x+y$$ (the two terms can be products of constants and variables)
+
+- **binomial theorem** - let *x* and *y* be variables, and n a non-negative integer. $$ (x+y)^n = \sum_{j=0}^{n} \binom{n}{j} x^{n-j}y^j = \binom{n}{0} x^n + \binom{n}{1} x^{n-1}y^1 + \binom{n}{2} x^{n-2}y^2 + \dots + \binom{n}{n-1} xy^{n-1} + \binom{n}{n} y^n$$
+
+## useful identity
+
+with $$n \geq 0$$, $$\sum_{k=0}^{n} \binom{n}{k} = 2^n$$
+
+## pascal's Identity
+
+if *n* and *k* are integers with $$ n \geq k \geq 0$$, then $$ \binom{n+1}{k} = \binom{n}{k-1} + \binom{n}{k}$$
