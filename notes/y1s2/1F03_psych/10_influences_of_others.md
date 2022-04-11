@@ -55,3 +55,40 @@ the presence of other witnesses leads to a diffusion of responsibility to act
 seeing helpful behavior increases your probability of helping others in the future, kindness is contagious
 
 - **social loafing** - individuals seem to be les motivated when working in a group than when working alone
+
+## obedience
+
+### Milgrim's experiments
+
+Milgrim's experiments demonstrated obedience to authority in a lab setting
+
+In Milgrim's experiments, participants took the role of a teacher that was supposed to deliver electric shocks to a learner (who was a confederate of the experiment). The experimenter encouraged the participant to keep going no matter what saying things like "you must continue the experiment" and "the experiment requires you to continue". 
+
+65% of participants continued shocking the learner even after they expressed concern about their heart condition, how they felt their heart was not feeling well, and eventually stopped all screaming and complaining
+
+### takeaways
+people display strong obedience, even to minimally powerful figures of authority
+
+people are bad judges at predicting their own behavior
+
+modern ethical codes prevent an experiment like this from taking place again
+
+### further findings
+
+changing location from a prestigious university to a rundown building did not produce statistically significantly change
+
+changing the experimenter with a confederate dressed casually decreased the obedience
+
+increasing the physical distance from the learner decreases obedience
+
+increasing the proximity of the experimenter increased obedience
+
+criminal background checks and tests for psychopathology, anti-social behaviors, etc. had no effect on the result
+
+## cognitive dissonance
+
+our attitudes aren't always accurately reflected in our behaviors
+
+when following social norms or whats expected of us, the behavior doesn't always line up with our attitude
+
+can our behavior change our attitude?
