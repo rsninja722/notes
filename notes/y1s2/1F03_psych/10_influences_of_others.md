@@ -1,0 +1,57 @@
+# influences of others
+
+## presence of others
+
+Norman Triplett first studied social phycology when he studied cyclists who cycled faster when racing against others vs. doing an independent time trial
+
+- **co-actor** - another individual performing the same task
+- **audience** - a group of people watching an individual
+- **social facilitation** - the increased performance that occurs in the same presence of co-actors or an audience (regardless of their interest in the task)
+
+some times the presence of others can have a positive, negative, or no effect
+
+### the effect of other's presences
+
+the presence of others increases your physiological activity which can lead to:
+
+- an improvement in performance (mostly) on well practiced tasks
+- a decrease in performance (mostly) on complex tasks
+
+## social learning theory
+
+children mimic observed behaviors, even when afflicting harm to other people
+
+reinforcement isn't the only way people learn
+
+## conformity
+
+- **norms** - unwritten but commonly accepted rules for how to behave
+- **norm formation** - when a certain behavior becomes typical amongst a group
+- **normative function** - the role of others in setting standards for our conduct based on a fear of rejection
+- **informational function** - the role of others in providing information about an ambiguous situation
+
+## group dynamics
+
+- **risky shift** - groups are either always more risky or less risky that an individual when making a decision, depending on the situation
+
+- **group polarization** - group decision making strengthens the inclinations of the individual group members
+
+- **group think** - a group decision making environment that occurs when group cohesiveness becomes so strong it overrides realistic appraisals of reality and alternative opinions
+
+to prevent group think
+1. be impartial as a leader
+2. critical evaluation (devils advocate)
+3. subdivide the group
+4. provide a second chance for the group to discuss
+
+## bystander effect
+
+the presence of other witnesses leads to a diffusion of responsibility to act
+
+- **pluralistic ignorance** - when each individual in a group sees nobody responding in a given situation, they conclude that the situation is not an emergency 
+
+- **diffusion of responsibility** - in deciding whether we have to act, we determine that someone else in the group is more qualified
+
+seeing helpful behavior increases your probability of helping others in the future, kindness is contagious
+
+- **social loafing** - individuals seem to be les motivated when working in a group than when working alone
