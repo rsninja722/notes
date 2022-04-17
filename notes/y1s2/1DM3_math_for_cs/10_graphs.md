@@ -89,3 +89,72 @@ the initial and terminal vertices of a loop are the same
 
 ### in/out-degrees
 
+- $$deg^{-}(v)$$ - in-degree of a vertex *v*, the number of edges which terminate at *v*
+- $$deg^{+}(v)$$ - out-degree of a vertex *v*, the number of edges with v as their initial vertex
+
+a loop counts as one for both the in and out degree of its vertex
+
+### theorem 3
+
+let $$G = (V,E) be a graph with directed edges
+
+$$|E| = \sum_{v\in V} deg^{-}(v) = \sum_{v\in V} deg^{+}(v)$$
+
+## special types of simple graphs
+
+type|explanation|diagram
+---|---|---
+complete graphs | a graph that contains exactly one edge between each pair of distinct vertices. a complete graph on n vertices is denoted by $$K_n$$ | ![graph](./media/10_graphs_7.png)
+cycles | a cycle $$C_n$$ for $$n \geq 3$$ consists of n vertices $$v_1,v_2, \dots ,v_n$$ and edges $$\lbrace v_1, v_2\rbrace , \lbrace v_2, v_3\rbrace  ,\dots , \lbrace v_{n-1}, v_n\rbrace , \lbrace v_n, v_1\rbrace .$$ | ![graph](./media/10_graphs_8.png)
+wheels | a wheel $$W_n$$ is obtained by adding an additional vertex to a cycle $$C_n$$ for $$n \geq 3$$ and and connecting this new vertex to each of the n vertices in $$C_n$$ | ![graph](./media/10_graphs_9.png)
+n-cubes | an n-dimensional hypercube, or n-cube, $$Q_n$$, is a graph with $$2^n$$ vertices representing all bit strings of length *n* where there is an edge between two vertices that differ in exactly one bit position. any two vertices have a path of at most *n* edges between them. | ![graph](./media/10_graphs_10.png)
+bipartite | a simple graph is bipartite if $$V$$ can be partitioned into two disjoint subsets $$V_1$$ and $$V_2$$ such that no vertices are connected to another vertex in their subset | ![graph](./media/10_graphs_11.png)
+complete bipartite | a bipartite graph where each vertex is connected to every vertex in the other subset, described by $$K_{m,n}$$ where *m* and *n* are the size of $$V_1$$ and $$V_2$$ | ![graph](./media/10_graphs_12.png)
+
+# 10.3 representing graphs
+
+## adjacency lists
+
+only work for graphs with no multiple edges
+
+for the following graphs:
+
+![graph](./media/10_graphs_13.png)
+
+the adjacency lists would be
+
+**G**:
+
+vertex|adjacent vertices
+:---:|---
+a | b,c,e
+b | a
+c | a,d,e
+d | c,e
+e | a,c,d
+
+**H**:
+
+initial vertex|terminal vertices
+:---:|---
+a | b,c,d,e
+b | b,d
+c | a,c,e
+d | 
+e | b,c,d
+
+## adjacency matrices
+
+for a graph $$G = (V,E)$$ where $$|V| = n$$, an n x n zero-one matrix can be made where 1 shows the (i,j)th entry has $$v_i$$ and $$v_j$$ adjacent and 0 shows they are not adjacent
+
+the adjacency matrix for G would be:
+
+$$
+\begin{vmatrix}
+   0 & 1 & 1 & 0 & 1 \newline
+   1 & 0 & 0 & 0 & 0 \newline
+   1 & 0 & 0 & 1 & 1 \newline
+   0 & 0 & 1 & 0 & 1 \newline
+   1 & 0 & 1 & 1 & 0
+\end{vmatrix}
+$$
