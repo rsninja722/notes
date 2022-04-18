@@ -235,12 +235,14 @@ if the domain of the variables are infinite, this process can not be carried out
 ## order of quantifiers
 order matters sometimes
 
-example:
+### examples
  let $$ P(x,y)$$ be the statement $$x + y = y + x$$. Assume that U is the real numbers. Then  $$\forall x \forall y P (x,y)$$ and  $$\forall y \forall x P (x,y)$$ have the same truth value
 
 let $$ Q(x,y)$$ be the statement $$x + y = o$$. Then $$\forall x \exists y Q (x,y)$$ is true, $$\exists y \forall x Q (x,y)$$ is false
 
-example:
+<details>
+<summary>more examples</summary>
+
 let U be the real numbers
 Define $$P(x,y): x \cdot y = 0$$
 - $$\forall x \forall y P (x,y)$$ = False
@@ -259,6 +261,7 @@ english
 - $$\exists x \forall y P (x,y)$$ For every x there is a y for which P(x,y) is true
 - $$\forall x \exists y P (x,y)$$ There is an x for which P(x,y) is true for every y
 - $$\exists y \exists x P (x,y)$$ There is a pair x,y for which P(x,y) is true
+</details>
 
 ## negating nested quantifiers
 $$\lnot \exists x \forall y P(x,y)$$
