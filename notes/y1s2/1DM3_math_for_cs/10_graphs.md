@@ -96,7 +96,7 @@ a loop counts as one for both the in and out degree of its vertex
 
 ### theorem 3
 
-let $$G = (V,E) be a graph with directed edges
+let $$G = (V,E)$$ be a graph with directed edges
 
 $$|E| = \sum_{v\in V} deg^{-}(v) = \sum_{v\in V} deg^{+}(v)$$
 
@@ -150,11 +150,42 @@ for a graph $$G = (V,E)$$ where $$|V| = n$$, an n x n zero-one matrix can be mad
 the adjacency matrix for G would be:
 
 $$
-\begin{vmatrix}
+\begin{bmatrix}
    0 & 1 & 1 & 0 & 1 \newline
    1 & 0 & 0 & 0 & 0 \newline
    1 & 0 & 0 & 1 & 1 \newline
    0 & 0 & 1 & 0 & 1 \newline
    1 & 0 & 1 & 1 & 0
-\end{vmatrix}
+\end{bmatrix}
 $$
+
+## incidence matrices
+
+Let  $$G = (V, E)$$ be an undirected graph with vertices where $$v_1, v_2, \dots v_n$$ and edges $$e_1, e_2, \dots e_m$$. the incidence matrix with respect to the ordering of *V* and *E* is the $$n \times m$$  matrix $$M = [m_{ij}]$$, where
+
+$$m_{ij} = \begin{cases}
+   1 &\text{where edge} e_j \text{is incident with} v_i, \newline
+   0 &\text{otherwise}
+\end{cases}$$
+
+the following graph:
+
+![graph](./media/10_graphs_14.png)
+
+would have the incidence matrix
+
+$$
+\begin{bmatrix}
+   1 & 1 & 0 & 0 & 0 & 0 \newline
+   0 & 0 & 1 & 1 & 0 & 1 \newline
+   0 & 0 & 0 & 0 & 1 & 1 \newline
+   1 & 0 & 1 & 0 & 0 & 0 \newline
+   0 & 1 & 0 & 1 & 1 & 0
+\end{bmatrix}
+$$
+
+## isomorphism of graphs
+
+the simple graphs $$G_1 = (V_1, E_1)$$ and $$G_2 = (V_2, E_2)$$ are isomorphic if there is a one-to-one and onto function *f* from $$V_1$$ to $$V_2$$ with the property that *a* and *b* are adjacent in $$G_1$$ if and only if $$f(a)$$ and $$f(b)$$ are adjacent in $$G_2$$ , for all *a* and *b* in $$V_1$$ . Such a function *f* is called an isomorphism. two simple graphs that are not isomorphic are called nonisomorphic.
+
+for each edge $$(a, b)$$ in $$G$$, if $$f(a) = a$$ and $$f(b) = b$$, the isomorphism means $$G_1 = G_2$$.

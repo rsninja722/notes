@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152717860-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-152717860-1');</script>
     <title>notes</title>
     <meta charSet="utf-8"/>
     <link rel="icon" type="image/gif" href="icon.png"/>
@@ -225,10 +227,16 @@
                 note = note.substring(6, note.length);
                 fetch(note).then(Response => Response.text().then(text => {
 
+                    
                     // find topics and create links
                     var lines = text.split("\n");
                     var topics = [];
                     var ignore = false;
+
+                    if(lines.length > 0) {
+                        document.title = lines[0].replace("# ","");
+                    }
+
                     for (var i=0;i<lines.length;i++) {
                         if(lines[i].startsWith("```")) {
                             ignore = !ignore;

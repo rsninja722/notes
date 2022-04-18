@@ -28,7 +28,7 @@ Let $$A = \lbrace 1, 2, 3, 4\rbrace$$. The ordered pairs in the relation $$R  = 
 
 ### how many relations there are on a set
 
-there are $$2^{|A|^2} relations on a set A 
+there are $$2^{|A|^2}$$ relations on a set A 
 
 ## reflexive relations
 
@@ -77,3 +77,21 @@ The relation R on a set A is transitive iff $$R^n \subseteq R for n = 1,2,3 \dot
  
 - **definition 1** - a relation on a set $$A$$ is called an equivalence relation if it is reflexive, symmetric, and transitive
 - **definition 2** - two elements $$a$$, and $$b$$ that are related by an equivalence relation are called equivalent. the notation $$a ∼ b$$ (read as "a tilde b") is often used to denote that $$a$$ and $$b$$ are equivalent elements with respect to a particular equivalence relation
+- **definition 3** - let *R* be an equivalence relation on a set *A*. the set of all elements that are related to an element a of *A* is called the equivalence class of *a*. The equivalence class of *a* with respect to *R* is denoted by $$[a]_R. <br><br> when only one relation is under consideration, we can write $$[a]$$, without the subscript *R*, for this equivalence class
+    - note: $$[a]_R = \lbrace s | (a,s) \in R\rbrace$$ with $$a \in A \land s \in A$$
+
+## theorem 1
+
+let R be an equivalence relation on a set *A*. these statements for elements *a* and *b* of *A* are equivalent:
+
+1. $$aRb$$ 
+2. $$[a] = [b]$$ 
+3. $$[a] \cap [b] \ne \varnothing$$
+
+## partition of a set
+
+a partition of a set *S* is a collection of disjoint nonempty subsets of *S* that have *S* as their union. In other words, the collection of subsets $$A_i$$, where $$i \in I$$ (where *I* is an index set), forms a partition of *S* if and only if
+
+- $$A_i \ne \varnothing$$ for $$i \in I$$
+- $$A_i \cap A_j = \varnothing$$ when $$i \ne j$$,
+-and $$\bigcup_{i\in I} A_i = S$$

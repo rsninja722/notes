@@ -92,3 +92,24 @@ our attitudes aren't always accurately reflected in our behaviors
 when following social norms or whats expected of us, the behavior doesn't always line up with our attitude
 
 can our behavior change our attitude?
+
+- **cognitive dissonance** - a state of physiological discomfort brought on by conflict between a person's attitudes and their behaviors
+
+an experiment was ran where participants were told the experiment was going to be exciting after going through a boring experiment, participants were asked to tell the next participant that the experiment was exiting
+
+results 
+
+![results](./media/10_influence_of_others_1.png)
+
+attitude | behavior | dissonance
+---|---|---
+thinks it's boring | says it's exciting (lie) | large dissonance
+thinks it's interesting | says it's exiting | reduced dissonance
+
+participants who were paid less had greater dissonance between attitude and behavior, so their attitude shifted to reduce cognitive dissonance
+ 
+participants who were paid more could say they lied just for the money and still believe the experiment was boring
+
+**for cognitive dissonance to take place** there must be insufficient justification for a behavior in conflict with an attitude
+
+- **over justification effect** - the resolution of cognitive dissonance as conflict in behavior and attitude are justified by some external means
