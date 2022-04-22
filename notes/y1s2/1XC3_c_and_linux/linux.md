@@ -3,6 +3,7 @@
 - **cat** - output content to file
 - **cd** - change working directory
 - **cp** - source target - copy a file, target can be a directory or a file, **-r** recursively copy
+- **echo** - `echo [text to print]` or to output to a file `echo [text/other commands] > [file path]` use `>>` to append instead of overwriting
 - **ls** - list directory contents, **-a** hidden files, **-l** more detailed
 - **mkdir** - make directory, **-p ___** create all directories for a given path
 - **mv** source target - move a file
@@ -19,3 +20,19 @@
     - .. parent dir
     - / root
     - ~ home
+
+
+# bash scripting
+
+expression | true when
+---|---
+`string1 = string2` | string1 equals string2
+`string1 != string2` | string1 does not equals string2
+`-r file` | file exists and is readable
+`-w file` | file exists and is writeable
+`-d file` | is a directory
+`-f file` | is a regular file
+`-s file` | is a non empty file (size > 0)
+`expression1 -a expression2` | expression1 and expression2 are both true
+`expression1 -o expression2` | expression1 or expression2 is true
+`! expression1` | expression1 is not true

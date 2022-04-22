@@ -77,7 +77,7 @@ The relation R on a set A is transitive iff $$R^n \subseteq R for n = 1,2,3 \dot
  
 - **definition 1** - a relation on a set $$A$$ is called an equivalence relation if it is reflexive, symmetric, and transitive
 - **definition 2** - two elements $$a$$, and $$b$$ that are related by an equivalence relation are called equivalent. the notation $$a ∼ b$$ (read as "a tilde b") is often used to denote that $$a$$ and $$b$$ are equivalent elements with respect to a particular equivalence relation
-- **definition 3** - let *R* be an equivalence relation on a set *A*. the set of all elements that are related to an element a of *A* is called the equivalence class of *a*. The equivalence class of *a* with respect to *R* is denoted by $$[a]_R. <br><br> when only one relation is under consideration, we can write $$[a]$$, without the subscript *R*, for this equivalence class
+- **definition 3** - let *R* be an equivalence relation on a set *A*. the set of all elements that are related to an element a of *A* is called the equivalence class of *a*. The equivalence class of *a* with respect to *R* is denoted by $$[a]_R$$. <br><br> when only one relation is under consideration, we can write $$[a]$$, without the subscript *R*, for this equivalence class
     - note: $$[a]_R = \lbrace s | (a,s) \in R\rbrace$$ with $$a \in A \land s \in A$$
 
 ## theorem 1
