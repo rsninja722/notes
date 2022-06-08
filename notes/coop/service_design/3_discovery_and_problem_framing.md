@@ -118,4 +118,21 @@ personas represent a group of people with shared interests, common behaviors, or
 
 #### compiling research reports
 
-reports bring together all the information about the research process, methods, research data, data visualizations, and insights in one place
+reports bring together all the information about the research process, methods, research data, data visualizations, and insights in one place.
+
+it's a good idea to share research outcomes with participants and incorporate their feedback into deliverables
+
+- research process - present research process in an accessible way, highlight what has been done to ensure data/insights are robust and relevant
+- key insights/main findings - should be the most crucial points to get across, key insights should be built on all types of data
+- visualizations - visually summarize findings in an easy to understand and appealing way (examples: personas, journey maps, system maps)
+- raw data - include media, statistics, and metrics to support insights
+
+## north star vision
+
+a statement that defines the problem and presents what the result of the solution should be
+
+it should:
+
+- articulate the problem that the organization is trying to solve
+- present a visualizable end state
+- resonate with internal and external stakeholders
