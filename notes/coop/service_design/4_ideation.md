@@ -64,3 +64,30 @@ idea mashup us best used at the early stages of ideation and when participants f
 ### speedy 8's
 
 getting participants to quickly sketch 8 ideas within 8 minutes, helps prevent people from second guessing their ideas
+
+1. Provide your participants with a sheet of paper, markers, and sticky dots. Ask them to draw eight boxes on their sheet of paper. (For remote sessions, people can do this at home, then upload a photo of their paper for the presentation portion.) 
+2. Set a timer for eight minutes, and ask them to sketch eight quick ideas for how to solve the problem.
+3. You should now have a lot of diverse ideas. Some of these will not be feasible, and some might be duplicates. The next stage is to reduce the ideas to focus on those that have the most potential.
+4. Ask people to pick their top three ideas, and give them six more minutes to sketch them out further.
+5. Ask each person to present their top two ideas back to the group. Through the process of fleshing out their ideas a bit further, they should be able to identify two that have more potential than the others.
+6. Once everyone has presented, ask the participants to vote on their two favourite ideas using the sticky dots. Usually, there will be a cluster of clearly preferred ideas that emerge.
+
+speedy 8's is best used when solutions have a visual or physical element
+
+### journey mapping
+
+journey maps can be used not just for discovery, but also for ideation. create a journey map or start with an existing one, and look for points of frustrations and critical issues that might need to be changed. generate solutions and integrate them into the journey map
+
+## co-creation
+
+the process of including diverse perspectives in interactive sessions to develop ideas.
+
+include people from all areas of service, for example:
+
+- customers
+- employees
+- prospective buyers
+- suppliers/competitors
+- industry influencers
+
+the goal is to approach issues from a new perspective and come away with better products and processes
