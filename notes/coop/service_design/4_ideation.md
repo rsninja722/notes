@@ -91,3 +91,28 @@ include people from all areas of service, for example:
 - industry influencers
 
 the goal is to approach issues from a new perspective and come away with better products and processes
+
+the objectives when running a co-creation session are:
+- Warming up (activities to get participants in the right mind frame)
+- Listening (for example a readout of the research findings and insights)
+- Generating (e.g., ideation activities, prototyping, capturing ideas)
+- Refining and prioritizing (ranking options, voting, making decisions)
+- Presenting and discussing (sharing ideas, discussing options, role playing)
+
+co-creation sessions can build on each other, one session might focus on ideation, while this next focuses on presenting and developing the best ideas.
+
+### diversity and inclusion
+
+promotes greater participation and creatibity
+
+diversity involves understanding that each individual is unique and recognizing individual differences. these can be along the dimensions of race, ethnicity, gender, sexual orientation, socio-economic status, age, physical abilities, religious beliefs, political beliefs, or other ideologies. diversity can also refer to differences in experience
+
+inclusion refers to the behaviours and social norms that ensure that people feel welcome. not only is inclusion crucial for diversity efforts to succeed; creating an inclusive culture will make design sessions more productive.
+
+some strategies to promote diversity and inclusion
+
+1. Include representatives from all impacted stakeholders within your project
+2. Encourage diversity within the core project team
+3. Create spaces that guarantee everyone’s voice is heard
+4. Include diverse representation and inclusive language
+5. Set norms and ground rules that align to values of diversity and inclusion
