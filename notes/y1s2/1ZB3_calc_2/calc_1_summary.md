@@ -182,7 +182,7 @@ function | anti derivative
 ---|---
 $$f(x)$$ | $$F(x)$$
 $$x^n\enspace (x \ne 0)$$ | $$\frac{1}{n+1}(x^{n+1})+C$$
-$$\frac{1}{x}$$ | $$\ln |x|+C$$
+$$\frac{1}{x}$$ | $$\ln{|x|}+C$$
 $$e^x$$ | $$e^x+C$$
 $$a^x \enspace (a > 0)$$ | $$\frac{a^x}{\ln{a}}+C$$
 $$\cos{x}$$ | $$\sin{x}+C$$

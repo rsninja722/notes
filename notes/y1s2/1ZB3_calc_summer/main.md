@@ -1,0 +1,1 @@
+lectures: tuesday, thursday from 7-10pm
