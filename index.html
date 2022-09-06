@@ -1,86 +1,177 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152717860-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-152717860-1');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152717860-1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-152717860-1');</script>
     <title>notes</title>
-    <meta charSet="utf-8"/>
-    <link rel="icon" type="image/gif" href="icon.png"/>
+    <meta charSet="utf-8" />
+    <link rel="icon" type="image/gif" href="icon.png" />
     <link rel="stylesheet" href="atom-one-dark.css">
     <style>
-        @font-face { 
+        @font-face {
             font-family: "OpenDyslexic3";
             src: url("./OpenDyslexic3-Regular.woff") format("woff");
         }
-        body {background-color: var(--back);color: var(--text);margin: 0;}
-        h1,h2,h3,h4,h5,h6 {color: var(--title);}
-        h2 {margin-top: 7px;margin-bottom: 7px;}
-        h3 {margin-top: 6px;margin-bottom: 6px;}
-        h4 {margin-top: 4px;margin-bottom: 4px;}
-        h5 {margin-top: 3px;margin-bottom: 3px;}
-        h6 {margin-top: 2px;margin-bottom: 2px;}
-        h1 {border-bottom: 2px solid #1e4976;text-align: center;margin-top: 8px;margin-bottom: 8px;}
-        b, strong {color: var(--bold);font-weight: normal;}
-        pre {color: var(--pre);margin: 0.5em}
-        a {color: var(--pre);text-decoration: none;}
-        a:hover {color:rgb(238, 227, 206);}
-        p {margin-top: 2px;margin-bottom: 2px;}
-        p,ul,li,td {line-height: var(--lineHeight);margin: var(--space)}
-        code {letter-spacing: normal;word-spacing: normal;font-family: Consolas, monaco, monospace;}
+
+        body {
+            background-color: var(--back);
+            color: var(--text);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--title);
+        }
+
+        h2 {
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        h3 {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        h4 {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        h5 {
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        h6 {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        h1 {
+            border-bottom: 2px solid #1e4976;
+            text-align: center;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        b,
+        strong {
+            color: var(--bold);
+            font-weight: normal;
+        }
+
+        pre {
+            color: var(--pre);
+            margin: 0.5em
+        }
+
+        a {
+            color: var(--pre);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(238, 227, 206);
+        }
+
+        p {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        p,
+        ul,
+        li,
+        td {
+            line-height: var(--lineHeight);
+            margin: var(--space)
+        }
+
+        code {
+            letter-spacing: normal;
+            word-spacing: normal;
+            font-family: Consolas, monaco, monospace;
+        }
+
         button {
-            color: #6df4d0; 
-            background-color: #001e3c; 
-            border: 1px solid #1e4976; 
-            border-radius: 2px; 
+            color: #6df4d0;
+            background-color: #001e3c;
+            border: 1px solid #1e4976;
+            border-radius: 2px;
             margin: 5px;
             padding: 3px 10px 3px 10px;
             box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
         }
+
         summary {
             color: var(--summary);
             -webkit-touch-callout: none;
             -webkit-user-select: none;
-            -khtml-user-select: none; 
-            -moz-user-select: none; 
-            -ms-user-select: none; 
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             user-select: none;
         }
+
         summary:hover {
             cursor: pointer;
         }
-        button:hover {background-color: #073058;}
-        button:active {background-color: #004c99;}
+
+        button:hover {
+            background-color: #073058;
+        }
+
+        button:active {
+            background-color: #004c99;
+        }
+
         table {
             box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
             border-collapse: collapse;
             background: var(--table);
-            border-radius:6px;
+            border-radius: 6px;
             border: 1px solid #1e4976;
-            overflow:hidden;
+            overflow: hidden;
             padding: 1px;
         }
+
         thead tr {
-            background:#292b56;
+            background: #292b56;
         }
+
         tbody tr {
             border-bottom: 1px dotted #163455;
         }
+
         tbody tr:last-child {
             border-bottom: none;
         }
+
         th {
             color: #6df4d0;
             padding-left: 5px;
             padding-right: 5px;
         }
+
         td {
             border-left: 1px solid #1e4976;
             border-right: 1px solid #1e4976;
             padding: 4px;
         }
+
         td:first-child {
             border-left: none;
         }
+
         td:last-child {
             border-right: none;
         }
@@ -91,22 +182,45 @@
             border-radius: 3px;
         }
 
-        ::-webkit-scrollbar {width: 10px;height: 10px;}
-        ::-webkit-scrollbar-track {background: #1e1e1e; }
-        ::-webkit-scrollbar-thumb {background: #797979ab; }
-        ::-webkit-scrollbar-thumb:hover {background: #b8b8b8ab; }
-        .katex {color: var(--math);}
-        .katex .base, .katex .strut {padding: 2px;}
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #797979ab;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b8b8b8ab;
+        }
+
+        .katex {
+            color: var(--math);
+        }
+
+        .katex .base,
+        .katex .strut {
+            padding: 2px;
+        }
+
         span.mord.text {
             padding-left: 0.3em;
             padding-right: 0.3em;
         }
-        .katex .base, .katex .strut {
+
+        .katex .base,
+        .katex .strut {
             padding: 2px 0 2px 0;
         }
+
         .hljs {
             background-color: var(--code) !important;
-            letter-spacing: normal; 
+            letter-spacing: normal;
             word-spacing: normal;
             width: fit-content;
             border-radius: 5px;
@@ -118,7 +232,12 @@
             color: #388b2d;
         }
 
-        .H1,.H2,.H3,.H4,.H5,.H6 {
+        .H1,
+        .H2,
+        .H3,
+        .H4,
+        .H5,
+        .H6 {
             padding-left: 1em;
             border-left: 1px solid #1e4976;
         }
@@ -127,10 +246,54 @@
             border-radius: 5px;
             box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
         }
-        
+
+        #nav {
+            position: absolute;
+            top: 0;
+            right: -26em;
+            width: 25em;
+            transition: right 0.3s ease-in-out;
+            background-color: var(--table);
+            border: 1px solid var(--text);
+        }
+
+        #nav .toggle-btn {
+            position: absolute;
+            top: 0;
+            right: 27em;
+            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .toggle-btn span {
+            width: 25px;
+            height: 5px;
+            border-radius: 2px;
+            background: var(--text);
+            display: block;
+            margin-top: 4px;
+        }
+
+        #nav.active {
+            right: 0;
+        }
+
+        .toggle-btn.active + span {
+            transform: rotate(45deg);
+            top: 8px;
+        }
+
+        .toggle-btn.active + span + span + span {
+            transform: rotate(-45deg);
+            top: -8px;
+        }
+
+        .toggle-btn.active + span + span{
+            opacity: 0;
+        }
     </style>
     <link rel="stylesheet" href="katex/katex.min.css">
 </head>
+
 <body>
     <div id="links">
         <h2>notes</h2>
@@ -138,296 +301,18 @@
     <a id="top"></a>
     <div id="postDiv" style="padding: 10px;"></div>
     <a href="#top" style="position: fixed;right:10px;bottom: 10px;">top</a>
+    <div id="nav">
+        <div class="toggle-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <script src="marked.js"></script>
     <script src="highlight.min.js"></script>
     <script src="katex/katex.min.js"></script>
     <script src="katex/katexAuto.js"></script>
-    <script defer>
-        
-        styleNames = [
-            "clean",
-            "contrast",
-            "blinding"
-        ];
-        styles = [
-            {
-                "--text": "#c7d6ff",
-                "--line-height": "normal",
-                "--title": "#6d86ff",
-                "--bold": "#47f3a4",
-                "--pre": "#e6c07b",
-                "--summary": "#454bff",
-                "--back": "#090f16",
-                "--math": "#41f0c1",
-                "--space": "0px",
-                "--code": "#08172a",
-                "--table": "#040609",
-                "font-family": "Helvetica,Arial,sans-serif",
-                "letter-spacing": "normal",
-                "word-spacing": "normal"
-            },
-            {
-                "--text": "#ffffff",
-                "--line-height": "140%",
-                "--title": "#ffb730",
-                "--bold": "#6aff44",
-                "--pre": "#e6c07b",
-                "--summary": "#14a800",
-                "--back": "#030508",
-                "--math": "#3cffae",
-                "--space": "-6px",
-                "--code": "#08172a",
-                "--table": "#040609",
-                "font-family":"OpenDyslexic3",
-                "letter-spacing": "-0.5px",
-                "word-spacing": "-5px"
-            },
-            {
-                "--text": "#2a415a",
-                "--line-height": "normal",
-                "--title": "#0b5394",
-                "--bold": "#2fa1da",
-                "--pre": "#c37e00;",
-                "--summary": "#454bff",
-                "--back": "#ffffff",
-                "--math": "#003003",
-                "--space": "0px",
-                "--code": "#08172a",
-                "--table": "#eeeeee",
-                "font-family": "Helvetica,Arial,sans-serif",
-                "letter-spacing": "normal",
-                "word-spacing": "normal"
-            }
-        ];
-        style = 0;
-
-        function switchTheme() {
-            style = (style+1 > styles.length-1 ? 0 : style+1);
-
-            setTheme(style);
-
-            localStorage.theme = style;
-        }
-
-        function setTheme(style) {
-            root = document.documentElement.style;
-
-            keys = Object.keys(styles[style]);
-            for(var i=0;i<keys.length;i++) {
-                root.setProperty(keys[i], styles[style][keys[i]]);
-            }
-
-            document.getElementById("styleButton").innerText = `theme: ${styleNames[style]}`;
-        }
-
-        fetch("files.json").then(Response => Response.json().then(json => {
-            var fileStructure = json
-            var note = window.location.search;
-            if (note.endsWith(".md")) {
-                note = note.substring(6, note.length);
-                fetch(note).then(Response => Response.text().then(text => {
-
-                    
-                    // find topics and create links
-                    var lines = text.split("\n");
-                    var topics = [];
-                    var ignore = false;
-
-                    if(lines.length > 0) {
-                        document.title = lines[0].replace("# ","");
-                    }
-
-                    for (var i=0;i<lines.length;i++) {
-                        if(lines[i].startsWith("```")) {
-                            ignore = !ignore;
-                        }
-
-                        if (ignore) {
-                            continue;
-                        }
-
-                        if(lines[i].startsWith("#")) {
-                            topicName = lines[i].replace(/[\r#]/g,"").replace(" ","");
-                            linkName = topicName.replace(/\s/g,"");
-                            topics.push(`${lines[i].split("#").slice(0,lines[i].split("#").length-2).map(x => "\t").join("")}- <a href="#${linkName}">${topicName}</a>`)
-                            lines.splice(i,0,"");
-                            lines.splice(i,0,`<a id="${linkName}"></a>`);
-                            lines.splice(i,0,"");
-                            i+=3;
-                        }
-                    }
-                    
-                    lines.splice(1,0,"</details>");
-                    for(var i=topics.length;i>-1;i--) {
-                        lines.splice(1,0,topics[i]);
-                    }
-                    lines.splice(1,0,"");
-                    lines.splice(1,0,"<summary>topics</summary>");
-                    lines.splice(1,0,"<details>");
-                    lines.splice(1,0,"");
-
-                    postDiv.innerHTML += marked(lines.join("\n"));
-                    // highligh code
-                    [].forEach.call(document.getElementsByTagName("pre"),e=>hljs.highlightElement(e));
-                    // highlight true/false T's and F's
-                    [].forEach.call(document.getElementsByTagName("td"),e=>e.style.color = e.innerHTML === "T" ? "#0beb0b" : (e.innerHTML === "F" ? "#e94c4c" : ""));
-
-                    // render LaTeX
-                    renderMathInElement(document.getElementById("postDiv"),{delimiters: [
-                            {left: '$$', right: '$$', display: false},
-                            {left: '$', right: '$', display: false},
-                            {left: '\\(', right: '\\)', display: false},
-                            {left: '\\[', right: '\\]', display: true}
-                        ],
-                    });
-
-                    renderMathInElement(document.body, {
-          // customised options
-          // • auto-render specific keys, e.g.:
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          // • rendering keys, e.g.:
-          throwOnError : false
-        });
-
-                    children = document.getElementById("postDiv").children;
-                    
-                    var stack = [];
-                    var tags = ["H1","H2","H3","H4","H5","H6"];
-                    var mainDiv = document.createElement("div");
-                    
-                    // debugger
-
-                    // for(var i=0;i<children.length;i++) {
-                    while(document.getElementById("postDiv").children.length > 0) {
-                        curChild = document.getElementById("postDiv").children[0]
-                        tagName = curChild.tagName;
-                        if(!tags.includes(tagName)) {
-                            if(stack.length == 0) {
-                                mainDiv.appendChild(curChild);
-                            } else {
-                                stack[stack.length-1].appendChild(curChild);
-                            }
-                            continue;
-                        }
-
-                        if(stack.length == 0) {
-                            div = document.createElement("div");
-                            div.className = tagName;
-                            stack.push(div);
-                            stack[stack.length-1].appendChild(curChild);
-                            continue;
-                        }
-
-                        tagLevel = tagName.slice(1,2);
-                        curLevel = parseInt(stack[stack.length-1].className.slice(1,2));
-
-                        // smaller header
-                        if(tagLevel > curLevel) {
-                            div = document.createElement("div");
-                            div.className = tagName;
-                            stack.push(div);
-                        // same size header
-                        } else if (tagLevel == curLevel) {
-                            if(stack.length == 1) {
-                                mainDiv.appendChild(stack.pop());
-                            } else {
-                                stack[stack.length-2].appendChild(stack.pop())
-                            }
-
-                            div = document.createElement("div");
-                            div.className = tagName;
-                            stack.push(div);
-                        // bigger header
-                        } else {
-                            
-                            while(parseInt(stack[stack.length-1].className.slice(1,2)) >= tagLevel) {
-                                if(stack.length == 1) {
-                                    mainDiv.appendChild(stack.pop());
-                                    break;
-                                } else {
-                                    stack[stack.length-2].appendChild(stack.pop())
-                                }
-                            }
-
-                            div = document.createElement("div");
-                            div.className = tagName;
-                            stack.push(div);
-                        }
-
-                        if(stack.length == 1) {
-                            mainDiv.appendChild(curChild);
-                        } else {
-                            stack[stack.length-2].appendChild(curChild);
-                        }
-                    }
-                    while(stack.length > 0) {
-                        if(stack.length == 1) {
-                            mainDiv.appendChild(stack.pop());
-                        } else {
-                            stack[stack.length-2].appendChild(stack.pop());
-                        }
-                    }
-
-                    document.getElementById("postDiv").innerHTML = "";
-                    document.getElementById("postDiv").appendChild(mainDiv);
-
-                    document.body.removeChild(document.getElementById("links"));
-                    
-                    link = window.location.hash.replace("#","");
-                    if(link.length > 0) {
-                        document.getElementById(link).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-                    }
-                }));
-            } else {
-                var dir = note.length == 0 ? "notes/" : note.substring(6, note.length);
-                var keyOrder = dir.split("/");
-                var notes = fileStructure;
-                for(var i of keyOrder) {
-                    if(i.length > 0) {
-                        notes = notes[i];
-                    }
-                }
-                var keys = Object.keys(notes);
-                for(var i=0;i<keys.length;i++) {
-                    var span = document.createElement("span");
-                    var a = document.createElement("a");
-
-                    a.href = `?note=${dir}${keys[i]}${keys[i].endsWith(".md")?"":"/"}`;
-                    a.innerText = "/" + keys[i];
-                    a.style = "font-size: 20px";
-
-                    span.appendChild(a);
-                    document.getElementById("links").appendChild(span);
-                    
-                    var br = document.createElement("br");
-                    document.getElementById("links").appendChild(br);
-                }
-            }
-            
-            button = document.createElement("button");
-            button.onclick = function () {
-                search = window.location.search;
-                link = search.endsWith(".md") ? search.substring(0,search.lastIndexOf("/")+1) : search.substring(0,search.length-1).substring(0,search.substring(0,search.length-1).lastIndexOf("/")+1);
-                window.location.search = link;
-            } 
-            button.innerText = "△";
-            document.body.insertBefore(button,document.getElementById("links"));
-            
-            var button = document.createElement("button");
-            button.id = "styleButton";
-            button.onclick = switchTheme;
-            button.innerText = "theme: clean";
-            document.body.insertBefore(button,document.getElementById("links"));
-
-            style = localStorage.theme | 0;
-            setTheme(style);
-
-        }));
-    </script>
+    <script src="main.js" defer></script>
 </body>
+
 </html>
