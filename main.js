@@ -234,7 +234,7 @@ fetch("files.json").then((Response) =>
                     
                     document.body.removeChild(document.getElementById("links"));
                     
-                    tree(fileStructure,document.getElementById("nav"));
+                    tree(fileStructure,document.getElementById("nav"),"?note=");
 
                     link = window.location.hash.replace("#", "");
                     if (link.length > 0) {
@@ -268,7 +268,7 @@ fetch("files.json").then((Response) =>
                 document.getElementById("links").appendChild(br);
             }
 
-            tree(fileStructure,document.getElementById("nav"));
+            tree(fileStructure,document.getElementById("nav"),"?note=");
         }
 
         button = document.createElement("button");
@@ -278,6 +278,7 @@ fetch("files.json").then((Response) =>
             window.location.search = link;
         };
         button.innerText = "△";
+        button.style.marginLeft = "3.5em";
         document.body.insertBefore(button, document.getElementById("links"));
 
         var button = document.createElement("button");
@@ -295,20 +296,29 @@ function toggleMenu() {
     document.getElementById("nav").classList.toggle("active");
 
     document.getElementById("nav").children[0].classList.toggle("active");
-    // [].forEach.call(document.getElementById("nav").children[0].children,e => e.classList.toggle("active"));
 }
 
-function tree(treeObject, parentElement) {
+function tree(treeObject, parentElement, dir) {
+    console.log(dir)
     for(let i in treeObject) {
         let div = document.createElement("div");
-        let text = document.createElement("span");
-
-        text.innerText = i;
-
-        div.appendChild(text);
-
+        
         if(typeof treeObject[i] === "object" && treeObject[i] !== null) {
-            tree(treeObject[i],div);
+            let text = document.createElement("span");
+            text.innerText = "⮟ " + i;
+            text.onclick = e => {
+                e.target.innerText = (e.target.innerText.slice(0,1) === "⮟" ? "⮞" : "⮟") + e.target.innerText.slice(1);
+                [].forEach.call(e.target.parentElement.children, el => {if(el.tagName === "DIV") {el.style.display = el.style.display === "none" ? "block" : "none"}});
+            }
+            div.appendChild(text);
+            tree(treeObject[i],div, dir + (dir === "?note=" ? "" : "/") + i);
+        } else {
+            // var dir = note.length == 0 ? "notes/" : note.substring(6, note.length);
+            // text.href = `?note=${dir}${keys[i]}${keys[i].endsWith(".md") ? "" : "/"}`;
+            let a = document.createElement("a");
+            a.innerText = i;
+            a.href = dir + "/" + i;
+            div.appendChild(a);
         }
 
         parentElement.appendChild(div);

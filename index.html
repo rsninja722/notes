@@ -84,11 +84,11 @@
         }
 
         p {
-            margin-top: 2px;
-            margin-bottom: 2px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            line-height: var(--lineHeight);
         }
 
-        p,
         ul,
         li,
         td {
@@ -142,6 +142,8 @@
             border: 1px solid #1e4976;
             overflow: hidden;
             padding: 1px;
+            margin-top: 4px;
+            margin-bottom: 4px;
         }
 
         thead tr {
@@ -254,31 +256,41 @@
         #nav {
             position: absolute;
             top: 0;
-            right: -26em;
+            left: -26em;
             width: 25em;
-            transition: right 0.3s ease-in-out;
-            background-color: var(--table);
-            border: 1px solid var(--text);
+            transition: left 0.3s ease-in-out;
+            /* background-color: var(--table); */
+            /* border: 1px solid var(--text); */
+            box-shadow: 3px 0px 1px -2px rgb(0 0 0 / 40%), 2px 0px 2px 0px rgb(0 0 0 / 30%), 1px 0px 5px 0px rgb(0 0 0 / 25%);
+            backdrop-filter: blur(6px);
+            background-color: #090f1677;
+            overflow-wrap: break-word;
         }
 
         #nav .toggle-btn {
             position: absolute;
-            top: 0;
-            right: 27em;
+            top: 4px;
+            left: 26.5em;
             transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            margin: 0;
+        }
+
+        #nav div {
+            margin-left: 1em;
         }
 
         .toggle-btn span {
             width: 25px;
-            height: 5px;
+            height: 4px;
             border-radius: 2px;
-            background: var(--text);
+            background: #001e3c;
             display: block;
-            margin-top: 4px;
+            margin-top: 3px;
+            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
         }
 
         #nav.active {
-            right: 0;
+            left: 0;
         }
 
         .toggle-btn.active + span {
@@ -306,11 +318,11 @@
     <div id="postDiv" style="padding: 10px;"></div>
     <a href="#top" style="position: fixed;right:10px;bottom: 10px;">top</a>
     <div id="nav">
-        <!-- <div class="toggle-btn" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div> -->
+            <div class="toggle-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
     </div>
     <script src="marked.js"></script>
     <script src="highlight.min.js"></script>

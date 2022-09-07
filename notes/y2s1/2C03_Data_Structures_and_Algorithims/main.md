@@ -1,5 +1,9 @@
 # 2C03 Data Structures and Algorithms
 
+goal is to gain a general understanding, not learn specific implementation
+
+language: JAVA :(
+
 - **classes** 
     - lecture  - Monday 8:30
     - tutorial - Tuesday 2:30
@@ -24,6 +28,7 @@ Final Exam | 42%
 All evaluations in this course are individual in nature: no group work will be assigned. You may discuss the general ideas and concepts of the course material with your classmates However, your assignments/labs must be your individual effort. You may consult other sources, such as textbooks, but all such sources must be documented. Failure to do so will result in academic dishonesty charges.
 
 Week # | Week of | Topic | Assignment | Assignment Due | Test
+---|---|---|---|---|---
 1 | Sep. 4 | Course overview & Fundamentals I - NO TUTORIALS
 2 | Sep. 11 | Fundamentals II | 1 | Oct. 2| 
 3 | Sep. 18 | Sorting I |||
