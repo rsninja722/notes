@@ -2,6 +2,8 @@
 
 first two sessions of the course are in person, rest are online
 
+- **circuit diagram site** - [https://www.circuit-diagram.org/editor/](https://www.circuit-diagram.org/editor/)
+
 - **instructor** - Todor Stoyanov [stoyanov@mcmaster.ca](stoyanov@mcmaster.ca)
 
 - **Office hours** - Mon 12:00-14:00, Wed 09:00-10:00 via MS Teams

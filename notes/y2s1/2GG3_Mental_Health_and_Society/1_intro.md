@@ -61,7 +61,7 @@ disease is a misnomer
 
 encourages us to think about mental beyond disorders
 
-### the individual and society
+## the individual and society
 
 if we reject the notion that "mental health" is merely a quality possessed by an individual, how might our ideas about mental health change?
 
@@ -92,7 +92,7 @@ instances of poor societal mental health:
 
 the idea could be used by people like politicians and those with the ability to enact change on the world to escape responsibility
 
-### the course...
+## the course...
 
 approaches mental health/illness broadly, focusing more on these concepts as broad spectrums of experience, rather than binary states.
 
@@ -101,3 +101,104 @@ asks how mental health as concepts, has come to play such a central role in our 
 explore a tension: are mental health troubles the result of individual problems or broader social issues? should we try to "fix" the individual? can we "fix" society?
 
 investigates why our mental health seems to be getting collectively worse?
+
+## the rise of mental health
+
+how often are things discussed in reference to mental health?
+
+one of the most powerful concepts of our time. shapes polices and regulations everywhere, even though mental health is loosly defined
+
+what allowed this to come into existance?
+
+from 1800s onwards much of humanty has been wrapped up in urbanization and industrialization <- new phenomenon creating new social problems
+
+there is no evedence of addictions from 150 years ago
+
+people seek solutions/expanations for these new problems, find mental health
+
+- secularization de-emphasized the soul; the mind takes its place 
+
+religion is on the decline
+
+science replaced religion as a conceptual authority. religion used to explain why people would act in ways we didn't want, used to be able to blame the soul, now we blame the mind
+
+new political trends put greater priority for the wellbeing of the everyday citizens
+
+1900s: remarkable and destructive change (WW, colonization, holocaust, partitioning of south asia)
+
+- what are the impacts on people, how would we examine
+- how would we prevent these things in the future (after ww2 looked into the pshycology of conflict and war)
+
+WHO (1946) with a new definition of health: not just a lack of desise/injury, instead a more encompasing complete state of physical mental and social state
+
+governments starts thinking of how to prevent mental health problems as a society
+
+concerns are social, responses are largely individual
+
+## the pssy-disciplines and psy-complex
+
+psychiatry and psychology - concerned with "the mental" and how to regulate it. these professions have only grown in size over the last 150 years
+
+- how do we make people better? (problem solving, happiness)
+
+- amount of workers in this field has grown as well as the scope as their work, weighing in on more aspects on life
+
+persistant grief dissorder (scope widening to grief)
+
+psy-complex: tools and knowledge of psy-discepline
+- journals, conferences, professional associations, institutions, tools (scales, tests, theraputic modalitys, RX)
+- what is "true" within the complex may not be true outside
+
+the epistomelogical world created by ^ is only one way of thinking of the world
+
+knowledge and tools have spread far beyond their psy-professions into many other realms (metal health in schools)
+
+## beyond healing
+
+they argue that the psy-complex is not about healing but enforcing a certain type of social order 
+
+psy disciplines as powerful social actors, setting acceptable limits of behavior and providing techniques/rationale to regulate behaviour
+
+
+power is not a top down heirarchy in the modern world
+
+power is excersised at the level of  the poputation, we excersize power, often without knowing we are doing so. at the micro level
+
+psy-complex exerts power with its influence, not with the intention of excersizing power
+
+its not an evil conspirency, there is no single entity excerting power, the power is diffuse
+
+- **DSM** - list of mental disorders and their symptoms, constantly changes, reflecting how society changes
+
+the DSM is a tool that disceminates the psy-complex, we think of it as science and therefore as a factual authority
+
+science is a tool used by humans, it is not a force on its own. has immense rhetorical value
+
+medicalization - causing more facets of human existence are coming to be understood through a prisim of the categorical approach
+
+there has been a push for 
+
+this knowledge has filtered down to lay people, tiktokers will learn this information, and present it to the general populus in a lay way
+
+the idea of mental health can be used to condition behavior (a 14 year old on their phone, not a shadow government)
+
+## theraputic tools
+
+lay activities: diet, medication, yoga, exercise, art, music, positive thinking, pets, etc.
+
+assisted individual interventions
+
+psyco therapy
+
+TODO add
+
+thought of not only as tools of healing, but serve as a way to regulate behavior
+
+how can we treat society as a whole?
+
+
+ 
+1. defining mental health is complex
+2. social in nature
+3. how it has become so promenate
+4. why do we have a mental health crises in a society of abundance
