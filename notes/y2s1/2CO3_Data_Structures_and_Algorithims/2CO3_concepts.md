@@ -1,4 +1,4 @@
-# map of concepts
+# map of concepts for 2CO3 data structures and algorithims  
 
 ## introduction to data structures and algorithims
 
