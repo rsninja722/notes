@@ -147,7 +147,7 @@
         }
 
         thead tr {
-            background: #292b56;
+            background: var(--table-head);
         }
 
         tbody tr {
@@ -279,7 +279,7 @@
 
         #nav .toggle-btn {
             position: absolute;
-            top: 4px;
+            top: 2px;
             left: 26.5em;
             transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
             margin: 0;
@@ -293,6 +293,7 @@
             width: 25px;
             height: 4px;
             border-radius: 2px;
+            border: 1px solid #1e4976;
             background: #001e3c;
             display: block;
             margin-top: 3px;
@@ -316,6 +317,35 @@
         .toggle-btn.active + span + span{
             opacity: 0;
         }
+
+        .lds-ellipsis {display: inline-block;width: 80px;height: 80px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+        .lds-ellipsis div {position: absolute;top: 33px;width: 13px;height: 13px;border-radius: 50%;background: #fff;animation-timing-function: cubic-bezier(0, 1, 1, 0);}
+        .lds-ellipsis div:nth-child(1) {left: 8px;animation: lds-ellipsis1 0.3s infinite;}
+        .lds-ellipsis div:nth-child(2) {left: 8px;animation: lds-ellipsis2 0.3s infinite;}
+        .lds-ellipsis div:nth-child(3) {left: 32px;animation: lds-ellipsis2 0.3s infinite;}
+        .lds-ellipsis div:nth-child(4) {left: 56px;animation: lds-ellipsis3 0.3s infinite;}
+        @keyframes lds-ellipsis1 {0% {transform: scale(0);}100% {transform: scale(1);}}
+        @keyframes lds-ellipsis3 {0% {transform: scale(1);}100% {transform: scale(0);}}
+        @keyframes lds-ellipsis2 {0% {transform: translate(0, 0);}100% {transform: translate(24px, 0);}}
+
+
+        :root {
+            --text: #c7d6ff;
+            --line-height: normal;
+            --title: #6d86ff;
+            --bold: #47f3a4;
+            --pre: #e6c07b;
+            --summary: #454bff;
+            --back: #090f16;
+            --math: #41f0c1;
+            --space: 0px;
+            --code: #08172a;
+            --table: #040609;
+            --table-head: #292b56;
+            font-family: Helvetica,Arial,sans-serif;
+            letter-spacing: normal;
+            word-spacing: norma;
+        }
     </style>
     <link rel="stylesheet" href="katex/katex.min.css">
 </head>
@@ -325,6 +355,9 @@
         <h2>notes</h2>
     </div>
     <a id="top"></a>
+
+    <div id="loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
     <div id="postDiv" style="padding: 10px;"></div>
     <a href="#top" style="position: fixed;right:10px;bottom: 10px;">top</a>
     <div id="nav">

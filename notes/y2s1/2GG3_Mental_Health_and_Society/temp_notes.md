@@ -1,3 +1,5 @@
+# lecture 1
+
 # thinking critically about mental health and illness
 
 mental health focuses mainly on thoughts, mood, and behavior
@@ -102,6 +104,8 @@ explore a tension: are mental health troubles the result of individual problems 
 
 investigates why our mental health seems to be getting collectively worse?
 
+# lecture 2
+
 ## the rise of mental health
 
 how often are things discussed in reference to mental health?
@@ -200,5 +204,117 @@ how can we treat society as a whole?
  
 1. defining mental health is complex
 2. social in nature
-3. how it has become so promenate
+3. how it has become so prominent
 4. why do we have a mental health crises in a society of abundance
+
+# lecture 3
+
+# from madness to mental illness
+
+over past 250 years idea has shifted from "madness" to "mental illness" 
+
+madness was a limited term, narrow range of things that would make someone mad
+
+mental illness is more broad, many of thoses with mental illness would not be considered mad
+
+- "illness" suggests something a physician can/should remedy
+
+central questions
+
+- has mental illness been on the rise and why?
+- how did mental healthcare become professionalized? (dont think of professionals as always truthful or moral)
+- what are the concequences of moving to a very medical apporach
+
+not a story of progress, more so a story of change
+
+be wary of "scientific progress"
+
+## pre institutional history
+
+hard to compare the past to the preset 
+
+all that we can say is that in the distant past, people described behaviours that sound like our mental health problems
+
+hippocrates and galen placed madness in body, yet many contempories saw other expplanations, there was no monopoly on the explanation
+
+wards for the mad existed in the early islamic world, not fully medicalized
+
+medival europe explained: grounded in the body, divine, supernatural, spiritual
+
+- monastary stays, burning at the stake, bloodletting, family care, whipping, etc.
+
+dont overgeneralize, both compasionate and cruel, medical and non-medical repsones existed
+
+- trepidation - drilling a hole in the skull
+    - seen all over the world in the past
+    - can help if brain is swelling 
+    - might have been used to "release demons"?
+
+## bethlem (bedlem) hospital
+
+means chaos, destruction
+
+established in the 14th century, heavy use of restraints
+
+TODO bedlem poem
+
+why did madness come to be feared?
+
+
+## moralizing madness
+
+TODO moralizing madness: hogarth's 18th century "A Rakes Progress
+
+tom rake loses a bunch of money, and ends up in bedlem
+
+bedlam opened as a tourist site, regarded as a freak show
+
+people would sneak in booze, sexually assault patients
+
+1770 tourism was banned because the crowds could not be controlled
+
+highlights important trends
+
+- stigmatization of mad individuals
+- TODO
+
+many justified madness as punishment, said the person invited upon them selves
+
+## vagrancy act 1714
+
+differentiated "pauper (poor) lunatics" from "vagrants, sturdy beggars, rouges"
+
+- charged local authories w/ apprehending individuals who "By lunacy, or otherwise, are furiously mad and dangerous to be permitted to go abroad"
+- such inividuals were considered not just bad, but were dangerous to be in public, and should be seperated from society, no punishment or treatment, just confinement
+
+a recognition that the mad were not to blame for their problems
+
+recognition of mad vs other devience
+
+also says the government to try to predict dangerousness of individuals
+
+## rise of private madhouses
+
+new basis for confinement sparked "trade in lunacy"
+
+anyone with property could be payed by the government/privately to store a lunatic
+
+custodial care, not treatment
+
+consequences?
+
+- incentive to keep costs low
+- became awful places to be
+- concerns over wrongful confinement
+
+## 1774 act for regulating madhouses (60 years later)
+
+- madhouses must be inspected and licensed by royal college of physicians
+
+- now a legal basis for linking medical field with madness, medicalization of madness
+
+gives a legitimacy
+
+- involuntary confinement possible only after a doctor and justice of the peace signed off on it
+
+- state now involved in regulating madness beyond dangerousness

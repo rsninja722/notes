@@ -22,98 +22,16 @@ _____________________
 
 ## linked lists
 
-- **singly linked list** - linear collection of nodes
-    - also just called a list
-    - each node has a value and a pointer to the next node
-    - **head** - starting node
-    - **tail** - last node, points to null
-    - traversable in only one direction
-
-```
-___________     ___________     ________
-|4|pointer| ->  |2|pointer| ->  |7|NULL|
-‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾
-```
-
-- **doubly linked list** - linked list in which each node contains a pointer to its previous node in addition to the next node
-    - traversible in both directions
-    - example of spending a little memory for a large time save
-
-```
-_____________     _____________     _____________
-|NULL|4|next| <-> |prev|2|next| <-> |prev|7|NULL|
-‾‾‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾‾‾‾‾‾
-```
-
-### linked list operations
-
-- **Search** - search for a node with data value $k$
-- **insert** - given a pointer to a node
-
-TODO
-
-### list searching
-
-we linearly search a node with the data value k by traversing list L
-
-- **traversing** - follow the node pointers form node to node in a list to accomplish some goal such as finding a specific element
-
-```
-listSearch(L,k)
-    x = L.head
-    while x != NIL and x.key != k
-        x = x.next
-    return x
-```
-
-### list insertion
-
-inserts a new node $x$ t the head of the list L (prepends to the list)
-
-```
-listInsert(L,x)
-    x.next = L.head
-    if L.head != NIL
-        L.head.prev = x
-    L.head = x
-    x.prev = NIL
-```
-
-L.head is the address of the first element of L
-
-x, when assigned to something is the address of $X$
-
-### list deletion
-
-delete a node x from the list L
-
-```
-listDelete(L,x)
-    if x.prev != NIL
-        x.prev.next = x.next
-    else 
-        L.head = x.next
-    if x.next != NIL
-        x.next.prev = x.prev
-```
-
-*the algorithim assumes we have already found the node
-
-### circular linked list
-
-TODO
-
-```
-         \/--------------------------------------------
-   _____________     _____________     _____________  |
--- |tail|4|next| <-> |prev|2|next| <-> |prev|7|head| --
-|  ‾‾‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾‾‾‾‾‾  
----------------------------------------------^
-```
+[linked lists](?note=notes\concepts\engineering\linked_lists.md)
 
 ## linked lists vs arrays
 
-TODO
+linked lists | arrays
+---|---
+better for dynamic data sets | better for static data sets
+traverse nodes for indexing $O(n)$ | calculate a memory offset for indexing $O(1)$ 
+expansion requires allocating new nodes | expansing may require copying array to a new chunk in memory
+deletion and insertion are faster, only needs pointer reassignment | deletion and insertion are more expensive, need to shift data  
 
 ## abstract data types
 
@@ -121,6 +39,44 @@ mathematical model for data type
 
 (OO programming)
 
+TODO
+
 ## application programming interface (API)
 
+- **API** - application programming interface (API), interface between differnet parts of a computer program 
+    - simplifies the implrementation and maintinence of software 
+    - used to specify the behaviour of an abstract data type
+
 ## bags stacks and queues
+
+data structure involving a collection of objects, that control the means for accessing the data
+
+TODO add pictures
+
+### bags
+
+- **bag** - collection of items with the following properties
+    - *add* - adds an item to the bag
+    - *iterate* - iterate through collected items (order not specified, could be random or arbitrary but deterministic)
+    - *isEmpty* - returns true if the bag has no items, false otherwise
+    - *size* - counts the number of items in the bag
+    - unordered
+    - no removal
+
+### queue
+
+- **FIFI queue** - collection where elements are drawn in the same order they were added with the following properties
+    - *enqueue* - adds an item to a queue
+    - *dequeue* - removes the next item from the queue
+    - *isEmpty* - boolean function which returns true of the queue is empty 
+    - *size* - number of items in the queue
+
+### stack
+
+- **stack/pushdown stack** - a last in first out queue, the most recently added items are retrieved, contains the following properties
+    - push - adds an item on the top of the stack
+    - pop -removes an item from the top of the stack
+    - isEmpty - returns tgrue if the stack is empty
+    - size - number of items in the stack
+
+### implementation

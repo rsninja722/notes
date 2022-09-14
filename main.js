@@ -12,6 +12,7 @@ styles = [
         "--space": "0px",
         "--code": "#08172a",
         "--table": "#040609",
+        "--table-head": "#292b56",
         "font-family": "Helvetica,Arial,sans-serif",
         "letter-spacing": "normal",
         "word-spacing": "normal"
@@ -28,6 +29,7 @@ styles = [
         "--space": "-6px",
         "--code": "#08172a",
         "--table": "#040609",
+        "--table-head": "#292b56",
         "font-family": "OpenDyslexic3",
         "letter-spacing": "-0.5px",
         "word-spacing": "-5px"
@@ -44,6 +46,7 @@ styles = [
         "--space": "0px",
         "--code": "#08172a",
         "--table": "#eeeeee",
+        "--table-head": "#2fa1da",
         "font-family": "Helvetica,Arial,sans-serif",
         "letter-spacing": "normal",
         "word-spacing": "normal"
@@ -232,50 +235,64 @@ fetch("files.json").then((Response) =>
                     document.getElementById("postDiv").innerHTML = "";
                     document.getElementById("postDiv").appendChild(mainDiv);
                     
+                    // [].forEach.call(document.getElementsByTagName("note"),e => {
+                    //     var id = e.id;
+                        
+                    //     var frame = document.createElement("iframe");
+                    //     frame.style.height = "fit-content";
+
+                    //     frame.href = window.location.origin + window.location.pathname + "?note=" + findFileLink(id, fileStructure);
+                    //     e.parentElement.insertBefore(frame,e.nextElementSibling);
+                    //     e.parentElement.removeChild(e);
+                    // });
+
+                    document.body.removeChild(document.getElementById("loader"));
+                    
                     document.body.removeChild(document.getElementById("links"));
                     
                     tree(fileStructure,document.getElementById("nav"),"?note=");
-
+                    
                     link = window.location.hash.replace("#", "");
                     if (link.length > 0) {
                         document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
                     }
-
+                    
                 })
-            );
-        } else {
-            var dir = note.length == 0 ? "notes/" : note.substring(6, note.length);
-            var keyOrder = dir.split("/");
-            var notes = fileStructure;
-            for (var i of keyOrder) {
-                if (i.length > 0) {
-                    notes = notes[i];
+                );
+            } else {
+                var dir = note.length == 0 ? "notes/" : note.substring(6, note.length);
+                var keyOrder = dir.split("/");
+                var notes = fileStructure;
+                for (var i of keyOrder) {
+                    if (i.length > 0) {
+                        notes = notes[i];
+                    }
                 }
+                var keys = Object.keys(notes);
+                for (var i = 0; i < keys.length; i++) {
+                    var span = document.createElement("span");
+                    var a = document.createElement("a");
+
+                    a.href = `?note=${dir}${keys[i]}${keys[i].endsWith(".md") ? "" : "/"}`;
+                    a.innerText = "/" + keys[i];
+                    a.style = "font-size: 20px";
+                    
+                    span.appendChild(a);
+                    document.getElementById("links").appendChild(span);
+                    
+                    var br = document.createElement("br");
+                    document.getElementById("links").appendChild(br);
+                }
+                document.body.removeChild(document.getElementById("loader"));
+                
+                tree(fileStructure,document.getElementById("nav"),"?note=");
             }
-            var keys = Object.keys(notes);
-            for (var i = 0; i < keys.length; i++) {
-                var span = document.createElement("span");
-                var a = document.createElement("a");
-
-                a.href = `?note=${dir}${keys[i]}${keys[i].endsWith(".md") ? "" : "/"}`;
-                a.innerText = "/" + keys[i];
-                a.style = "font-size: 20px";
-
-                span.appendChild(a);
-                document.getElementById("links").appendChild(span);
-
-                var br = document.createElement("br");
-                document.getElementById("links").appendChild(br);
-            }
-
-            tree(fileStructure,document.getElementById("nav"),"?note=");
-        }
-
-        button = document.createElement("button");
-        button.onclick = function () {
-            search = window.location.search;
-            link = search.endsWith(".md") ? search.substring(0, search.lastIndexOf("/") + 1) : search.substring(0, search.length - 1).substring(0, search.substring(0, search.length - 1).lastIndexOf("/") + 1);
-            window.location.search = link;
+            
+            button = document.createElement("button");
+            button.onclick = function () {
+                search = window.location.search;
+                link = search.endsWith(".md") ? search.substring(0, search.lastIndexOf("/") + 1) : search.substring(0, search.length - 1).substring(0, search.substring(0, search.length - 1).lastIndexOf("/") + 1);
+                window.location.search = link;
         };
         button.innerText = "△";
         button.style.marginLeft = "3.5em";
@@ -299,7 +316,6 @@ function toggleMenu() {
 }
 
 function tree(treeObject, parentElement, dir) {
-    console.log(dir)
     for(let i in treeObject) {
         let div = document.createElement("div");
         
@@ -323,4 +339,19 @@ function tree(treeObject, parentElement, dir) {
 
         parentElement.appendChild(div);
     }
+}
+
+function findFileLink(file, fileStructure) {
+    for(let i in fileStructure) {
+        if (i === file) {
+            return i;
+        } else if(typeof fileStructure[i] === "object" && fileStructure[i] !== null) {
+            var search = findFileLink(file, fileStructure[i]);
+            if (search) {
+                return i + "/" + search;
+            }
+        }
+    }
+
+    return;
 }
