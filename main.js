@@ -134,25 +134,25 @@ fetch("files.json").then((Response) =>
                     // render LaTeX
                     renderMathInElement(document.getElementById("postDiv"), {
                         delimiters: [
-                            { left: "$$", right: "$$", display: false },
+                            { left: "$$", right: "$$", display: true },
                             { left: "$", right: "$", display: false },
                             { left: "\\(", right: "\\)", display: false },
                             { left: "\\[", right: "\\]", display: true }
                         ]
                     });
 
-                    renderMathInElement(document.body, {
-                        // customised options
-                        // • auto-render specific keys, e.g.:
-                        delimiters: [
-                            { left: "$$", right: "$$", display: true },
-                            { left: "$", right: "$", display: false },
-                            { left: "\\(", right: "\\)", display: false },
-                            { left: "\\[", right: "\\]", display: true }
-                        ],
-                        // • rendering keys, e.g.:
-                        throwOnError: false
-                    });
+                    // renderMathInElement(document.body, {
+                    //     // customised options
+                    //     // • auto-render specific keys, e.g.:
+                    //     delimiters: [
+                    //         { left: "$$", right: "$$", display: true },
+                    //         { left: "$", right: "$", display: false },
+                    //         { left: "\\(", right: "\\)", display: false },
+                    //         { left: "\\[", right: "\\]", display: true }
+                    //     ],
+                    //     // • rendering keys, e.g.:
+                    //     throwOnError: false
+                    // });
 
                     children = document.getElementById("postDiv").children;
 

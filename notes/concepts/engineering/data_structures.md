@@ -79,4 +79,3 @@ TODO add pictures
     - isEmpty - returns tgrue if the stack is empty
     - size - number of items in the stack
 
-### implementation

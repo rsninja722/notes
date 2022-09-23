@@ -2,10 +2,11 @@
 
 laws:
 
+- **substitution** - [$\frac{E}{E[v \coloneqq  F]}$](?note=notes\concepts\engineering\substitution.md)
 - **reflexivity** - $x = x$
 - **symmetry** - $(x = y) = (y = x)$
 - **transitivity** - $\frac{X = Y, Y = Z}{X = Z}$
-- **Leibnitz rule of interference** - $\frac{X \equiv Y}{E[z \coloneqq X] \equiv E[z \coloneqq Y]}$
+- **Leibnitz rule of interference** - $\frac{X \equiv Y}{E[z \coloneqq X] \equiv E[z \coloneqq Y]} \forall E$
     
 
 <details>
