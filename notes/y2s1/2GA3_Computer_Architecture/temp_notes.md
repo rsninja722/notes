@@ -1,5 +1,9 @@
 # temp notes
 
+# ssh
+
+ssh nickolij@cs2ga3.cas.mcmaster.ca
+
 ## adding binary numbers
 
 add the same as decimal numbers
@@ -191,7 +195,258 @@ binary | unsigned int | sign magnitude int | ones complement int | twos compleme
 ### casting and filling integers
 
 
-# ssh
+## fetch execute cycle
 
-ssh nickolij@cs2ga3.cas.mcmaster.ca
+```
+instructionPointer = start of program
+repeat forever
+    instruction = fetch (memory[instructionPointer])
+    execute instruction
+    instructionPointer++
+```
 
+instructions are represented as 
+
+## high level programming
+
+a programmer uses a *high level language* to write source code, then uses a tool to translate the source code into the representation that a preprocessor expects
+
+```
+source code
+\/
+[preprocessor]
+\/
+preprocessed source code
+\/ 
+[compiler]
+\/
+assembly code
+\/
+[assembler]
+\/
+reallocated object code
+\/
+[linker] <-- [object code in libraries]
+\/
+binary object code
+```
+
+## instruction set architecture
+
+- **instruction set architecture** - set of operations the hardware recognizes, operations are called instructions
+    - defines:
+        - available instructions 
+        - what the instructions do, pre/post conditions
+        - number of operands, operand encoding, instruction encoding, result
+
+most common ISAs: x86, arm, RISC-V
+
+## assembly languages
+
+- low-level programming level
+- intermediate step to machine instructions
+- direct mapping
+- human readable, some shortcuts, macros
+
+## types of instructions
+
+- ALU operations
+- Register access
+- Memory access
+- Program flow control
+
+## branching
+
+- moving the instruction pointer to a different location in program
+- necessary for conditionals, loops, ect.
+
+```
+instructionPointer = start of program
+repeat forever
+    instruction = fetch (memory[instructionPointer])
+    tmp = instructionPointer + 1
+    execute instruction
+    instructionPointer = tmp
+```
+
+# tutorials 5
+
+topic: pipelines, hazards, instructions
+
+covered previously (to review):
+- pipelining
+- hazards
+- documenting + minimizing stalls
+- reading + encoding instructions
+
+## hazards for pipelines
+
+may cause **stalls** which delay the pipeline
+
+3 main types
+
+- **data hazard** - waiting for data from earlier instruction
+- **control hazard** - when the instruction fetched is no the one needed (example: don't know what instruction to fetch for branch until branch is evaluated)
+- **structural hazard** - when a resource required is needed at the same time by more than one instruction
+
+### data forwarding 
+
+one way to avoid stalls  
+
+using data right after calculation, before its sent to memory
+
+### pipeline stalls
+
+sometimes we need to stall the pipeline, which creates **bubbles**
+
+the bubble will pass through the rest of the pipe
+
+# registers
+
+- types
+    - general-purpose
+    - floating point
+    - instruction pointer
+    - comparison operation
+
+when working with registers, the workflow is typically as follows:
+
+1. load data from memory to register
+2. perform ALU operation
+3. store result from register to memory
+
+# assembly
+
+## branching example
+
+```assembly
+#loop label
+lop: add r1 r2  #increment counter
+     memo r3 r7 #perform some operation
+     cmp r2 r4  #compare to invariant
+     bne loop   #conditional branch
+#main label
+main:           #goes on
+
+```
+
+
+
+# von neumann vs harvard architecture
+
+## von neumann
+
+- offers more flexibility
+- can result in memory bottlenecks
+
+```markdown
+processor <-> memory
+/\            /\
+\/            \/
+input/output facilities 
+
+```
+
+## harvard architecture
+
+- less susceptible to bottle necks
+- offers better security
+- rigid separation between the types of memory
+
+```markdown
+
+instruction memory
+/\
+\/
+processor <-> memory
+/\            /\
+\/            \/
+input/output facilities 
+
+```
+
+# processors
+
+- **processor** - a digital device that can perform multi-step computation
+
+there are a few main types of processors:
+
+- **fixed logic** - function fixed in hardware
+    - example: adder
+- **selectable logic** - can choose one of several fixed functions
+- **parametrizable logic** - parameters govern computation
+    - example: sin(a+xb)
+- **programmable logic** - takes a list of instructions provided at runtime 
+
+there are also different categories for processors
+
+- **co-processors** - dedicated function
+    - fixed/selectable logic 
+    - used to implement a dedicated function, instructed by a general purpose processor, not usual used in isolation
+- **microcontrollers** - direct hardware control
+    - uses programmable logic
+    - example: control for an elevator
+- **embedded systems** - dedicated hardware
+    - used for real-time operating systems
+    - used on a device with a single purpose
+    - example: coffee machine with a touch screen
+- **general purpose** - interchangeable and compatible for multiple systems
+
+```markdown
+fixed
+   ____
+a-|    |
+  |    |-c
+b-|____|
+
+selectable
+   ____
+a-|    |
+  |    |-c
+b-|____|
+    |
+    x (selects function)
+
+parametrizable
+   ____
+a-|    |
+  |    |-c
+b-|____|
+   | | |
+   x y x
+```
+
+# real-time operating systems
+
+- **real-time operating system** - an operating system which guarantees instructions will be executed within a set amount of time
+
+# processor structure
+
+a processor contains:
+
+- ALU and other components/engines
+- local storage
+- controller - governs execution
+- external interface
+- internal connections
+
+```
+            ----------
+     ______ controller _______
+    |       ----------        | control lines
+    |        |    |           |         ^
+ ---------  ---  ---------- -------    internal connections
+ registers  ALU  components engines
+ (storage)  ---  ---------- -------
+ ---------   |        |      |   
+     |      -------------------
+     |_____      bus            < internal connections
+            -------------------
+                    |
+            ------------------
+            external interface
+            ------------------
+            | | | | | | | | |
+```
+
+#

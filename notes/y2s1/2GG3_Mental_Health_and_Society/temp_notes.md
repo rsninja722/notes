@@ -110,15 +110,15 @@ investigates why our mental health seems to be getting collectively worse?
 
 how often are things discussed in reference to mental health?
 
-one of the most powerful concepts of our time. shapes polices and regulations everywhere, even though mental health is loosly defined
+one of the most powerful concepts of our time. shapes polices and regulations everywhere, even though mental health is loosely defined
 
-what allowed this to come into existance?
+what allowed this to come into existence?
 
-from 1800s onwards much of humanty has been wrapped up in urbanization and industrialization <- new phenomenon creating new social problems
+from 1800s onwards much of humanly has been wrapped up in urbanization and industrialization <- new phenomenon creating new social problems
 
-there is no evedence of addictions from 150 years ago
+there is no evidence of addictions from 150 years ago
 
-people seek solutions/expanations for these new problems, find mental health
+people seek solutions/explanations for these new problems, find mental health
 
 - secularization de-emphasized the soul; the mind takes its place 
 
@@ -131,15 +131,15 @@ new political trends put greater priority for the wellbeing of the everyday citi
 1900s: remarkable and destructive change (WW, colonization, holocaust, partitioning of south asia)
 
 - what are the impacts on people, how would we examine
-- how would we prevent these things in the future (after ww2 looked into the pshycology of conflict and war)
+- how would we prevent these things in the future (after ww2 looked into the phycology of conflict and war)
 
-WHO (1946) with a new definition of health: not just a lack of desise/injury, instead a more encompasing complete state of physical mental and social state
+WHO (1946) with a new definition of health: not just a lack of disease/injury, instead a more encompassing complete state of physical mental and social state
 
 governments starts thinking of how to prevent mental health problems as a society
 
 concerns are social, responses are largely individual
 
-## the pssy-disciplines and psy-complex
+## the psy-disciplines and psy-complex
 
 psychiatry and psychology - concerned with "the mental" and how to regulate it. these professions have only grown in size over the last 150 years
 
@@ -147,13 +147,13 @@ psychiatry and psychology - concerned with "the mental" and how to regulate it. 
 
 - amount of workers in this field has grown as well as the scope as their work, weighing in on more aspects on life
 
-persistant grief dissorder (scope widening to grief)
+persistent grief disorder (scope widening to grief)
 
-psy-complex: tools and knowledge of psy-discepline
-- journals, conferences, professional associations, institutions, tools (scales, tests, theraputic modalitys, RX)
+psy-complex: tools and knowledge of psy-discipline
+- journals, conferences, professional associations, institutions, tools (scales, tests, therapeutic modality, RX)
 - what is "true" within the complex may not be true outside
 
-the epistomelogical world created by ^ is only one way of thinking of the world
+the epistemological world created by ^ is only one way of thinking of the world
 
 knowledge and tools have spread far beyond their psy-professions into many other realms (metal health in schools)
 
@@ -161,14 +161,14 @@ knowledge and tools have spread far beyond their psy-professions into many other
 
 they argue that the psy-complex is not about healing but enforcing a certain type of social order 
 
-psy disciplines as powerful social actors, setting acceptable limits of behavior and providing techniques/rationale to regulate behaviour
+psy disciplines as powerful social actors, setting acceptable limits of behavior and providing techniques/rationale to regulate behavior
 
 
-power is not a top down heirarchy in the modern world
+power is not a top down hierarchy in the modern world
 
-power is excersised at the level of  the poputation, we excersize power, often without knowing we are doing so. at the micro level
+power is exercised at the level of  the population, we exercise power, often without knowing we are doing so. at the micro level
 
-psy-complex exerts power with its influence, not with the intention of excersizing power
+psy-complex exerts power with its influence, not with the intention of exercising power
 
 its not an evil conspirency, there is no single entity excerting power, the power is diffuse
 
@@ -589,6 +589,14 @@ some theories as to how the rise in pharmaceuticalisation came to be
     - psy-discplines facilitate self-governence by transforming people into calculable, measureable beings, constantly working to ensure our feelings and behaviours stay witin paticualr boundries
     - neoliberalsim promots self responsibilization, society isn't a thing, everything is up to the individual
 
+    TODO define neoliberalism / make ideology note
+
+        states will disinsentivise certain things and interfere with free markets
+
+    TODO lassez-faire
+
+    political and economic philosophy - structures our world now - assumes that the best way to resolve human problems is through the creation of markets (competing forces) competition in markets leads to the best results, for the markets to work the best there should be no regulation/interfearance, government should be small so it does not interfear with natural market forces. there is no such thing as society, we are indepentent individual actors who will maximize our own potential and own good, which will benifit everyone
+
 # experts of the soul 
 
 Joseph Stalin coined the term "engineers of the soul" to refer to writers under his government
@@ -620,3 +628,585 @@ the relation between expert and client is structured by a hierarchy of wisdom
 
 
 psy-diciplines - psychology, psychiatry, psychoanalysis, and psychotherapies
+
+# lecture 4
+
+## into the $21^{st}$ centry
+
+during 21st centry, psyences continue to entrence in daily life
+
+past 25 years, push in psy diciplines to move away from illness, to focusing on "maximizing human potential"
+
+more overt in their role in pushing people further
+
+governence over psychological life increasingly perfomed by lay people
+
+lay people begin to take a central role, lay people starting to use the terminology without the psydiscipline or science invlovled
+
+medicalization done by lay people
+
+some scholars tie it to the rise in neoliberalism
+
+TODO define positivism
+
+## questions
+
+- how can we explain the emergence of positive psychology?
+- how has positive psychology 
+
+TODO
+
+## arival of cognitive behavioral treatment
+
+- roots in early 20th centry behaviourism (watson, pavlov, skinner), itself informed by positivism
+    - psychology should adapt the scientific method only focus on things that can be observed and classified (ex. behaviour), not on introspection
+    - behaviour is fundementally learned
+
+- mid 20th centry recognized human behaviour is filtered through thoughts
+    - ellis: the distress people feel is often not from the event itself, but from the toughts about the event
+    - beck: *automatic thoughts* are identifiable and treatable
+
+- by 21st centry, treatment methods emerge with an emphisis on reshaping thoughts, CBT is the leading modality 
+
+## emergence of positive psychology
+
+- as cbt is replacing psychoanalysis, in the 1990's, Seligman had an "epiphany" - his grumpyness arrises from his thought proccess, thoughts arrise first which lead to behaviour
+- elected as head of american psychological assotiation said psychology must turn away from "the negative" and from peoples issues, to study the "universal science of happiness"
+- Csikszentmihayli - interested in how people that survived WW2 in the face of terrible events could remain optimistic and happy
+    - flow - people got into a proccess and could focus on the positives
+
+## key tenets of positive pshycology
+
+- emotions are learned because they come from thoughts, thoughts are also learned
+    - inverts freudian theouy that feelings/emotions drive thoughts (themselves product of life experiences)
+- positive outlook is good for you, negative is bad, happiness has a looping "multiplier effect"
+- positivity can improve all aspects of life
+- strive to augment individual's ability to prevent mental illness
+    - TODO
+    - mental illess can be kept at bay if people thought the right things
+
+- manefesting
+
+## explosion of positive psychology
+
+- started as a movement in an acedemic industry, expanded through media, academia, and professional practice
+- clinitions started to integrated positive psychology into their work
+- claim that there was a "science" of happiness, optimism is good for virtually all aspects of life
+    - "healing effects" - 
+        - fredrickson: positivity undoes damaged  that negativity causees to the cardio system
+        - segerstrom: positive thoughts boost the immune system
+- discorse infiltrates everyday practice
+    - gratitude excercises, TODO
+- new wellness industry TODO
+
+## mindfulness
+
+- roots of buddhism
+- rise due to hippies, simplified for mass consumption
+- used by positive psychology as a teachable technique to gaurd against mental health problems, increase life satisfaction, aid learning
+- need to be hyper aware of our feelings, always being aware of negative emotions/thoughts
+- scolarly critiques
+    - reveley: imparts self responsibilization, aligns closely with neoliberalism
+    - barker: despite non-medical practice, reinforces dirstress and discomfort as illness which necessitates treatment.
+
+## the happiness turn
+
+- the happiness turn - intellectual and cultural shift
+- ahmed: happiness used to be a cinceptual ideal, not an achiveable state, something people worked towards. that vision gave way to the idea that hapiness can be concretely achived, identified and measured, hapiness should always be persued. created a perscription for happiness
+- discourse of happiness is everywhere, norms of what is good, desireable, healthy, and prosperous
+- not pursuing happiness is a sign that the individual is a failure
+- "other" types of hapiness are often not discussed, even looked down upon ("guilty" pleasures)
+- ultimately happiness is a choice
+
+## decontextualizing happiness
+
+- many scholarly critiques
+- "unviversal truths" about the "science of hapiness" often grounded in culture of individualism
+- take hapiness out of the social context, assumptions about hapiness only apply to some with the luxury of their circumstance 
+
+**we have to insolate ourselves against misforture, instead of changing the environment around us**
+
+- positive psychology is a response to and enabler of neoliberalism
+
+## science of positive psychology
+
+critiques:
+
+- perez-alvarez: positive psychology isises the "autority" of science to mask its underlying ideological character
+- wilson: mindfulness uses the rhetoric of science to shift expertise from religion/philosophy to the medical realm
+
+stock put in science uncritically, not much stock put in religion
+
+- positive psychology tautologies "those who are more satisfied with there life are more happy" - circular argument
+
+## happiness as imperative
+
+- cabanas: happiness presented as the logical consequece of following the "science" of happiness functions as a set of "ought tos". failing to achive happiness is thought of as a sign of individual malfunction
+- held: "tyranny of positive attitude" be happy or face the concequences
+    - obscures the "benifits of the negative" (anxiety could be useful if there is something to be anxious about)
+- ehrenreich ("smile or die" book)
+
+## further critiques
+
+- assumes how we feel can be measured biologically, and predicted on a universal human being
+
+- critics: wellness industry preys upon insecurites regarding being well, happiness understood as an imperative
+- what we assign as "proper" sources of happiness may police certain activities
+
+## conclusion
+
+- by 21st century, psy-disciplines focused on psyche as learned, rooted in cognitive frameworks
+    - feelings start as thoughts
+- arrival of positive psychology reflects and perpetuates a broader trend wherein human beings imagined as measureable, caterizable
+- claims scientific domain over wider array of human feelings, thoughts, and behaviour
+TODO
+
+# Launching a new movement for mental health
+
+Despite the great attention western countries pay to the mind and human consciousness in philosophy and the arts, disturbances of mental health remain not only neglected but also deeply stigmatised across our societies
+
+western world defineitely trys
+
+the WHO has promised to tackle mental health, but has not provided adequate funding / failed to establish any sustainable systems
+
+responsibility should lie with world bank, country donors, foundations, researh funding bodies, and professional assotiations
+
+
+## Horton: Launching a New Movement for Mental Health:
+- mental health is a neglected aspect of human well-being, intimately connected with many other conditions of global health importance
+- resources for mental health are inadequate, insufficient, and inequitably distributed
+- there is already a strong evidence base on which to scale up mental health service
+- most low-income and middle- income countries currently devote far too few resources to mental health
+- there are critical lessons to learn from past successes and failures — for:
+    - political leadership and priority setting
+    - increasing financial support
+    - decentralising mental health services
+    - integrating mental health into primary care
+    - increasing health workers trained in mental health
+    - strengthening public health perspectives in mental health
+- any call to action demands a clear set of indicators to measure progress at country level
+
+## clark: medicalization of global health
+- mental health issues now make up 13% of the total disease burden
+    - 70% of the burden lies in low and middle-income countries
+- Movement for Global Mental Health 
+    - focuses on treatment gap, aims to scale-up health services and treatment coverage for mental disorders in all countries   
+- as mental health is globalising, it brings much needed attention to the issue of mental health, but also creates conditions for disease mongering and medicalization
+
+
+- **medicalization** - application of a biomedical model that sees health as freedom from disease
+
+- arguments
+ - shared biology unifies experiences across cultures
+    - counter: disease categories are socially and historically constructed is shown by the fact that homosexuality was a classified mental illness until 198
+    - cross-cultural evidence shows how depression in the medicalized fashioning may in others be ‘thinking too much’, ‘fall of heart or mind’, or sadness, or depending on the social circumstances may be distress due to displacement, conflict, injustice, or social suffering
+- financial insentive: International Federation of Pharmaceutical Manufacturers’ Association highly commended WHO for its leadership and affirmed the pharmaceutical industry’s active engagement in the ‘fight against mental and neurological disorders’ with over 200 compounds said to be in research and development 
+-  mental health pharmaceutical market valued in the 10s of billions - hundreds of dollars per person
+
+- research in India suggested, medication treatment may be more acceptable to individuals with common mental health issues than non-pharmaceutical approaches such as talking therapies, especially in a group environment 
+- medical labels can be double edged
+
+# lecture
+
+## critiques 3
+
+- summerfield - worked in sub-saharn africa, critical of global mental health unit
+    - global mental health won't work, as its based on concepts that aren't meaningful for those being treated in some contries/culturs/communities
+    - in some cultures, not talking about things is a strategy to forget and move on from difficult circumstances, so trying to run talk therapy for PTSD, removes agency by telling people "you do have PTSD, and here is what to do about it"
+        - not saying that the PTSD doesn't exist, say that trying to enforce a specific treatment could cause more harm than good
+    
+- jain and jadhav - community mental health services set up across the global south are isolated from the community, and dissconnect TODO
+
+- when a botswonina learned about ADHD, they said "isnt this just describing young boys?"
+
+## critiques 4
+
+- other areas of the world are interpreted as untapped markets
+- global mental health movement sometimes frames some mental ilnesss as leading to lower ecenomic productivity
+
+## critiques 5
+
+- **imperialism** - a policy of extending a collective's power and influence through diplomacy or military force
+
+- GMH is a form of psychiatric imperialism
+- Kirmayer - global south is effectively prevented from contributing to knowledge production of this "global science"
+    - most scientific confreces/journals are in english, and come with costs
+    - GMH claims that the science contains universal truths even though it is only developed in northamerica and western eruope
+- summerfield - GMH workers should be tought of as the new religous missionaires - modernizing, educating, civilizing
+    - the notition of a group "laking mental health literacy" assumes they should think like us, and we don't need to understand their ideas
+- others cultures are framed as an "obstacle for understanding"
+- not only is a framework for understanding suffering being globalized, the idea of what it means to be a human, and person hood itself is also globalized
+
+## decolonizing mental health unit
+
+those who reject absolutist/universalist approach have pushed against biological-reductionist perspectives
+
+TODO
+
+"ethnopsychiatries"
+
+## conclusions
+
+- global mental health movement aims to atalyze interest and funding for mental health, seeing mental health porblems as a barrier to development and the source of hidden suffering 
+
+TODO
+
+# lecture 6: place, space, and mental health
+
+## recall about mental health
+
+- "mental health" is a more expansive concept than the absence of a diagnosable disorder
+    - defined by feeling good and functioning well <- inherently social
+
+## social determinants of health
+
+the factors that are beyond those which are internal and intreinsic to a person.
+
+non-medical factors that influence health outcomes
+
+"conditions in which people are born, grow, live, work, and age ... shaped by the distribution of money, power, and resources."
+
+- examples
+    - race - to racialization
+    - gender
+    - culture
+    - community
+    - access to
+        - healthcare
+        - education
+        - housing
+        - food and water
+
+**racialized** - how a social proccess perscribes a person value
+
+## space versus place
+
+space is physical
+
+place is the meaning perscribed to a place 
+
+### example
+
+high score on surveys for poor mental health in a housing estate space that had a negative stigma associated with it, a few years later, the scores were much better - after cleaning up the area and fixing the space
+
+demonstrates that mental halth can be greatly affected by the space and place a person inhabits
+
+## urbanization
+
+TODO
+
+### economic stratification
+
+class impacts mental health
+
+## social causation
+
+### neighborhoods 
+
+urban environment itseft can be a sourcc of poor mental health
+
+- perceived disorder in one's surroundings may increase feelings of pwerlessness and unpreditability, sorce for more substance abouse.
+- residents moving in and out offten might limit community and social ties
+- TODO
+
+### violence
+
+- amoung the key drivers of poor mental health in urban eznvironments
+- 
+
+TODO
+
+### sprawl
+
+suburbinization causes change to peoples' mental health
+
+- some proposed benifits:
+    - more greenery
+    - less noise
+    - closer proximity to nature
+- some proposed negatives
+    - isolation
+    - time spent commuting subtracts from availible time
+    - less walking
+        - impacts social interection
+- suburbs impact urban areas
+    - jobs, schools, and stores, move to suburbs, leaving behind urban environment
+
+### housing
+
+spaces also matter
+
+- upper floors of high rises are associated with greater neruotiscism and social isolation
+- poorer housing associated with greater social stigma/negative evaluation
+- TODO
+
+### homelesness and homefulness
+
+- having a home or not signigicly 
+
+TODO
+
+# nature
+
+# greenspace
+
+- can be mitigated if parts are considerd dangourus 
+
+## conclusuions
+
+we can think of mental health as if people have something or not, or a variable that all people have that relates to a sense of ontrol, feeling of belonging, social connection, and having purpose in one's life
+
+social determinants have tremendous importance in shaping mental health outcomes
+
+its not that things that intrinsic to the person don't matter, its that only focusing on that is a limited way of thinking
+
+# gender, sexuality, and mental health
+
+## key questions
+- do men and women experience similar rates of mental pathology
+    - is mental illness  TODO
+- how might distress be genderd
+- TODO
+
+## hysteria
+
+one of the most studied issues
+
+thought to be age old, with ever changing symptomology including:
+- fits
+- losing ability to use limbs
+- angry, iritable
+- exusted
+- losing ability to see
+- highly emoitional
+
+- micale: a dramatic metaphor for everything that men found mysterious TODO
+
+in ancient world:
+
+the womb was blamed "a roming uterus"
+
+- indicative of tendency to somatize womens mental health TODO - define
+- gender norms (and violation) thought to be linked to mental health
+
+medeval/early modern times:
+
+- explanations sometimes centered on witchcraft and demons
+
+post industrial revolution
+
+- exmplained hysteria as a consequence of women's constitutional weakness
+- shifting symptomology reflected "unpredictable nature" of women's bodies
+- common treatment for hystareia - "hysterical paroxysms" (orgasms through vibration, vibrators originally marketed as a health treatment)
+
+20th centry
+
+- freud and others reimagined hysteria along psychological lines
+
+- term "hysteria" replaced by "conversion disorder"
+
+### uses of hysteria
+
+- imagined symptoms and causes reflect shifting ideas about gender, including the behaviours "appropriate" for women
+- both "pathologized and protected" women - by pathologizing, frames as something beyond one's control - freeing from some responsability (pathologize - frame as illness)
+
+- symptoms be understood as a form of resistance against gender norms (suffragettes, educated women)
+- could be seen as a medicalization of a male defensive response to femal assertiveness
+- a (subconscious) strategy for the powerless? example: hysterical leg paralysis (thought of as a protest or resistance of whats expected because of the lack of power)
+
+hysteria as evidence of
+- how biological difference can be weponized to explain mental health problems 
+- how expressions of distress themselves can be gendered
+- how gender norms structure understnadings of mental illness (example: bipolar personality dissorder)
+
+## symptom repertoire
+
+set of recognizeable determinates for a condition
+
+## abuse of psychology for political means
+
+those who spoke out against the state were diagnosed - their ideas were labeled 
+
+## gender and mental health imbalances
+
+- intopunitive 
+    - shame
+    - doupt
+    - anxiety
+
+- "intopunitive" emotions self-reported more often by women
+    - diagnosed more often with axiety, depression, EDs, some PDs
+- "externalizers" (anger, aggression) self reported by men
+    - diagnosed more often with substance-use disorders, anti-social behavioural disorders
+
+competing explanations
+- real differences based on physiology
+- real differences based on social conditions and socialization
+- false differences based on research/diagnosic bias (men more likely to volenteer for experiments for medication, women more likely to put themselves forward for mental health diagnoses, men represented more in the justice system)
+
+## sources of stress
+
+- women tend to self-identify as having mental health problems more commonly, also diagnosed at a higher rate
+- is this related to distress? if women experience more distress why? proposed explanations:
+    - exposure to harm
+    - fewer resources (purchasing power - women concentrated in service industry (insurance differences), bad parental leave compensation)
+    - dual burden (carer and house work)
+    - "female roles" - more stifling, less socially rewarding
+- case study: "supermoms"
+    - "intensive mother ideologies" linked to negative effects on mental health
+        - increased stress, anxiety, guildt, decresed sense of self-efficacy
+    - effects found in "supermoms" and those in their social circles
+
+## gender and anorexia
+
+women diagnoesd at a rate 7-10x that of men
+
+possible explanations
+- differing standard of beauty for men and women
+    - slimness for women
+    - muscularity for men
+- women socialized into giving up control - especially to families. "well behaved" women seeking control
+    - anorexia is a form of rebelion and attempt at control over own life
+    - idea divides feminist theorists: some support, some reject bevause it values "male personality traits" as ideal: autonomy, independence, emotional distance
+- Bordo (post-structural fenitist): a form of resistance to maternal body and the "suffocation destiny of reproductive motherhood"
+
+## suicide
+
+common finding: women attept suicide more frequently, men are more likely to complete suicide more frequently
+
+possible explanations
+- higher rates of testoterone/aggression lead to more lethal attempts (different methods for attempts)
+- men socialized into traits like decisiveness, not failing, not giving up - masculine gender norms leads to making completed suicide more likely
+    - men more to have access to more effective menthods (example: guns)
+- womens preferred methods reflect a gendered expectation to preserve beauty
+
+previous examples predicated on belief real differences exist in the mental health problems experienced by women and men
+
+## resons for differences
+
+### expressing mental disorder
+
+theory: experience does not differ, counting differs (due to different expressions of symptoms)
+
+suggestion: male and female variants of depression, only female variant easily recognizable
+
+- "female depression" - internalizing behaviours/feelings, somatic symptoms
+- "male depression" - exhaustion, irritability, restlessness, substance use
+
+hard to debate since there is no way to know if someone is depressed
+
+### reporting
+
+suggestions:
+- women report mental health concerns to doctors more often
+- men less likely to report mental health due to socialization ("feminine")
+    - favour "non-mental health words" example: "burnout" vs. "depression"
+- differences not solely related to gender. some ment more likely to report, example: more educated, have intimate partner, chronic illness and disability
+
+### diagnostics and treatment
+
+shifts responsibility away from the people being diagnosed onto the researchers/doctors
+
+suggestions:
+- research/diagnostic bias
+- with non-immediately observable complaints, MDs tend to assume men's problems are organtic, women's problems are psychosomatic
+- women less likely to receive advanced diagnostic and therapeutic interventions, more likely to receive medical prescription
+
+## case study: femal sexual dysfunction
+
+- some scholars point to mental disorders related femal sexal dysfunction as evidence of clinical and research bias
+
+- female orgasmic disorder
+    - from the DSM: "any difficulty or delay in reaching orgasm that causes the women personal distress." can we separate distress TODO
+    - diagnosable if a women doesn't orgasm from "sufficient stimulation"
+- sexual interest/arousal disorder
+    - US data: 32% of women "have it", more than 2x the rate of men
+    - symptoms include "discrepancies in desire" and being "typically unreceptive to a partner's attemos to initiate
+
+- for scholors, these disorders and their criteria heavily reflective of traditional medical (male) gaze
+
+gendered ideas built into the diagnostic tools
+
+## queer mental health
+
+sexualities and gender identies TODO
+
+- homosexuality delisted from the DSM in 1980, replaced with "ego-dystonic sexuality" (distress over being having same-sex attraction) until mid 1980s
+- queer individuals appear to be at greater risk for poor mental health
+    - TODO
+
+### sources of distress
+
+theories on sources of additional distress:
+- predjudice, social exclusion, coming out process, internalized stigma, heteronomativity
+- siginificantly elevated reates of physical and sexual assult
+- could this be about broader social determinats 
+    - example: in ontario, >50% of trans individuals live on <$15k, much more likely to experience homelessness
+- discrimination within the healthcare system itself
+
+### when care causes distress
+
+- case study: gender identity disorder, first appeared in DSM III
+    - DSM IV: boys who want to wear dresses, girls who refues to wear them...
+    - boys roughly 6x more likely than girls to be diagnosed with GID
+    - conversion therapy applied to restore "normal gender identiy"
+- DSM 5: terminology shifted to gender dysphoria
+
+TODO
+
+## conclusions
+
+- mental health differeces between sexes and genders complex, related to social determinates, medical assumptions, and perhaps physiological differences
+- throughout recent history, transgressing gender and sexual norms identifie both as "proff" of mental disorder, as well as cause of distress
+
+
+
+
+
+
+
+# meg john barker: depression and/or oppression? bisexuality and mental health
+
+bisexual people are more prone to mental health problems then other queer or straight people
+
+popular understandings of mental health are binary and internal
+Either
+I’m ill—I need help—it’s not my fault
+Or
+I’m not ill—I don’t get help—it is my fault
+
+understanding of distress
+- ill - biological, not personally accountable
+- not ill - caused by bad habits or personal deficiencies, personal responsible, cure is strenghtening willpower
+
+due to cultural tendancies and neoliberal thinking
+
+reflected in self help industy with "victimization" self help and "enpowerment" self help
+
+Binaries put people in unhelpful double binds that exacerbate distress - **accepting one side inevitebly involves denying the other**
+
+accepting one side also leaves one haunted with the possibility of the other side - need to constantly prove illness or wellness
+
+the two options are 
+1. you need fixing - disempowerd
+2. you are to blame for your problems - guilty if reaching out for help
+s
+either way distress is internalized as the proposed causes are both internal
+
+biopsychosocial - mental health is a matter of one's existing biology and neural connetions, and influences of what is learned during growth
+
+problems with binary view:
+
+1. It forces people into trapped either/or positions which separates out ‘us’ and ‘them’ when, in fact, we all suffer over the course of our lives.
+2. It oversimplifies the reasons for distress despite the major problems in locating emotional experience solely within atomized individuals.
+3. It internalizes what are often highly social forms of suffering in ways which exacerbate distress.
+
+## bisexuality in mental health
+
+marginalization is harmful for bisexual people - not having a place in a binary is harmful to mental health
+
+"bicurious" used as a way to dismiss bisexuallity (just a phase)
+
+to those unfamilier with bisexuality, bisexual people appear to meet the criteria for BPD 
+
+within the lgbtq community, there is often a focus only on the lg

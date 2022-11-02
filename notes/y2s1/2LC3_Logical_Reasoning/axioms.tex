@@ -1,0 +1,253 @@
+- **substitution** - $\frac{E}{E[v \coloneqq  F]}$
+- **reflexivity** - $x \equiv x$
+- **symmetry** - $(x \equiv y) \equiv (y \equiv x)$
+- **transitivity** - $\frac{X \equiv Y, Y \equiv Z}{X \equiv Z}$
+- **Leibnitz rule of interference** - $\frac{X \equiv Y}{E[z \coloneqq X] \equiv E[z \coloneqq Y]} \forall E$
+
+Equivalence \equiv and true
+= is conjunctional: b = c = d is b = c \land c = d
+\equiv is associative: b \equiv c \equiv d is (b \equiv c) \equiv d
+(3.1) Ax. Associativity of \equiv ((p \equiv q) \equiv r) \equiv (p \equiv (q \equiv r))
+(3.2) Ax. Symmetry of \equiv p \equiv q \equiv q \equiv p (p \equiv q) \equiv (q \equiv p)
+p \equiv (q \equiv q \equiv p) (p \equiv q \equiv q) \equiv p
+(3.3) Ax. Identity of \equiv true \equiv q \equiv q (true \equiv q) \equiv q
+true \equiv (q \equiv q)
+(3.4) Th. true
+(3.5) Th. Reflexivity of \equiv p \equiv p
+
+Negation \lnot , Inequivalence 6\equiv , and false
+(3.8) Ax. Definiton of false false \equiv \lnot true
+(3.9) Ax. Dist. of \lnot  over \equiv \lnot (p \equiv q) \equiv \lnot p \equiv q
+(3.10) Ax. Def. of 6\equiv (p 6\equiv q) \equiv \lnot (p \equiv q)
+(3.11) Th. \lnot p \equiv q \equiv p \equiv \lnot q
+(3.12) Th. Double Negation \lnot \lnot p \equiv p
+(3.13) Th. Negation of false \lnot false \equiv true
+(3.14) Th. (p 6\equiv q) \equiv \lnot p \equiv q
+(3.15) Th. \lnot p \equiv p \equiv false
+(3.16) Th. Symmetry of 6\equiv (p 6\equiv q) \equiv (q 6\equiv p)
+(3.17) Th. Associativity of 6\equiv ((p 6\equiv q) 6\equiv r) \equiv (p 6\equiv (q 6\equiv r))
+(3.18) Th. Mutual Associativity ((p 6\equiv q) \equiv r) \equiv (p 6\equiv (q \equiv r))
+(3.19) Th. Mutual Interchangability p 6\equiv q \equiv r \equiv p \equiv q 6\equiv r
+(3.20) Fact About Sequences P0 \equiv P1 \equiv \dots \equiv Pn is true
+exactly when an even number of Pi are false
+
+Disjunction \lor 
+(3.24) Ax. Symmetry of \lor p \lor q \equiv q \lor p
+(3.25) Ax. Associativity of \lor (p \lor q) \lor r \equiv p \lor (q \lor r)
+(3.26) Ax. Idempotency of lor p \lor p \equiv p
+(3.27) Ax. Dist. of \lor over \equiv p \lor (q \equiv r) \equiv p \lor q \equiv p \lor r
+(3.28) Ax. Excluded Middle p \lor \lnot p a value must always be
+true or not true, it cannot be both!
+(3.29) Th. Zero of \lor p \lor true \equiv true
+(3.30) Th. Identity of \lor p \lor false \equiv p
+(3.31) Th. Dist. of \lor over \lor p \lor (q \lor r) \equiv (p \lor q) \lor (p \lor r)
+(3.32) Th. p \lor q \equiv p \lor \lnot q \equiv p
+(9.9) (\forall x|R : P \equiv Q) \implies  ((\forall x|R : P) \equiv (\forall x|R : Q))
+(9.10) Range Weak./Strength. (\forall x|Q \lor R : P) \implies  (\forall x|Q : P)
+(9.11) Body Weak./Strength. (\forall x|R : P \land Q) \implies  (\forall x|R : P)
+(9.12) Monocity of \forall 
+(\forall x|R : Q \implies  P) \implies  ((\forall x|R : Q) \implies  (\forall x|R : P))
+(9.13) Instantiation (\forall x| : P) \implies  P[x := E]
+
+
+Conjunction \land 
+(3.35) Ax. Golden Rule p \land q \equiv p \equiv q \equiv p \lor q
+(p \equiv q) \equiv (p \land q \equiv p \lor q)
+(3.36) Ax. Symmetry of \land p \land q \equiv q \land p
+(3.37) Ax. Associativity of \land (p \land q) \land r \equiv p \land (q \land r)
+(3.38) Ax. Idempotency of \land p \land p \equiv p
+(3.39) Ax. Identity of \land p \land true \equiv p
+(3.40) Ax. Zero of \land p \land false \equiv false
+(3.41) Ax. Dist. of \land over \lor p \land (q \land r) \equiv (p \land q) \land (p \land r)
+(3.42) Ax. Contradiction p \land \lnot p \equiv false
+(3.43) Th. Absorption a) p \land (p \lor q) \equiv p b) p \lor (p \land q) \equiv p
+(3.44) Th. Absorption a) p \land (\lnot p \lor q) \equiv p \land q b)
+p \lor (\lnot p \land q) \equiv p \lor q
+(3.45) Th. Dist. of \land over \lor p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)
+(3.46) Th. Dist. of \land over \lor p \land (q \lor r) \equiv (p \land q) \lor (p \land r)
+(3.47) Th. De Morgan a) \lnot (p \land q) \equiv \lnot p \lor \lnot q b)
+\lnot (p \lor q) \equiv \lnot p \land \lnot q
+(3.48) Th. p \land q \equiv p \land \lnot q \equiv \lnot p
+(3.49) Th. p \land (q \equiv r) \equiv p \land q \equiv p \land r \equiv p
+(3.50) Th. p \land (q \equiv p) \equiv p \land q
+(3.51) Th. Replacement (p \equiv q) \land (r \equiv p) \equiv (p \equiv q) \land (r \equiv q)
+(3.52) Ax. Def. of \equiv p \equiv q \equiv (p \land q) \lor (\lnot p \land \lnot q)
+(3.53) Ax. Def. of Exclusive or p 6\equiv q \equiv (\lnot p \land q) \lor (p \land \lnot q)
+(3.55) Th.
+(p \lor q) \lor r \equiv p \equiv q \equiv r \equiv p \lor q \equiv q \lor r \equiv r \lor p \equiv p \lor q \lor r
+
+Implication
+Note: for p \implies  q, q \implies  p is the converse, \lnot q \implies  \lnot p is the
+contrapositive and \lnot p \implies  \lnot q is the inverse.
+(3.57) Ax. Def. of Implication p \implies  q \equiv p \lor q \equiv q
+(3.58) Ax. Def. of Consequence p \Leftarrow q \equiv q \implies  p
+(3.59) Th.Alternative Def. of Implication p \implies  q \equiv \lnot p \lor q
+(3.60) Th. Alternative Def. of Implication p \implies  q \equiv p \land q \equiv p
+(3.61) Th. Contrapositive p \implies  q \equiv \lnot q \implies  \lnot p
+(3.62) Th. p \implies  (q \equiv r) \equiv p \land q \equiv p \land r
+(3.63) Th. Dist. of \implies  over \equiv p \implies  (q \equiv r) \equiv p \implies  q \equiv p \implies  r
+(3.64) Th. p \implies  (q \implies  r) \equiv (p \implies  q) \implies  (p \implies  r)
+(3.65) Th. Shunting p \land q \implies  r \equiv p \implies  (q \implies  r)
+(3.66) Th. p \land (p \implies  q) \equiv p \land q
+(3.67) Th. p \land (q \implies  p) \equiv p
+(3.68) Th. p \lor (p \implies  q) \equiv true
+(3.69) Th. p \lor (q \implies  p) \equiv q \implies  p
+(3.70) Th. p \lor q \implies  p \land q \equiv p \equiv q
+(3.71) Th. Reflexivity of \implies  p \implies  p \equiv true
+(3.72) Th. Right zero of \implies  p \implies  true \equiv true
+(3.73) Th. Left identity of \implies  true \implies  p \equiv p
+(3.74) Th. p \implies  false \equiv \lnot p
+(3.75) Th. false \implies  p \equiv true
+(3.76) Th. Weak./Strength. 
+a) p \implies  p \lor q 
+b) p \land q \implies  p 
+c) p \land q \implies  p \lor q 
+d) p \lor (q \land r) \implies  p \lor q 
+e) p \land q \implies  p \land (q \lor r)
+(3.77) Th. Modus ponens p \land (p \implies  q) \implies  q
+(3.78) Th. Case Analysis (p \implies  r) \land (q \implies  r) \equiv (p \lor q \implies  r)
+(3.79) Th. Case Analysis (p \implies  r) \land (\lnot p \implies  r) \equiv r
+(3.80) Th. Mutual Implication (p \implies  q) \land (q \implies  p) \equiv p \equiv q
+(3.81) Th. Antisymmetry (p \implies  q) \land (q \implies  p) \implies  (p \equiv q)
+(3.82) Th. Transitivity 
+a) (p \implies  q) \land (q \implies  r) \implies  (p \implies  r)
+b) (p \equiv q) \land (q \implies  r) \implies  (p \implies  r)
+c) (p \implies  q) \land (q \equiv r) \implies  (p \implies  r)
+
+Leibniz as an Axiom
+(3.83) Ax. Leibniz (e = f) \implies  (E_e^z = E_f^z
+) where E is any exp.
+(3.84) Th. Sub. a) (e = f) \land E_e^z \equiv (e = f) \land E_f^z
+b)
+(e = f) \implies  E_e^z \equiv (e = f) \implies  E_f^z
+c)
+q \land (e = f) \implies  E_e^z \equiv q \land (e = f) \implies  E_f^z
+(3.85) Th. Replace by true 
+a) p \implies  E_p^z \equiv p \implies  E_{true}^z 
+b) q \land p \implies  E_p^z \equiv q \land p \implies  E_{true}^z
+(3.86) Th. Replace by false 
+a) E_p^z \implies  p \equiv E_{false}^x \implies  p 
+b) E_p^z \implies  p \lor q \equiv E_{false}^x \implies  p \lor q
+(3.87) Th. Replace by true p \land E_p^z \equiv p \land E_{true}^z
+(3.88) Th. Replace by false p \lor E_p^z \equiv p \lor E_{false}^z
+(3.89) Th. Shannon E_p^z \equiv (p \land E_{true}^z) \lor (\lnot p \land E_{false}^z)
+(4.1) p \implies  (q \implies  p)
+(4.2) Monotonicity of \lor (p \implies  q) \implies  (q \lor r \implies  q \land r)
+(4.3) Monotonicity of \land (p \land q) \implies  (p \land r \implies  q \land r)
+. For the following rules, assume ∗ operator is symmetric,
+associative and has identity u
+(8.13) Ax., Empty range (*x|false : P) = u (u is the identity
+of * )
+(8.14) Ax., One-point rule Provided \lnot occurs('x','E'),
+(*x|x = E : P) = P[x := E]
+(8.15) Ax., Dist. Provided each Quant. is defined,
+(*x|R : P) * (*x|R : Q) = (*x|R : P * Q)
+(8.16) Ax., Range split Provided R \land S \equiv false and each
+Quant. is defined, (*x|R \lor S : P) = (*x|R : P) * (*x|S : P)
+(8.17) Ax., Range split Provided each Quant. is defined,
+(*x|R \lor S : P) * (*x|R \land S : P) = (*x|R : P) * (*x|S : P) (8.18)
+Ax., Range split for idempotent * Provided each Quant. is
+defined, (*x|R \lor S : P) = (*x|R : P) * (*x|S : P)
+(8.19) Ax., Interchange of dummies Provided each Quant. is
+defined, \lnot occurs('y','R')and \lnot occurs('x','Q'), (*x|R : (*y|Q : P)) = (*y|Q : (*x|R : P))
+(8.20) Ax., Nesting Provided \lnot occurs(
+'y
+'
+,
+' R'
+),
+(*x, y|R \land Q : P) = (*x|R : (*y|Q : P))
+(8.21) Ax., Dummy renaming Provided \lnot occurs(
+'y
+'
+,
+' R, P'
+),
+(*x|R : P) = (*y|R[x := y] : P[x := y])
+(8.22) Change of dummy Provided \lnot occurs(
+'y
+'
+,
+' R, P'
+) and f
+has an inverse, (*x|R : P) = (*y|R[x := f.y] : P[x := f.y])
+(8.23) Th. Split off term For n : N and dummies i : N,
+(*i|0 ≤ i ≤ n + 1 : P) = (*i|0 ≤ i < n : P) * P[i := n]
+(*i|0 ≤ i ≤ n + 1 : P) = P[i := 0] * (*i|0 < i < n + 1 : P)
+ 
+Predicate Calculus
+Universal Quantification
+(9.2) Ax., Trading (\forall x|R : P) \equiv (\forall x| : R \implies  P)
+(9.3) Trading (a) (\forall x|R : P) \equiv (\forall x| : \lnot R \lor P) (b)
+(\forall |R : P) \equiv (\forall | : R \land P \equiv R) (c)
+(\forall x|R : P) \equiv (\forall x| : R \lor P \equiv P)
+(9.4) Trading (a) (\forall x|Q \land R : P) \equiv (\forall x|Q : R \implies  P) (b)
+(\forall x|Q \land R : P) \equiv (\forall x|Q : \lnot R \lor P) (c)
+(\forall x|Q \land R : P) \equiv (\forall x|Q : R \land P \equiv R) (d)
+(\forall x|Q \land R : P) \equiv (\forall x|Q : R \lor P \equiv P)
+(9.5) Ax., Dist. of \lor over \forall  Provided \lnot occurs(
+'x
+'
+,
+' P
+'
+),
+P \lor (\forall x|R : Q) \equiv (\forall x|R : P \lor Q)
+(9.6) Provided \lnot occurs(
+'x
+'
+,
+' P
+'
+), (\forall x|R : P) \equiv P \lor (\forall x| : \lnot R)
+(9.7) Dist. of \land over \forall 
+\lnot (\forall x| : \lnot R) \implies  ((\forall x|R : P \land Q) \equiv P \land (\forall x|R : Q))
+(9.8) (\forall x|R : true) \equiv true
+
+Existential Quantification
+(9.17) Ax., Generalized De Morgan (∃x|R : P) \equiv \lnot (\forall x|R : \lnot P)
+(9.18) Generalized De Morgan (a) \lnot (∃x|R : \lnot P) \equiv (\forall x|R : P)
+(b)\lnot (∃x|R : P) \equiv (\forall x|R : \lnot P) (c)(∃x|R : \lnot P) \equiv \lnot (\forall x|R : P)
+(9.19) Trading (∃x|R : P) \equiv (∃x| : R \land P)
+(9.2') Trading (∃x|Q \land R : P) \equiv (∃x|Q : R \land P)
+(9.21) Dist. of \land over ∃ Provided \lnot occurs(
+'x
+'
+,
+' P
+'
+),
+P \land (∃x|R : Q) \equiv (∃x|R : P \land Q)
+(9.22) Provided \lnot occurs(
+'x
+'
+,
+' P
+'
+), (∃x|R : P) \equiv P \land (∃x| : R)
+(9.23) Dist. of \lor over ∃ Provided \lnot occurs(
+'x
+'
+,
+' P
+'
+),
+(∃x| : R) \implies  ((∃x|R : P \lor Q) \equiv P \lor (∃x|R : Q))
+(9.24) (∃x|R : false) \equiv false
+(9.25) Range Weak./Strength. (∃x|R : P) \implies  (∃x|Q \lor R : P)
+(9.26) Body Weak./Strength. (∃x|R : P) \implies  (∃x|R : P \lor Q)
+(9.27) Monocity of ∃
+(\forall x|R : Q \implies  P) \implies  ((∃x|R : Q) \implies  (∃x|R : P))
+(9.28) ∃-Introduction P[x := E] \implies  (∃x| : P)
+(9.29) Interchange of Quant. Provided \lnot occurs(
+0y
+0
+,
+0 R0
+) and
+\lnot occurs ∗
+0 x
+0
+,
+0 Q0
+), (∃x|R : (\forall y : Q : P)) \implies  (\forall y|Q : (∃x|R : P))

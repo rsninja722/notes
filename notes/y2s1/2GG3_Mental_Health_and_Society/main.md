@@ -9,3 +9,7 @@
     - Oct 24-28
     - Nov 14-18
     - Nov 28 – Dec  
+
+- **midterm**
+    - no lectures/tutorials the week of
+    - open 12:01am nov 1st, closes 11:59pm nov 2nd

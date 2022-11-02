@@ -234,3 +234,235 @@ $f(f(x,y),f(y,x))$ = True, $(x \leftrightarrow y) \leftrightarrow (y \leftrighta
 
 $\frac{f(x,y) \land f(y,z)}{f(x,z)}$ = True, $\frac{x \leftrightarrow y \land y \leftrightarrow z}{x \leftrightarrow z}$ = True
 
+___
+
+$p \land (p\lor q)$
+
+= golden rule
+
+$p \equiv p \lor q \equiv p \lor p \lor q$
+
+= $p \lor p = p$ idempotency of disjunction
+
+$p \equiv p\lor q \equiv p \lor q$
+
+= identity of $\equiv$
+
+$p \equiv true$
+
+= identity of $\equiv$
+
+$p$
+
+___
+
+
+$p \lor (p \land q) = p$
+
+= golden  rule
+
+$p \lor (p \equiv q \equiv p \lor q)$
+
+= distribute $\lor$ over $\equiv$
+
+$p \lor p \equiv p \lor q = p \lor p\lor q$
+
+= $p\lor p \equiv p$
+
+$p \equiv p\lor q \equiv p\lor q
+
+= identity of $\equiv$ twice
+
+$p$
+
+___
+
+$p \lor (\lnot p \lor q) \equiv p \land q$
+
+= golden rule
+
+$p \equiv \lnot p \lor q \equiv p (\lnot p \lor q)$
+
+=
+
+$p \equiv  \lnot p \lor q \equiv (p\lor \lnot p) \lor q$
+
+= identity of equality twice, $p\lor \lnot p = true$
+
+$ p=\lnot p \lor q$
+
+= $p\lor \lnot q \equiv p\lor q \equiv p) [p,q \coloneqq q,p]$
+
+$p \equiv p \lor q \equiv q$
+
+= symmetry of $\equiv$ and golden rule
+
+$p \land q$
+
+___
+
+$p \lor (\lnot p \land q) \equiv p\lor q$
+
+= golden rule
+
+$p \lor (\lnot p \equiv p \equiv \lnot p \lor q$
+
+= distribute of $\lor$
+
+$p \lor \lnot p \equiv p \lor q \equiv p\lor p\lor q$
+
+=
+
+$true = p\lor q \equiv true \lor q$
+
+=
+
+$p \lor q$
+
+___
+
+$p (q \land r) \equiv (p \lor q) \lor (p\lor r)$
+
+$(p \lor q) \lor (p\lor r)$
+
+= golden rule 
+
+$p\lor q \equiv p\lor r \equiv p\lor q \lor p \lor r
+
+= associative and , and $p\lor q \equiv p$
+
+$p \lor q \equiv p \lor r \equiv p \lor q \lor r$
+
+= distribute $\lor$ over 
+
+$p lor ( q \equiv r \equiv q\lor r)
+
+$p \lor (q\land r)$
+
+___
+
+if you have two of the same, eliminate
+
+$p \lor r \equiv p\lor q \equiv p\lor r$ -> $p\lor q$
+
+important: 3.32 $p \lor q \equiv p \lor \lnot q \equiv p$ (can use textual substitution)
+
+___
+
+$p\land q \equiv p \lor \lnot q \equiv \lnot p$
+
+$p\land q \equiv p \lor \lnot q$
+
+= golden rule
+
+$p \equiv q \equiv p \lor q \equiv o \equiv \lnot q \equiv p\lor \lnot q$
+
+= 
+
+$q \equiv p\lor \equiv\lnot q \equiv p\lor \lnot q$
+
+= $p \lor q \equiv p \lor \lnot q \equiv p$, 
+
+$q \equiv \lnot q \equiv p$
+
+= $q \equiv \lnot \equiv false$
+
+$false = p$
+
+= $\lnot p \equiv p \equiv false$
+
+$\lnot p$
+
+# programming and hoare logic
+
+programs have a state input ($s_{in}$) and a state output ($S_{out}$)
+
+specification of a program: $\lbrace Q \rbrace x \coloneqq ? \lbrace R \rbrace$
+
+# tutorial
+
+formal logic - a logic is consistent if at least one of its formulas is a theorem and at least one is not; otherwise, the logic is inconsistent
+
+
+
+
+# conditional statements and expressions
+
+the conditional statement IF has the form: if $B$ then $S_1$ else $S_2$
+
+where $B$ is a boolean statement
+
+and $S_1$ and $S_2$ are statements
+
+to illustrate the execution of IF
+
+$\lbrace Q \rbrace$
+
+if $B$ then $\lbrace Q \land B \rbrace S_1 \lbrace R \rbrace$ 
+
+&emsp;&emsp; else $B$ then $\lbrace Q \land \lnot B \rbrace S_2 \lbrace R \rbrace$ 
+
+$\lbrace R \rbrace$
+
+## proof
+
+to prove $\lbrace Q \rbrace$ IF $\lbrace R \rbrace$, it suffices to prve
+
+1. $\lbrace Q \land B \rbrace S_1 \lbrace R \rbrace$
+2. $\lbrace Q \land \lnot B \rbrace S_2 \lbrace R \rbrace$
+
+note: $S_2$ can be a skip ($\lbrace R \rbrace$ skip $\lbrace R \rbrace$)
+
+
+# conditional statements: guards
+
+if $B$ then $S_1$ else $S_2$ can alternatively be written:
+
+if $B_1 \leftarrow S_1$
+
+⌈⌋  $B_2 \leftarrow S_2$
+
+⌈⌋  $B_3 \leftarrow S_3$
+
+fi
+
+- execution aborts if no guard is true
+- if more than one guard is true, only one of them is chosen (arbitrarily)
+
+# hoare logic 
+
+consists of the following inference rules
+
+- empty statement
+
+$$
+\begin{array}{c}
+    \hline
+   {\lbrace P \rbrace} \enspace skip \enspace {\lbrace P \rbrace} \\
+\end{array}
+$$
+
+- assignment
+
+$$
+\begin{array}{c}
+    \hline
+   {\lbrace P[x\coloneqq E] \rbrace} x \coloneqq E {\lbrace P \rbrace} \\
+\end{array}
+$$
+
+- composition
+
+$$
+\begin{array}{c}
+   {\lbrace P \rbrace} S {\lbrace Q \rbrace}, {\lbrace Q \rbrace} T {\lbrace R \rbrace} \hline \\
+   {\lbrace P \rbrace} S; T {\lbrace R \rbrace}
+\end{array}
+$$
+
+- if-then-else
+- while-do
+
+often omitted:
+
+- consequence
