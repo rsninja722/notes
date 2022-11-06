@@ -166,11 +166,11 @@ _________           ________
 
 factory
 strategy
-singilton
-ovserver
+singleton
+observer
 decorator
 facade
-prox
+proxy
 adapter 
 command
 
