@@ -6,6 +6,8 @@
 
 the notation $E[x \coloneqq  R]$ or $E_{R}^{x}$ donates an expression that is the same as E, but with all $x$'s replaced by $R$. (E and R are expressions, x is a variable)
 
+$g.X: E$ denotes that $g.X = E[z \coloneqq X]$
+
 example:
 
 Expression | Result | Unnecessary parentheses removed

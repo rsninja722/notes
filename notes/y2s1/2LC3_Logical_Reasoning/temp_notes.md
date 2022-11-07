@@ -2,20 +2,7 @@
 
 # propositional calculus
 
-- **calculus** - method of reasoning by calculation with symbols 
-- **propositional calculus** - method of calculating with boolean expressions that involve propositional variables
-    - aka **equational logic $E$** 
-    - consists of **axioms** - boolean expressions that define basic manipulative properties
-        - example: axiom for $\lor$: $p \lor q \equiv q \lor p$
-    - also consists of three inference rules
-        - **Leibnitz** - $\frac{X \equiv Y}{E[z \coloneqq X] \equiv E[z \coloneqq Y]}$
-        - **transitivity** - $\frac{X = Y, Y = Z}{X = Z}$
-        - **substitution** -  $\frac{E}{E[v \coloneqq  F]}$
 
-- **theorem** (of propositional calculus) is either:
-    1. an axiom
-    2. the conclusion of an interference rule whose premises are theorems
-    3. a boolean expression using the interferences rules that is proved equal to an axiom or a previously proved theorem
 
 to check if a theorem is valid, check each axiom with a truth table, and arguing for each inference rule that if its premises are valid then so is its conclusion
 

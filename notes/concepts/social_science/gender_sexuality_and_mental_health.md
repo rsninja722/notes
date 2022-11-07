@@ -1,4 +1,3 @@
-
 # gender, sexuality, and mental health
 
 ## key questions

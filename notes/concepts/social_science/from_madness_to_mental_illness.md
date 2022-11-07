@@ -1,6 +1,3 @@
-
-# lecture 3
-
 # from madness to mental illness
 
 over past 250 years idea has shifted from "madness" to "mental illness" 
