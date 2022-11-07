@@ -1,5 +1,4 @@
-
-# lecture 6: place, space, and mental health
+# place, space, and mental health
 
 ## recall about mental health
 

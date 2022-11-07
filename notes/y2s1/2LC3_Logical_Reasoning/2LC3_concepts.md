@@ -13,3 +13,4 @@
 - [boolean logic and logic gates](?note=notes/concepts/engineering/boolean_logic_and_logic_gates.md)
 - [valididty and satisfiability](?note=notes/concepts/engineering/valididty_and_satisfiability.md)
 - [modeling english propositions](?note=notes/concepts/engineering/modeling_english_propositions.md)
+- [natural deduction](?note=notes/concepts/engineering/natural_deduction.md)

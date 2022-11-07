@@ -1,5 +1,3 @@
-# lecture 1
-
 # thinking critically about mental health and illness
 
 mental health focuses mainly on thoughts, mood, and behavior

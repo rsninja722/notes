@@ -1,5 +1,7 @@
 # equality
 
+used to show that two expressions are equal without calculating their values
+
 laws:
 
 - **substitution** - [$\frac{E}{E[v \coloneqq  F]}$](?note=notes\concepts\engineering\substitution.md)
@@ -15,3 +17,13 @@ laws:
 Assume that $b + 3 = c + 5$ is a theorem. Then $d + b + 3  = d + c + 5$ is a theorem by Leibnitz with $X: b+3, Y: c+5, E : d +z$ and $z : z$
 
 </details>
+
+# equality vs equivalence
+
+$=$ has a higher priority than $\equiv$
+
+$=$ is conjunctional meaning $a = b = c$ is an abbreviation for $a = b \land b = c$
+
+$\equiv$ is associative meaning $a \equiv b \equiv c$ is an abbreviation for $(a \equiv b) \equiv c$ or $a \equiv (b \equiv c)$
+
+cannot be both associative and conjunctional

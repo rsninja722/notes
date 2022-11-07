@@ -1,5 +1,4 @@
-
-# lecture 5 - emergence of the psy-ences
+# emergence of the psy-ences
 
 how these declines came to establish themselves as important parts of our world, and how they generate knowledge, and how the knowledge works its way into society
 

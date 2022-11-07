@@ -1,4 +1,3 @@
-
 # Launching a new movement for mental health
 
 Despite the great attention western countries pay to the mind and human consciousness in philosophy and the arts, disturbances of mental health remain not only neglected but also deeply stigmatised across our societies
