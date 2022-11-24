@@ -1,0 +1,4 @@
+ssh nickolij@cs2ga3.cas.mcmaster.ca
+ssh -p9846 pi@127.0.0.1
+scp −P 5022 pi@127.0.0.1:/home/pi/YOUR FILE DESTINATON
+scp −P9846 hello_world.S  pi@127.0.0.1:/home/pi/hello_world.S

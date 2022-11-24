@@ -14,3 +14,4 @@
 - [valididty and satisfiability](?note=notes/concepts/engineering/valididty_and_satisfiability.md)
 - [modeling english propositions](?note=notes/concepts/engineering/modeling_english_propositions.md)
 - [natural deduction](?note=notes/concepts/engineering/natural_deduction.md)
+- [propositional calculus](?note=notes/concepts/engineering/propositional_calculus.md)
