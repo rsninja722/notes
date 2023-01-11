@@ -9,7 +9,7 @@
     <style>
         @font-face {
             font-family: "OpenDyslexic3";
-            src: url("./OpenDyslexic3-Regular.woff") format("woff");
+            src: url("./fonts/OpenDyslexic3-Regular.woff") format("woff");
         }
 
         body {
@@ -344,7 +344,7 @@
             word-spacing: norma;
         }
     </style>
-    <link rel="stylesheet" href="katex/katex.min.css">
+    <link rel="stylesheet" href="scripts/libraries/katex/katex.min.css">
 </head>
 
 <body>
@@ -364,11 +364,15 @@
                 <span></span>
             </div>
     </div>
-    <script src="marked.js"></script>
-    <script src="highlight.min.js"></script>
-    <script src="katex/katex.min.js"></script>
-    <script src="katex/katexAuto.js"></script>
-    <script src="main.js" defer></script>
+    <script src="scripts/libraries/marked.js"></script>
+    <script src="scripts/libraries/highlight.min.js"></script>
+    <script src="scripts/libraries/katex/katex.min.js"></script>
+    <script src="scripts/libraries/katex/katexAuto.js"></script>
+    <script src="scripts/render.js" defer></script>
+    <script src="scripts/renderHelpers.js" defer></script>
+    <script src="scripts/loading.js" defer></script>
+    <script src="scripts/theme.js" defer></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 
 </html>
