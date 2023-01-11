@@ -125,3 +125,103 @@ $(\forall x |R:P(x)) \implies (\exists x|R:P(x)) \equiv (\exists x |R:P(x))$
     - $(\sum t:Team | t \in Teams : numOfDisc(t))$
 - getBestTeams(): $\implies$ Team{} = $teams^*$ such that:
     - $(\forall ts:Team{} |validTeams(ts):totalDiscDiv(teams)\leq totalDiscDiv(teams*)) \land validTeams(teams^*)$
+
+
+# line module interface  (MIS example)
+
+## uses
+
+Point
+
+## syntax
+
+### exported constants
+
+None
+
+### exported types
+
+Line = ?
+
+### exported access routines
+
+routine name | in | out | exceptions
+new Line | start : Point, end : Point | Line | 
+translateX | $\mathbb{R}$ ||
+translateY | $\mathbb{R}$ ||
+length ||$\mathbb{R}$|
+
+## semantic
+
+### state variables
+
+start : Point
+end : Point
+
+### state invariant
+
+None
+
+## assumptions
+
+- all input arguments are of the proper type
+- equalityL p1 = p2 iff p1.x = p2.x and p1.y = p2.y
+
+## access routine semantics
+
+new Line(start, end):
+- transition: this.start, this.end := start, end
+- output: out := this
+- exception: none
+
+translateX(x):
+- transition: start.translateX(x), end.translateX(x)
+
+translateY(y):
+- transition: start.translateY(y), end.translateY(y)
+
+length():
+- output: start.distanceFrom(end)
+
+## local functions
+
+None
+
+## local variables
+
+None
+
+## local constants
+
+None
+
+## considerations
+
+consider using the single input translate method from point
+
+
+# implementation does not have to have a 1:1 correspondence with specification
+
+givin the specification for a circle intersects function:
+
+___
+
+intersects(c):
+- output: out := (getPoints(this) $\cap$ getPoints(c)) $\neq \emptyset$
+
+local functions
+
+getPoints(): Circle $\leftarrow$ Points {}
+getPoints(c) = $\lbrace p:Point | (p.getX() - c.getCenter().getX())^2 + (p,getY()-c.getCenter().getY())^2 \leq c.getRadius()^2\rbrace$
+
+___
+
+the implementation can look like
+
+```java
+boolean intersects(c) {
+    return this.distance(c) <= this.r + c.r;
+}
+```
+
+ 

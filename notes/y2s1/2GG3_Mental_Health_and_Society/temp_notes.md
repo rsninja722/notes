@@ -283,20 +283,53 @@ basically - its complicated, don't overgeneralize
 - boom in childhood mental health problems should not be understood as changes in children them selves, they are targets of intervention due to social changes
 - TODO
 
+# strikes
+
+strikes necessarily cause disruptions
+
+the goal of the labor side is to cause disruption
+the goal of the employer is to end the strike
+
+strikes are a PR battle, and all about communication
+
+charter of rights and freedoms guarantees the right to strike, the notwithstanding clause meant for quebec language can be used to charge strikers financially 
+
+public sector workers in ontario have had wages frozen at a max of 1% increase a year
+
+the results of strikes create precedents for future labor rights (affecting you)
+
+since 2018, mcmaster made a $730 million surplus
+
+mcmaster offered $40000 to be divided among TAs
+
+picket line pay is $14 an hour for 20 hours a week
 
 
 
 
 
+# institutions
 
+- psychiatric hospital
+- hospitals with psych units 
+- residential care facilities
+    - still people living their
+    - more community based
+    - stepping stone back to independent living
+    - look like houses
+- forensic psychiatric facilities
+    - combination of prison and medical system
+    - for people convicted of crimes but deemed mentally ill
 
+## total institution
 
+people have to accept the norms the institutions place upon them, resistance against the institution is reframed as justification of mental illness or inability to care for self, many people admit they fake everything just to get out of institutions
 
+- institutional neuroses - the structure and regiment that people are conditioned to in an institution is so disconnected from the real world that institution could be doing more harm then good. the structure of an institutions has an effect on people 
 
-
-
-
-
+- deinstitutionalization - 
+    - when there is a lack of community support, and decrease of institutions, people with mental health problems still need to go somewhere
+    - transinstitutionalization - with the absence of institutions, people end up in the justice system
 
 
 

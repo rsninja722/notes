@@ -397,3 +397,23 @@ to the drink, other do not.
 Think about what could change later on with these drink options, and devise a design for this software
 system. Draw a UML diagram of your design, and explain your design decisions.
 Page 10
+
+
+# exam
+
+7 questions
+
+q 1. short answers - 10 marks
+remaining questions: 4-5 marks each
+- 3 design pattern qs
+    - design principles
+    - explain/define
+    - identify
+    - choose
+    - implement a class 
+    - refactor
+    - uml
+- 3 spec questions
+    - write
+    - describe
+    - implement

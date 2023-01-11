@@ -491,3 +491,84 @@ worst case structure: every element is added in order leading to a $n$ deep BST 
 ## min and max
 
 follow the left branch as far as you can to get the minimum, do the same with the right for the maximum
+
+
+# directed graphs
+
+
+
+
+## searching in directed graph
+
+
+### depth first search
+depth-first search in digraphs: same method as for undirected graphs
+- every undirected graph is a diagraph (with edges in both directions)
+- DFS is a digraph algorithm
+
+dfs for undirected graphs
+
+```java
+private void dfs(Graph G, int v) {
+    marked[v] = true;
+    for (int w : G.adjacent(v)) {
+        if (!marked[w]) {
+            edgeTo[w] = v;
+            dfs(G, w);
+        }
+    }
+}
+```
+
+dfs for directed graphs
+
+```java
+private void dfs(Graph G, int v) {
+    marked[v] = true;
+    for (int w : G.adjacent(v)) {
+        if (!marked[w]) {
+            dfs(G, w);
+        }
+    }
+}
+```
+
+### breadth first search
+
+TODO
+
+
+## multiple source shortest paths 
+
+given a directed graph and a set of vertices S, find shortest path from any vertex in the set to each other vertex
+
+implement by using BFS, but initialize by enqueuing all source vertices
+
+# precedence-constrained scheduling
+
+- precedence-constrained scheduling problem - given a set of jobs to be completed, with precedence constraints that specify that certain jobs have to be completed before certain jobs are begun, how can we schedule the jobs such that they are all completed while still respecting the constraints?
+
+for any such problem, a digraph model is useful, where **vertex = task** and **edge = precedence constraints**
+
+however, if job x bust be completed before job y, job y before job z, and job z before job x, clearly these constraints cannot be satisfied; that is, a digraph with cycles will not have a feasible solution
+
+- directed acyclic graph (DAG) - a digraph with no directed cycles
+
+## topological sort
+
+given a digraph, put the vertices in order such that all its directed edges point from a vertex earlier in the order to a vertex later in the order (or report that doing so is not possible)
+
+linear ordering of its vertices such that for each directed edge $u,v$ from vertex $u$ to vertex $v,u$ comes before $v$ in the ordering
+
+can be multiple correct graphs
+
+### DFS
+
+idea - depth-first search visits each vertex exactly once. if we save the vertex given as arguments to the recursive dfs() in a data structure, then iterate through that data structure (as queue or stack), we see all the graph vertices, in an order determined by the nature of the data structure and by wether we can do the save before or after the recursive calls.
+
+three vertex orderings are of interest in typical applications
+
+- preorder - put the vertex on a queue before the recursive calls
+- postorder - put the vertex on a queue after the recursive calls
+- reverse postorder - put the vertex on a stack after the recursive calls
+

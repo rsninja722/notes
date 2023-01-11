@@ -1,7 +1,3 @@
-// globals 
-
-
-
 async function init() {
     themes = await loadJSONfile("./themes.json");
     
@@ -9,7 +5,6 @@ async function init() {
 
     var note = window.location.search;
 
-    var fileStructure = json;
     if (note.endsWith(".md")) {
         renderNote(note.substring(6, note.length), files);
     } else {

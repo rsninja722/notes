@@ -453,3 +453,57 @@ $$
 often omitted:
 
 - consequence
+
+
+possible topics 
+
+Textual Substitution, Equality, and Assignment
+Boolean Expressions
+Propositional Calculus
+Applications of Propositional Calculus
+Formal Logic
+Quantification
+Predicate Calculus
+English to predicate logic
+Model Theory
+Predicates, Programming and Hoare Logic
+Theory of Sets
+Ryszard Janicki About Exam 3
+theory of sets
+mathematical induction
+loops and loop invariiants
+relations and functions
+programs as relations
+equivalence relatons and partial orders
+modern algabra
+
+# review
+
+
+prove correctness (produc $m \cdot n$ of the below program:
+
+```
+procedure multiply (m.nl integers, return product : integers)
+    if n<0 then a := -n else a := n;
+    k := 0; x := 0;
+    while k < a do
+    begin
+    x:=x+m; k:=k+1;
+    end;
+    if n < 0 then product := -x else product := x
+    end of procedure
+```
+
+
+define $D = \mathbb{Z} x \mathbb{Z} x \mathbb{Z} x \mathbb{Z}$, where $\mathbb{Z}$ is the set of integers, and denote the elements of D as (a,k,x,product), or (a,k,x,p) for short. Each statement can be modeled by a function $F_i : D \to D, i=1,2,4,5$, in the following manner:
+
+    "if n < 0 then a := - n else a:= n" corresponds to
+$F_1(a,k,x,p) = (|n|,k,x,p)$,
+    "k:=0;x:=0" corresponds to $F_2(a,k,x,p)=(a,0,0,p),
+    "x:=x+m; k:=k+1" corresponds to $F_4(a,k,x,p) = (a,k+1,x+m),
+and 
+    "if n<0 then product := -x else product := x" maps to
+
+$F_5(a,k,x,p) = x = \begin{cases} (a,k,x,-x) & \text{if } n < 0 \\ (a,k,x,x) &\text{if } n \geq 0 \end{cases}$
+
+THe test "k < a" can be modelled by two partial identity functions
