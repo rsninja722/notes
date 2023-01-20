@@ -1,6 +1,7 @@
 # 2DB3 Databases
 
 - instructor email - jhellings@mcmaster.ca, website - https://jhellings.nl
+- database - `ssh nickolij@cs2db3.cas.mcmaster.ca`
 
 ## grades
 
@@ -92,3 +93,31 @@ first consider of a DBMS is the right fit, then,
     - how missing data will be added in the future
     - how data could be restructured to improve performance
 
+
+## aside: names in software
+
+guidelines
+
+1. dont put limitations on what can be entered unless you have a specific goal
+2. clarify what you are asking the user to fill in
+    - informal - ask what they want to be called 
+    - formal - ask what they want to be called formally
+    - billing - ask the name as used by their bank
+    - shipping - ask the name as used by the mail carrier
+    - travel - ask the name as printed in their travel documents
+3. have sensible defaults - prefill billing names with account information
+
+there is no standard solution that works in all cases
+
+![](./media/entity_relation.png)
+
+- entity is an object in the real world (student)
+- entities are described via a set of attributes
+- attributes have a domain (e.g., text, number, date).
+
+- Key: set of attributes that identify an entity.
+- All keys are candidate keys.
+- One is chosen as the primary key.
+
+- An entity set: collection of similar entities.
+- An instance: snapshot of the entities (“data”).

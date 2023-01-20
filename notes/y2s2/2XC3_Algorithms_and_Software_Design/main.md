@@ -37,3 +37,44 @@ Floating | 10% | Better midterm or exam grade
     - bad, some people like it
 
 
+## if else optimization
+
+unoptimized
+```python
+r = rand(0,1)
+if r < 0.2: # runs 100% of the time
+    a()
+elif r < 0.9: # runs 80% of the time
+    b()
+else:
+    c()
+```
+
+optimized
+```python
+r = rand(0,1)
+if r < 0.7: # runs 100% of the time
+    b()
+elif r < 0.9: # runs 30% of the time
+    a()
+else:
+    c()
+```
+
+## recursion
+
+usually slower than an iterative algorithm
+
+## insertion sort optimization
+
+instead of swapping after every comparison, just shift the elements up, only putting the value you are moving in once you find its place, leads to 1 swap per space instead of 2
+
+## potential testing errors
+
+- not resetting data for each test
+    - example - not scrambling an array between sorting algorithm tests
+
+## python append
+
+- worst case - O(n)
+- worst amortized - O(1)

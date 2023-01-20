@@ -1,6 +1,7 @@
 # 2BO3 Philosophy Introductory logic
 
 - instructor email - shuberbj@mcmaster.ca
+- TA - sadegh - balalnis@mcmaster.ca
 
 ## info
 
