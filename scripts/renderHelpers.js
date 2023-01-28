@@ -229,3 +229,25 @@ function tree(treeObject, parentElement, dir, preferences, preferencePath, toCol
         parentElement.appendChild(div);
     }
 }
+
+// singleton for loading flashcards
+class FlashCards {
+    static flashCardText;
+
+    async getCards(tags, mode) {
+        if(this.flashCardText === undefined) {
+            var txt = await loadTextFile("./flashcards/flashcards.md");
+            txt = txt.split("# tags").slice(1).map(i => i.split("##"));
+            txt.forEach(i => {
+                i[0] = i[0].replaceAll("\n","").replaceAll("\r","");
+                i[1] = i[1].split("\n").slice(1).join("\n"); 
+                i[2] = i[2].split("\n").slice(1).join("\n"); 
+            });
+            this.flashCardText = txt;
+        }
+
+        return this.flashCardText;
+    }
+}
+
+var flashcards = new FlashCards();

@@ -442,3 +442,113 @@ back to example
 \_______/           \_______/           \_______/
        ↻c,a               ↻c,a                ↻c,a,b
 ```
+
+___
+
+from quiz
+
+if A and B are regular, then which one is regular?
+
+- $A \cap B$
+- $A \cup B$
+    - $= \text{\textasciitilde}(\text{\textasciitilde} A \cap \text{\textasciitilde} B)$
+- $A \backslash B$
+    - $= A \cap (\text{\textasciitilde} B)$
+- $\text{\textasciitilde} A$
+
+___
+
+$A = \{ w a w : w \in  \{a,b\}^* \}$
+
+$B = \{ w_1 a w_2 : w_1. 2_2 \in \{a,b\}^* \}$
+
+$A \notin B$, $A \subseteq B$
+
+e.g., $baaab \in B$, $baaab \notin B$
+___
+
+back to the product construction for $A \cap B$
+
+$M_1 = (Q_1, \Sigma, \delta_1, s_1, F_1), L(M_1) = A$
+
+$M_2 = (Q_2, \Sigma, \delta_2, s_2, F_2), L(M_2) = B$
+
+
+$M_3 = (Q_1 \times Q_2, \Sigma, \delta_3, (s_1,s_2), F_1 \times F_2)$ 
+
+where $\delta_3((p,q),a) = (\delta_1(p,a), \delta_2 (q,a))$
+
+$\forall a \in \Sigma, p \in Q_1, q \in Q_2$
+
+claim: $L(M_3) = L(M_1) \cap L(M_2)$
+
+observation:
+
+$\forall p \in Q_1$
+
+$\forall q \in Q_2$
+
+$\forall x \in \Sigma^*$
+
+$\hat\delta_3 ((p,q), x) = (\hat\delta_1 (p,x), \hat\delta_2 (q,x))$
+
+
+exercise: prove the observation using induction on length of x
+
+proof of the claim:
+
+$x \in L(M_3) \Leftrightarrow \hat\delta_3 ((s_1, s_2), x) \in F_1 \times F_2 \Leftrightarrow (\hat\delta_1 (s_1, x), \hat\delta_2 (s_2, x)) \in F_1 \times F_2 \Leftrightarrow \hat\delta_1 (s_1,x) \in F_1 \text{ AND } \hat\delta_2 (s_2,x) \in F_2 \Leftrightarrow x \in L(M_1) \text{ AND } x\in L(M_2) \Leftrightarrow x\in A \cap B$
+
+___
+
+what will be the DFA for $A \cup B$
+
+$M_3 = (Q_1 \times Q_2, \Sigma, \delta_3, (s_1,s_2), F_1 \times Q_2 \cup Q_1 \times F_2)$
+
+$F_1 \times Q_2$ will accept anything in L(M)
+
+___
+
+more challenging:
+
+if A and B are regular can we say AB is also regular?
+
+$AB = \{xy: x\in A, y\in B\}$
+
+___
+
+example:
+
+is the following language regular?
+
+$A = \{x\in \{a,b\}^* \big| |x| \geq 5, \text{ and the 5th symbol of x from the right is "a"}\}$
+
+$abbaababb \in A$
+
+$aaabbbabab \not\in A$
+
+you need to remember the last 5 symbols that it has consumed, so need $\geq 32 = 2^5$
+
+__
+
+non-deterministic finite automaton (NFA)
+
+we want to make our computational model stronger. so we relax some rules in DFAs:
+
+- multiple start states
+- in each state, given an input symbol, the next state is chosen from a set of states. (can be of size 0,1,2,ect)
+- therefore, there could be more than one "computational path" (way of processing for the string)
+- NFA accepts a string if at least one computational path ends up in an accept state
+
+___
+
+example
+
+
+```txt
+       a      a,b     a,b     a,b     a,b    
+-> ◯ ---> ◯ ---> ◯ ---> ◯ ---> ◯ ---> ⦾
+   ↻a,b    
+```
+
+circles go $q_1, q_2, q_3, q_4, q_5, q_6$

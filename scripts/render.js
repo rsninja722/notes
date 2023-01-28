@@ -84,6 +84,40 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
     }, noteDiv);
 
     toRemove.forEach(e => e.parentElement.removeChild(e));
+    
+    var flashcardData = await flashcards.getCards();
+
+    // embed flashcards
+    elementsWithTagMap("embed", e => {
+        var tags = e.getAttribute("tags").split(",");
+        var mode = e.getAttribute("mode");
+        
+        var cards = flashcardData.filter(card => {
+            var cardTags = card[0].split(",");
+            if(mode === "or") {
+                return tags.reduce((res,tag) => res || cardTags.includes(tag), false);
+            } else {
+                return tags.reduce((res,tag) => res && cardTags.includes(tag), true);
+            }
+        });
+
+        cards.forEach(card => {
+            
+            var div = createElement("div", {class: "flashcard"});
+            var front = createElement("div", {class: "flashcardFront"});
+            var back = createElement("div", {class: "flashcardBack"});
+            front.innerHTML = card[1];
+            back.innerHTML = card[2];
+            div.appendChild(front);
+            div.appendChild(back);
+            front.innerHTML = marked(front.innerHTML);
+            back.innerHTML = marked(back.innerHTML);
+            e.parentElement.insertBefore(div, e);
+            return true
+
+        });
+    })
+
 
     if(!embedMode) {
         document.body.removeChild(document.getElementById("loader"));
@@ -97,6 +131,7 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
             document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
         } 
     }
+
 }
 
 function renderDirectory(note, files) {

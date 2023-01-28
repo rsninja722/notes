@@ -74,7 +74,36 @@ instead of swapping after every comparison, just shift the elements up, only put
 - not resetting data for each test
     - example - not scrambling an array between sorting algorithm tests
 
+<embed tags="test1" mode="or"/>
+
 ## python append
 
-- worst case - O(n)
-- worst amortized - O(1)
+- append worst case - O(n)
+- amortized append worst case - O(1)
+
+- do $n$ appends, and distribute the total runtime across $n$ appends
+    - most operations take O(1), but some operations take O(n)
+
+### calculation for append
+
+$nO(1) + 1 O(n)$
+
+amortize 
+
+$= \frac{O(n) + O(n)}{n} = O(1)$
+
+### another calculation example
+
+$nO(1) + \frac{n}{10} O(n)$
+
+amortize 
+
+$= \frac{O(n) + O(n^2)}{n} = O(n)$
+
+## recursion
+
+if implementing fibonacci sequence with recursion, the (un optimized) runtime will be $O(2^n)$
+
+### fibonacci space complexity
+
+space complexity = O(n) for fibonacci since the recursive calls look like a tree, and since only one side of `fib(n-1) + fib(n-2)` is calculated at once 
