@@ -1,4 +1,4 @@
-async function renderNote(note, files) {
+async function renderNote(noteDiv, note, files, embedMode = false) {
 
     var text = await loadTextFile(note);
 
@@ -8,16 +8,16 @@ async function renderNote(note, files) {
     lines = generateTopicLinks(lines);
 
     // render markdown
-    postDiv.innerHTML += marked(lines.join("\n"));
+    noteDiv.innerHTML += marked(lines.join("\n"));
 
     // highligh code
-    elementsWithTagMap("pre", hljs.highlightElement);
+    elementsWithTagMap("pre", hljs.highlightElement, noteDiv);
     
     // highlight true/false T's and F's
-    elementsWithTagMap("td", (e) => (e.style.color = e.innerHTML === "T" ? "#0beb0b" : e.innerHTML === "F" ? "#e94c4c" : ""));
+    elementsWithTagMap("td", (e) => (e.style.color = e.innerHTML === "T" ? "#0beb0b" : e.innerHTML === "F" ? "#e94c4c" : ""), noteDiv);
 
     // render LaTeX
-    renderMathInElement(document.getElementById("postDiv"), {
+    renderMathInElement(noteDiv, {
         delimiters: [
             { left: "$$", right: "$$", display: true },
             { left: "$", right: "$", display: false },
@@ -27,54 +27,138 @@ async function renderNote(note, files) {
     });
 
     // indent based on headers
-    var parent = document.getElementById("postDiv");
-    indented = indentBasedOnHeaders(parent);
-    parent.innerHTML = "";
-    parent.appendChild(indented);
+    indented = indentBasedOnHeaders(noteDiv);
+    noteDiv.innerHTML = "";
+    noteDiv.appendChild(indented);
 
-    function toggleSection(target) {
+    
+    // handles collapsing sections
+    function toggleSection(e) {
+        var target;
+        if(e.target.classList.contains("sectionCollapseButton")) {
+            target = e.target.parentElement;
+        } else {
+            target = e.target.nextSibling;
+        }
+
+        target.previousSibling.classList.toggle("bottomBorder");
         for(var i of target.children) {
             if(i.classList.contains("sectionCollapseButton")) {
                 continue;
             }
             i.classList.toggle("sectionCollapsed");
         }
+        if(!checkVisible(target.previousSibling)) {
+            target.previousSibling.scrollIntoView();
+        }
     }
 
-    
-
     // add mouse move event listener to all headers
-    var sections = [...document.getElementsByClassName("H1"), ...document.getElementsByClassName("H2"), ...document.getElementsByClassName("H3"), ...document.getElementsByClassName("H4"), ...document.getElementsByClassName("H5"), ...document.getElementsByClassName("H6")];
+    var sections = [...noteDiv.getElementsByClassName("H1"), ...noteDiv.getElementsByClassName("H2"), ...noteDiv.getElementsByClassName("H3"), ...noteDiv.getElementsByClassName("H4"), ...noteDiv.getElementsByClassName("H5"), ...noteDiv.getElementsByClassName("H6")];
 
-    // for (var i of sections) {
-    //     div = createElement("div", {class: "sectionCollapseButton"})
-    //     var toggleFunction = function() {toggleSection(i.previousSibling);}
-    //     div.addEventListener("click", toggleFunction);
-    //     i.nextSibling.firstChild.addEventListener("click", toggleFunction);
-    //     i.insertBefore(div, i.firstChild)
-    // }
-    // e.addEventListener("mousemove", (event) => mouseMove(event, e)));
+    for (var i of sections) {
+        div = createElement("div", {class: "sectionCollapseButton", });
+        div.addEventListener("click", toggleSection);
+        i.insertBefore(div, i.firstChild)
+
+        i.previousSibling.addEventListener("click", toggleSection);
+    }
     
-    // [].forEach.call(document.getElementsByTagName("note"),e => {
-    //     var id = e.id;
+    var toRemove = [];
+
+    // embed notes
+    elementsWithTagMap("a", (e) => {
+        // debugger
+        var linkParam = e.href.indexOf("?note=");
+        if(linkParam === -1 || e.href.includes("#")) {
+            return;
+        }
         
-    //     var frame = document.createElement("iframe");
-    //     frame.style.height = "fit-content";
+        var curNoteDiv = createElement("div", {class: "noteDiv"});
+        
+        e.parentElement.insertBefore(curNoteDiv,e.nextElementSibling);
+        toRemove.push(e);
+        
+        renderNote(curNoteDiv, e.href.slice(linkParam).substring(6), files, true);
+        
+    }, noteDiv);
 
-    //     frame.href = window.location.origin + window.location.pathname + "?note=" + findFileLink(id, fileStructure);
-    //     e.parentElement.insertBefore(frame,e.nextElementSibling);
-    //     e.parentElement.removeChild(e);
-    // });
+    toRemove.forEach(e => e.parentElement.removeChild(e));
+    
+    var flashcardData = await flashcards.getCards();
 
-    document.body.removeChild(document.getElementById("loader"));
-    
-    document.body.removeChild(document.getElementById("links"));
-    
-    tree(files,document.getElementById("nav"),"?note=");
-    
-    link = window.location.hash.replace("#", "");
-    if (link.length > 0) {
-        document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    } 
+    // embed flashcards
+    elementsWithTagMap("embed", e => {
+        var tags = e.getAttribute("tags").split(",");
+        var mode = e.getAttribute("mode");
+        
+        var cards = flashcardData.filter(card => {
+            var cardTags = card[0].split(",");
+            if(mode === "or") {
+                return tags.reduce((res,tag) => res || cardTags.includes(tag), false);
+            } else {
+                return tags.reduce((res,tag) => res && cardTags.includes(tag), true);
+            }
+        });
+
+        cards.forEach(card => {
+            
+            var div = createElement("div", {class: "flashcard"});
+            var front = createElement("div", {class: "flashcardFront"});
+            var back = createElement("div", {class: "flashcardBack"});
+            front.innerHTML = card[1];
+            back.innerHTML = card[2];
+            div.appendChild(front);
+            div.appendChild(back);
+            front.innerHTML = marked(front.innerHTML);
+            back.innerHTML = marked(back.innerHTML);
+            e.parentElement.insertBefore(div, e);
+            return true
+
+        });
+    })
+
+
+    if(!embedMode) {
+        document.body.removeChild(document.getElementById("loader"));
+        
+        document.body.removeChild(document.getElementById("links"));
+        
+        document.getElementById("nav").appendChild(generateNavTree(files, "?note="));
+        
+        link = window.location.hash.replace("#", "");
+        if (link.length > 0) {
+            document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        } 
+    }
+
 }
 
+function renderDirectory(note, files) {
+    var dir = note.length == 0 ? "notes/" : note.substring(6);
+    var keyOrder = dir.split("/");
+    var filesAtDir = files;
+    for (var i of keyOrder) {
+        if (i.length > 0) {
+            filesAtDir = filesAtDir[i];
+        }
+    }
+    var keys = Object.keys(filesAtDir);
+    for (var i = 0; i < keys.length; i++) {
+        var span = document.createElement("span");
+        var a = document.createElement("a");
+
+        a.href = `?note=${dir}${keys[i]}${keys[i].endsWith(".md") ? "" : "/"}`;
+        a.innerText = "/" + keys[i];
+        a.style = "font-size: 20px";
+        
+        span.appendChild(a);
+        document.getElementById("links").appendChild(span);
+        
+        var br = document.createElement("br");
+        document.getElementById("links").appendChild(br);
+    }
+    document.body.removeChild(document.getElementById("loader"));
+    
+    document.getElementById("nav").appendChild(generateNavTree(files, "?note="));
+}

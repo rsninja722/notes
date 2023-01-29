@@ -42,3 +42,14 @@ activities and handle multiple events
 - LTS - labelled transition systems
 - petri nets - extension of finite state machines
     - displayed and analysed by the LTSA analysis tool
+
+# tutorial
+
+no concrete definitions for concurrency, concurrent programing amd parallel programs
+
+- parallelism - running multiple computations simultaneously 
+- process - the instance of a computer program executed by one or many threads. it contains the program code and its activity. it includes the program counter TODO
+
+## LTSA
+
+    

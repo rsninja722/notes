@@ -1,6 +1,12 @@
-function elementsWithTagMap(tag, f) {
-    [].forEach.call(document.getElementsByTagName(tag), (e) => f(e));
+function elementsWithTagMap(tag, f, parent = document) {
+    [].forEach.call(parent.getElementsByTagName(tag), (e) => f(e));
 }
+
+function checkVisible(e) {
+    var rect = e.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
 
 // returns a div with elements indented based on headers
 function indentBasedOnHeaders(parent) {
@@ -151,3 +157,97 @@ function generateTopicLinks(lines) {
 
     return lines;
 }
+
+function generateNavTree(treeObject, root) {
+    var preferences = localStorage.noteFileTreePreferences || "{}"
+
+    preferences = JSON.parse(preferences);
+
+    var rootDiv = document.createElement("div");
+
+    var toCollapse = [];
+
+    tree(treeObject, rootDiv, root, preferences, [], toCollapse);
+
+    localStorage.noteFileTreePreferences = JSON.stringify(preferences);
+
+    for( let i of toCollapse) {
+        i.collapseFunc(i,false);
+    }
+
+    return rootDiv;
+}
+
+
+function tree(treeObject, parentElement, dir, preferences, preferencePath, toCollapse) {
+    for(let i in treeObject) {
+        let div = document.createElement("div");
+        
+        if(typeof treeObject[i] === "object" && treeObject[i] !== null) {
+            if(preferences[i] === undefined) {
+                preferences[i] = {preferencesHidden: false}
+            }
+
+            let text = document.createElement("span");
+            text.innerText = "⮟ " + i;
+            text.onclick = e => {
+                e.target.collapseFunc(e.target);
+            }
+            text.collapseFunc = function(e,updatePreferences = true) {
+                e.innerText = (e.innerText.slice(0,1) === "⮟" ? "⮞" : "⮟") + e.innerText.slice(1);
+                [].forEach.call(e.parentElement.children, el => {if(el.tagName === "DIV") {el.style.display = el.style.display === "none" ? "block" : "none"}});
+                
+                if(updatePreferences) {
+                    var localPreferences = JSON.parse(localStorage.noteFileTreePreferences);
+                    var setting = localPreferences;
+                    var path = e.preferencePath.split("/");
+
+                    for(let i = 0; i < path.length; i++) {
+                        setting = setting[path[i]];
+                    }
+
+                    setting.preferencesHidden = !setting.preferencesHidden;
+                    localStorage.noteFileTreePreferences = JSON.stringify(localPreferences);
+                }
+            }
+            text.preferencePath = preferencePath.concat([i]).join("/");
+            div.appendChild(text);
+
+            if(preferences[i].preferencesHidden) {
+                toCollapse.push(text);
+            }
+
+
+            tree(treeObject[i],div, dir + (dir === "?note=" ? "" : "/") + i, preferences[i], preferencePath.concat([i]), toCollapse);
+        } else {
+            let a = document.createElement("a");
+            a.innerText = i;
+            a.href = dir + "/" + i;
+            div.appendChild(a);
+        }
+
+        parentElement.appendChild(div);
+    }
+}
+
+// singleton for loading flashcards
+class FlashCards {
+    static flashCardText;
+
+    async getCards(tags, mode) {
+        if(this.flashCardText === undefined) {
+            var txt = await loadTextFile("./flashcards/flashcards.md");
+            txt = txt.split("# tags").slice(1).map(i => i.split("##"));
+            txt.forEach(i => {
+                i[0] = i[0].replaceAll("\n","").replaceAll("\r","");
+                i[1] = i[1].split("\n").slice(1).join("\n"); 
+                i[2] = i[2].split("\n").slice(1).join("\n"); 
+            });
+            this.flashCardText = txt;
+        }
+
+        return this.flashCardText;
+    }
+}
+
+var flashcards = new FlashCards();
