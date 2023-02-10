@@ -106,4 +106,33 @@ if implementing fibonacci sequence with recursion, the (un optimized) runtime wi
 
 ### fibonacci space complexity
 
-space complexity = O(n) for fibonacci since the recursive calls look like a tree, and since only one side of `fib(n-1) + fib(n-2)` is calculated at once 
+space complexity = O(n) for fibonacci since the recursive calls look like a tree, and since only one side of `fib(n-1) + fib(n-2)` is calculated at once
+
+## graphing problems
+
+- traveling salesman
+
+### vertex cover 
+- set of nodes for which all edges are connected to at least one of the edges in such a set
+
+#### check for cover
+
+```
+loop though edges
+    if neither node is in the cover set
+        return false
+```
+
+
+- edge cover
+- independent set
+
+
+## power sets
+
+```python
+p = lambda n:[[]]if n==0 else p(n-1)+[x+[n] for x in p(n-1)]
+```
+
+to get the powerset of a set with one more element then another powerset, the new powerset is the old one concatenated to the old one where every set has the new element appended to it
+

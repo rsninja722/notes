@@ -49,7 +49,3 @@ no concrete definitions for concurrency, concurrent programing amd parallel prog
 
 - parallelism - running multiple computations simultaneously 
 - process - the instance of a computer program executed by one or many threads. it contains the program code and its activity. it includes the program counter TODO
-
-## LTSA
-
-    

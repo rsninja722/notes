@@ -84,40 +84,6 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
     }, noteDiv);
 
     toRemove.forEach(e => e.parentElement.removeChild(e));
-    
-    var flashcardData = await flashcards.getCards();
-
-    // embed flashcards
-    elementsWithTagMap("embed", e => {
-        var tags = e.getAttribute("tags").split(",");
-        var mode = e.getAttribute("mode");
-        
-        var cards = flashcardData.filter(card => {
-            var cardTags = card[0].split(",");
-            if(mode === "or") {
-                return tags.reduce((res,tag) => res || cardTags.includes(tag), false);
-            } else {
-                return tags.reduce((res,tag) => res && cardTags.includes(tag), true);
-            }
-        });
-
-        cards.forEach(card => {
-            
-            var div = createElement("div", {class: "flashcard"});
-            var front = createElement("div", {class: "flashcardFront"});
-            var back = createElement("div", {class: "flashcardBack"});
-            front.innerHTML = card[1];
-            back.innerHTML = card[2];
-            div.appendChild(front);
-            div.appendChild(back);
-            front.innerHTML = marked(front.innerHTML);
-            back.innerHTML = marked(back.innerHTML);
-            e.parentElement.insertBefore(div, e);
-            return true
-
-        });
-    })
-
 
     if(!embedMode) {
         document.body.removeChild(document.getElementById("loader"));
@@ -129,7 +95,49 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
         link = window.location.hash.replace("#", "");
         if (link.length > 0) {
             document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        } 
+        }
+
+        var flashcardData = await flashcards.getCards();
+
+        // embed flashcards
+        elementsWithTagMap("embed", e => {
+            var tags = e.getAttribute("tags").split(",");
+            var mode = e.getAttribute("mode");
+            
+            var cards = flashcardData.filter(card => {
+                var cardTags = card[0].split(",");
+                if(mode === "or") {
+                    return tags.reduce((res,tag) => res || cardTags.includes(tag), false);
+                } else {
+                    return tags.reduce((res,tag) => res && cardTags.includes(tag), true);
+                }
+            });
+
+            cards.forEach(card => {
+                
+                var div = createElement("div", {class: "flashcard"});
+                var front = createElement("div", {class: "flashcardFront"});
+                var back = createElement("div", {class: "flashcardBack"});
+                front.innerHTML = card[1];
+                back.innerHTML = card[2];
+                div.appendChild(front);
+                div.appendChild(back);
+                front.innerHTML = marked(front.innerHTML);
+                back.innerHTML = marked(back.innerHTML);
+                e.parentElement.insertBefore(div, e);
+                return true
+
+            });
+        })
+
+        // collapse examples
+        var headers = [...noteDiv.getElementsByTagName("h1"), ...noteDiv.getElementsByTagName("h2"), ...noteDiv.getElementsByTagName("h3"), ...noteDiv.getElementsByTagName("h4"), ...noteDiv.getElementsByTagName("h5"), ...noteDiv.getElementsByTagName("h6")];
+
+        for (var i of headers) {
+            if(i.innerText.includes("example")) {
+                i.click();
+            }
+        }
     }
 
 }

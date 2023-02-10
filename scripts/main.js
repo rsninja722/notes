@@ -31,7 +31,7 @@ async function init() {
     button.innerText = "theme: clean";
     document.body.insertBefore(button, document.getElementById("links"));
 
-    style = localStorage.theme || 0;
+    style = parseInt(localStorage.theme) || 0;
     setTheme(style);
 }
 
