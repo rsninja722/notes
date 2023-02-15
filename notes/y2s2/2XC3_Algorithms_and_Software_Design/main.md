@@ -136,3 +136,14 @@ p = lambda n:[[]]if n==0 else p(n-1)+[x+[n] for x in p(n-1)]
 
 to get the powerset of a set with one more element then another powerset, the new powerset is the old one concatenated to the old one where every set has the new element appended to it
 
+## how many graphs are there?
+
+if $G_n$ is the set of all graphs with $n$ nodes 
+
+what is the magnitude?
+
+$|G_n| = ?$
+
+$E$ = edges
+
+if $n = 10$, $E \subseteq V \times V$, $|V \times V| = 100$, approximate: $\frac{100-10}{2} \approx 45$
