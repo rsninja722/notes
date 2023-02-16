@@ -1,0 +1,1 @@
+p only if q $\equiv$ if q, p $\equiv$ q is necessary condition for p
