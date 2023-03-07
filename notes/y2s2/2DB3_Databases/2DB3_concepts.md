@@ -4,6 +4,10 @@
 
 [entity-relationship model](?note=notes/concepts/engineering/entity-relationship_model.md)
 
+## SQL
+
+[SQL](?note=notes/concepts/engineering/sql.md)
+
 ## aside: names in software
 
 guidelines

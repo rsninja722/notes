@@ -14,7 +14,7 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
     elementsWithTagMap("pre", hljs.highlightElement, noteDiv);
     
     // highlight true/false T's and F's
-    elementsWithTagMap("td", (e) => (e.style.color = e.innerHTML === "T" ? "#0beb0b" : e.innerHTML === "F" ? "#e94c4c" : ""), noteDiv);
+    elementsWithTagMap("td", (e) => (e.style.backgroundColor = e.innerHTML === "T" ? "#1fc11f" : e.innerHTML === "F" ? "#c14b4b" : ""), noteDiv);
 
     // render LaTeX
     renderMathInElement(noteDiv, {
@@ -64,6 +64,15 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
         i.previousSibling.addEventListener("click", toggleSection);
     }
     
+    // collapse examples
+    var headers = [...noteDiv.getElementsByTagName("h1"), ...noteDiv.getElementsByTagName("h2"), ...noteDiv.getElementsByTagName("h3"), ...noteDiv.getElementsByTagName("h4"), ...noteDiv.getElementsByTagName("h5"), ...noteDiv.getElementsByTagName("h6")];
+
+    for (var i of headers) {
+        if(i.innerText.includes("example")) {
+            i.click();
+        }
+    }
+
     var toRemove = [];
 
     // embed notes
@@ -129,17 +138,7 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
 
             });
         })
-
-        // collapse examples
-        var headers = [...noteDiv.getElementsByTagName("h1"), ...noteDiv.getElementsByTagName("h2"), ...noteDiv.getElementsByTagName("h3"), ...noteDiv.getElementsByTagName("h4"), ...noteDiv.getElementsByTagName("h5"), ...noteDiv.getElementsByTagName("h6")];
-
-        for (var i of headers) {
-            if(i.innerText.includes("example")) {
-                i.click();
-            }
-        }
     }
-
 }
 
 function renderDirectory(note, files) {

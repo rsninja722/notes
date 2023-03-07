@@ -79,11 +79,17 @@ for example: $a^5 = aaaaa$, $a^1 = a$, $a^0 = \epsilon$, $(aab)^3 = aabaabaab$
 note: sets of strings are subsets of $\Sigma^*$
 
 - **set union** - $A \cup B = $\lbrace x | x \in A \lor x \in B \rbrace$
+    - **identity** - $\emptyset$
+        - $A \cup \emptyset = \emptyset \cup A = A$
 - **set intersection** - $A \cup B = $\lbrace x | x \in A \land x \in B \rbrace$
 - **complement in** $\Sigma^*$ - $\text{\textasciitilde} A = \lbrace x \in \Sigma^* | x \not\in A \rbrace$
 - **concatination** - $AB = \lbrace xy | x \in A \land y \in B \rbrace$
     - example - $\lbrace a,ab\rbrace \lbrace b,ba\rbrace = \lbrace ab, aba, abb, abba \rbrace$
     - in general, $AB$ and $BA$ are different
+    - **identity** - $\lbrace \epsilon \rbrace$
+        - $A \lbrace \epsilon \rbrace = \lbrace \epsilon \rbrace A = A$
+    - **annihilator** - $\emptyset$
+        - $A \emptyset = \emptyset A = \emptyset$
 - **powers** $A^n$ of a set $A$
     - inductive definition:
         - $A^0 = \lbrace \epsilon \rbrace$
@@ -95,3 +101,32 @@ note: sets of strings are subsets of $\Sigma^*$
         - $\lbrace a,b \rbrace^3 = \lbrace aaa, aba, baa, bba, aab, abb, bab, bbb \rbrace$
 - **asterate** $A^*$ - the asterate of a set $A$ is the union of all finite powers of $A$
     - $$A^* = \bigcup_{n\geq 0} A^n = A^0 \cup A^1 \cup A^2 \cup \dots$$
+    - $A^*$ for $n = 0$ is $\lbrace \epsilon \rbrace$
+    - the definition of asterate is the same as $\Sigma^*$
+    - **properties**
+        - $A^* A^* = A^*$
+        - $A^{\*\*} = A^*$
+        - $A^* = \lbrace \epsilon \rbrace AA^* = \lbrace \epsilon \rbrace \cup A^* A$
+        - $\emptyset^* = \lbrace \epsilon \rbrace$
+
+### set properties
+
+operation | associative | commutative
+---|---|---
+union | T | T
+intersection | T | T
+concatenation | T | F
+
+- **union** and **intersection** distribute over each other
+    - $A \cup (B \cap C) = (A\cup B)\cap (A\cup C)$
+    - $A \cap (B \cup C) = (A\cap B)\cup (A\cap C)$
+- **concatenation** distributes over **union**
+    - $A (B \cup C) = AB \cup AC$
+    - $(A \cup B)C = AC \cup BC$
+    - all works for any family of sets
+        - $$A (\bigcup_{i\in I} B_i) = \bigcup_{i\in I} A B_i$$
+        - $$(\bigcup_{i\in I} B_i)A = \bigcup_{i\in I} B_i A$$
+- **concatenation** does *not* distribute over **intersection**
+- **de morgan law** holds
+    - $\text{\textasciitilde} (A \cup B) = \text{\textasciitilde} A \cap \text{\textasciitilde} B$
+    - $\text{\textasciitilde} (A \cap B) = \text{\textasciitilde} A \cup \text{\textasciitilde} B$
