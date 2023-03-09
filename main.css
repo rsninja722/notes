@@ -100,7 +100,7 @@ button {
     color: #6df4d0;
     background-color: #001e3c;
     border: 1px solid #1e4976;
-    border-radius: 2px;
+    border-radius: 3px;
     margin: 5px;
     padding: 3px 10px 3px 10px;
     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
@@ -278,6 +278,12 @@ span.mord.text {
     width: calc(1em - 2px);
 }
 
+.topicLinks {
+    padding: 0.5em;
+    border-radius: 3px;
+    background-color: var(--transparentBack);
+}
+
 h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover {
     background-color: var(--hover);
     border-bottom-color: var(--text);
@@ -308,7 +314,7 @@ svg text {
     /* border: 1px solid var(--text); */
     box-shadow: 3px 0px 1px -2px rgb(0 0 0 / 40%), 2px 0px 2px 0px rgb(0 0 0 / 30%), 1px 0px 5px 0px rgb(0 0 0 / 25%);
     backdrop-filter: blur(6px);
-    background-color: #090f1677;
+    background-color: var(--transparentBack);
     overflow-wrap: break-word;
 }
 
@@ -327,7 +333,7 @@ svg text {
 .toggle-btn span {
     width: 25px;
     height: 4px;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid #1e4976;
     background: #001e3c;
     display: block;
@@ -386,6 +392,7 @@ svg text {
     --summary: #454bff;
     --back: #090f16;
     --back2: #0f1720;
+    --transparentBack: #090f1677;
     --hover: #17222e;
     --math: #41f0c1;
     --space: 0px;

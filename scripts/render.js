@@ -73,26 +73,34 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
         }
     }
 
-    var toRemove = [];
+    var outboundSymbol = `<svg width="24" height="24" style="background-color: inherit;vertical-align: top;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
 
-    // embed notes
+    // embed notes within notes div
     elementsWithTagMap("a", (e) => {
-        // debugger
         var linkParam = e.href.indexOf("?note=");
+        // skip if not a link to a note
         if(linkParam === -1 || e.href.includes("#")) {
             return;
         }
         
         var curNoteDiv = createElement("div", {class: "noteDiv"});
         
+        // create div for embedded note
         e.parentElement.insertBefore(curNoteDiv,e.nextElementSibling);
-        toRemove.push(e);
+
+        // create button to expand embedded note
+        curNoteDiv.appendChild(createElement("button", {class: "backButton"}, {innerText: "expand", onclick: () => {
+            curNoteDiv.innerHTML = "";
+            renderNote(curNoteDiv, e.href.slice(linkParam).substring(6), files, true);
+        }}));
         
-        renderNote(curNoteDiv, e.href.slice(linkParam).substring(6), files, true);
+        // add symbol to link
+        e.innerHTML += outboundSymbol;
+
+        // move link to new div
+        curNoteDiv.appendChild(e);
         
     }, noteDiv);
-
-    toRemove.forEach(e => e.parentElement.removeChild(e));
 
     if(!embedMode) {
         document.body.removeChild(document.getElementById("loader"));

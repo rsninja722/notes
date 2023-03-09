@@ -95,10 +95,13 @@ function indentBasedOnHeaders(parent) {
 
 // returns an element with the given tag and attributes
 // with attributes in the form {attributeName: value, attributeName2: value2...}
-function createElement(tag,attributes) {
+function createElement(tag,attributes, dotAttributes = {}) {
     var element = document.createElement(tag);
     for (var key in attributes) {
         element.setAttribute(key, attributes[key]);
+    }
+    for (var key in dotAttributes) {
+        element[key] = dotAttributes[key];
     }
     return element;
 }
@@ -144,7 +147,7 @@ function generateTopicLinks(lines) {
     }
 
     // create collapsable topics section
-    lines.splice(1, 0, "</details>");
+    lines.splice(1, 0, "</details></div>");
 
     for (var i = topics.length; i > -1; i--) {
         lines.splice(1, 0, topics[i]);
@@ -152,7 +155,7 @@ function generateTopicLinks(lines) {
 
     lines.splice(1, 0, "");
     lines.splice(1, 0, "<summary>topics</summary>");
-    lines.splice(1, 0, "<details>");
+    lines.splice(1, 0, "<div class='topicLinks'><details>");
     lines.splice(1, 0, "");
 
     return lines;

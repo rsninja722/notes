@@ -36,6 +36,29 @@ Floating | 10% | Better midterm or exam grade
 - Algorithms, Sedgewick
     - bad, some people like it
 
+# midterm info
+
+- no red black trees
+- no shortest path
+- everything up to MSTs and graph lab
+    - list/dictionaries
+        - python implementation, best/worst cases
+        - amortizing
+    - heaps/priority queues
+        - implementations
+            - swim
+            - extract
+            - increase/decrease key
+    - algorithms
+        - bubble, selection, insertion, merge, quick, heap
+            - and insights
+        - prim, kruskal
+        - BFS, DFS
+        - vertex/edge cover
+
+5 questions (3 3 4 4 6)
+    
+50 minutes
 
 ## if else optimization
 

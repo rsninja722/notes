@@ -8,20 +8,12 @@
 
 ## 1. computation overview
 
-[computation overview](?note=notes/concepts/engineering/computation_overview.md)
+[computation overview](?note=notes/concepts/engineering/computation_overview.md) <!-- [](/notes/concepts/engineering/computation_overview.md) -->
 
 ## 2. strings and sets
 
-[computation - strings and sets](?note=notes/concepts/engineering/computation-strings_and_sets.md)
+[computation - strings and sets](?note=notes/concepts/engineering/computation-strings_and_sets.md) <!-- [](/notes/concepts/engineering/computation-strings_and_sets.md) -->
 
-## 3 finite automata and regular sets
+## 3. finite automata and regular sets
 
-- **state** - instantaneous description of a system
-- **transitions** - changes of state
-- **finite state transition system** - 
-- **deterministic finite automaton (DFA)** - $M = (Q, \Sigma, \delta, s, F)$
-    - Q : set of states
-    - $\Sigma$ - alphabet
-    - $\delta$ : $Q\times \Sigma \to Q$: transition function "what will be the next state if we are in $q\in Q$ and consume some $a \in \Sigma$
-    - $s \in Q$ : start state
-    - $F \subseteq Q$ : set of accept states
+[finite automata and regular sets](?note=notes/concepts/engineering/finite_automata_and_regular_sets.md) <!-- [](/notes/concepts/engineering/finite_automata_and_regular_sets.md) -->

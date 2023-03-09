@@ -81,3 +81,35 @@ the sets of logical operators $\{\lnot, \land\}, \{\lnot, \lor\}, \{\lnot, \impl
 
 this is called truth-functional completeness or, expressive completeness
 
+# truth tables
+
+rows = $2^n$ where $n$ is the number of components in the expression
+
+## example
+
+p | q | p & q
+---|---|---
+T | T | T
+T | F | F
+F | T | F
+F | F | F
+
+
+# validity
+
+contra example
+
+for $p \vdash q$ show that p is true and q is false to prove invalidity
+
+for validity show the entire truth tables match up
+
+
+
+
+
+
+# sequent vs entailment 
+
+- sequent- p proves q
+- entailment - q follows from p on the truth table 
+
