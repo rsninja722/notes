@@ -2,6 +2,7 @@
     {
         "name": "clean",
         "--text": "#c7d6ff",
+        "--sub-text": "#9aa3bc",
         "--line-height": "normal",
         "--title": "#6d86ff",
         "--bold": "#47f3a4",
@@ -23,6 +24,7 @@
     {
         "name": "contrast",
         "--text": "#ffffff",
+        "--sub-text": "#9aa3bc",
         "--line-height": "140%",
         "--title": "#ffb730",
         "--bold": "#6aff44",
@@ -44,6 +46,7 @@
     {
         "name": "blinding",
         "--text": "#2a415a",
+        "--sub-text": "#9aa3bc",
         "--line-height": "normal",
         "--title": "#0b5394",
         "--bold": "#2fa1da",

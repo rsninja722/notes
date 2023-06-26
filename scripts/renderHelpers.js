@@ -2,6 +2,14 @@ function elementsWithTagMap(tag, f, parent = document) {
     [].forEach.call(parent.getElementsByTagName(tag), (e) => f(e));
 }
 
+function insertAfter(node, child) {
+    if(node.nextElementSibling === null) {
+        node.parentElement.appendChild(child);
+    } else {
+        node.parentElement.insertBefore(child, node.nextElementSibling);
+    }
+}
+
 function checkVisible(e) {
     var rect = e.getBoundingClientRect();
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
