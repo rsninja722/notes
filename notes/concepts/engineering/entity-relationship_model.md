@@ -80,7 +80,15 @@ when storing data, consider if a DBMS is the right choice, which DBMS to use, an
 
 ### types of relationships
 
-#### many-to-many relationship
+#### self relationship
+
+![](./media/2DB3_7.JPG)
+
+#### binary relationships
+
+##### many-to-many
+
+$R \subseteq A \times B$, no restrictions
 
 ![](./media/2DB3_1.JPG)
 
@@ -88,14 +96,34 @@ example implementation of this model
 
 ![](./media/2DB3_2.JPG)
 
+##### one-to-many
+
+$R \subseteq A \times B$, where each $a \in A$ is related to at most **one** $b \in B$
+
+
+##### one-to-one
+
+$R \subseteq A \times B$ where each $A$ is related to at most one $B$
+
+- if A has total participation: R is an **injection**,
+    - each $a \in A$ is related to exactly-one-and-unique $b \in B$
+- If B has total participation: R is an **surjection**,
+    - each $b \in B$ is related to exactly-one-and-unique $a \in A$
+- If A, B have total participation: R is a **bijection**,
+    - there is a one-to-one mapping between all $a \in A$s and $b \in B$s
+
+![](./media/2DB3_8.JPG)
+
+
 #### ternary relationship
 
 ![](./media/2DB3_3.JPG)
 
-### example 
 
-Faculty(fid, name, location, mail),
-Course(cid, name, year, credits).
-Teaches(fid, cid).
-Entities
-Relationship
+## weak entities
+
+- entities that can only be uniquely identified in conjunction with owning entities
+    - example: a course code (2DB3) is a weak entity that can only be identified with a program prefix (COMPSCI 2DB3, SFWRENG 2DB3)
+
+TODO
+add arrows 

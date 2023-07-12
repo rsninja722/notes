@@ -14,6 +14,7 @@ function setTheme(style) {
 
     keys = Object.keys(themes[style]);
     for (var i = 1; i < keys.length; i++) {
+        if(keys[i] == "--pre") debugger;
         root.setProperty(keys[i], themes[style][keys[i]]);
     }
 

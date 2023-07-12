@@ -18,7 +18,7 @@ h5,
 h6 {
     color: var(--title);
     cursor: pointer;
-    border-bottom: 1px solid #1e4976;
+    border-bottom: 1px solid var(--line);
     margin-bottom: 0;
     padding-left: 10px;
     border-radius: 6px 0 0 0;
@@ -50,7 +50,7 @@ h6 {
 }
 
 h1 {
-    border-bottom: 2px solid #1e4976;
+    border-bottom: 2px solid var(--line);
     text-align: center;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -64,12 +64,12 @@ strong {
 }
 
 pre {
-    color: var(--pre);
+    color: var(--preformatted);
     margin: 0.5em
 }
 
 a {
-    color: var(--pre);
+    color: var(--preformatted);
     text-decoration: none;
 }
 
@@ -99,7 +99,7 @@ code {
 button {
     color: #6df4d0;
     background-color: #001e3c;
-    border: 1px solid #1e4976;
+    border: 1px solid var(--line);
     border-radius: 3px;
     margin: 5px;
     padding: 3px 10px 3px 10px;
@@ -133,7 +133,7 @@ table {
     border-collapse: collapse;
     background: var(--table);
     border-radius: 6px;
-    border: 1px solid #1e4976;
+    border: 1px solid var(--line);
     overflow: hidden;
     padding: 1px;
     margin-top: 4px;
@@ -153,14 +153,14 @@ tbody tr:last-child {
 }
 
 th {
-    color: #6df4d0;
+    color: var(--math);
     padding-left: 5px;
     padding-right: 5px;
 }
 
 td {
-    border-left: 1px solid #1e4976;
-    border-right: 1px solid #1e4976;
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
     padding: 4px;
 }
 
@@ -180,6 +180,10 @@ code {
 
 sp {
     width: 4em;
+}
+
+hr {
+    border: 1px solid var(--line);
 }
 
 ::-webkit-scrollbar {
@@ -229,7 +233,7 @@ span.mord.text {
 }
 
 .hljs-comment {
-    color: #388b2d;
+    color: #388b2d !important;
 }
 
 .H1,
@@ -240,7 +244,7 @@ span.mord.text {
 .H6 {
     position: relative;
     padding-left: 1em;
-    border-left: 1px solid #1e4976;
+    border-left: 1px solid var(--line);
     padding-top: 0.25em;
 }
 
@@ -340,7 +344,7 @@ svg text {
     width: 25px;
     height: 4px;
     border-radius: 3px;
-    border: 1px solid #1e4976;
+    border: 1px solid var(--line);
     background: #001e3c;
     display: block;
     margin-top: 3px;
@@ -374,7 +378,7 @@ svg text {
 
 .bottomBorder {
     padding-bottom: 0.5em;
-    border-bottom: 2px solid #1e4976;
+    border-bottom: 2px solid var(--line);
     border-bottom-style: dashed;
 }
 
@@ -395,12 +399,13 @@ svg text {
     --line-height: normal;
     --title: #6d86ff;
     --bold: #47f3a4;
-    --pre: #e6c07b;
+    --preformatted: #e6c07b;
     --summary: #454bff;
     --back: #090f16;
     --back2: #0f1720;
     --transparentBack: #090f1677;
     --hover: #17222e;
+    --line: #1e4976;
     --math: #41f0c1;
     --space: 0px;
     --code: #08172a;
