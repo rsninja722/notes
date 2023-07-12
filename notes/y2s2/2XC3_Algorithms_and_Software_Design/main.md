@@ -170,3 +170,19 @@ $|G_n| = ?$
 $E$ = edges
 
 if $n = 10$, $E \subseteq V \times V$, $|V \times V| = 100$, approximate: $\frac{100-10}{2} \approx 45$
+
+# dp problems
+
+## can an arbitrary string be split into english words
+
+can an arbitrary length string be split into substrings so that all substrings are english words?
+
+## egg drop problem
+
+sp(n) as a recursion assuming you choose n' as the next floor
+
+## strings problem
+
+how many strings of length n exist without k consecutive vowels
+
+simplify - how many bit strings of length n exist without k consecutive 0's

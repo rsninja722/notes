@@ -113,3 +113,42 @@ for validity show the entire truth tables match up
 - sequent- p proves q
 - entailment - q follows from p on the truth table 
 
+
+# syllogistic logic
+
+4 categories of statements
+
+statement | name | meaning
+---|---|---
+A | universal affirmative | all A are b
+E | universal negative | all A are not b
+I | particular affirmative | some A are b 
+O | particular negative | some A are not b
+
+- A is a contradiction to O
+- E is a contradiction to I
+
+## names and predicates 
+
+- **names** - edward, animals, tables. symbolized as $\lbrace a, b \dots, t\rbrace$
+- **arbitrary names** 
+    - predicate applies to any member of a category $\lbrace u, v, w\rbrace$
+    - **arbitrary individual name** - predicate applies to at least one member of a category $\lbrace i, j, k\rbrace$
+- **predicates** - tall, orange, fast. symbolized as $\lbrace A, B \dots, Z\rbrace$
+- **variables** - symbolized as $\lbrace x, y, z\rbrace$
+
+
+example: EDWARD is TALL and FAST -> $Te \land Fe$
+
+## universal and existential quantifiers
+
+### interdefinability 
+
+- $\lnot \exists x \lnot \phi x = \forall x \phi x$
+- $\lnot \forall x \lnot \phi x = \exists x \phi x$
+
+syllogistic reasoning is limited, predicate logic lets your generalize aristotle's system and go beyond the limitations
+
+# relational logic
+
+2-place predicates are used to express relations

@@ -522,3 +522,19 @@ example
 ```
 
 circles go $q_1, q_2, q_3, q_4, q_5, q_6$
+
+# midterm 2 answers
+
+1. assume $A\subseteq {a,b}*$ and $B \subseteq {a,b}*$ are regular sets
+
+
+
+2. design a cfg for
+
+$A = {x \in {a,b,c}^* | #a(x) + #b(x) = #c(x)}$
+
+1 $S \to SaScS | SbScS | ScSaS | ScSbS | c $
+
+2 $S \to cSa | aSc | cSb | bSc$
+
+3 $S \to acS | aSc | Sac | bcS | bSc | sBc | caS | cSa | Sca | caS | cSb | cbS | \epsilon$

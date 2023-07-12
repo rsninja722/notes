@@ -118,11 +118,6 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
         document.body.removeChild(document.getElementById("links"));
         
         document.getElementById("nav").appendChild(generateNavTree(files, "?note="));
-        
-        link = window.location.hash.replace("#", "");
-        if (link.length > 0) {
-            document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }
 
         var flashcardData = await flashcards.getCards();
 
@@ -155,7 +150,12 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
                 return true
 
             });
-        })
+        });
+
+        link = window.location.hash.replace("#", "");
+        if (link.length > 0) {
+            document.getElementById(link).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
     }
 }
 
