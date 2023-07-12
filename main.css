@@ -289,6 +289,12 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover {
     border-bottom-color: var(--text);
 }
 
+.imageDescription {
+    color: #9aa3bc;
+    font-size: 80%;
+    line-height: 1px;
+}
+
 img {
     border-radius: 6px;
     box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
@@ -385,6 +391,7 @@ svg text {
 
 :root {
     --text: #c7d6ff;
+    --sub-text: #9aa3bc;
     --line-height: normal;
     --title: #6d86ff;
     --bold: #47f3a4;

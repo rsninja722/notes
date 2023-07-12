@@ -11,6 +11,7 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
     noteDiv.innerHTML += marked(lines.join("\n"));
 
     // highligh code
+    hljs.configure({ignoreUnescapedHTML: true});
     elementsWithTagMap("pre", hljs.highlightElement, noteDiv);
     
     // highlight true/false T's and F's
@@ -72,6 +73,15 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
             i.click();
         }
     }
+
+    // add image descriptions
+    elementsWithTagMap("img", (e) => {
+        var description =  e.getAttribute("alt");
+        if (description) {
+            insertAfter(e, createElement("p", {class: "imageDescription"}, {innerText:description}));
+        }
+    }, noteDiv);
+    
 
     var outboundSymbol = `<svg width="24" height="24" style="background-color: inherit;vertical-align: top;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
 

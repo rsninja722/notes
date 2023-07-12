@@ -53,13 +53,13 @@ when storing data, consider if a DBMS is the right choice, which DBMS to use, an
 
 ### entities
 
-![](./media/2DB3_5.JPG)
+![entity](./media/2DB3_5.JPG)
 
 - **entity** - an object in the real world
 
 ### attributes
 
-![](./media/2DB3_4.JPG)
+![attribute](./media/2DB3_4.JPG)
 
 - attributes are used to describe entities and relationships
     - have a domain/type (e.g., text, number, date).
@@ -69,7 +69,7 @@ when storing data, consider if a DBMS is the right choice, which DBMS to use, an
 
 ### relationships
 
-![](./media/2DB3_6.JPG)
+![relationship](./media/2DB3_6.JPG)
 
 - relates two or more entities
 

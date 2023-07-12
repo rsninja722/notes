@@ -185,16 +185,16 @@ def var_eq_gen(pf):
 def tex_to_table(tex):
     pf = tex_to_postfix(tex)
     ex = build_expr(pf)
-    rows = [[f"$${str(e)}$$" for e in ex.collect()]]
+    rows = [[f"${str(e)}$" for e in ex.collect()]]
     rows.append([":-:"] * len(rows[0]))
     for ex in var_eq_gen(pf):
 
         # print("F", ex)
         rows.append(
-            [["F", "T"][e.eval() if isinstance(e, Expr) else e] for e in ex.collect()]
+            [["<p class='F'>F</p>", "<p class='T'>T/p>"][e.eval() if isinstance(e, Expr) else e] for e in ex.collect()]
         )
     rows = list(zip(*sorted(set(list(zip(*rows))), key=lambda x: (len(x[0]), x[0]))))
 
-    return " |\n".join([" | ".join([str(e) for e in row]) for row in rows]) + " |"
+    return "\n".join([" | ".join([str(e) for e in row]) for row in rows])
 
-print(tex_to_table("(\\neg p \\lor q) \\land (p \\lor r) \\rightarrow (q \\lor r)"))
+print(tex_to_table("\\neg p"))
