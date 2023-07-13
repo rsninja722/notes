@@ -1,33 +1,81 @@
-# c++
+# C++
+
+- C++ is a compiled language created in 1979 that gets compiled into machine code
+- wide platform support
+- fast language, but will be slower than interpreted languages if you write bad code
 
 ## language design
 
 - the standard library is made in c++, with very minor use of machine code
 - statically typed (all types must be specified at compile time)
 
-## basics
+# vscode setup
+
+- install visual studio 
+- install c++ desktop development
+- create empty c++ project
+- right click source files folder > add new item > c++ file
+
+## building
+
+- right click on project > build
+
+## running
+
+- click local windows debugger
+
+## compilation
+
+1. header files are included into source (.cpp) files
+2. each source file is compiled into an object file (.obj)
+
+
+# basics
+
+## hello world
+
+```c++
+#include <iostream>
+
+int main() {
+	std::cout << "hello world!" << std::endl;
+	std::cin.get();
+}
+```
 
 - **//** - comments
     - ignored by compiler, for human use
 - **<<** - "put to" operator
     - writes the second argument onto the first
 
-### types
+## types
 
 - a type defines a set of possible values and 
 
-#### fundamental types
+### fundamental types
 
 - bool - true, false
 - char - 'a', 'b'
 - int - 1, 42, -7
 - double - 3.1415926545, 2.9999
 
-#### type sizes
+### type sizes
 
 - type sizes differ based on implementation across different machines
 - size of type can be found with the `sizeof()` operator
 
+## main
+
+- entry point for program
+- main can return nothing
+
+## preprocessor statements
+
+anything that begins with a # happens before compilation 
+
+### #include
+
+- copies the content of the specified file into the file it is written in
 
 # cheat sheet
 
@@ -74,3 +122,5 @@ x >= y; // greater than or equal
 
 
 ```
+
+
