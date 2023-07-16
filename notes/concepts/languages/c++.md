@@ -1,3 +1,13 @@
+# flashcards
+
+## basics
+
+<embed tags="c++,basics" mode="and"/>
+
+## advanced topics
+
+<embed tags="c++,advanced" mode="and"/>
+
 # c++
 
 ## language design

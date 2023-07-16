@@ -97,8 +97,6 @@ instead of swapping after every comparison, just shift the elements up, only put
 - not resetting data for each test
     - example - not scrambling an array between sorting algorithm tests
 
-<embed tags="test1" mode="or"/>
-
 ## python append
 
 - append worst case - O(n)

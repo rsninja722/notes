@@ -1,22 +1,31 @@
 # tags
-test1,test2
+c++,basics
 ## front
-test
-- bruh
-    - yo
+**c++**
+
+what is the difference between assignment with `{}` and with `=`?
 ## back
-info
+```c++
+// conversion
+int i = 7.2;   // automatic conversion to 7
+int j {7.2};   // error : floating-point to integer conversion
 
-info
-
-![media](./media/2_sets_1.png)
-
-___
-
-bruh
+// behavior with auto
+auto k = 7.2;  // double
+auto l { 7.2 };// class std::initializer_list<double>
+```
 # tags
-test2
+c++,basics
 ## front
-question
+**c++**
+
+explain what `const` and `constexpr` mean.
 ## back
-answer sdfjsdf lkdjsflksdfjsdfhlkadssa dfhksda lfhsadfh lhsdafhdsfh ahsdafhk adsasdfkhldsak jhladhkjldfsalkjhasdfhkjsfkl lakhjfashkjlsadfkjlds kjldfsadl dkjfsdjkdf shkljdsfahkjlsdfahkjlsfdahlksdfakjhlsdfahjlk fdshkj dsfalkjh dsflhkjdfsdfklsfsdak
+- `const` - makes a variable unchangeable
+- `constexpr` - a simple function or variable whose value can be determined during compilation
+
+[more info](http://localhost/notes/?note=notes/concepts/languages/c++.md#constandconstexpr)
+# tags
+c++,advanced
+## front
+## back

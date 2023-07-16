@@ -382,6 +382,58 @@ svg text {
     border-bottom-style: dashed;
 }
 
+.hidden {
+    display: none;
+}
+
+.flashcardContainer {
+    background-color: var(--back);
+    margin: 1em;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 1em;
+    width: 70vw;
+    min-height: 25em;
+}
+
+.flashcardControls {
+    border-bottom: 2px solid var(--line);
+    background-color: var(--back2);
+    margin-bottom: 1em;
+    width: 100%;
+
+    display: inline-grid;
+    grid-template: "a b c";    
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+.flashcardTopics {
+    font-family: monospace;
+}
+
+.flashcardTitle {
+    justify-content: end;
+    display: inherit;
+    font-weight: bold;
+    width: max-content;
+    color: var(--line);
+}
+
+.flashcardFront {
+    border: 2px solid var(--line);
+    border-radius: 5px 5px 0 0;
+    background-color: var(--back2);
+    padding: 0.5em;
+}
+.flashcardBack {
+    border: 2px solid var(--line);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--back);
+    padding: 0.5em;
+}
+
 .lds-ellipsis {display: inline-block;width: 80px;height: 80px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
 .lds-ellipsis div {position: absolute;top: 33px;width: 13px;height: 13px;border-radius: 50%;background: #fff;animation-timing-function: cubic-bezier(0, 1, 1, 0);}
 .lds-ellipsis div:nth-child(1) {left: 8px;animation: lds-ellipsis1 0.3s infinite;}
