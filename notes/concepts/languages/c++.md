@@ -1,3 +1,5 @@
+TODO: Finish language features, multi file, best practices
+
 # c++
 
 # flashcards
@@ -100,21 +102,6 @@ constexpr double i7 = constSquare(j);   // error: expression did not evaluate to
 double sum(const vector<double>&) {...} // sum will not modify its argument
 ```
 
-### const member functions
-
-**const** can be used to make a non-static member function unable to modify the attributes of the object it's called on
-
-```c++
-class A {
-    int x;
-public:
-    void getX() const {
-        ++x; // causes error
-        return x;
-    }
-}
-```
-
 ## pointers
 
 - **\*** - "contents of" operator
@@ -131,10 +118,149 @@ public:
 - the name given to the struct becomes a new data type
 - structs cannot contain functions, but functions can specify that they require or return them
 
-### classes
+#### access struct members
 
+```c++
+void f(Structure s1,Structure& s2,Structure* s3) {
+    std::cout << s1.var;
+    std::cout << s2.var;
+    std::cout << s3->var;
+}
+```
 
+#### modifying members of structs passed by value
 
+careful when using pointers in structs, passing by value even as a const doesn't prevent modification of the data the pointer points to
+
+```c++
+struct One { int var1; };
+struct Two { One* var2; };
+void f(const Two t) { t.var2->var1 = 2; }
+
+int main() {
+	One o = { 1 };
+	Two t = { &o };
+	std::cout << t.var2->var1; // 1
+	f(t);
+	std::cout << t.var2->var1; // 2
+}
+```
+
+# classes
+
+## structure
+
+```c++
+```
+
+## initializer
+
+### initializer list
+
+initializer lists are structured as follows: `Classname() : member1( val1 ), member2( val2 ) { ... }`, and can be used to initialize members, call specific parent constructors, or delegate to . 
+
+```c++
+// the only way to change a const after creating it
+class C {
+public:
+    C(int val) : m_val{val} {}
+private:
+    const int m_val;
+};
+
+// choosing constructor for parent with no default constuctor
+class Parent {
+public:
+    int val;
+    Parent(int x) : val{ x } {}
+    Parent(int x, int y) : val{ x + y } {}
+};
+
+class Child : public Parent {
+public:
+    Child() : Parent{ 1, 2 } {}
+};
+
+// delegating constructor
+class C {
+public:
+    C(char x, int y) {}
+    C(int y) : C{'a', y} {} // delegates to C(char, int)
+};
+```
+
+further details of how the initialization list functions are shown below:
+
+```c++
+// priority of member vs argument names
+class C {
+public:
+    const int& i;
+    C(int c) :
+        i{a},       // sets C::i to C::a
+        b{c},       // sets C::b to c
+        c{c},       // sets C::c to c
+        d{this->c}  // sets C::d to C::c
+    {}
+private:
+    int a,b,c,d
+};
+
+// using with try ... catch
+class C {
+public:
+    int i;
+    C() try : i{1} {} catch (...) { /* handle exception */ }
+};
+```
+
+## const member functions
+
+**const** can be used to make a non-static member function unable to modify the attributes of the object it's called on
+
+```c++
+class A {
+    int x;
+public:
+    void getX() const {
+        ++x; // causes error
+        return x;
+    }
+}
+```
+
+## operator overloading
+
+by default, the assignment
+
+### operator[]
+
+```c++
+
+```
+
+# standard library
+
+## vector
+
+# advice
+
+The C++ programming language / Bjarne Stroustrup. Fourth edition.
+
+- Express ideas directly in code;
+- Define classes to represent application concepts directly in code;
+- Use concrete classes to represent simple concepts and performance-critical components;
+- Avoid "naked" new and delete operations;
+- Use resource handles and Resource Acquisition is Initialization to manage resources;
+- Use abstract classes as interfaces when complete separation of interface and implementation is needed; 
+- When designing a class hierarchy, distinguish between implementation inheritance and inter-face inheritance;
+- Control construction, copy, move, and destruction of objects;
+- Return containers by value (relying on move for efficiency);
+- Provide strong resource safety; that is, never leak anything that you think of as a resource;
+- Use containers, defined as resource handle templates, to hold collections of values of the same type;
+- Use function templates to represent general algorithms;
+- Use function objects, including lambdas, to represent policies and actions;
+- Use type and template aliases to provide a uniform notation for types that may vary among similar types or among implementations;
 
 # cheat sheet
 
@@ -281,6 +407,43 @@ std::cout << (e == nullptr); // true
 e = &a;
 std::cout << *e; // 6
 
+// _____ new _____
+// TODO placement new
+
+
+int* newInt(int x) {
+	return new int{ x }; // new creates allocates memory for the 
+}                        // object and returns a pointer to it.
+                         // objects created by new will not be
+                         // deleted at the end of the scope
+int* i = newInt(3);
+std::cout << *i; // 3
+
+// _____ arrays _____
+
+int arr[4] = { 0,1,2,3 };
+
+// access element of array
+std::cout << arr[1]; // 1
+std::cout << *(arr+1); // 1 ( arr is just a pointer to the first element in the array )
+std::cout << 1[arr]; // 1 ( compiler treats it as *(1+arr) whereas arr[1] is treated as *(arr+1) ) 
+
+// modify
+arr[1] += 10; // think of [] having a return type of int&
+std::cout << arr[1]; // 11
+
+// declare explicitly as a pointer ( can allocate memory separately from declaration)
+int* arr2;
+arr2 = new int[4];
+for (int i = 0;i < 4;i++) { arr2[i] = i; }
+
+// move array pointer
+std::cout << arr2[0]; // 0
+arr2 += 1;
+std::cout << arr2[0]; // 1
+std::cout << arr2[-1]; // 0
+
+
 // _____ structs _____
 
 struct StructName { // declare structure
@@ -290,7 +453,7 @@ struct StructName { // declare structure
 
 // initialize with general initializer
 double arr[] = {1,2,3};
-StructName s1{ 3, arr}; 
+StructName s1{ 3, arr }; 
 
 // initialize then assign values
 StructName s2;
@@ -298,6 +461,11 @@ s2.var1 = 3;
 s2.arr1 = new double[3];
 for (int i = 0;i < 3;i++) { s2.arr1[i] = i + 1; }
 
+// when using a pointer to a struct, access members with -> instead of .
+void structPointer(StructName* s) {
+    s->var1 = 3;
+    s->arr1 = new double[3];
+}
 
 
 

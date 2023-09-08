@@ -1,5 +1,9 @@
 # boolean logic and logic gates
 
+boolean operators are used in [propositional calculus](?note=notes/concepts/engineering/propositional_calculus.md) <!-- [](/notes/concepts/engineering/propositional_calculus.md) -->
+
+boolean logic (or boolean algebra) is an algebraic system that uses two values: true and false
+
 - **boolean constants** - true,false
 	- also shown as T,F or 1,0
 - **truth table** - a table of outputs for all combinations of inputs

@@ -1,5 +1,7 @@
 # propositional calculus
 
+propositional calculus uses [boolean operators](?note=notes/concepts/engineering/boolean_logic_and_logic_gates.md) <!-- [](/notes/concepts/engineering/boolean_logic_and_logic_gates.md) -->
+
 - **calculus** - method of reasoning by calculation with symbols 
 - **propositional calculus** - method of calculating with boolean expressions that involve propositional variables
     - aka **equational logic $E$** 
