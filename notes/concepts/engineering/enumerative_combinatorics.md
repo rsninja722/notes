@@ -33,7 +33,7 @@ we know the cardinality of this set is $\prod_{i=1}^{n} \\#A_i = \prod_{i=1}^{n}
 
 $\prod_{i=1}^{n} \\{ \text{include, exclude} \\}$ = {exclude, exclude, exclude}, {include, exclude, exclude}, {exclude, include, exclude}, {exclude, exclude, include}, {include, include, exclude}, {exclude, include, include}, {include, exclude, include}, {include, include, include}
 
-$P( \\{ a,b,c \\} )$ = {{},{a},{b},{c},{a,b},{b,c},{a,c},{a,b,c}}
+$P( \\{ a,b,c \\} )$ = $\\{\\{\\},\\{a\\},\\{b\\},\\{c\\},\\{a,b\\},\\{b,c\\},\\{a,c\\},\\{a,b,c\\}\\}$
 
 ## permutations and combinations
 

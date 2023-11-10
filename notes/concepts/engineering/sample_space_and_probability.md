@@ -4,13 +4,13 @@
 
 - **probability space** - $(\Omega,\mathscr{F}, \mathbb{P})$
 
-## sample space
+### sample space
 
 $\Omega = \\{ \text{set of all possible outcomes} \\}$
 
 elements of $\Omega$ are **sample points**
 
-## events
+### events
 
 "the collection of events in Omega"
 
@@ -18,7 +18,7 @@ $\mathscr{F}$ is the sigma-algabra. it is the set of (some) subsets of $\Omega$ 
 
 when $\Omega$ is finite we will choose $\mathscr{F}$ to be the set of all subsets of $\Omega$ (the power set of $\Omega$)
 
-## probability measure
+### probability measure
 
 (probability distribution)
 
@@ -26,7 +26,7 @@ $\mathbb{P}$ is the probability measure. it is a function $\mathbb{P}: \mathscr{
 
 $\mathbb{P}$ takes events (elements of $\mathscr{F}$) as input and it outputs their probability of happening
 
-### probability measure axioms
+## probability measure axioms
 
 Each event $A$ has a probability $P(A)$ and $P$ satisfies Kolmogorov’s axioms:
 
@@ -34,7 +34,7 @@ Each event $A$ has a probability $P(A)$ and $P$ satisfies Kolmogorov’s axioms:
 - axiom of certainty - $\mathbb{P}(\Omega) = 1$
 - axiom of additivity - if $A_1,A_2,A_3,...$ is a sequence of [pairwise disjoint](?note=notes/concepts/engineering/sets.md#pairwisedisjoint) events then $$P(\bigcup_{i=1}^{\infin} A_i ) = \sum_{i=1}^{\infin} P(A_i)$$
 
-### useful rules
+## useful rules
 
 - probability of compliment - $P(A^c) = 1 - P(A)$
 - probability of empty set - $\mathbb{P}(\varnothing) = 0$
@@ -42,33 +42,10 @@ Each event $A$ has a probability $P(A)$ and $P$ satisfies Kolmogorov’s axioms:
     - extended - $P(A\cup B \cup C)=P(A)+P(B)+P(C)−P(A \cap B)−P(A \cap C)−P(B\cap C)+P(A\cap B\cap C)$
 - subset - if $B \subseteq A$ then $P\\{ B \\} \leq P\\{ A\\}$
 
-### example: die
+## example: die
 
 a 6-sided die has a probability space of $ \Omega = \\{  1,2,3,4,5,6\\} $
 
 probability of rolling even: $P\\{  2,4,6 \\}  = P\\{  2 \\}  + P\\{  4 \\}  +P\\{  6 \\}  = \frac{1}{2}$
 
 note the notation $P(\\{  1 \\} ) = P\\{  1 \\}  = P(1)$
-
-## ordered partition/ multinomial coefficient
-
-things that divide into groups
-
-go through and assign labels
-
-giving something a label <=> placing them in a group
-
-
-
-## compliment rule
-
-$P(A^c) = 1- P(A)$
-
-### proof
-
-note: $P(\Omega) = 1$
-
-note: $A$ and $A^c$ form a partition of $\Omega$
-
-- **partition** - a finite collection $\\{B_1, ... , B_n \\}$ is a partition of $\Omega$ if the sets $B_i$ are pairwise disjoint and together make up $\Omega$
-
