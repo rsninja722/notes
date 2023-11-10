@@ -31,6 +31,8 @@ Indicates saleability of inventory - the number of times a company sells its ave
 
 $$\text{inventory turnover} = \frac{\text{cost of goods sold}}{\text{average inventory}}$$
 
+- average inventory = (beginning + end) /2
+
 $$\text{DIO} = \frac{\text{365}}{\text{inventory turnover}}$$
 
 ### accounts receivable turnover

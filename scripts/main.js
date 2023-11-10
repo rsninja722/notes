@@ -11,8 +11,7 @@ async function init() {
         renderDirectory(note, files);    
     }
         
-    button = document.createElement("button");
-    button.onclick = function () {
+    document.getElementById("upButton").onclick = function () {
         search = window.location.search;
         if(search.endsWith(".md")) {
             link = search.substring(0, search.lastIndexOf("/") + 1);
@@ -21,18 +20,26 @@ async function init() {
         }
         window.location.search = link;
     };
-    button.innerText = "△";
-    button.style.marginLeft = "3.5em";
-    document.body.insertBefore(button, document.getElementById("links"));
 
-    var button = document.createElement("button");
-    button.id = "styleButton";
-    button.onclick = switchTheme;
-    button.innerText = "theme: clean";
-    document.body.insertBefore(button, document.getElementById("links"));
+    document.getElementById("styleButton").onclick = toggleThemeList;
+
+    for(var i = 0; i < themes.length; i++) {
+        var div = createElement("div", {class: "themeOption", id: "themeOption" + i}, {innerText: themes[i].name});
+        let id = i;
+        div.addEventListener("click", function() {
+            document.getElementById("themeOption" + style).classList.remove("selected");
+            document.getElementById("themeOption" + id).classList.add("selected");
+
+            setTheme(id);
+            toggleThemeList();
+        });
+        document.getElementById("themeList").appendChild(div);
+    }
 
     style = parseInt(localStorage.theme) || 0;
     setTheme(style);
+
+    document.getElementById("themeOption" + style).classList.add("selected");
 }
 
 

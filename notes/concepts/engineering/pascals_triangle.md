@@ -1,7 +1,7 @@
 # pascal's triangle
 
-related to binomial theorem: $(x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^k y^{n-k}$
-
+- start with an infinite row ... ,0,0,1,0,0, ...
+- each number next row is found by adding the number up and to the left with the number up and to the right
 
 $$\begin{matrix}
 &&&&&&&1&&&&&&\\\\
@@ -13,6 +13,19 @@ $$\begin{matrix}
 &1&&6&&15&&20&&15&&6&&1
 \end{matrix}$$
 
+## binomial theorem
+
+$$(a+b)^n = \sum_{k=0}^{n} \binom{n}{k} a^k b^{n-k}$$
+
+### binomial expansion
+
+to expand $(a,b)^n$ use the terms in pascals triangle at row n as coefficients, and set the exponents of a to n...0 and the exponents of b to 0...n
+
+$(a,b)^0 = 1 a^0 b^0 = 1$
+
+$(a,b)^1 = 1 a^1 b^0 + 1 a^1 b^0 = a + b$
+
+$(a,b)^2 = 1 a^2 b^0 + 2 a^1 b^1 +1 a^0 b^2 = a^2 + 2ab + b^2$
 
 ## pascals triangle with combinations
 

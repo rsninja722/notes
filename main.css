@@ -8,7 +8,16 @@ body {
     color: var(--text);
     margin: 0;
     overflow-x: hidden;
+    width: calc(var(--compress)*55% + 45%);
 }
+
+/*
+goodby cpu 
+h1,h2,h3,h4,h5,h6,pre,p,span,ul,li,td,ol,code,button,summary,table,hr {
+    transition-property: color, background-color, border;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+} */
 
 h1,
 h2,
@@ -19,42 +28,51 @@ h6 {
     color: var(--title);
     cursor: pointer;
     border-bottom: 1px solid var(--line);
+    border-top: calc(calc(1 - var(--compress)) * 1px) solid var(--line);
+    border-left: calc(calc(1 - var(--compress)) * 1px) solid var(--line);
     margin-bottom: 0;
     padding-left: 10px;
     border-radius: 6px 0 0 0;
+    margin-top: calc(var(--compress)*1em);
 }
 
 h2 {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: calc(var(--compress)*7px);
+    padding-bottom: calc(var(--compress)*7px);
+    font-size: calc(var(--compress)*0.7em + 0.8em);
 }
 
 h3 {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: calc(var(--compress)*6px);
+    padding-bottom: calc(var(--compress)*6px);
+    font-size: calc(var(--compress)*0.53em + 0.8em);
 }
 
 h4 {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: calc(var(--compress)*4px);
+    padding-bottom: calc(var(--compress)*4px);
+    font-size: calc(var(--compress)*0.2em + 0.8em);
 }
 
 h5 {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: calc(var(--compress)*3px);
+    padding-bottom: calc(var(--compress)*3px);
+    font-size: 0.8em;
 }
 
 h6 {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: calc(var(--compress)*2px);
+    padding-bottom: calc(var(--compress)*2px);
+    font-size: 0.8em;
 }
 
 h1 {
     border-bottom: 2px solid var(--line);
     text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: calc(var(--compress)*8px);
+    padding-bottom: calc(var(--compress)*8px);
     margin-bottom: 0;
+    font-size: calc(var(--compress)*1.2em + 0.8em);
 }
 
 b,
@@ -65,7 +83,7 @@ strong {
 
 pre {
     color: var(--preformatted);
-    margin: 0.5em
+    margin: 0.5em 0.5em 0.5em 0;
 }
 
 a {
@@ -78,17 +96,28 @@ a:hover {
 }
 
 p {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: calc(var(--compress)*4px);
+    margin-bottom: calc(var(--compress)*4px);
     line-height: var(--lineHeight);
 }
 
-ul,
-li,
-td {
+ul, li, td, ol {
     line-height: var(--lineHeight);
-    margin: var(--space)
+    margin: var(--space);
 }
+
+ul,ol {
+    padding-inline-start: calc(var(--compress) * 1em + 1em);
+}
+
+ul {
+    list-style-type: "•";
+}
+
+li {
+    padding-left: 0.5em;
+}
+
 
 code {
     letter-spacing: normal;
@@ -205,6 +234,8 @@ hr {
 
 .katex {
     color: var(--math);
+    font-weight: calc(var(--compress) * -300 + 700) !important;
+    font-size: calc(var(--compress) * 0.31em + 0.9em) !important;
 }
 
 .katex .base,
@@ -224,12 +255,24 @@ span.mord.text {
 
 .hljs {
     background-color: var(--code) !important;
-    letter-spacing: normal;
-    word-spacing: normal;
+    color: var(--code-color) !important;
+    padding: calc(var(--compress) * 0.3em + 0.2em) !important;
+    letter-spacing: calc(var(--compress) * 0.75px + -0.75px) !important;
+    word-spacing: calc(var(--compress) * 2px + -2px) !important;
+    line-height: calc(var(--compress) * 0.1em + 0.9em) !important;
+    font-size: calc(var(--compress) * 0.1em + 0.9em) !important;
     width: fit-content;
     border-radius: 6px;
     box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
     font-family: consolas, monospace;
+}
+
+pre {
+    padding: calc(var(--compress) * 0.3em + 0.2em) !important;
+    letter-spacing: calc(var(--compress) * 0.75px + -0.75px) !important;
+    word-spacing: calc(var(--compress) * 2px + -2px) !important;
+    line-height: calc(var(--compress) * 0.1em + 0.9em) !important;
+    font-size: calc(var(--compress) * 0.1em + 0.9em) !important;
 }
 
 .hljs-comment {
@@ -243,9 +286,10 @@ span.mord.text {
 .H5,
 .H6 {
     position: relative;
-    padding-left: 1em;
+    padding-left: calc(var(--compress) * 0.5em + 0.5em) ;
     border-left: 1px solid var(--line);
     padding-top: 0.25em;
+    padding-bottom: 0.1em;    
 }
 
 
@@ -314,6 +358,13 @@ svg text {
     stroke-width: 0px;        
 }
 
+#postDiv {
+    padding-left: 10px;
+    padding-right: calc(var(--compress) * 10px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #nav {
     position: absolute;
     top: 0;
@@ -326,6 +377,7 @@ svg text {
     backdrop-filter: blur(6px);
     background-color: var(--transparentBack);
     overflow-wrap: break-word;
+    z-index: 2;
 }
 
 #nav .toggle-btn {
@@ -353,6 +405,50 @@ svg text {
 
 #nav.active {
     left: 0;
+}
+
+#styleDropDown {
+    display: inline-block;
+    position: relative;
+}
+
+#themeList {
+    position: absolute;
+    top: calc(var(--themeListHeight) - 5em);
+    left: 5px;
+    transition: top 0.3s ease-in-out;
+    width: max-content;
+    height: fit-content;
+    background-color: var(--transparentBack);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    box-shadow: 0px 4px 2px -1px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
+    z-index: 1;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+div#themeList.shown {
+    top: 100%;
+}
+
+.themeOption {
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line);
+}
+
+.themeOption:last-child {
+    border-bottom: none;
+}
+
+.themeOption:hover {
+    background-color: var(--hover);
+}
+
+.themeOption.selected {
+    background-color: var(--hover);
 }
 
 .toggle-btn.active + span {
@@ -434,6 +530,7 @@ svg text {
     padding: 0.5em;
 }
 
+
 .lds-ellipsis {display: inline-block;width: 80px;height: 80px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
 .lds-ellipsis div {position: absolute;top: 33px;width: 13px;height: 13px;border-radius: 50%;background: #fff;animation-timing-function: cubic-bezier(0, 1, 1, 0);}
 .lds-ellipsis div:nth-child(1) {left: 8px;animation: lds-ellipsis1 0.3s infinite;}
@@ -446,6 +543,7 @@ svg text {
 
 
 :root {
+    --themeListHeight: 0;
     --text: #c7d6ff;
     --sub-text: #9aa3bc;
     --line-height: normal;
@@ -461,9 +559,11 @@ svg text {
     --math: #41f0c1;
     --space: 0px;
     --code: #08172a;
+    --code-color: #abb2bf;
     --table: #040609;
     --table-head: #292b56;
     font-family: Helvetica,Arial,sans-serif;
     letter-spacing: normal;
-    word-spacing: norma;
+    word-spacing: normal;
+    --compress: 1;
 }

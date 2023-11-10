@@ -262,6 +262,95 @@ The C++ programming language / Bjarne Stroustrup. Fourth edition.
 - Use function objects, including lambdas, to represent policies and actions;
 - Use type and template aliases to provide a uniform notation for types that may vary among similar types or among implementations;
 
+# standard library
+
+## algorithm
+
+`#include <algorithm>`
+
+```c++
+sort(a.begin(), a.end()); // a is some type with an iterator
+sort(a.begin(), a.end()); // a is some type with an iterator
+```
+
+## utility
+
+`#include <utility>`
+
+### pair
+
+```c++
+// ways to initialize
+std::pair<int, char> p1 {1, 'a'};
+auto p2 = std::make_pair(2, 'b');
+
+// access elements
+std::cout << p1.first;
+std::cout << p1.second;
+
+// swap elements of p1 and p2
+p1.swap(p2);
+```
+## vector
+
+```c++
+// initialize
+vector<int> vect1;
+vector<int> vect2(5, 1); // {1,1,1,1,1}
+vector<int> vect3{1,1,1,1,1};
+
+int arr[] = {1,2,3};
+int n = sizeof(arr) / sizeof(arr[0]);
+vector<int> vect4(arr, arr + n);
+
+vector<int> vect5(vect2.begin() vec2.end());
+
+fill(vect2.begin(), vect2.end(), 3); // {3,3,3,3,3}
+
+iota(vect2.begin(), vect2.end(), 1); // {1,2,3,4,5}
+```
+
+## map/unordered_map
+
+
+`#include <map>` - stored as balanced BST, lower memory, O(log n) search/insert/delete, rebalance time required for
+    - `multimap` allows pairs with the same key
+    - maps and multimaps will keep elements ordered by key
+
+`#include <unordered_map>` - stored as hash table, higher memory, best: O(1) / worst: O(n) search/insert/delete
+    - `unordered_multimap` allows pairs with the same key
+
+```c++
+std::map<int, int> m;
+std::multimap<int, int> m2;
+std::unordered_map<int, int> m3;
+std::unordered_multimap<int, int> m4;
+
+// insert elements
+m.insert({1,2});
+m.emplace(2,3);
+m.emplace(std::make_pair(3,4)); // doesn't copy or move objects
+m[4] = 5; // will overwrite if pair exists already
+// insert and emplace_hint can take an iterator to hint to the position to insert the element, can speed up insert time
+
+// access elements
+m.at(1); // 2   returns out_of_range exception if key does not exist
+m[1]; // 2      initialize a pair with the value type's default value if key does not exist
+
+// other methods
+m.find(1); // returns an iterator to the position of the element, or m.end() if it doesn't exist
+m.erase(1); // deletes pair with key 1, also can remove all elements between a provided iterator start and end
+m.clear(); // deletes all elements
+m.empty(); // true if map has no elements, false if not
+m.size(); // number of elements
+m.swap(m2); std::swap(m,m2); // swap maps
+
+// iterate
+for(auto i:m) {
+    // i is a pair
+}
+```
+
 # cheat sheet
 
 ```c++
@@ -422,6 +511,7 @@ std::cout << *i; // 3
 // _____ arrays _____
 
 int arr[4] = { 0,1,2,3 };
+int arr2[4] = { 0 }; // = {0,0,0,0}
 
 // access element of array
 std::cout << arr[1]; // 1

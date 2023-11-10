@@ -1,15 +1,31 @@
 # permutations and combinations
 
-- "possible ways of doing x or y" - add possibilities
-- "possible ways of doing x and y" - multiply possibilities
+## permutations
 
-- permutations
-    - ordered
-    - you divide out the choices you don't make 
-- combinations
-    - unordered
-    - you divide out the choices you don't make 
-    - and you divide out the ways to arrange the items you choose
+$$p(n,r) = \frac{n!}{(n-r)!}$$
+
+- **permutations** - all ordered arrangements (size $r$) of a set (size $n$)
+    - no repetitions
+    - order matters
+    
+- you divide out the choices you don't make
+
+### deriving permutations
+
+[multiplication principal](?note=notes/concepts/engineering/enumerative_combinatorics.md#generalmultiplicationprinciple) <!-- [](/notes/concepts/engineering/enumerative_combinatorics.md) -->
+
+## combinations
+
+$$c(n,r) = \frac{n!}{r!(n-r)!}$$
+
+- **combinations** - all unordered subsets (size $r$) of some set (size $n$)
+    - no repetitions
+    - order doesn't matter    
+    
+- you divide out the choices you don't make 
+- and you divide out the ways to arrange the items you choose
+
+### useful combinations
 
 $$\binom{n}{n} = 1$$
 
@@ -17,6 +33,7 @@ $$\binom{n}{1} = n$$
 
 $$\binom{n}{0}= 1$$
 
+note: $0! = 1$
 
 ## pascal's identity
 
@@ -80,3 +97,41 @@ $= n^2 + n(n-1)$
 $= n^2 + n^2-n$
 
 $= 2n^2-n$
+
+## ordered partitions
+
+- $n$ objects
+- $r$ partitions (groups)
+- $k_1, k_2, ... , k_r$ partition sizes (adds up to $n$)
+
+$$ \binom{n}{k_1, k_2, ... , k_r} = \frac{n!}{k_1! k_2! ... k_r!} $$
+
+- also can be though of as assigning **specific** labels to the elements of the set
+### example
+
+how many words can be made from the word "statistics"?
+
+- word length : 10
+- 3 s
+- 3 t
+- 2 i
+- 1 a
+- 1 c
+
+$$ \binom{10}{3,3,2,1,1} = \frac{10!}{3! 3! 2! 1! 1!} = 50400$$
+
+### non-specific labels
+
+$$\frac{\binom{n}{k_1, k_2, ... , k_r}}{r!}$$
+
+#### example
+
+how many ways can 4 people be divide into 2 pairs?
+
+$$\frac{\binom{4}{2,2}}{2!} = 3$$
+
+ab cd
+
+ac bd
+
+ad bc

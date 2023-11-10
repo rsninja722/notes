@@ -15,46 +15,41 @@ the elements in set A or set B
 
 definition: $\lbrace x|x \in A \lor x \in B \rbrace$
 
-venn diagram for $A \cup B$
-
-![img](./media/2_sets_1.png)
-
-### symmetric difference $\oplus$ (exclusive or)
-the elements that are only in A or (inclusive) only in B
-
-definition: $A \oplus B = (A-B) \cup (B-A)$
-
-venn diagram for $A \oplus B$
-
-![img](./media/2_sets_5.png)
-
+![venn diagram for A ∪ B](./media/2_sets_1.png)
 
 ### intersection $\cap$ (and)
 the elements in both set A and set B    
 
 definition: $\lbrace x|x \in A \land x \in B \rbrace$
 
-venn diagram for $A \cap B$
+also written as $AB$
 
-![img](./media/2_sets_2.png)
+![venn diagram for A ∩ B](./media/2_sets_2.png)
 
 ### complement $\bar{A}$ (not)
 the elements in U that are not in set A. The set $U-A$
 
 definition: $\bar{A} = \lbrace x \in U | x \notin A \rbrace$
 
-venn diagram for compliment
+also written as $A^c$ or $A'$
 
-![img](./media/2_sets_3.png)
+![venn diagram for compliment](./media/2_sets_3.png)
 
-### differnce 
+### difference / relative complement
 A-B is the set containing the elements of A that are not in B. AKA the complement of B with respect to A
 
 definition: $A-B = \lbrace x | x \in A \land x \notin B \rbrace = A \cap \bar{B}$
 
-venn diagram for $A-B$
+also written as $A \backslash B$
 
-![img](./media/2_sets_4.png)
+![venn diagram for A-B](./media/2_sets_4.png)
+
+### symmetric difference $\oplus$ (exclusive or)
+the elements that are only in A or (inclusive) only in B
+
+definition: $A \oplus B = (A-B) \cup (B-A)$
+
+![venn diagram for A ⊕ B](./media/2_sets_5.png)
 
 ## cardinality of the union of two sets
 inclusion-exclusion

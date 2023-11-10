@@ -3,7 +3,7 @@
 - **set** - an **unordered** collection of things (elements / members / other sets) where **each element is unique**
     - a set is said to contains elements/members
     - usually denoted with curly brackets: $\lbrace \text{element 1}, \text{element 2}, ... , \text{element n} \rbrace$
-
+    - **singleton** - set with one element
 ## sub topics
 
 - [set operations](?note=notes/concepts/engineering/set_operations.md) <!-- [](/notes/concepts/engineering/set_operations.md) -->
@@ -31,7 +31,8 @@ $S =  \lbrace  ... ,-3,-2,-1\rbrace $ "set of all integers less than zero" - ell
 
 ### set-builder notation
 
-specify the property(s) that all members must satisfy
+- set of all things on the left
+- specify the property(s) that members must satisfy on the right
 
 $S =  \lbrace x | x \text{is a positive integer less than} 100\rbrace $ "all elements x such that x is a positive integer less than 100"
 
@@ -119,3 +120,7 @@ given a predicate $P$ and a domain $D$, the truth set of P to be the set of elem
 ### example
 
 the truth set of $P(x)$ where the domain is the integers and P(x) is $|x| = 1$ is the set $\\{-1,1\\}$
+
+## pairwise disjoint
+
+- **pairwise disjoint** - for a set of sets: all $A_i \cap A_j = \emptyset$ for all $i \neq j$
