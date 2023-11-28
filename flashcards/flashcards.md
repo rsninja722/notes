@@ -64,3 +64,9 @@ resulting in the income statement showing higher income than likely
 and the balance sheet showing a more favorable position
 
 this is fraud, unethical, and illegal
+# tags
+stats,chap1
+## front
+a
+## back
+b

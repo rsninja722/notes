@@ -9,13 +9,15 @@
 
 [tuples](?note=notes/concepts/engineering/tuples.md) <!-- [](/notes/concepts/engineering/tuples.md) -->
 
+[permutations and combinations](?note=notes/concepts/engineering/permutations_and_combinations.md) <!-- [](/notes/concepts/engineering/permutations_and_combinations.md) -->
+
 [sum product and series](?note=notes/concepts/engineering/sum_product_series.md) <!-- [](/notes/concepts/engineering/sum_product_series.md) -->
 
 [proof by induction](?note=notes/concepts/engineering/proof_by_induction.md) <!-- [](/notes/concepts/engineering/proof_by_induction.md) -->
 
-## chapter 1
+[calc 1 summary](?note=notes/concepts/engineering/calc_1_summary.md) <!-- [](/notes/concepts/engineering/calc_1_summary.md) -->
 
-1.1-1.5
+## chapter 1
 
 [enumerative combinatorics](?note=notes/concepts/engineering/enumerative_combinatorics.md) <!-- [](/notes/concepts/engineering/enumerative_combinatorics.md) -->
 
@@ -32,12 +34,15 @@
 - sampling with replacement, order matters
 - sampling without replacement, order matters
 - sampling without replacement, order doesn't matter
+- labels
 
 [sample space infinitely many outcomes](?note=notes/concepts/engineering/sample_space_infinitely_many_outcomes.md) <!-- [](/notes/concepts/engineering/sample_space_infinitely_many_outcomes.md) -->
 
+-
+
 [probability random variables](?note=notes/concepts/engineering/probability_random_variables.md) <!-- [](/notes/concepts/engineering/probability_random_variables.md) -->
 
-## chapter 2
+## chapter 2 - conditional probability and independence
 
 2.1-2.4
 
@@ -47,15 +52,97 @@
 
 [independence](?note=notes/concepts/engineering/probability_independence.md) <!-- [](/notes/concepts/engineering/probability_independence.md) -->
 
-## chapter 3
+## chapter 3 - random variables
 
-3.1-3.4
+[probability distributions](?note=notes/concepts/engineering/probability_distribution.md) <!-- [](/notes/concepts/engineering/probability_distribution.md) -->
 
-[probability expectation](?note=notes/concepts/engineering/probability_expectation.md) <!-- [](/notes/concepts/engineering/probability_expectation.md) -->
+[cumulative distribution](?note=notes/concepts/engineering/cumulative_distribution.md) <!-- [](/notes/concepts/engineering/cumulative _distribution.md) -->
 
-[probability variance](?note=notes/concepts/engineering/probability_variance.md) <!-- [](/notes/concepts/engineering/probability_variance.md) -->
+[expectation](?note=notes/concepts/engineering/expectation_variance.md) <!-- [](/notes/concepts/engineering/expectation_variance.md) -->
+
+[variance](?note=notes/concepts/engineering/probability_variance.md) <!-- [](/notes/concepts/engineering/probability_variance.md) -->
 
 [gaussian distribution](?note=notes/concepts/engineering/gaussian_distribution.md) <!-- [](/notes/concepts/engineering/gaussian_distribution.md) -->
+
+## chapter 4 - approximations of the binomial theorem
+
+[normal approximation](?note=notes/concepts/engineering/normal_approximation.md) <!-- [](/notes/concepts/engineering/normal_approximation.md) -->
+
+[law of large numbers](?note=notes/concepts/engineering/law_of_large_numbers.md) <!-- [](/notes/concepts/engineering/law_of_large_numbers.md) -->
+
+[poisson approximation](?note=notes/concepts/engineering/poisson_approximation.md) <!-- [](/notes/concepts/engineering/poisson_approximation.md) -->
+
+[poisson process](?note=notes/concepts/engineering/poisson_process.md) <!-- [](/notes/concepts/engineering/poisson_process.md) -->
+
+[exponential distribution](?note=notes/concepts/engineering/exponential_distribution.md) <!-- [](/notes/concepts/engineering/exponential_distribution.md) -->
+
+## chapter 5 - transforms and transformations
+
+[moment generating function](?note=notes/concepts/engineering/moment_generating_function.md) <!-- [](/notes/concepts/engineering/moment_generating_function.md) -->
+
+[distribution of function of random variable](?note=notes/concepts/engineering/distribution_of_function_of_random_variable.md) <!-- [](/notes/concepts/engineering/distribution_of_function_of_random_variable.md) -->
+
+## chapter 6 - joint distribution of random variables
+
+[joint distribution of random variables](?note=notes/concepts/engineering/joint_distribution_of_random_variables.md) <!-- [](/notes/concepts/engineering/joint_distribution_of_random_variables.md) -->
+
+[jointly continuous random variables](?note=notes/concepts/engineering/jointly_continuous_random_variables.md) <!-- [](/notes/concepts/engineering/jointly_continuous_random_variables.md) -->
+
+[joint distributions and independence](?note=notes/concepts/engineering/joint_distributions_and_independence.md) <!-- [](/notes/concepts/engineering/joint_distributions_and_independence.md) -->
+
+## chapter 7 - sums and symmetry
+
+[sums of independent variables](?note=notes/concepts/engineering/sums_of_independent_variables.md) <!-- [](/notes/concepts/engineering/sums_of_independent_variables.md) -->
+
+[exchangeable random variables](?note=notes/concepts/engineering/exchangeable_random_variables.md) <!-- [](/notes/concepts/engineering/exchangeable_random_variables.md) -->
+
+## chapter 8 - expectation and variance in the multivarient setting
+
+[linearity of expectation](?note=notes/concepts/engineering/linearity_of_expectation.md) <!-- [](/notes/concepts/engineering/linearity_of_expectation.md) -->
+
+[expectation and independence](?note=notes/concepts/engineering/expectation_and_independence.md) <!-- [](/notes/concepts/engineering/expectation_and_independence.md) -->
+
+[sums and moment generating functions](?note=notes/concepts/engineering/sums_and_moment_generating_functions.md) <!-- [](/notes/concepts/engineering/sums_and_moment_generating_functions.md) -->
+
+[covariance and correlation](?note=notes/concepts/engineering/covariance_and_correlation.md) <!-- [](/notes/concepts/engineering/covariance_and_correlation.md) -->
+
+[bivariate normal distribution](?note=notes/concepts/engineering/bivariate_normal_distribution.md) <!-- [](/notes/concepts/engineering/bivariate_normal_distribution.md) -->
+
+# flashcards
+
+<embed tags="stats" mode="and"/>
+
+## chapter 1
+
+<embed tags="stats,chap1" mode="and"/>
+
+## chapter 2
+
+<embed tags="stats,chap2" mode="and"/>
+
+## chapter 3
+
+<embed tags="stats,chap3" mode="and"/>
+
+## chapter 4
+
+<embed tags="stats,chap4" mode="and"/>
+
+## chapter 5
+
+<embed tags="stats,chap5" mode="and"/>
+
+## chapter 6
+
+<embed tags="stats,chap6" mode="and"/>
+
+## chapter 7
+
+<embed tags="stats,chap7" mode="and"/>
+
+## chapter 8
+
+<embed tags="stats,chap8" mode="and"/>
 
 # tutorial 1 examples
 

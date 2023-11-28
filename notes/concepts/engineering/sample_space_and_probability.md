@@ -38,9 +38,11 @@ Each event $A$ has a probability $P(A)$ and $P$ satisfies Kolmogorov’s axioms:
 
 - probability of compliment - $P(A^c) = 1 - P(A)$
 - probability of empty set - $\mathbb{P}(\varnothing) = 0$
-- union law - $P(A\cup B) = P(A) + P(B) - P(A \cap B)$
+- union law (inclusion-exclusion) - $P(A\cup B) = P(A) + P(B) - P(A \cap B)$
     - extended - $P(A\cup B \cup C)=P(A)+P(B)+P(C)−P(A \cap B)−P(A \cap C)−P(B\cap C)+P(A\cap B\cap C)$
 - subset - if $B \subseteq A$ then $P\\{ B \\} \leq P\\{ A\\}$
+- $P(B) = P(A\cap B) + P(A^c \cap B)$
+- monotonicity of probability - if $A \subseteq B$ then $P(A) \leq P(A)$
 
 ## example: die
 

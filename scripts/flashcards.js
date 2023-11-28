@@ -34,6 +34,10 @@ async function renderFlashCards(e) {
             return tags.reduce((res, tag) => res && cardTags.includes(tag), true);
         }
     });
+
+    if(orderedCards.length === 0) {
+        return createElement("div", {class: "flashcardContainer"}, {innerText: "No cards found."});
+    }
     
     var cards = [];
     // shuffle cards

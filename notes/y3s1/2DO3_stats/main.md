@@ -52,3 +52,22 @@ Week | Lec | Date(C01) |  | Topic |  | Reading | Assginment
 12 | 36 | 1-Dec |  | Random spinner game I |  |  |  
 13 | 37 | 5-Dec |  | Random spinner game II |  |  |  
 13 | 38 | 6-Dec |  | Flex |  |  | HW6, 6-Dec | 
+
+## midterm 2 topics
+
+- expectation and variance
+    - [expectation](?note=notes/concepts/engineering/expectation_variance.md) <!-- [](/notes/concepts/engineering/expectation_variance.md) -->
+    - [variance](?note=notes/concepts/engineering/probability_variance.md) <!-- [](/notes/concepts/engineering/probability_variance.md) -->
+- properties of expectation and variance, including linearity
+    - [linearity of expectation](?note=notes/concepts/engineering/linearity_of_expectation.md) <!-- [](/notes/concepts/engineering/linearity_of_expectation.md) -->
+- Markov's and Chebychev's inequalities
+- exponential distribution and memorylessness
+    - [exponential distribution](?note=notes/concepts/engineering/exponential_distribution.md) <!-- [](/notes/concepts/engineering/exponential_distribution.md) -->
+- normal and Poisson approximations to the binomial
+    - [normal approximation](?note=notes/concepts/engineering/normal_approximation.md) <!-- [](/notes/concepts/engineering/normal_approximation.md) -->
+    - [poisson approximation](?note=notes/concepts/engineering/poisson_approximation.md) <!-- [](/notes/concepts/engineering/poisson_approximation.md) -->
+- functions of a discrete or continuous RV (PMF, PDF, CDF)
+- joint PMFs
+- multinomial distribution
+- discrete marginal distributions
+- expected value of a function of two discrete random variables
