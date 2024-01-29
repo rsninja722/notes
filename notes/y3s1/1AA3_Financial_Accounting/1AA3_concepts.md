@@ -59,3 +59,20 @@
 [financial statement analysis](?note=notes/concepts/business/financial_statement_analysis.md) <!-- [](/notes/concepts/business/financial_statement_analysis.md) -->
 
 
+## review
+
+- **horizontal analysis** - year to year percentage changes in line items from comparative financial statements
+- when computing trend percentages, the base year is always equal to 100%
+- trend analysis (can be done for all statements)
+- vertical analysis
+- for understated/overstated questions, write out the equations for each year, specifying which is over/understated
+- COGS = purchases - purchases returns and allowance - purchase discount + freight-in
+- EI = BI + cost of goods purchased - COGS
+- different ways of calculating COGS (FIFO, ect.)
+- at end of assets useful life - book value = salvage value
+- **double declining value: check before answering**
+    - calculate ending book value to make sure it is not less than the salvage value
+- questions about changes in estimates and disposal(sale) of long-term assets require the calculation of book value
+    - disposal of long term assets - calculate the book value at te point of sale
+    - change in estimates - calculate the book value a the begging of the year in which estimate have changed
+- change in estimation does not change previous years

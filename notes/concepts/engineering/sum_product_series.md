@@ -61,6 +61,19 @@ $$\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$$
 
 $$\sum_{k=1}^{n} k^3 = \frac{n^2(n+1)^2}{4}$$
 
+## useful summation formulas
+
+sum | closed formula
+:--- | :---
+$\sum_{k=0}^{n} ar^k\enspace (r\ne 0)$ | $\frac{ar^{n+1}-1}{r-1},r\ne 1$
+$\sum_{k=1}^{n} k$ | $\frac{n(n+1)}{2}$
+$\sum_{k=1}^{n} k^2$ | $\frac{n(n+1)(2n+1)}{6}$
+$\sum_{k=1}^{n} k^3$ | $\frac{n^2(n+1)^2}{4}$
+$\sum_{k=1}^{\infin} x^k, \vert x\vert < 1$ | $\frac{1}{1-x}$
+$\sum_{k=1}^{\infin} kx^{k-1},\vert x\vert < 1$ | $\frac{1}{(1-x)^2}$
+
+
+
 #### binomial theorem
 
 [binomial theorem](?note=notes/concepts/engineering/pascals_triangle.md#binomialtheorem) <!-- [](/notes/concepts/engineering/pascals_triangle.md) -->

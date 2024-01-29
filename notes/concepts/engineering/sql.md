@@ -22,6 +22,40 @@ cid | title | lecturer
 3 | Databases | 2
 4 | Advanced Databases | 2
 
+### valid operators
+
+Operator | Description
+---|---
+= | Equal	
+\> | Greater than	
+< | Less than	
+\>= | Greater than or equal	
+<= | Less than or equal	
+<> | Not equal
+BETWEEN	| Between a certain range	
+LIKE | Search for a pattern	
+SIMILAR TO | like LIKE but uses the SQL standard's definition of a regular expression
+IN | To specify multiple possible values for a column
+AND | boolean and of expressions on both sides of the AND
+OR | boolean or of expressions on both sides of the OR
+NOT() | boolean not of expression in brackets
+IS NULL | returns if the left side is NULL
+IS NOT NULL | returns if the left side is not NULL
+
+### three-valued logic
+A|B|A AND B| A OR B |NOT A
+---|---|---|---|---
+F |F |F |F |T
+T |F |F |T |F
+F |T |F |T |T
+T |T |T |T |F
+F |unknown |F |unknown |T
+T |unknown |unknown |T |F
+unknown |F |F |unknown |unknown
+unknown |T |unknown |T |unknown
+unknown |unknown |unknown |unknown |unknown
+
+
 ### SELECT
 
 - retrieves data from a table
@@ -60,40 +94,6 @@ SELECT * FROM courses WHERE lecturer = 2; -- get all rows from courses table tha
 ```sql
 SELECT * FROM courses, faculty WHERE lecturer = fid;
 ```
-
-##### valid operators
-
-Operator | Description
----|---
-= | Equal	
-\> | Greater than	
-< | Less than	
-\>= | Greater than or equal	
-<= | Less than or equal	
-<> | Not equal
-BETWEEN	| Between a certain range	
-LIKE | Search for a pattern	
-SIMILAR TO | like LIKE but uses the SQL standard's definition of a regular expression
-IN | To specify multiple possible values for a column
-AND | boolean and of expressions on both sides of the AND
-OR | boolean or of expressions on both sides of the OR
-NOT() | boolean not of expression in brackets
-IS NULL | returns if the left side is NULL
-IS NOT NULL | returns if the left side is not NULL
-
-##### three-valued logic
-A|B|A AND B| A OR B |NOT A
----|---|---|---|---
-F |F |F |F |T
-T |F |F |T |F
-F |T |F |T |T
-T |T |T |T |F
-F |unknown |F |unknown |T
-T |unknown |unknown |T |F
-unknown |F |F |unknown |unknown
-unknown |T |unknown |T |unknown
-unknown |unknown |unknown |unknown |unknown
-
 #### LIKE
 
 - matches a text pattern in a WHERE clause
@@ -191,21 +191,91 @@ EXCEPT ALL -- EXCEPT combines results as a multiset. (if A had 4 elements that m
 SELECT fid AS id FROM faculty;
 ```
 
-#### nested select
+#### nested queries
+
+- use one query to select some set of data, and use another to refine that set
+
+```sql
+SELECT id FROM students
+WHERE id IN (SELECT id FROM faculty);
+```
 
 #### ALL
 
+```sql
+SELECT pid, rid FROM reviews
+WHERE originality >= ALL (SELECT originality FROM reviews);
+```
+- returns primary key of review(s) with highest originality
+
+#### correlated nested queries
+
+
+```sql
+SELECT pid, rid FROM reviews AS ra
+WHERE originality >= ALL (
+    SELECT originality 
+    FROM reviews AS rb
+    WHERE ra.rid = rb.rid);
+```
+
 #### ANY
+
+```sql
+SELECT pid, rid FROM reviews
+WHERE originality = ANY (
+    SELECT quality
+    FROM reviews);
+```
+- returns review(s) with originality = quality
 
 #### EXISTS
 
+- **EXISTS** - true if the provided list $\ne \varnothing$
+
+```sql
+SELECT * FROM students
+WHERE EXISTS (
+    SELECT *
+    FROM faculty);
+```
+
 #### BETWEEN
+
+- `name BETWEEN x AND y` - equivalent to `x <= name AND name <= y`
 
 #### JOIN
 
+```sql
+SELECT * FROM courses C
+JOIN instructors I 
+    ON C.cid = I.cid;
+```
+
 ##### CROSS JOIN
 
+- works like join but returns the cartesian product of the two selected rows   
+
+```sql
+SELECT * FROM courses C
+CROSS JOIN instructors I 
+    WHERE C.cid = I.cid;
+```
+
+also can be written as
+
+```sql
+SELECT * FROM courses C, instructors I 
+    WHERE C.cid = I.cid;
+```
+
 ##### INNER JOIN
+
+```sql
+SELECT * FROM courses C
+INNER JOIN instructors I 
+    ON C.cid = I.cid;
+```
 
 ##### LEFT JOIN
 
@@ -223,12 +293,12 @@ SELECT fid AS id FROM faculty;
 
 function | definition
 ---|---
-MIN() |
-MAX() |
-COUNT() |
-DISTINCT |
-SUM() |
-AVG() |
+MIN() | minimum value of column
+MAX() | maximum value of column
+COUNT() | number of rows
+DISTINCT | used with other functions, removes rows with duplicate values for that column 
+SUM() | adds values of column
+AVG() | averages values of column, use CAST to get a decimal result from a column of INTs
 
 #### CAST
 
@@ -239,7 +309,105 @@ CAST(_ AS DECIMAL) |
 
 #### GROUP BY
 
+- aggregation operates on groups of rows (by default a table is one group)
+- `GROUP BY` splits a table into separate groups of rows
+    - after grouping, you can't access individual unaggregated columns
+
+##### example
+
+productreview
+
+user | product | rating
+---|---|---
+Alicia | cheese | 10
+Alicia | phone | 5
+Eva | cheese | 9
+Eva | shoe | 8
+Bo | phone | 3
+Bo | shoe | 5
+Celeste | cheese | 7
+
+```sql
+SELECT product, MAX(rating), MIN(rating)
+FROM productreview
+GROUP BY product;
+```
+
+output
+
+product | MAX(rating) |	MIN(rating)
+---|---|---
+cheese  | 10 | 7
+phone	|  5 | 3
+shoe	|  8 | 5
+
+
 ##### HAVING
+
+```sql
+SELECT aggregated output columns
+FROM sources
+WHERE row conditions -- Filters rows before grouping!
+GROUP BY columns_to_group_rows_on
+HAVING conditions_on_aggregated groups; -- Filters aggregated rows (after grouping)
+```
+
+###### example
+
+productreview
+
+user | product | rating
+---|---|---
+Alicia | cheese | 10
+Alicia | phone | 5
+Eva | cheese | 9
+Eva | shoe | 8
+Bo | phone | 3
+Bo | shoe | 5
+Celeste | cheese | 7
+
+```sql
+SELECT product, MAX(rating), MIN(rating)
+FROM productreview
+GROUP BY product
+HAVING COUNT(*) > 2; -- only products with > 2 rows
+```
+
+output
+
+product | MAX(rating) |	MIN(rating)
+---|---|---
+cheese  | 10 | 7
+
+```sql
+SELECT product, MAX(rating), MIN(rating)
+FROM p
+GROUP BY product
+HAVING AVG(rating) >= 5;
+```
+
+output
+
+product | MAX(rating) |	MIN(rating)
+---|---|---
+cheese  | 10 | 7
+shoe	|  8 | 5
+
+```sql
+SELECT product, MAX(rating), MIN(rating)
+FROM p
+WHERE rating > 4 -- filter out bad ratings
+GROUP BY product
+HAVING AVG(rating) >= 5; 
+```
+
+output
+
+product | MAX(rating) |	MIN(rating)
+---|---|---
+cheese  | 10 | 7
+phone	|  5 | 3
+shoe	|  8 | 5
 
 
 ### INSERT
