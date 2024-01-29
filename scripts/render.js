@@ -83,13 +83,21 @@ async function renderNote(noteDiv, note, files, embedMode = false) {
     }, noteDiv);
     
 
-    var outboundSymbol = `<svg width="24" height="24" style="background-color: inherit;vertical-align: top;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+    var outboundSymbol = `<svg width="20" height="20" style="background-color: inherit;vertical-align: sub;stroke: var(--preformatted);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
 
     // embed notes within notes div
     elementsWithTagMap("a", (e) => {
         var linkParam = e.href.indexOf("?note=");
+
         // skip if not a link to a note
         if(linkParam === -1 || e.href.includes("#")) {
+            return;
+        }
+
+        // only add symbol if link is inline
+        if(e.parentElement.innerText !== e.innerText) { 
+            // add symbol to link
+            e.innerHTML += outboundSymbol;
             return;
         }
         

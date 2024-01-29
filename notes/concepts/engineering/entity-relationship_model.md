@@ -2,6 +2,7 @@
 
 - **data model** - the rules by which real-world data can be represented and structured
 - **relational data model** - data model in which data is a collection of tables
+    - versatile, widely used, centered around combining data (via queries), complex enough for real world data, simple enough for user-friendly access
 - **scheme** - how the table looks/ describing how the stored data is structured
     - conceptual schema - in terms of the data model
     - physical schema - in terms of layout on disk
@@ -44,20 +45,15 @@ when storing data, consider if a DBMS is the right choice, which DBMS to use, an
     - can be represented as tabels 
     - can be shown as an ER-diagram which create useful visuals
 
+# ER diagrams
 
-
-
-
-
-## ER diagrams
-
-### entities
+## entities
 
 ![entity](./media/2DB3_5.JPG)
 
 - **entity** - an object in the real world
 
-### attributes
+## attributes
 
 ![attribute](./media/2DB3_4.JPG)
 
@@ -67,26 +63,26 @@ when storing data, consider if a DBMS is the right choice, which DBMS to use, an
     - All keys are **candidate keys**.
     - One is chosen as the **primary key**.
 
-### relationships
+## relationships
 
 ![relationship](./media/2DB3_6.JPG)
 
 - relates two or more entities
 
-### entity sets and instances
+## entity sets and instances
 
 - An entity set: collection of similar entities.
 - An instance: snapshot of the entities ("data").
 
-### types of relationships
+## types of relationships
 
-#### self relationship
+### self relationship
 
 ![](./media/2DB3_7.JPG)
 
-#### binary relationships
+### binary relationships
 
-##### many-to-many
+#### many-to-many
 
 $R \subseteq A \times B$, no restrictions
 
@@ -96,12 +92,12 @@ example implementation of this model
 
 ![](./media/2DB3_2.JPG)
 
-##### one-to-many
+#### one-to-many
 
 $R \subseteq A \times B$, where each $a \in A$ is related to at most **one** $b \in B$
 
 
-##### one-to-one
+#### one-to-one
 
 $R \subseteq A \times B$ where each $A$ is related to at most one $B$
 
@@ -115,15 +111,27 @@ $R \subseteq A \times B$ where each $A$ is related to at most one $B$
 ![](./media/2DB3_8.JPG)
 
 
-#### ternary relationship
+### ternary relationship
 
 ![](./media/2DB3_3.JPG)
 
 
+## constraints on relationships
+
+### at most one
+
+pointy arrow
+
+### every
+
+thick line
+
 ## weak entities
 
-- entities that can only be uniquely identified in conjunction with owning entities
+- a weak entity is owned by another identity
     - example: a course code (2DB3) is a weak entity that can only be identified with a program prefix (COMPSCI 2DB3, SFWRENG 2DB3)
 
-TODO
-add arrows 
+## ISA 
+
+
+## good design

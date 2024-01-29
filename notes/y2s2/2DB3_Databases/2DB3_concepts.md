@@ -1,5 +1,10 @@
 # 2DB3 concepts
 
+
+## intro
+
+[databases](?note=notes/concepts/engineering/databases.md) <!-- [](/notes/concepts/engineering/databases.md) -->
+
 ## entity-relationship model
 
 [entity-relationship model](?note=notes/concepts/engineering/entity-relationship_model.md) <!-- [](/notes/concepts/engineering/entity-relationship_model.md) -->
@@ -34,3 +39,29 @@ guidelines
 3. have sensible defaults - prefill billing names with account information
 
 there is no standard solution that works in all cases
+
+## connecting to DB2 server
+
+in a terminal, run:
+
+1. `ssh nickolij@cs2db3.cas.mcmaster.ca`
+2. `db2`
+3. `connect to cs2db3`
+4. `list tables`
+
+to create a table: `create table name(field Type, field Type)`
+
+## connect with dbeaver/datagrip
+
+field | value
+---|---
+host | cs2db3.cas.mcmaster.ca
+port | 25010
+database | cs2db3
+username | macid
+password | ---
+
+## commands
+
+- copy file onto server `scp filenameA macid@cs2db3.cas.mcmaster.ca:~/filenameB`
+- get db2 to execute file (after sshing) `db2 -tvf filename`

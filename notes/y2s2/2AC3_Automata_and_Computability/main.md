@@ -1,18 +1,41 @@
 # 2AC3 Automata and Computability
 
-- instructor email - zokaeiam@mcmaster.ca
+- instructor email - jodayrem@mcmaster.ca
 
 ## marks
 
-- assignments - 30% (4 assignments)
-- avenue quizzes - 10% (worst removed)
-- midterm 1 - 15% (febuary 16th, during lecture)
-- midterm 2 - 15% (march 16th , during lecture)
-- exam - 30%
+item | weight | description
+---|---|---
+assignments | 30%  | due jan 29, feb 19, mar 26
+midterm | 20% | march 11th, cheat sheet allowed
+exam | 50% | cheat sheet allowed
 
 ## textbook
 
-“Automata and Computability” by Dexter Kozen
+Michael Sipser - Introduction to the Theory of Computation 3rd edition
+
+## schedule
+
+weeks of | topic
+jan 8 - jan 21 | introduction
+jan 22 - feb 4 | regular languages
+feb 5 - feb 18 | context-free languages
+feb 19 - mar 3 | church-turing thesis
+mar 4 - mar 17 | decidability
+mar 18 - mar 31 | reducibility
+apr 1 - apr 10 | advanced topics in computability theory
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## models of computation
 
@@ -25,8 +48,6 @@
 - regular languages
 - context-free
 - unrestricted
-
-
 
 # studying various models of computation
 

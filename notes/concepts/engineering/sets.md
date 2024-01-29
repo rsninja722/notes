@@ -4,11 +4,12 @@
     - a set is said to contains elements/members
     - usually denoted with curly brackets: $\lbrace \text{element 1}, \text{element 2}, ... , \text{element n} \rbrace$
     - **singleton** - set with one element
+    - **unordered pair** - set with two elements
 ## sub topics
 
 - [set operations](?note=notes/concepts/engineering/set_operations.md) <!-- [](/notes/concepts/engineering/set_operations.md) -->
 - [set functions](?note=notes/concepts/engineering/set_functions.md) <!-- [](/notes/concepts/engineering/set_functions.md) -->
-- [sequences and summations](?note=notes/concepts/engineering/sequences_and_summations.md) <!-- [](/notes/concepts/engineering/sequences_and_summations.md) -->
+- [sequences](?note=notes/concepts/engineering/sequences.md) <!-- [](/notes/concepts/engineering/sequences.md) -->
 
 ## membership
 
@@ -53,7 +54,7 @@ specify a range from a to b
 - $(a,b) =  \lbrace x|a\leq x\leq b\rbrace $
 
 ## important sets
-- $\mathbb{N}$ = natural numbers $ \lbrace 0,1,2,3, ...\rbrace $
+- $\mathbb{N}$ or sometimes $\mathbb{Z}^{*}$ = natural numbers $ \lbrace 0,1,2,3, ...\rbrace $
 - $\mathbb{Z}$ = integers $ \lbrace  ... ,-3,-2,-1,0,1,2,3, ...\rbrace  $
 - $\mathbb{Z}^{+}$ = positive integers $ \lbrace 1,2,3, ...\rbrace $
 - $\mathbb{Q}$ = rational numbers (fractions)
@@ -100,6 +101,17 @@ examples:
 - $|\lbrace 1,3,2\rbrace |$ = 3
 - $\mathbb{Z}$ is infinite
 
+## power set
+
+- power set of A - $P(A)$ - all sets that are subsets A
+- $|P(A)| = 2^{|A|}$
+
+$P(\\{1\\}) = \\{\\{\varnothing\\},\\{1\\}\\}$
+
+$P(\\{1,2\\}) = \\{\\{\varnothing\\},\\{1\\},\\{2\\},\\{1,2\\}\\}$
+
+to make the next power set in a sequence, add the new element to each existing set, and add those
+
 ## cartesian product
 the cartesian product of two sets A and B,denoted by $A \times B$ is the set of ordered pairs (a,b) where $a \in A$ and $b \in B$
 
@@ -124,3 +136,26 @@ the truth set of $P(x)$ where the domain is the integers and P(x) is $|x| = 1$ i
 ## pairwise disjoint
 
 - **pairwise disjoint** - for a set of sets: all $A_i \cap A_j = \emptyset$ for all $i \neq j$
+
+## countability 
+
+- **countable** - a set that is finite or has the same cardinality as the set of positive integers ($\mathbb{Z}^{+}$)
+- **uncountable** - a set that is not countable, example: set of real numbers $\mathbb{R}$
+
+- **$\aleph_{0}$** - cardinality of a countably infinite set
+
+some countable sets:
+- set of all positive integers
+- set of all positive rational numbers
+
+some uncountable sets:
+- set of all real numbers
+
+### show countability
+show a set is countable by showing its elements can be indexed by the positive integers
+
+a one-to-one correspondence **f** from the set of positive integers to a set **S** can be expressed as a sequence $a_1,a_2,\dots,a_n,\dots$ where $a_1 = f(1),a_2 = f(2),\dots,a_n = f(n),\dots$ 
+
+so, find a bijection with a function f(x) that generates all members of the sets from the positive real integers
+
+or show you can list the sequence
