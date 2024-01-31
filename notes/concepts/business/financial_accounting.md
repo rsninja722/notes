@@ -1,5 +1,26 @@
 # financial accounting
 
+## equations
+
+
+
+
+- **balance** - beginning balance​ + issuance of shares​ - dividends​ + net income​ (or - net​ loss) = ending balance
+- **equity** - ending equity = beginning equity + change in capital + net income - dividend
+- **ending cash​** = beginning cash​ + collections​ - payments
+- **collections​** = sales​ - amount not collected
+- **payments​** = inventory payment​ + all other payments
+- **notes payable​** = beginning notes payable​ + borrowed notes payable​ - paid off notes payable
+- **amount stolen​** = adjusted book balance​ - adjusted bank balance
+- **adjusted bank balance​** = bank statement balance​ + deposits in transit​ - outstanding cheques
+- **book balance of cash​** = adjusted bank balance​ + service charge​ - interest earned​ + NSF cheque​ - book error
+
+- **ASPE**
+    - **consulting price per hour​** = total contract​ ÷ months in year​ ÷ hours per month
+- **IFRS**
+    - **hours per year​** = hours per month​ × months in year
+    - **consulting price per hour**​ = total contract​ ÷ obligation hours
+
 ## definitions
 
 - **accounting** - an information system that measures and records business activities, and processes data into reports
@@ -24,7 +45,9 @@
 - **funding**
     - money to support the business
     - provided by investors and creditors, with the hope of returns
+- **gains** - money from peripheral operations
 - **owners' equity** - portion of the business assets owned outright by the owners
+- **revenues** - money from ongoing business operations
 - **shareholder** - person/entity invested in a company in exchange for a share of ownership
     - shareholders have ultimate control of a company
 - **shareholder's equity** - value of the company's obligation to shareholders / net worth of company
@@ -45,24 +68,6 @@
 - **IFRS** - international financial reporting standards
     - must be used by organizations listed on TSX
 
-
-## misc equations
-
-- **balance** - beginning balance​ + issuance of shares​ - dividends​ + net income​ (or - net​ loss) = ending balance
-- **equity** - ending equity = beginning equity + change in capital + net income - dividend
-- **ending cash​** = beginning cash​ + collections​ - payments
-- **collections​** = sales​ - amount not collected
-- **payments​** = inventory payment​ + all other payments
-- **notes payable​** = beginning notes payable​ + borrowed notes payable​ - paid off notes payable
-- **amount stolen​** = adjusted book balance​ - adjusted bank balance
-- **adjusted bank balance​** = bank statement balance​ + deposits in transit​ - outstanding cheques
-- **book balance of cash​** = adjusted bank balance​ + service charge​ - interest earned​ + NSF cheque​ - book error
-
-- **ASPE**
-    - **consulting price per hour​** = total contract​ ÷ months in year​ ÷ hours per month
-- **IFRS**
-    - **hours per year​** = hours per month​ × months in year
-    - **consulting price per hour**​ = total contract​ ÷ obligation hours
 ## important points
 
 - recognize revenues when they are earned, not when collected
@@ -76,8 +81,6 @@
 
 - **financial statements** - business documents that companies use to report the results of their activities to various user groups, financial standing, and performance
     - primary objective: provide useful info for investing and lending decisions
-
-
 
 
 the following are in order:
@@ -112,38 +115,31 @@ the following are in order:
 
 ### income statement
 
-- reports the revenues and expenses for a specific period 
+- reports the revenues and expenses for a specific period     
+- header - name,income statement, for the year ended December 31 XXXX
 
 - **net income** = total income - total expenses
     - **total income** = revenues + gains
     - **total expenses** = expenses + losses
-    - affected by: cash
-
-- header - name,income statement, for the year ended December 31 XXXX
 
 
 ### statement of retained earnings
 
 - wealth increase
-
-- **retained earnings** - ending returned earnings = beginning returned earnings + net income - dividends
-
 - header - name,statement of retained earnings, for the year ended December 31 XXXX
 
+- **ending retained earnings** = beginning returned earnings + net income - dividends
 
 ### balance sheet
 
 - reports the​ assets, liabilities, and​ owners' equity of the entity at a particular point in time.
-
+- header - name,balance sheet, as at date
 - **classified balance sheet** - separates current/non-current assets/liabilities
 
-
 - **accounting equation** - assets = liabilities + owner's equity
-
-- header - name,balance sheet, as at date
 - assets = property + equipment + cash + receivables + prepaid expenses + other assets
 - liabilities = long term liabilities + current liabilities
-- equity = common shares + retained earnings
+- equity = common shares (capital) + retained earnings
 
 ### statement of cash flow
 

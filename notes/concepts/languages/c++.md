@@ -54,6 +54,12 @@ int i = 7;
 d = d+i; // converts to double
 i = d∗i; // converts to int
 ```
+### string methods
+
+```c++
+// int to string
+std::string s = std::to_string(42);
+```
 
 ## assignment
 
@@ -243,24 +249,6 @@ by default, the assignment
 
 ## vector
 
-# advice
-
-The C++ programming language / Bjarne Stroustrup. Fourth edition.
-
-- Express ideas directly in code;
-- Define classes to represent application concepts directly in code;
-- Use concrete classes to represent simple concepts and performance-critical components;
-- Avoid "naked" new and delete operations;
-- Use resource handles and Resource Acquisition is Initialization to manage resources;
-- Use abstract classes as interfaces when complete separation of interface and implementation is needed; 
-- When designing a class hierarchy, distinguish between implementation inheritance and inter-face inheritance;
-- Control construction, copy, move, and destruction of objects;
-- Return containers by value (relying on move for efficiency);
-- Provide strong resource safety; that is, never leak anything that you think of as a resource;
-- Use containers, defined as resource handle templates, to hold collections of values of the same type;
-- Use function templates to represent general algorithms;
-- Use function objects, including lambdas, to represent policies and actions;
-- Use type and template aliases to provide a uniform notation for types that may vary among similar types or among implementations;
 
 # standard library
 
@@ -291,6 +279,48 @@ std::cout << p1.second;
 // swap elements of p1 and p2
 p1.swap(p2);
 ```
+
+## stack
+
+`#include <stack>`
+
+```c++
+// initialize
+stack<int> s;
+
+// insert values
+s.push(1); // inserts a copy of the passed value
+s.emplace(2); // new element in stack is constructed in place, passing the value given as the argument(s) for its constructor
+
+// access newest inserted value
+s.top(); // 2
+
+// remove newest inserted value
+s.pop();
+
+// size
+s.size(); // 1
+s.empty(); // false
+```
+
+## queue
+
+`#include <queue>`
+
+same as stack with the following differences:
+```c++
+// initialize
+queue<int> q;
+
+// access newest inserted value
+q.back();
+// access oldest inserted value
+q.front();
+
+// remove oldest inserted value
+q.pop();
+```
+
 ## vector
 
 ```c++
@@ -308,6 +338,16 @@ vector<int> vect5(vect2.begin() vec2.end());
 fill(vect2.begin(), vect2.end(), 3); // {3,3,3,3,3}
 
 iota(vect2.begin(), vect2.end(), 1); // {1,2,3,4,5}
+
+// access
+vect2[2]; // 3
+vect2.at(2); // 3
+
+// remove elements
+
+vect2.erase(std::next(vect2.begin(), 2)); // removes third element
+vect2.erase(vect2.begin() + 2); // removes third element
+vect2.erase(vect2.begin() + 1, vect2.begin() + 3); // removes second to fourth element
 ```
 
 ## map/unordered_map
@@ -560,3 +600,103 @@ void structPointer(StructName* s) {
 
 
 ```
+
+# standards and guidelines
+
+## advice from The C++ programming language / Bjarne Stroustrup. Fourth edition.
+
+- Express ideas directly in code;
+- Define classes to represent application concepts directly in code;
+- Use concrete classes to represent simple concepts and performance-critical components;
+- Avoid "naked" new and delete operations;
+- Use resource handles and Resource Acquisition is Initialization to manage resources;
+- Use abstract classes as interfaces when complete separation of interface and implementation is needed; 
+- When designing a class hierarchy, distinguish between implementation inheritance and inter-face inheritance;
+- Control construction, copy, move, and destruction of objects;
+- Return containers by value (relying on move for efficiency);
+- Provide strong resource safety; that is, never leak anything that you think of as a resource;
+- Use containers, defined as resource handle templates, to hold collections of values of the same type;
+- Use function templates to represent general algorithms;
+- Use function objects, including lambdas, to represent policies and actions;
+- Use type and template aliases to provide a uniform notation for types that may vary among similar types or among implementations;
+
+
+## Ubisoft
+
+- code structure layers: inverted pyramid 
+    - gameplay
+    - engine
+    - graphics
+    - core
+- they don't use
+    - RTTI (run-time type information: exposes information about an objects type at runtime)
+        - no typeid, no dynamic_cast
+    - exception handling (was slower at runtime, slows compilation, use static analysis instead)
+    - STL containers (alternatives have only the features wanted, some run faster)
+        - don't allow maps with strings as keys
+    - no boost includes in engine
+- use fastbuild, precomiled headers
+- templates
+    - template classes derived from non-template base classes
+    - template code should end up inline by the compiler
+```
+baseClass           templateClass T
+_________   <---    ____________
+a lot of            inlined
+stuff               functions
+```
+
+- performance: keep in mind the hardware hierarchy: cpu, l1 cache, l2, l3, ram, hdd
+    - try to access data sequentially
+    - avoid reading/writing back and forth, example if adding a total, instead of adding to a member variable, add to a local variable then write to the member variable
+
+## nooby c++ habits
+
+from https://www.youtube.com/watch?v=i_wDa2AS_8w
+
+- bad habits
+    - `using namespace std`
+    - `std::endl` - it flushes the buffer, so use `'\n'`
+    - using for loop by index when range based loop works
+    - not using standard algorithims (std::find_if, etc.)
+    - using c style arrays instead of `std::array`
+    - using `reinterpret_cast`, indented use `std::bit_cast`
+    - casting away const, instead use a different method (.at instead of [] for maps)
+    - not marking parameters/variables const
+    - not using constexpr
+    - not using structured bindings 
+        - (when looping through pairs: `for(const auto&[var1, var2]: arrOfPairs) {...}`)
+        - (with structs, works with order of declaration)
+    - using multiple out parameters instead of returning a struct
+    - not marking base class destructors virtual, and marking derived destructors override
+    - not knowing difference between default vs value initialization 
+    - not using constants for magic numbers
+    - removing/adding elements to a container while iterating through it
+    - returning a moved local variable
+    - using heap allocations when stack allocations work
+        - variables declared with `new` will live until deleted
+        - member variables have the same life time as their parent
+    - not using unique_ptr or shared_ptr
+        - `unique_ptr` - give it a heap allocated pointer, and it deletes it when it goes out of scope
+        - `shared_ptr` - uses a reference counting scheme to track when to delete, more expensive computationally
+    - directly constructing a unique_ptr or shared_ptr, instead of using make_unique or make_shared
+    - using shared_ptr when unique_ptr works
+    - using new/delete instead of unique_ptr or shared_ptr
+    - thinking shared_ptr is thread safe
+    - manually doing resource management
+        - Resource Acquisition Is Initialization
+    - thinking raw pointers are bad
+    - ignoring compiler warnings
+- things to know
+    - string literals live for the entire life of the program
+    - class members are initialized in the order they are declared in
+    - move is a cast to r-value
+    - when calling functions in arguments, its not guaranteed they are evaluated left to right
+    - const with pointers
+        - const applies to left, if theres nothing to the left, applies to right
+        - `int x`
+        - `const int y` - y is constant
+        - `const int* p = &y` - p can be changed, *p cannot
+        - `int const* p = &y` - p can be changed, *p cannot
+        - `int* const p = &x` - *p can be changed, p cannot
+        - `const int* const p = &y` - *p and p cannot be changed

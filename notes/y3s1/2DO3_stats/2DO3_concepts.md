@@ -1,5 +1,10 @@
 # 2DO3 concepts
 
+## important points
+
+- take time to decide if order matters and if there is replacement
+
+
 ## review
 
 [sets](?note=notes/concepts/engineering/sets.md) <!-- [](/notes/concepts/engineering/sets.md) -->
@@ -41,6 +46,37 @@
 -
 
 [probability random variables](?note=notes/concepts/engineering/probability_random_variables.md) <!-- [](/notes/concepts/engineering/probability_random_variables.md) -->
+
+### questions types
+
+#### arrange n items, in categories
+
+- items - $n$
+- categories - $K = (k_1,k_2,..., k_n)$ (all add to n)
+
+= $\\#KP\\#K \times !k_1 \times !k_2 \times ... \times !k_n$
+
+
+#### selecting subgroups
+
+- items - $n$
+- subgroups - $k_1,k_2...$
+
+##### disjoint (members can only be in one subgroup)
+
+= $nCk_1 \times (n-k_1)Ck_2 \times (n-k_1-k_2)Ck_3 ...$
+
+##### members can be in multiple subgroups
+
+= $nCk_1 \times nCk_2 \times nCk_3 ...$
+
+#### selecting something where certain possibilities are disallowed
+
+= #possibilities without restrictions - #restricted possibilities
+
+#### intersection and union of events
+
+- inclusion-exclusion principle 
 
 ## chapter 2 - conditional probability and independence
 

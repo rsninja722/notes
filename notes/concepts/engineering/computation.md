@@ -4,7 +4,11 @@
     - example: mathematical equations, computer algorithms 
 - **computability** - investigates what problems are solvable in principle by algorithms
 
-- **complexity theory** - explores the resources required to solve computational theory
+- **theory of computation** - study of the foundations of computation, concerned with the following questions
+    - what does it mean for a function to be computable?
+    - what can and cannot be computed?
+    - how does computational power depend on computational mechanisms?
+    - how do we classify computable functions?
 
 - approaches for confronting computationally hard problems
     - understand what aspects are at the root of the problem, then alter the problem so it becomes easier
@@ -47,12 +51,11 @@ even before computers existed, many mathematicians and philosophers were trying 
 
 there are many models of computation with varying power (listed in increasing order)
 
-1. **finite state machine** (finite memory)
-    - example: finite automata, regular expressions
-2. **finite state machine with unlimited stack**
-    - examples: pushdown automata 
-3. **unrestricted models**
-    - examples: turing machines, lambda calculus, post systems, $\mu$-recursive functions, combinatory logic, or any sufficiently powerful programming language like c++ or java
+1. **finite automata** (finite memory)
+    - example: regular expressions
+2. **pushdown automata** (finite automata with unlimited stack)
+3. **unrestricted models** (turing machines)
+    - examples: lambda calculus, post systems, $\mu$-recursive functions, combinatory logic, or any sufficiently powerful programming language like c++ or java
 
 ## chomsky hierarchy
 

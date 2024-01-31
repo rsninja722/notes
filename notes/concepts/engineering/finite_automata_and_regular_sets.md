@@ -8,7 +8,7 @@
     - example: rubik's cube has $\frac{54!}{9!^6}$ states and 12 transitions (6 sides, 2 directions to turn for each)
 - **deterministic finite automaton (DFA)** - a mathematical model of a finite state transition system
     - defined by machine $M = (Q, \Sigma, \delta, s, F)$ where:
-        - Q : set of states
+        - $Q$ : set of states
         - $\Sigma$ - alphabet
         - $\delta$ : $Q\times \Sigma \to Q$: transition function "what will be the next state if we are in $q\in Q$ and consume some $a \in \Sigma$
         - $s \in Q$ : start state

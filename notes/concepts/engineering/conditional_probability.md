@@ -1,5 +1,7 @@
 # conditional probability
 
+the mathematical tool for describing dependence (additional constraints on outcomes)
+
 - $P(A | B) = \frac{P(AB)}{P(B)}$ - the conditional probability of A given B
     - can be rearranged - $P(AB) = P(A) P(B | A)$
     - generalizes to n events - $P(ABC) = P(A) P(B | A) P(C | AB)$

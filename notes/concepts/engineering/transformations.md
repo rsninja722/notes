@@ -2,24 +2,20 @@
 
 using right hand: thumb - y, pointer - x, middle - z
 
-used for 
-- manipulating 2d/3d objects
-- projecting 3d objects to 2d images
-- texture mapping
-- animation
-- camera movement
-
+- used for 
+    - manipulating 2d/3d objects
+    - projecting 3d objects to 2d images
+    - texture mapping
+    - animation
+    - camera movement
 - affine transformations - preserve parallel lines
     - linear transformations - affine and origin remains in the same place
-$$ \begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \end{bmatrix}$$
-
 - note: a transformation and its inverse cancel only if one immediately follows the other
 
 ## identity 
+$$ \begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \end{bmatrix}$$
 
-does not change points
-
-$f(p) = Ip$
+has no effect: $f(p) = Ip = p$
 
 ## rotation (linear)
 
@@ -28,7 +24,9 @@ $f(p) = Ip$
 
 ### 2D
 
-$$f(p) \begin{bmatrix} \cos{\theta} & -\sin{\theta} \\\\ \sin{\theta} & \cos{\theta} \end{bmatrix} \begin{bmatrix} x \\\\ y \end{bmatrix} $$
+clockwise around $\theta$: x-axis $$f(\begin{bmatrix}1\\\\0\end{bmatrix}) = \begin{bmatrix}\cos{\theta}\\\\-\sin{\theta}\end{bmatrix}$$, y-axis $$f(\begin{bmatrix}1\\\\0\end{bmatrix}) = \begin{bmatrix}\sin{\theta}\\\\\cos{\theta}\end{bmatrix}$$
+
+counter clockwise (matrix representation) $$f(p) \begin{bmatrix} \cos{\theta} & -\sin{\theta} \\\\ \sin{\theta} & \cos{\theta} \end{bmatrix} \begin{bmatrix} x \\\\ y \end{bmatrix} $$
 
 ### 3D
 
@@ -60,3 +58,24 @@ $$f(p) \begin{bmatrix} \cos{\theta} & -\sin{\theta} \\\\ \sin{\theta} & \cos{\th
 
 - **2D** - $$f(p) = \begin{bmatrix} 1 & 0 & t_x \\\\ 0 & 1 & t_y \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\\\ y \\\\ 1 \end{bmatrix}$$
 - **3D** - $$f(p) = \begin{bmatrix} 1 & 0 & 0 & t_x \\\\ 0 & 1 & 0 & t_y \\\\ 0 & 0 & 1 & t_z \\\\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x \\\\ y \\\\ z \\\\ 1\end{bmatrix}$$
+
+## composite transformations
+
+$M = M_n M_{n-1} ... M_2 M_1$ transformations applied right to left
+
+## inverses
+
+- $M_{rotate}^{-1} = M_{rotate}^{T}$
+- inverse of rotate $\theta$ is $-\theta$
+- inverse of scale $s$ is $\frac{1}{s}$
+- inverse of translate(x,y,z) is translate(-x,-y,-z)
+
+## normal transformation
+
+$M_{normal} = (M^{-1})^T$
+
+## scene graphs
+
+objects are attached to parent objects in a hierarchy with a root object.
+
+for example neck position in scene on a character would be computed by: $M_{hip} M_{spine} M_{neck}$

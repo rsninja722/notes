@@ -20,5 +20,3 @@ sampling method | outcome | sample space | amount of outcomes | further points
 **without replacement, order matters** | $(s_1,s_2, ... , s_k)$ each element is distinct | $\Omega = \\{(s_1,s_2, ... , s_k) : s_i \neq s_j \text{ if } i \neq j\\}$ | $\\#\Omega = n \cdot (n-1) \cdot ... \cdot (n-k+1)$ (called descending factorial)| $k \not\gt n$
 **without replacement, order doesn't matter** | $\\{s_1,s_2, ... , s_k\\}$ | $\Omega = \\{ X \subset S : \\#X = k\\}$| $\\#\Omega = nCk$ | $P(X) = \frac{1}{nCk}$
 **with replacement, order doesn't matter** | covered in chapter 6 | | |
-
-

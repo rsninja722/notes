@@ -75,7 +75,7 @@ $$\frac{\text{total liabilities}}{\text{total assets}}$$
 
 Measures the number of times operating income can cover interest expense
 
-$$\frac{\text{income from operations}}{\text{income expense}}$$
+$$\frac{\text{income from operations}}{\text{interest expense}}$$
 
 ## measuring profitability
 

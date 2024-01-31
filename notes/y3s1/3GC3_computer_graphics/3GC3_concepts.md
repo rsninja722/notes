@@ -25,10 +25,6 @@
 
 [graphics cameras](?note=notes/concepts/engineering/graphics_cameras.md) <!-- [](/notes/concepts/engineering/graphics_cameras.md) -->
 
-[coordinate systems](?note=notes/concepts/engineering/coordinate_systems.md) <!-- [](/notes/concepts/engineering/coordinate_systems.md) -->
-
-[scene graph](?note=notes/concepts/engineering/scene_graph.md) <!-- [](/notes/concepts/engineering/scene_graph.md) -->
-
 [rasterization](?note=notes/concepts/engineering/rasterization.md) <!-- [](/notes/concepts/engineering/rasterization.md) -->
 
 [antialiasing](?note=notes/concepts/engineering/antialiasing.md) <!-- [](/notes/concepts/engineering/antialiasing.md) -->
@@ -38,3 +34,9 @@
 [graphics meshes](?note=notes/concepts/engineering/graphics_meshes.md) <!-- [](/notes/concepts/engineering/graphics_meshes.md) -->
 
 [graphics textures](?note=notes/concepts/engineering/graphics_textures.md) <!-- [](/notes/concepts/engineering/graphics_textures.md) -->
+
+[graphics materials](?note=notes/concepts/engineering/graphics_materials.md) <!-- [](/notes/concepts/engineering/graphics_materials.md) -->
+
+[raytracing](?note=notes/concepts/engineering/raytracing.md) <!-- [](/notes/concepts/engineering/raytracing.md) -->
+
+[spatial data structures](?note=notes/concepts/engineering/spatial_data_structures.md) <!-- [](/notes/concepts/engineering/spatial_data_structures.md) -->

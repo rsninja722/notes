@@ -1,41 +1,135 @@
 # 2AC3 Automata and Computability
 
-- instructor email - jodayrem@mcmaster.ca
+- instructor email - wmfarmer@mcmaster.ca
 
 ## marks
 
 item | weight | description
 ---|---|---
-assignments | 30%  | due jan 29, feb 19, mar 26
-midterm | 20% | march 11th, cheat sheet allowed
-exam | 50% | cheat sheet allowed
+class participation | 15% | 6% in class, 4% M&Ms, 3% discussion forum, 2% bio sheet
+assignments | 35%  | 7 at 5% each
+midterm | 20% | march 21th
+exam | 30% |
+
+## M&Ms
+
+1. describes something from the week’s lectures or reading that was especially meaningful or memorable to the student
+2. identifies something that was not understood by the student, or
+3. comments on how the student thinks the course is going
 
 ## textbook
 
-Michael Sipser - Introduction to the Theory of Computation 3rd edition
+Dexter C. Kozen, Automata and Computability
 
 ## schedule
 
-weeks of | topic
-jan 8 - jan 21 | introduction
-jan 22 - feb 4 | regular languages
-feb 5 - feb 18 | context-free languages
-feb 19 - mar 3 | church-turing thesis
-mar 4 - mar 17 | decidability
-mar 18 - mar 31 | reducibility
-apr 1 - apr 10 | advanced topics in computability theory
 
+---
 
+- Week 03: Mon, Jan 22 – Sun, Jan 28
+    - Discussion session Wed, Jan 24: 0 Introduction to the Course
+    - Discussion session Thu, Jan 25: 1 Review of Mathematical Proof
+    - Reading: Chapters 1–2 of AC1
+    - Lecture videos: 1a, 1b2
+    
+---
 
+- Week 04: Mon, Jan 29 – Sun, Feb 4
+    - Discussion session Mon, Jan 29: 2 Finite Automata and Regular Expressions (1/8)
+    - Discussion session Wed, Jan 31: 2 Finite Automata and Regular Expressions (2/8)
+    - Discussion session Thu, Feb 1: 2 Finite Automata and Regular Expressions (3/8)
+    - Reading: Chapters 3–5 of AC
+    - Lecture videos: 4a, 4b, 4c
 
+---
 
+- Week 05: Mon, Feb 5 – Sun, Feb 11
+-   Discussion session Mon, Feb 5: 2 Finite Automata and Regular Expressions (4/8)
+-   Discussion session Wed, Feb 7: 2 Finite Automata and Regular Expressions (5/8)
+-   Discussion session Thu, Feb 8: 2 Finite Automata and Regular Expressions (6/8)
+-   Assignment 1: Due on Sun, Feb 11
+-   Reading: Chapters 6–8 of AC
+-   Lecture videos: 4d, 4e
 
+---
 
+- Week 06: Mon, Feb 12 – Sun, Feb 18
+    - Discussion session Mon, Feb 12: 2 Finite Automata and Regular Expressions (7/8)
+    - Discussion session Wed, Feb 14: 2 Finite Automata and Regular Expressions (8/8)
+    - Discussion session Thu, Feb 15: 3 Push-Down Automata and Context-Free Languages (1/10)
+    - Assignment 2: Due on Sun, Feb 18
+    - Reading: Chapters 9,A,19 of AC
+    - Lecture videos: 4f, 5a
+    - Midterm Recess: Mon, Feb 19 – Sun, Feb 25
 
+---
 
+- Week 07: Mon, Feb 26 – Sun, Mar 3
+    - Discussion session Mon, Feb 26: 3 Push-Down Automata and Context-Free Languages (2/10)
+    - Discussion session Wed, Feb 28: 3 Push-Down Automata and Context-Free Languages (3/10)
+    - Discussion session Thu, Feb 29: 3 Push-Down Automata and Context-Free Languages (4/10)
+    - Assignment 3: Due on Sun, Mar 3
+    - Reading: Chapters 20–22 of AC
+    - Lecture videos: 5b, 5c
 
+---
 
+- Week 08: Mon, Mar 4 – Sun, Mar 10
+    - Discussion session Mon, Mar 4: 3 Push-Down Automata and Context-Free Languages (5/10)
+    - Discussion session Wed, Mar 6: 3 Push-Down Automata and Context-Free Languages (6/10)
+    - Discussion session Thu, Mar 7: 3 Push-Down Automata and Context-Free Languages (7/10)
+    - Assignment 4: Due on Sun, Mar 10
+    - Reading: Chapters 23,E,24 of AC
+    - Lecture videos: 5d, 5e
 
+---
+
+- Week 09: Mon, Mar 11 – Sun, Mar 17
+    - Discussion session Mon, Mar 11: 3 Push-Down Automata and Context-Free Languages (8/10)
+    - Discussion session Wed, Mar 13: 3 Push-Down Automata and Context-Free Languages (9/10)
+    - Discussion session Thu, Mar 14: 3 Push-Down Automata and Context-Free Languages (10/10)
+    - Assignment 5: Due on Sun, Mar 18
+    - Reading: Chapters 25,F,26 of AC
+    - Lecture videos: 5f, 5g
+
+---
+
+- Week 10: Mon, Mar 18 – Sun, Mar 24
+    - Discussion session Mon, Mar 18: 4 Turing Machines and Computability (1/8)
+    - Discussion session Wed, Mar 20: 4 Turing Machines and Computability (2/8)
+    - Review session Thu, Mar 21
+    - Midterm Test: Thu, Mar 21, 7:00–9:00 PM.
+    - Reading: Chapters 28–30 of AC
+    - Lecture videos: 6a, 6b
+
+---
+
+- Week 11: Mon, Mar 25 – Sun, Mar 31 6 Turing Machines and
+    - Computability (2/2)
+    - Discussion session Mon, Mar 25: 4 Turing Machines and Computability (3/8)
+    - Discussion session Wed, Mar 27: 4 Turing Machines and Computability (4/8)
+    - Discussion session Thu, Mar 28: 4 Turing Machines and Computability (5/8)
+    - Assignment 6: Due on Sun, Mar 31
+    - Reading: Chapters 31–33 of AC
+    - Lecture videos: 6c, 6d
+
+---
+
+- Week 12: Mon, Apr 1 – Sun, Apr 7
+    - Discussion session Mon, Apr 1: 4 Turing Machines and Computability (6/8)
+    - Discussion session Wed, Apr 3: 4 Turing Machines and Computability (7/8)
+    - Discussion session Wed, Apr 4: 4 Turing Machines and Computability (8/8)
+    - Assignment 7: Due on Sun, Apr 7
+    - Reading: Chapter 37 of AC
+    - Lecture videos: 6e, 6f
+
+---
+
+- Week 13: Mon, Apr 8 – Wed, Apr 10
+    - All Questions Answered! Mon, Apr 8
+    - Review session Wed, Apr 10
+    - No tutorials this week
+    - Final Exams: Fri, Apr 12 – Thu, Apr 25
 
 ## models of computation
 

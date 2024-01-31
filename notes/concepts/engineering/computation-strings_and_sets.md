@@ -32,10 +32,9 @@ the set of possible inputs for a decision problem will always be - the set of fi
 - **alphabet** - any finite set, denoted as $\Sigma$
     - example - $\lbrace  0, 1, 2, \dots, 9\rbrace  $ when dealing with integers, or ASCII characters if dealing with text
 - **letter/symbol** - element of an alphabet
-- **string** - finite length sequence of elements of and alphabet $\Sigma$
+- **string** - finite length sequence of elements of an alphabet $\Sigma$
     - also called a string over $\Sigma$
     - example - for $\Sigma = \lbrace  a,b\rbrace  $, $aabab$ is a string over $\Sigma$ of length five
-- **length** - for a string $x = ababb$, $|x| = 5$ denotes the length of the string
 - **null string** - string of length 0 that can be made from any alphabet
     - denoted as $\epsilon$ (epsilon)
 - $\Sigma^*$ - set of all strings over alphabet $\Sigma$
@@ -48,22 +47,19 @@ the set of possible inputs for a decision problem will always be - the set of fi
 
 - **concatenation** - denoted $xy$ for strings $x$ and $y$
     - concatenation is *associative* - $(xy)z = x(yz)$
+- **length** - for a string $x = ababb$, $|x| = 5$ denotes the length of the string
+    - $|\epsilon| = 0$
+- **repetition** - for a string of x concatenated to itself n times, write $x^n$
+    - for example: $a^5 = aaaaa$, $a^1 = a$, $a^0 = \epsilon$, $(aab)^3 = aabaabaab$
+    - inductive definition: 
+        - $x^0 = \epsilon$
+        - $x^{n+1} = $x^n x$
 - **occurrences** - $\\#a(x)$ is the number of a's in x
     - example - $\\#0(001101001000) = 8$
 - **prefix** - a prefix of a $x$ an initial substring of $x$
     - formally, a string $y$ for which there exists a string $z$ such that $x = yz$
         - $y$ can be $\epsilon$
     - **proper prefix** - a prefix that is not the empty set and not the string itself
-
-## repeating letters
-
-for a string of x concatenated to itself n times, write $x^n$
-
-for example: $a^5 = aaaaa$, $a^1 = a$, $a^0 = \epsilon$, $(aab)^3 = aabaabaab$
-
-- inductive definition: 
-    - $x^0 = \epsilon$
-    -$x^{n+1} = $x^n x$
 
 ## monoid
 
@@ -74,7 +70,7 @@ for example: $a^5 = aaaaa$, $a^1 = a$, $a^0 = \epsilon$, $(aab)^3 = aabaabaab$
 
 - $\Sigma^*$, string concatenation, and the identity $\epsilon$ together are a monoid
 
-## sets operations
+## sets of strings operations
 
 note: sets of strings are subsets of $\Sigma^*$
 
@@ -83,7 +79,7 @@ note: sets of strings are subsets of $\Sigma^*$
         - $A \cup \emptyset = \emptyset \cup A = A$
 - **set intersection** - $A \cup B = $\lbrace x | x \in A \land x \in B \rbrace$
 - **complement in** $\Sigma^*$ - $\text{\textasciitilde} A = \lbrace x \in \Sigma^* | x \not\in A \rbrace$
-- **concatination** - $AB = \lbrace xy | x \in A \land y \in B \rbrace$
+- **concatenation** - $AB = \lbrace xy | x \in A \land y \in B \rbrace$
     - example - $\lbrace a,ab\rbrace \lbrace b,ba\rbrace = \lbrace ab, aba, abb, abba \rbrace$
     - in general, $AB$ and $BA$ are different
     - **identity** - $\lbrace \epsilon \rbrace$
@@ -108,6 +104,7 @@ note: sets of strings are subsets of $\Sigma^*$
         - $A^{\*\*} = A^*$
         - $A^* = \lbrace \epsilon \rbrace AA^* = \lbrace \epsilon \rbrace \cup A^* A$
         - $\emptyset^* = \lbrace \epsilon \rbrace$
+    - **positive asterate** $A^{+}*$ - $$A^{+} = \bigcup_{n\geq 0} A^n = A^1 \cup A^2 \cup \dots = A^* - \\{\epsilon\\}$$
 
 ### set properties
 

@@ -13,13 +13,15 @@
 
 [functions and relations](?note=notes/concepts/engineering/functions_and_relations.md) <!-- [](/notes/concepts/engineering/functions_and_relations.md) -->
 
-[strings and languages](?note=notes/concepts/engineering/strings_and_languages.md) <!-- [](/notes/concepts/engineering/strings_and_languages.md) -->
-
 [boolean logic](?note=notes/concepts/engineering/boolean_logic_and_logic_gates.md) <!-- [](/notes/concepts/engineering/boolean_logic_and_logic_gates.md) -->
 
 [graphs](?note=notes/concepts/engineering/graphs.md) <!-- [](/notes/concepts/engineering/graphs.md) -->
 
 [computation](?note=notes/concepts/engineering/computation.md) <!-- [](/notes/concepts/engineering/computation.md) -->
+
+[modular arithmetic](?note=notes/concepts/engineering/modular_arithmetic.md) <!-- [](/notes/concepts/engineering/modular_arithmetic.md) -->
+
+[decision problems](?note=notes/concepts/engineering/decision_problems.md) <!-- [](/notes/concepts/engineering/decision_problems.md) -->
 
 [automata](?note=notes/concepts/engineering/automata.md) <!-- [](/notes/concepts/engineering/automata.md) -->
 
