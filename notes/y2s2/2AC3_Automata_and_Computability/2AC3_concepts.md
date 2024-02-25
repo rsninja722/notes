@@ -33,6 +33,10 @@
 
 [finite automata and regular sets](?note=notes/concepts/engineering/finite_automata_and_regular_sets.md) <!-- [](/notes/concepts/engineering/finite_automata_and_regular_sets.md) -->
 
+## 4. regular expressions
+
+[regular expressions](?note=notes/concepts/engineering/regular_expressions.md) <!-- [](/notes/concepts/engineering/regular_expressions.md) -->
+
 
 # temp notes
 

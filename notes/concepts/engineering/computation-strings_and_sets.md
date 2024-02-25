@@ -1,4 +1,4 @@
-# computation - strings and sets
+ # computation - strings and sets
 
 ### variables
 
@@ -74,10 +74,10 @@ the set of possible inputs for a decision problem will always be - the set of fi
 
 note: sets of strings are subsets of $\Sigma^*$
 
-- **set union** - $A \cup B = $\lbrace x | x \in A \lor x \in B \rbrace$
+- **set union** - $A \cup B = \lbrace x | x \in A \lor x \in B \rbrace$
     - **identity** - $\emptyset$
         - $A \cup \emptyset = \emptyset \cup A = A$
-- **set intersection** - $A \cup B = $\lbrace x | x \in A \land x \in B \rbrace$
+- **set intersection** - $A \cup B = \lbrace x | x \in A \land x \in B \rbrace$
 - **complement in** $\Sigma^*$ - $\text{\textasciitilde} A = \lbrace x \in \Sigma^* | x \not\in A \rbrace$
 - **concatenation** - $AB = \lbrace xy | x \in A \land y \in B \rbrace$
     - example - $\lbrace a,ab\rbrace \lbrace b,ba\rbrace = \lbrace ab, aba, abb, abba \rbrace$

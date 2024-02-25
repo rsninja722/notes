@@ -84,6 +84,8 @@ when storing data, consider if a DBMS is the right choice, which DBMS to use, an
 
 #### many-to-many
 
+the default relationship
+
 $R \subseteq A \times B$, no restrictions
 
 ![](./media/2DB3_1.JPG)
@@ -95,7 +97,6 @@ example implementation of this model
 #### one-to-many
 
 $R \subseteq A \times B$, where each $a \in A$ is related to at most **one** $b \in B$
-
 
 #### one-to-one
 
@@ -120,18 +121,47 @@ $R \subseteq A \times B$ where each $A$ is related to at most one $B$
 
 ### at most one
 
-pointy arrow
+```
+E1 --> R --- E2  
+```
 
-### every
+E1 partakes at most *once* in an R relationship
 
-thick line
+### exactly once
+
+```
+E1 --) R --- E2  
+```
+
+E1 partakes at *exactly* *once* in an R relationship
+
+### at least once
+
+```
+E1 === R --- E2  
+```
+
+E1 partakes at *least* *once* in an R relationship
+
+every E1 will have a relationship R
+
 
 ## weak entities
 
 - a weak entity is owned by another identity
     - example: a course code (2DB3) is a weak entity that can only be identified with a program prefix (COMPSCI 2DB3, SFWRENG 2DB3)
+- weak entities must participate in their identifying relationship
+- **partial key** - must have one attribute that is unique (identified with dashed underline instead of the normal solid underline)
+- **primary key** - for a weak entity is the pair (key, partial key)
 
-## ISA 
+## ISA hierarchy
+
+- entity at the top is a **superclass/generalization**
+- entities below are **subclasses/specializations** of the entity at the top
+
+- you must document all constraints
+    - **overlap constraint** - can a single entity belong to multiple subclasses?
+    - **covering constraint** - must every superclass entity also belong to one of its subclasses?
 
 
 ## good design
