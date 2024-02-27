@@ -416,6 +416,90 @@ shoe	|  8 | 5
 INSERT INTO table_name (column_name1, column_name2) -- specifying columns optional
 VALUES (value_1, value_2), (more_rows, optional);
 ```
+#### non-default actions
+
+for `... REFERENCES table(id) ON UPDATE action ON DELETE action`
+
+possible actions are:
+
+action | description
+---|---
+`NO ACTION` | reject all invalidating changes (this is the default behavior)
+`RESTRICT` | reject all changes to foreign key columns in referenced rows
+`CASCADE` | apply the same changes to foreign keys
+`SET NULL` | set the foreign key to null
+`SET DEFAULT` | set the foreign key to the default value (of that column)
+
+#### deferred constraints
+
+for two tables that reference each other
+
+execute multiple inserts as a single transaction and use `SET CONSTRAINT ALL DEFERRED`
+
+### DELETE
+
+```sql
+DELETE FROM table_name WHERE cid = 1; -- deletes specified rows
+DELETE FROM table_name; -- deletes all rows
+```
+
+### UPDATE
+
+```sql
+UPDATE table_name
+SET column_name = 'new value', other_column = some_number + 1
+WHERE conditions = 1;
+
+UPDATE table_name SET one = two, two = one; -- swap columns
+```
+
+## data definition
+
+### CREATE TABLE
+
+```sql
+CREATE TABLE name (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    some_number INT NOT NULL,
+    other_number INT NOT NULL DEFAULT 13,
+    short_text VARCHAR(100),
+    long_text CLOB,
+);
+```
+
+- `NOT NULL` - must have a value
+- `DEFAULT` - specify default value for column
+- `GENERATED ALWAYS AS IDENTITY` - automatically generate an identifier
+
+#### identify primary key
+
+single 
+
+```sql
+CREATE TABLE name (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
+);
+```
+
+multiple 
+
+```sql
+CREATE TABLE name (
+    pid INT NOT NULL,
+    rid INT NOT NULL,
+
+    PRIMARY KEY(pid,rid)
+);
+```
+
+#### primary key vs identity
+
+primary key | identity
+---|---
+unique column that defines the row | just a column of increasing integers
+works with any type | only works with integer types
+cannot have duplicate values | can have duplicate values
+value must be provided when updating/inserting | value is created automatically
 
 #### sql data types
 
@@ -478,76 +562,3 @@ CREATE TABLE enroll_in
 ```
 
 note: `REFERENCES student(sid)` can be written as `REFERENCES student` because REFERENCES points to the primary key by default
-
-#### non-default actions
-
-for `... REFERENCES table(id) ON UPDATE action ON DELETE action`
-
-possible actions are:
-
-action | description
----|---
-`NO ACTION` | reject all invalidating changes (this is the default behavior)
-`RESTRICT` | reject all changes to foreign key columns in referenced rows
-`CASCADE` | apply the same changes to foreign keys
-`SET NULL` | set the foreign key to null
-`SET DEFAULT` | set the foreign key to the default value (of that column)
-
-### DELETE
-
-```sql
-DELETE FROM table_name WHERE cid = 1; -- deletes specified rows
-DELETE FROM table_name; -- deletes all rows
-```
-
-### UPDATE
-
-```sql
-UPDATE table_name
-SET column_name = 'new value', other_column = some_number + 1
-WHERE conditions = 1;
-
-UPDATE table_name SET one = two, two = one; -- swap columns
-```
-
-## data definition
-
-### CREATE TABLE
-
-```sql
-CREATE TABLE name (
-    id INT GENERATED ALWAYS AS IDENTITY,
-    some_number INT NOT NULL,
-    other_number INT NOT NULL DEFAULT 13,
-    short_text VARCHAR(100),
-    long_text CLOB,
-);
-```
-
-- `NOT NULL` - must have a value
-- `DEFAULT` - specify default value for column
-- `GENERATED ALWAYS AS IDENTITY` - automatically generate an identifier
-
-#### identify primary key
-
-single 
-
-```sql
-CREATE TABLE name (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY
-);
-```
-
-multiple 
-
-```sql
-CREATE TABLE name (
-    pid INT NOT NULL,
-    rid INT NOT NULL,
-
-    PRIMARY KEY(pid,rid)
-);
-```
-
-TODO
-fill blank areas
