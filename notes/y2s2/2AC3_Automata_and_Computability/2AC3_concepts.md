@@ -40,3 +40,67 @@
 
 # temp notes
 
+- decidable - there exists a total turing machine that accepts it
+
+
+hierarchy
+
+if a language is accepted by something at layer n, it is also accepted by all layers above it
+
+- regular sets
+- L accepted by DPDA
+- CFL
+- recursive sets (accepts by total TM)
+- recursively enumerable
+
+## turing machine that accepts xaa | $x \in a,b$
+
+example: abaa - accepted, aabababba - rejected
+
+$M = (Q,\Sigma,\Gamma,\vdash,\_,\delta, s, t,r)$
+
+- $\Sigma = \\{a,b\\}$
+- $\Gamma = \\{a,b,\vdash,\_\\}$
+- $Q = \\{s,t,r,q_1,q_2}$
+
+Q\ $\Gamma$ | $\vdash$ | a | b | _
+---|---|---|---|---
+s | (s,$\vdash$,R) | (s,a,R) | (s,a,R) | ($q1$,_,L)
+$q1$ | (r,$\vdash$,R) | ($q2$,a,L) | (r,-,-) | -
+$q2$ | (r,$\vdash$,R) | (t,-,-) | (r,-,-) | -
+t | (t,$\vdash$,R) | (t,-,-) | (t,-,-) | (t,-,-)
+r | (r,$\vdash$,R) | (r,-,-) | (r,-,-) | (r,-,-)
+
+
+## turing machine that checks for balanced parentheses
+
+$M = (Q,\Sigma,\Gamma,\vdash,\_,\delta, s, t,r)$
+
+- $\Sigma = \\{[,]\\}$
+- $\Gamma = \\{[,],x,\vdash,\_\\}$
+- $Q = \\{s,t,r,q_1,q_2\\}$
+
+plan: move right until ], go left until [, until blank space, then go to left until start (see if all x)
+
+
+Q\ $\Gamma$ | $\vdash$ | [ | ] | x | _
+---|---|---|---|---|---
+s | (s,$\vdash$,R) | (S,[,R) | (close,x,L) | (check,_,L) | (t,-,-)
+open | (r,$\vdash$,R) | (open,[,R) | (close,x,L) | (open, _ ,R) | (check,_,L)
+close | (r,$\vdash$,R) | (open,x,R) | (close,],L) | (close,x,L) | (r,-,-)
+check | (t,$\vdash$,R) | (r,-,-) | (r,-,-) | (check,x,L) | (r,-,-)
+t | (t,$\vdash$,R) | (t,-,-) | (t,-,-) | (t,-,-) | (t,-,-)
+r | (r,$\vdash$,R) | (r,-,-) | (r,-,-) | (r,-,-) | (r,-,-)
+
+
+example:
+
+```
+------------------
+| ⊢ [ ] [ [ ] ] |
+------------------
+
+```
+
+## $\lambda$-calculus
+

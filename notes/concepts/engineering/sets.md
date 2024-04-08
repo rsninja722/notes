@@ -101,6 +101,22 @@ examples:
 - $|\lbrace 1,3,2\rbrace |$ = 3
 - $\mathbb{Z}$ is infinite
 
+
+### cardinality of infinite sets
+
+$\mathbb{N} \equiv \mathbb{Q}$ - countable sets
+
+you can make a bijection between the rationals and the real numbers
+
+num \ den | 1 | 2 | 3 | 4
+---|---|---|---|---
+1 | 1 | 2 | 6 | 7 
+2 | 3 | 5 | 8 | ...
+3 | 4 | 9 | ...|... 
+4 | 10 |... |... | ...
+
+$\mathbb{N} \ne \mathbb{R}$ - there is no bijection (proven with diagonalization)
+
 ## power set
 
 - power set of A - $P(A)$ - all sets that are subsets A
