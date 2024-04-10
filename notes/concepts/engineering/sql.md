@@ -416,7 +416,25 @@ shoe	|  8 | 5
 INSERT INTO table_name (column_name1, column_name2) -- specifying columns optional
 VALUES (value_1, value_2), (more_rows, optional);
 ```
+#### non-default actions
 
+for `... REFERENCES table(id) ON UPDATE action ON DELETE action`
+
+possible actions are:
+
+action | description
+---|---
+`NO ACTION` | reject all invalidating changes (this is the default behavior)
+`RESTRICT` | reject all changes to foreign key columns in referenced rows
+`CASCADE` | apply the same changes to foreign keys
+`SET NULL` | set the foreign key to null
+`SET DEFAULT` | set the foreign key to the default value (of that column)
+
+#### deferred constraints
+
+for two tables that reference each other
+
+execute multiple inserts as a single transaction and use `SET CONSTRAINT ALL DEFERRED`
 
 ### DELETE
 
@@ -474,5 +492,73 @@ CREATE TABLE name (
 );
 ```
 
-TODO
-fill blank areas
+#### primary key vs identity
+
+primary key | identity
+---|---
+unique column that defines the row | just a column of increasing integers
+works with any type | only works with integer types
+cannot have duplicate values | can have duplicate values
+value must be provided when updating/inserting | value is created automatically
+
+#### sql data types
+
+- character and binary strings
+
+name | definition
+---|---
+`CHAR(n)` | fixed-length string of n characters
+`VARCHAR(n)` | variable-length string of at-most n characters
+`CLOB` | large strings
+`BINARY(n)` | fixed-length binary string of n characters
+`VARBINARY(n)` | variable-length binary string of at-most n characters
+`BLOB` | large binary string
+
+note: CLOB and BLOB are intended for storage only, cannot be primary keys or be operated on in queries
+
+- numeric types 
+
+name | definition
+---|---
+`DECIMAL(p,s)` | exact number with p positions before comma, and s after (p and s are optional args)
+`SMALLINT` | fixed width integer
+`INT` | fixed width integer
+`BIGINT` | fixed width integer
+`REAL` | floating point
+`DOUBLE` | floating point
+`BOOLEAN` | boolean type
+
+- date and time types
+
+name | definition
+---|---
+`DATE` | day 
+`TIME` | time of day
+`TIMESTAMP` | date and time
+`INTERVAL` | time duration
+
+- CURRENT_DATE, CURRENT_TIME, and CURRENT_TIMESTAMP yield now.
+    - example `CREATE TABLE test (stamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);`
+- Functions YEAR, MONTH, DAY to extract date information.
+- Functions HOUR, MINUTE, SECOND to extract time information.
+
+#### relationships as tables
+
+for the following many-to-many relationship
+
+![](./media/2db3_12.JPG)
+
+the insert statement would be as follows
+
+```sql
+CREATE TABLE enroll_in
+(
+    sid INT NOT NULL REFERENCES student(sid),
+    cid INT NOT NULL REFERENCES course(cid),
+    year INT NOT NULL,
+    PRIMARY KEY(sid, cid),
+    CHECK(2020 <= year)
+);
+```
+
+note: `REFERENCES student(sid)` can be written as `REFERENCES student` because REFERENCES points to the primary key by default
