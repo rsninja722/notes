@@ -13,6 +13,7 @@
         - $\delta$ : $Q\times \Sigma \to Q$: transition function "what will be the next state if we are in $q\in Q$ and consume some $a \in \Sigma$
         - $s \in Q$ : start state
         - $F \subseteq Q$ : set of accept states
+    - two DFAs are equivalent if they accept the same language
 
 the formal description of how a DFA runs is as follows:
 
@@ -30,7 +31,8 @@ basically means the $\hat\delta$ is runs $\delta$ for each character in a string
     - a string results in machine $M$ ending up in state that is not an accepted state
 - $L(M)$ - set of all strings accepted by $M$
     - definition: $L(M) = \lbrace x \in \Sigma^* | \hat\delta (s,x) \in F \rbrace$
-- **regular** - a subset $A \subseteq \Sigma^*$ is regular if $A = L(M)$ for a finite automata $m$
+- **regular language/set** - a subset $A \subseteq \Sigma^*$ is regular if $A = L(M)$ for a finite automata $m$
+    - a set of strings that is accepted by some DFA
 
 ## DFA example
 

@@ -1,0 +1,9 @@
+# prefix sums algorithm
+
+## problems
+
+- [https://leetcode.com/problems/range-sum-query-immutable/](https://leetcode.com/problems/range-sum-query-immutable/)
+- [https://leetcode.com/problems/range-sum-query-2d-immutable/](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+- [https://leetcode.com/problems/find-pivot-index/](https://leetcode.com/problems/find-pivot-index/)
+- [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)
+- [https://leetcode.com/problems/subarray-sum-equals-k/](https://leetcode.com/problems/subarray-sum-equals-k/)

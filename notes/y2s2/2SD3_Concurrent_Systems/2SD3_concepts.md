@@ -41,6 +41,13 @@
     - error prone: concurrency introduces many new possibilities for errors 
         - (example: one thread deletes an object that another thread is still accessing)
 
+## petri nets
+
+### firing rules
+
+- all incoming resources must be ready, and then all fire to their process at the same time
+- a process may require multiple tokens from one resource
+- a process can create multiple (can be different) amount of tokens for their output resource(s)
 
 # deadlock
 
@@ -95,3 +102,58 @@ PHIL = (think -> takeboth -> eat -> putboth -> PHIL),
 || DINERS(N = 5) = forall[i : 1..N] (phil[i] : PHIL||{phil[i].right, phil[i + 1].left} :: FORK);
 ```
 
+## colored petri nets
+
+colored petri nets make use of [multisets](?note=notes/concepts/engineering/multisets.md) <!-- [](/notes/concepts/engineering/multisets.md) -->
+
+- each resource is now a multiset
+- each transition can define how and how many tokens are needed
+- each process can define conditions for what resources they can take in
+
+### example with dining philosophers
+
+![dining philosophers colored petri net](./media/2sd3_3.JPG)
+
+take forks requires 1 philosopher and 2 forks 
+
+```
+colour PH = with ph1 | ph2 | ph3 | ph4 | ph5
+colour Fork = with f 1 | f 2 | f 3 | f 4 | f 5
+LEFT : PH -> FORK, RIGHT : PH -> FORK
+var x : PH
+fun LEFT x = case of ph1 => f 2 | ph2 => f 3 | ph3 => f 4 | ph4 => f 5 | ph5 => f 1
+fun RIGHT x = case of ph1 => f 1 | ph2 => f 2 | ph3 => f 3 | ph4 => f 4 | ph5 => f 5
+```
+
+
+
+# FSP syntax
+
+```tex
+const NAME = 1
+range NAME2 = 3..7
+
+LABEL = (transition_a -> transition_b -> LABEL),
+LABEL2 = (a -> b -> LABEL2 | c -> LABEL2),
+
+||COMPOSITION = (LABEL || LABEL2).
+
+||COMPOSITION_WITH_INSTANCES = (instance_a:LABEL || instance_b:LABEL).
+
+MULTI_TRANSITIONS = (a[i:0..2] -> b[i] -> MULTI_TRANSITIONS)
+
+CLIENT = (call -> wait -> continue -> CLIENT)
+SERVER = (request -> service -> reply -> SERVER)
+||RENAMEED = (CLIENT || SERVER)/{call/request,reply/wait}
+% CLIENT = (call -> reply -> continue -> CLIENT)
+% SERVER = (call -> service -> reply -> SERVER)
+
+RESOURCE = acquire -> release -> RESOURCE
+USER = acquire -> use -> release -> USER
+||PREFIXED = a : USER || b : USER || {a, b} :: RESOURCE
+% relabels every transition of a process with the prefix(s)
+
+
+HIDING = (a->b->c HIDING)\{a} % hides a
+HIDING2 = (a->b->c HIDING2)@{a} % hides all except a (hides b and c)
+```

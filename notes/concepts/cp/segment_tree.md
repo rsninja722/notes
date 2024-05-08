@@ -1,0 +1,8 @@
+# segment tree algorithm
+
+## problems
+
+- [https://leetcode.com/problems/range-sum-query-mutable/](https://leetcode.com/problems/range-sum-query-mutable/)
+- [https://leetcode.com/problems/queue-reconstruction-by-height/](https://leetcode.com/problems/queue-reconstruction-by-height/)
+- [https://leetcode.com/problems/my-calendar-i/](https://leetcode.com/problems/my-calendar-i/)
+- [https://leetcode.com/problems/longest-increasing-subsequence-ii/](https://leetcode.com/problems/longest-increasing-subsequence-ii/)

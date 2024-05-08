@@ -10,6 +10,8 @@
 - [set operations](?note=notes/concepts/engineering/set_operations.md) <!-- [](/notes/concepts/engineering/set_operations.md) -->
 - [set functions](?note=notes/concepts/engineering/set_functions.md) <!-- [](/notes/concepts/engineering/set_functions.md) -->
 - [sequences](?note=notes/concepts/engineering/sequences.md) <!-- [](/notes/concepts/engineering/sequences.md) -->
+- [multisets](?note=notes/concepts/engineering/multisets.md) <!-- [](/notes/concepts/engineering/multisets.md) -->
+
 
 ## membership
 
