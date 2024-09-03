@@ -597,6 +597,13 @@ void structPointer(StructName* s) {
     s->arr1 = new double[3];
 }
 
+// _____ lambda functions _____
+
+// [captures] <template> (arguments) {body}
+// [&] - capture by reference
+// [=] - capture by copy
+
+
 
 
 ```
