@@ -72,3 +72,5 @@ Magnetic disk | 5,000,000–20,000,000 ns | $0.01–$0.02
 - structure of data: index | valid | tag | data 
 
 - **cache miss** - A request for data from the cache that cannot be filled because the data is not present in the cache.
+
+- cache size and replacement policy have a big effect on the systems performance

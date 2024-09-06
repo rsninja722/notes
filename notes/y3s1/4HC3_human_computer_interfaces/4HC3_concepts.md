@@ -13,4 +13,5 @@ Human Computer Interfaces is closely related to service design:
 
 ## intro
 
-- [intro to Human Computer Interfaces](?note=notes/concepts/engineering/intro_to_human_Computer_interfaces) <!-- [](/notes/concepts/engineering/intro_to_human_Computer_interfaces) -->
+- [intro to Human Computer Interfaces](?note=notes/concepts/engineering/intro_to_human_Computer_interfaces.md) <!-- [](/notes/concepts/engineering/intro_to_human_Computer_interfaces.md) -->
+- [design of everyday things by don norman](?note=notes/concepts/design/design_of_everyday_things.md) <!-- [](/notes/concepts/design/design_of_everyday_things.md) -->

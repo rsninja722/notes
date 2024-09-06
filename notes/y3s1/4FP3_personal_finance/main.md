@@ -8,7 +8,7 @@
 
 - Part 1: The Foundations of Financial Planning and the Tools
     - 1 The Financial Planning Process, Chapters 1 and 3 (skip pp. 66-69)
-    - 2 Time Value of Money, Chapter 3 in Keown et al
+    - 2 Time Value of Money, Chapter 3 in Keown et al (different text book on avenue)
     - 3 Income Tax Planning, Chapter 4 (skip Appendix 4A)
 - Part II: Planning the Basic Household Activity
     - 4 Cash Management and Financial Institutions, Chapter 5
@@ -31,3 +31,7 @@ class participation | 10%
 test 1 | 25%, oct. 11
 test 2 | 25%, nov. 15
 exam | 40%
+
+## exam
+
+questions similar to assigned questions from textbook

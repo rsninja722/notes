@@ -8,18 +8,28 @@
 
 ## what do operating systems do
 
-- resource allocation
-- controls execution of programs
+- resource allocation (memory management)
+- controls execution of programs (process management)
+- storage and file management
+- protection and security
 
-## OS components
+## kernel 
 
 - **kernel** - program in main memory that is always running
     - controls execution of other programs
     - other programs interact with kernel through system calls
-- **system call** - a routine that user programs can use to request actions that require special privileges
-    - differs from an ordinary function call in many ways, including access to kernel data, see the example below for more
 
-## #system call differences example
+## dual mode and system calls
+
+- **dual mode** - allows OS to protect certain parts of the system
+    - user mode & kernel mode
+    - **mode bit** - bit used to distinguish mode
+
+- **system call (privileged instructions)** - a routine that user programs can use to request actions that require special privileges
+    - differs from an ordinary function call in many ways, including access to kernel data, see the example below for more
+    - user calls system call setting mode bit to 0, call is executed and on return mode bit is set to 1, return from system call is received in user mode
+
+### system call differences example
 
 - Understanding Protection Domains
     - There are two protection domains in the operating system: the user protection domain and the kernel mode protection domain.
@@ -44,6 +54,13 @@
 - System Calls Available to Kernel Extensions
     - The system calls are grouped according to which subroutines call them.
 
+## process & programs
+
+- program - passive entity stored on disk
+- process (aka tasks)- active entity being executed
+
+- different names for the same data depending on whats being done with it
+
 ## interrupts
 
 - **interrupts** - enables a device/software to notify the CPU that it needs attention
@@ -66,3 +83,55 @@
     - as a routine - slow and inefficient
     - interrupt vector - use a predefined table of pointers to various interrupt routines
 
+## computer startup
+
+- first loads a **bootstrap program** stored on a reserved part of ROM (generally known as **firmware**)
+- then the bootstrap programs loads kernel and system programs (system daemons)
+
+## multiprogramming 
+
+- OS organizes jobs for the CPU to execute
+- **job scheduling** - how an OS selects which job to run
+    - when one program is waiting (example: for I/O), the OS switches to another job
+
+### timesharing
+
+- CPU switches jobs so frequently that users can interact with each job while running (**interactive computing**)
+- response time should be < 1 second
+- 
+
+
+## timer
+
+- a hardware component that can be set to interrupt the computer after a specified period
+    - helps prevent infinite loops / process hogging resources
+    - OS maintains a counter which decrements and generates an interrupt when 0 is reached 
+    - setting the timer is a privileged instruction
+
+## virtualization
+
+- an abstraction of computer hardware
+- **virtual machine management
+
+TODO
+
+## command line interpreter (CLI)
+
+- aka shells
+- allows direct command entry to the OS
+TODO
+
+# structure of operating systems
+
+- ways to structure an OS
+    - monolithic
+    - layered
+    - microkernel
+    - modular
+
+## modular
+
+- kernel has separate core components with clearly defined interfaces
+- additional services linked in via modules (at boot time or run time)
+- each module is loaded as needed
+- TODO

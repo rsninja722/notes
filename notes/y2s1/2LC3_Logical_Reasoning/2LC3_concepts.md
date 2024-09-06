@@ -2,7 +2,7 @@
 
 ## textual substitution, equality, and assignment
 
-- [syntax and notation](?note=notes/concepts/engineering/syntax_and_notation.md)
+- [syntax and notation](?note=notes/concepts/engineering/syntax_notation_and_semantics.md)
 - [state and evaluation](?note=notes/concepts/engineering/state_and_evaluation.md)
 - [proof conventions](?note=notes/concepts/engineering/proof_conventions.md)
 - [substitution](?note=notes/concepts/engineering/substitution.md)

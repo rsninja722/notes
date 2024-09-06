@@ -33,7 +33,7 @@ assignments  3 | 3% process management
 assignments  4 | 10% memory management
 assignments  5 | 10% storage/file management
 labs | 10%
-midterm | 25%
+midterm | 25% oct 25th 4:30
 exam | 35%
 
 document sources for assignments, even textbooks

@@ -18,34 +18,7 @@
 
 ## rough history of computation
 
-even before computers existed, many mathematicians and philosophers were trying to create various models of computation, many of which were computationally equivalent
-
-300 bce 
-
-- eculid came up with algorithms for finding GCD
-- one of the first computational problems - trisect an angle, aka create 3 equal angles (using compass and a straight edge)? - not possible 
-- another question - create a cube with double the volume of the other (using compass and a straight edge)
-
-800's ce 
-
-- al-khawrazmi came up with algebra and arithmetic
-
-1500's 
-
-- cubic equation
-
-1800's 
-
-- abel-ruffini - proved that degree 5 polynomials dont generally have a solution that can be represented by radicals
-- galois - $x^5-x-1 = 0$ has no radical solutions
-    - peire wantzel showed that the angle and cube questions from 300 bce are impossible
-- newtons principia mathematical - solving polynomial equations
-- gauss - disquisitions arithmatica - FFT
-
-1900's
-
-- hilbert russell - formalist school - reduce math to formal manipulation of symbols    
-- kurt godel - incompleteness theorem - no matter what system of number theory you take, there are statements that are "true" but cannot be proven
+[history of computation](?note=notes/concepts/engineering/history_of_computation.md) <!-- [](/notes/concepts/engineering/history_of_computation.md) -->
 
 ## models
 

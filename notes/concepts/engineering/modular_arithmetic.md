@@ -1,8 +1,11 @@
 # modular arithmetic
 
 - **modulo function** - $a$ mod $n$ returns the remainder after dividing $a$ by $n$
-    - $\mathbb{Z}^{+} \cross \mathbb{Z}^{+} \to \mathbb{N}$
+    - $\mathbb{Z}^{+} \times \mathbb{Z}^{+} \to \mathbb{N}$
     - **modulus** - $n$
+    - also written as a congruence $a \equiv r mod n$ (r = remainder, n = modulus) (n divides a-r, and $a = nx + r$ for some x)
+        - example: $73 \equiv 8 \text{ mod } 13$ (both 73 and 8 are equivalent when modulus 13)
+        - the remainder r is not unique (infinite set of remainders)
 
 modular arithmetic draws on the concept of divisibility
 
@@ -75,3 +78,24 @@ $$ ab \text{mod} m = ((a \text{mod} m)(b\text{mod} m)) \text{mod} m$$
 - **modular arithmetic** is arithmetic on $\mathbb{Z}_n$ for some $n \in \mathbb{Z}^{+}$
     - think of it as clock arithmetic
 - **theorem** - when $n > 1$, $(\mathbb{Z}_n, 0, 1, +_n, *_n, -_n)$ is a commutative ring, when n is prime, $(\mathbb{Z}_n, 0, 1, +_n, *_n, -_n, \cdot_n^{-1})$ is also a field
+    - closure: the result of the functions are always in $R$
+    - associative
+    - distributive
+    - identity for addition: $a + 0 = a$
+    - inverse for addition: $a + (-a) = a$
+    - identity for multiplication: $a \times 1 = a$
+    - inverse for multiplication: $ a\times a^{-1} = 1$ (may not exist)
+
+### compute mod with inverse
+
+- $\frac{a}{b} \text{ mod } n \equiv ab^{-1} \text{ mod } n$
+- inverse ($b^{-1}$) of an integer ($b$) satisfies $bb^{-1} = 1 \text{ mod } n$
+- example - $\frac{3/5} \text{ mod } 9$, find inverse $5^{-1} \equiv 2 \text{ mod } 9$, then compute $3 \cdot 2 \equiv 6 \text{ mod } 9$
+
+- inverse $b^{-1}$ only exists if gcd(b,n) = 1
+    - b and n are coprime
+
+### modular reduction
+
+- reduction at end - $7^5 = 16807 \equiv 11 \text{ mod } 13$
+- reduction throughout - $7^5 - 7^2 \cdot 7^2 \cdot 7 \equiv 10 \cdot 10 \cdot 7 \equiv 11 \text{ mod } 13$

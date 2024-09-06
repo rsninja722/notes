@@ -31,4 +31,6 @@ assignment 1 | 15% block ciphers and hash functions
 assignment 2 | 15% block ciphers and hash functions
 assignment 3 | 15% public-key cryptography
 assignment 4 | 15% public-key cryptography
-final project | 35%
+final exam | 35%
+
+exponential late policy for assignments, $2^n%$ penalty where $n$ is the days late
