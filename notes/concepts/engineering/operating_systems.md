@@ -18,6 +18,7 @@
 - **kernel** - program in main memory that is always running
     - controls execution of other programs
     - other programs interact with kernel through system calls
+    - layer between hardware management and rest of OS
 
 ## dual mode and system calls
 

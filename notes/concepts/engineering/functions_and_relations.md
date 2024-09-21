@@ -9,6 +9,16 @@
         - input $a$ is the **preimage** of $b$
         - output $b$ is the **image** of $a$
 
+## types of functions
+
+- **n-ary function** - maps from $n$ inputs to an output ($T^n \to T$) 
+    - some common functions:
+    - nullary (constant function/operation) - $$T^0 \to T$ example: true
+    - unary - $$T^1 \to T$ example: succession(num)
+    - binary - $$T^2 \to T$ example: add(num1,num2)
+    - ternary - $$T^3 \to T$ example: if condition then out1 else out2
+
+
 # relations
 
 ## binary relations

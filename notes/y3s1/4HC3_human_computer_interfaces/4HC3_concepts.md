@@ -14,4 +14,13 @@ Human Computer Interfaces is closely related to service design:
 ## intro
 
 - [intro to Human Computer Interfaces](?note=notes/concepts/engineering/intro_to_human_Computer_interfaces.md) <!-- [](/notes/concepts/engineering/intro_to_human_Computer_interfaces.md) -->
+- [human computer interaction](?note=notes/concepts/engineering/human_computer_interaction.md) <!-- [](/notes/concepts/engineering/human_computer_interaction.md) -->
 - [design of everyday things by don norman](?note=notes/concepts/design/design_of_everyday_things.md) <!-- [](/notes/concepts/design/design_of_everyday_things.md) -->
+
+
+
+## tut
+
+poor affordances - thode library washroom - looks like the faucets affords automatically turning on, but they actually affords leaning on a panel on the side of the sink to turn it on, there are no signifiers like text or symbols telling the user where to press, just the shape of the activation panel, which looks like a non-functional design
+
+good affordances - affords sitting and moving the chair up and down, the handle 

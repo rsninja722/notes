@@ -7,3 +7,7 @@
 ## concepts
 
 [cryptology overview](?note=notes/concepts/engineering/cryptology_overview.md) <!-- [](/notes/concepts/engineering/cryptology_overview.md) -->
+
+[stream ciphers](?note=notes/concepts/engineering/stream_ciphers.md) <!-- [](/notes/concepts/engineering/stream_ciphers.md) -->
+
+[data encryption standard](?note=notes/concepts/engineering/data_encryption_standard.md) <!-- [](/notes/concepts/engineering/data_encryption_standard.md) -->

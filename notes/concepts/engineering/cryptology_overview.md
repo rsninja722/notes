@@ -17,6 +17,10 @@ areas of crytology
         - symmetric ciphers
         - asymmetric ciphers
         - protocols              
+    - **post-quantum cryptography**
+
+- **unconditional security** - cryptosystem is information-theoretically secure if it cannot be broken even with infinite computational resources
+- **computational security** - there is no known polynomial time algorithm that can break the cryptosystem
 
 ## symmetric cryptography
 
@@ -24,6 +28,8 @@ areas of crytology
     - both algorithms are public
     - the system is only secure because the key is shared in a secure way
     - problem of secure communication is reduced to the problem of securely sending and storing the key
+
+- in general a small area in cryptography, much of it is not mathematically based, often consists of throwing together lots of steps and hoping it can't be broken
 
 ### example: substitution cipher
 

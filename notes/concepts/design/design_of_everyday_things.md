@@ -21,7 +21,9 @@ to ensure these questions are answerable, the following principles should be fol
 - **Conceptual model** - design projects info for a user to create an accurate conceptual model of the system
     - enhances understanding, feeling of control, discoverability, and evaluation of results
 - **Affordances** - the possible actions the user perceives align with the action the user desires
+    - affordances is present when our mental model aligns with the conceptual model of the object
 - **Signifiers** - visual cues (signifiers) are used to enhance discoverability, and feedback
+    - indicators that communicate appropriate behavior
 - **Mappings** - relationship between controls and their actions are enhanced by closeness in both space and time
 - **Constraints** - use of restrictions/constraints to guide user behavior and ease interpretation
     - constraints can be physical, logical, semantic, or cultural

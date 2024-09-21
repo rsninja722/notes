@@ -35,6 +35,13 @@ for an example of a bad human computer interface see [https://userinyerface.com/
 - **interface** - what is presented to the user
 - **interaction** - the dialogue between the computer and user
 
+## core design skills 
+
+- take a broad view, see constraints, understand what could make a difference
+- frame or reframe the problem and objective
+- knowing how to choose a good approach from many options
+- visualize and prototype the intended solution
+
 ## interactive cycle 
 
 - **interactive cycle** - `user --articulation-> input --performance-> computer --presentation-> output --observation-> user`
