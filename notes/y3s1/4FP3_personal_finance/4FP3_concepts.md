@@ -10,3 +10,4 @@
 
 [time value of money](?note=notes/concepts/business/time_value_of_money.md) <!-- [](/notes/concepts/business/time_value_of_money.md) -->
 
+[income tax planning](?note=notes/concepts/business/income_tax_planning.md) <!-- [](/notes/concepts/business/income_tax_planning.md) -->

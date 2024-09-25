@@ -115,3 +115,57 @@ deposit $1000 for one year at 10%
 
 ## application examples
 
+paying for food problem - option between prepaying $100 with a 10% discount vs. paying $5 a week over 13 weeks
+
+prepay cash balance = (beginning + ending) / 2
+
+= ($100+$0)/2
+
+= $50
+
+"return" over 13 weeks = $10/%50 = 20%
+
+EAR = $(1.20)^{\frac{52}{13}}-1 = 107\%$
+
+___
+
+canadian tire - when paying with cash, get a 1% coupon, no coupon for paying with a credit card. paying $100, credit card bill due 30 days later
+
+with cash discount - effectively paying $99 now
+
+using credit card frees up the $99 for 30 days - price of using 99$ for 30 days = $1
+
+EAR = $(1+1\%)^{\frac{365}{30}}-1 = 12.86\%$
+
+___
+
+reducing monthly expense (dinner and movie) from $75 * 4 = $300 a month, to twice a week ($75 * 2 = $150). how much is accumulated after 30 years of 10% interest at end of year
+
+savings = $75 \cdot 2 \cdot 12 = 1800$
+
+FVIFA = $1800 \frac{(1.1^30) -1}{0.1}$
+
+= $296,089
+
+___
+
+
+retirement plan
+
+two scenarios:
+
+1. $5000 lump sum per year starting at 25 for 40 years
+2. $5000 lump sum per year starting at 55 for 10 years
+
+annual return of 10%
+
+lump sum:
+
+$5000 (1.1)^40 = 226296$
+
+$5000 (1.1)^10 = 12968$
+
+annuity:
+
+5000 FVIFA(40 years at 10%) = $5000 * 442.58 = 2212900$
+5000 FVIFA(10 years at 10%) = $5000 * 15.937 = 79685$
