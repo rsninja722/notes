@@ -30,6 +30,12 @@
     - differs from an ordinary function call in many ways, including access to kernel data, see the example below for more
     - user calls system call setting mode bit to 0, call is executed and on return mode bit is set to 1, return from system call is received in user mode
 
+### APIs
+
+in the context of system calls
+
+TODO
+
 ### system call differences example
 
 - Understanding Protection Domains
@@ -61,6 +67,10 @@
 - process (aka tasks)- active entity being executed
 
 - different names for the same data depending on whats being done with it
+
+### system programs
+
+#### continuously running system programs
 
 ## interrupts
 
@@ -124,11 +134,11 @@ TODO
 
 # structure of operating systems
 
-- ways to structure an OS
-    - monolithic
-    - layered
-    - microkernel
-    - modular
+## monolithic
+
+## layered
+
+## microkernel
 
 ## modular
 
@@ -136,3 +146,5 @@ TODO
 - additional services linked in via modules (at boot time or run time)
 - each module is loaded as needed
 - TODO
+
+## hybrid

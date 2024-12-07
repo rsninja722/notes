@@ -11,3 +11,7 @@
 [stream ciphers](?note=notes/concepts/engineering/stream_ciphers.md) <!-- [](/notes/concepts/engineering/stream_ciphers.md) -->
 
 [data encryption standard](?note=notes/concepts/engineering/data_encryption_standard.md) <!-- [](/notes/concepts/engineering/data_encryption_standard.md) -->
+
+[advanced encryption standard](?note=notes/concepts/engineering/advanced_encryption_standard.md) <!-- [](/notes/concepts/engineering/advanced_encryption_standard.md) -->
+
+[hash functions](?note=notes/concepts/engineering/hash_functions.md) <!-- [](/notes/concepts/engineering/hash_functions.md) -->

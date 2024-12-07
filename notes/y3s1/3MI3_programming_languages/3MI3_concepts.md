@@ -14,6 +14,28 @@
 
 [syntax and semantics](?note=notes/concepts/engineering/syntax_notation_and_semantics.md) <!-- [](/notes/concepts/engineering/syntax_notation_and_semantics.md) -->
 
+# lambda calculus
+
+# church numerals 
+
+- $c_0 = \lambda s.\lambda z. z$ (0)
+- $c_1 = \lambda s.\lambda z. s z$ (1)
+- $c_2 = \lambda s.\lambda z. s (s z)$ (2)
+- $c_3 = \lambda s.\lambda z. s (s (s z))$ (3)
+
+consider the successor function: $f = \lambda n.\lambda s.\lambda z. s (n s z)$
+
+- applied to c0: $f c_0 = \lambda n.\lambda s.\lambda z. s (n s z) c_0$
+- $\lambda s.\lambda z. s (c_0 s z)$ (apply n?)
+- $\lambda s.\lambda z. s ((\lambda s. \lambda z. z) s z)$ (substitute c0)
+- $\lambda s.\lambda z. s ((\lambda z. z) z)$ (apply inner s))
+- $\lambda s.\lambda z. s z$ (apply inner z) this is c1
+
+addition: plus = $\lambda m.\lambda n.\lambda s.\lambda z. m s (n s z)
+
+multiplication: times = $\lambda m.\lambda n. m (plus n)$
+
+# church booleans
 
 # tut 1 question answers
 
