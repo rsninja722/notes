@@ -6,9 +6,13 @@ the whole [computer architecture course](?note=notes/y2s1/2GA3_Computer_Architec
 
 most importantly, review: [computer architecture and operating systems](?note=notes/concepts/engineering/computer_architecture_and_operating_systems.md) <!-- [](/notes/concepts/engineering/computer_architecture_and_operating_systems.md) -->
 
-## intro
+## topics
 
 [operating systems](?note=notes/concepts/engineering/operating_systems.md) <!-- [](/notes/concepts/engineering/operating_systems.md) -->
+
+[processes and threads](?note=notes/concepts/engineering/processes_and_threads.md) <!-- [](/notes/concepts/engineering/processes_and_threads.md) -->
+
+
 
 ## tut qs chapter 1/2
 
