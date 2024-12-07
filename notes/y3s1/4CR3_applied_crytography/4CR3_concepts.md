@@ -15,3 +15,5 @@
 [advanced encryption standard](?note=notes/concepts/engineering/advanced_encryption_standard.md) <!-- [](/notes/concepts/engineering/advanced_encryption_standard.md) -->
 
 [hash functions](?note=notes/concepts/engineering/hash_functions.md) <!-- [](/notes/concepts/engineering/hash_functions.md) -->
+
+[discrete logarithm public key schemes](?note=notes/concepts/engineering/discrete_logarithm_public_key_schemes.md) <!-- [](/notes/concepts/engineering/discrete_logarithm_public_key_schemes.md) -->

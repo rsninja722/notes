@@ -65,3 +65,18 @@ good affordances - affords sitting and moving the chair up and down, the handle
     - collage
     - draw the experience
     - narration
+
+
+# task centered design
+
+- using descriptions of existing or envisioned tasks of a system
+
+
+## scenarios and tasks
+
+- informal narrative descriptions
+    - provide a personalized description of how a task is accomplished
+    - single perspective each
+    - concrete and specific
+    - focus: on the people no the technology
+    
