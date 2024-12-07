@@ -39,7 +39,7 @@ for an example of a bad human computer interface see [https://userinyerface.com/
 
 - take a broad view, see constraints, understand what could make a difference
 - frame or reframe the problem and objective
-- knowing how to choose a good approach from many options
+- creating/envisioning many options,and choosing a good approach from those
 - visualize and prototype the intended solution
 
 ## interactive cycle 
