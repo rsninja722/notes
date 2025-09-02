@@ -1,0 +1,39 @@
+# history of machine learning
+
+- starts with [history of computation](?note=notes/concepts/engineering/history_of_computation.md)
+
+- john von neumann
+    - conceived the modern computer architecture
+    - introduced ideas about automata and nero science with computation
+    - invented game theory
+- the golden age
+    - first summer of AI
+        - 1955 - john mccarthy (creator of lisp) coined the name "artificial intelligence"
+        - lots of optimism for quick easy progress
+        - frank rosenblatt implements the first perception
+    - 1958 - article in the new york times - "electronic 'brain' teaches itself"
+        - predicted facial recognition, OCR, and voice recognition
+    - 1964 - ELIZA - first chat bot
+    - 1968 - simulated environments - micro world that a computer can manipulate and answer questions about
+- first winter 70s to 80s
+    - minsky shows that 1 layer perceptrons will not work
+    - lighthill report (1972) discredits AI research due to combinatorial explosion (example: go game has $250^200$ possible games)
+    - AI funding is cut
+    - AI is thought of as unscientific as alchemy
+    - first winter thought to be caused by attempting to create general AI instead of targeting specific tasks
+- second AI summer 80s to 90s
+    - instead of AI, called expert systems
+    - systems being built based on mathematical logic
+- second AI winter
+    - hard to codify all knowledge
+    - often knowledge is contradictory
+    - experts often don't write down logical rules for why they do things
+- third summer of AI 90s
+    - behavioral AI, agent based AI
+    - releasing autonomous systems into the real world (example: roomba, deep blue beats garry kasparov in chess)
+- third AI winter 90s to 2006
+    - no new applications of AI found
+- summer of deep learning
+    - 2006 geoffrey hinton - publishes a paper about deep learning
+- 2012 - alexnet wins image recognition contest
+- 2017 - attention is all you need (transformers paper)
