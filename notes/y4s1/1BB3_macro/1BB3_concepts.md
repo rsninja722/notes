@@ -45,3 +45,10 @@ answer: T has the absolute advantage in producing both, and the comparative adva
     - price equilibrium price rises, equilibrium quantity is ambiguous
 - price of W (normal good) have risen steadily, prices for B to store W have dropped and incomes risen, what explains the the rising prices of W
     - demand curve for W has shifted to the right more than the supply curve has shifted to the right
+
+# midterm 1 hardest questions
+
+- stock/flow variables market diagram, which unit should be on horizontal axis?
+    - flow variable on y axis, stock variable on x (number of pizzas per week)
+- two dimensional graph
+    - shifting curves adds new dimensions
