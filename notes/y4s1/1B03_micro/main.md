@@ -17,3 +17,10 @@ tut participation | | 5%
 midterm 1 | oct 4 12:30 | 20%
 midterm 2 | nov 1 12:30 | 20%
 exam | TBA | 40%
+
+## midterm 2 topics
+
+- 365 - elasticity 74
+- 509 - consumer choice   117
+- 573 - production and costs 151    
+- 664 - perfect competition     

@@ -36,3 +36,11 @@ Nov. 24 - 28 | TTL #5 | Final Exam Practice Questions
 - Ch. 1 - Foundations and Models
 - Ch. 2 - Trade-offs, Comparative Advantage, and the Market System
 - Ch. 3 - Where Prices Come From: The Interaction of Supply and Demand
+
+# test 2
+
+- 252 - GDP: Measuring Total Production and Income
+- 278 - Unemployment and Inflation
+- 318 - Economic Growth, the Financial System, and Business Cycles
+- 352 - Long Run Economic Growth: Sources and Policies
+- 392 - Aggregate Expenditure and Output in the Short Run

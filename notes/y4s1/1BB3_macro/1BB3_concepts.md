@@ -52,3 +52,17 @@ answer: T has the absolute advantage in producing both, and the comparative adva
     - flow variable on y axis, stock variable on x (number of pizzas per week)
 - two dimensional graph
     - shifting curves adds new dimensions
+
+# gdp
+
+- business cycle
+- economic growth
+- employment
+- inflation rate
+
+- **GDP** - gross domestic product - market value of all goods and services produced in a country for some period of time
+    - only includes current production
+    - total production = total income
+- **final good or service** - is one that is purchased by its final user and is not included in the production of any other good or service
+- **intermediate good or service** - a good or service that is an input into another good or service
+**transfer payments** - payments by the government to households for which the government does not receive a new good or service in return
