@@ -24,3 +24,66 @@ exam | TBA | 40%
 - 509 - consumer choice   117
 - 573 - production and costs 151    
 - 664 - perfect competition     
+
+## exam
+
+all material
+
+1. intro
+    - what is economics
+    - economic systems
+    - how economists work
+2. comparative advantage
+    - production possibilities
+    - comparative advantage
+    - circular flow of income
+3. supply and demand
+    - consumer demand
+    - producer supply
+    - market price
+    - changes in market price
+4. market efficiency 
+    - market surplus
+    - market surplus and efficiency
+    - government interventions
+    - sales taxes
+5. elasticity
+    - Price Elasticity of Demand
+    - Price Elasticity Determinants and Firm Revenue
+    - Income and Cross-Price Elasticities of Demand
+    - Price Elasticity of Supply
+6. consumer choice
+    - Utility and Consumer Behaviour
+    - A Model of Consumer Behaviour
+    - The Budget and Consumer Choice
+    - Changes in Income and Price
+    - Behavioural Economics
+7. production and costs 
+    - Types of Business Organizations
+    - The Production Function and Productivity
+    - Total Cost and Efficiency
+    - Input Choice in the Long-Run
+
+textbook reads:
+
+8. perfect competition
+    - Perfect Competition and Profit Maximization
+    - Profits in Perfect Competition in the Short-Run
+    - Profits in Perfect Competition in the Long-Run
+9. monopolistic competition
+    - Monopolistic Competition
+    - Monopolistic Competition and Profit Maximization
+    - Profits in Monopolistic Competition
+10. oligopoly
+    - Oligopoly and Profit Maximization
+    - Strategic Behaviour
+    - Game Theory and Firm Behaviour
+    - Welfare Effects of Oligopoly
+11. monopoly
+    - Monopoly and Profit Maximization
+    - Welfare Effects of Monopoly
+    - Pricing Strategies
+12. public economics
+    - Market Failures
+    - Public Goods and Common Property
+    - Public Choice

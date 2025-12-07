@@ -44,3 +44,57 @@ Nov. 24 - 28 | TTL #5 | Final Exam Practice Questions
 - 318 - Economic Growth, the Financial System, and Business Cycles
 - 352 - Long Run Economic Growth: Sources and Policies
 - 392 - Aggregate Expenditure and Output in the Short Run
+
+# exam
+
+chapters 4-12
+
+- 252 - GDP: Measuring Total Production and Income
+    - GDP Definition 
+    - Housing in the GDP 
+    - Gross National Income 
+    - Calculations of Chapter 4 Variables
+- 278 - Unemployment and Inflation
+    - Employment/Unemployment Calculations
+    - How to Categorize Canadians
+    - Using the Labour Market Diagram 
+    - Calculating CPI
+    - CPI vs. GDP Deflator 
+    - Product/Quotient Rule 
+    - Unanticipated Inflation Example 
+- 318 - Economic Growth, the Financial System, and Business Cycles
+    - Economic Growth Calculations
+    - Loanable Funds – Algebra
+    - Loanable Funds – Market Diagram Set Up
+    - Using the LF Diagram to Analyze Shocks
+- 352 - Long Run Economic Growth: Sources and Policies
+    - Economic Growth – PPF Diagram
+    - Production Function, Equation and Diagram
+    - Production Function and Policy
+- 392 - Aggregate Expenditure and Output in the Short Run
+    - Consumption 
+    - Macro Equilibrium – 45° Line 
+    - Multiplier Effect 
+    - Infinite Geometric Series 
+    - Using AE to Derive AD 
+    - Using AE to Shift AD
+- Aggregate Demand and Aggregate Supply Analysis
+    - Review of AD, LRAS, SRAS
+    - Using AD-AS to Analyze Shocks
+    - What if we are away from LR equilibrium?
+    - Dynamic AD-AS Model
+- Money, Banks, and the Bank of Canada
+    - What is Money?
+    - How do Banks Create Money?
+    - What does the Bank of Canada do
+    - Using the Quantity Theory to Make Predictions
+- Monetary Policy
+    - Money Market Diagram – Shocks and Policy
+    - Money Market and AD-AS
+Fiscal Policy
+    - Fiscal Policy and AE/AD-AS
+    - Automatic Stabilizers – Stylized Business Cycle an AD-AS 
+    - Spending and Tax Multipliers 
+    - Balanced Budget Multiplier 
+
+do exam and test 2 practices

@@ -161,11 +161,11 @@ TODO
 
 goal: find a relationship between two parameters
 
-the parameters (weights) in a linear equation are the model
+the parameters (weights) in a linear equation are the model:
 
 $y' = \Beta_0 + \Beta_1 \cdot x_1 + \Beta_2 \cdot x_2 + \dots + \Beta_p \cdot x_p$
 
-the linear equation is used to estimate the label
+the linear equation is used to estimate the label ($x_n$ is an input feature from the dataset)
 
 usually optimized using "least squares": $\Sum_{i=0}^{n} d^2$ 
 
@@ -213,7 +213,7 @@ TODO
 derivative gives the slope of the function to follow to find a local minimum
 
 - take the derivative of the loss function to determine the direction
-
+ 
 # developing a model
 
 - define a goal for what to accomplish
